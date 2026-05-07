@@ -9,7 +9,7 @@ const DATA_FILES = {
   similar: "data/similar.json"
 };
 
-const DATA_CACHE_VERSION = "v1-ebird-2026-05-07";
+const DATA_CACHE_VERSION = "v1-macaulay-2026-05-07";
 
 const STORAGE_KEYS = {
   lists: "birdPreviewBook:lists",
@@ -26,7 +26,18 @@ const $html = (strings, ...values) => strings.reduce((out, str, i) => out + str 
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
 const nowISO = () => new Date().toISOString();
 const safeParse = (text, fallback) => { try { return JSON.parse(text); } catch { return fallback; } };
-const normalize = (text) => String(text || "").trim().toLowerCase();
+const TRAD_TO_SIMP = {
+  "凍":"冻","鵝":"鹅","鴨":"鸭","鴛":"鸳","鴦":"鸯","鵠":"鹄","鵰":"雕","鷹":"鹰","鷂":"鹞","鷲":"鹫","鶚":"鹗","鶻":"鹘",
+  "鷺":"鹭","鶴":"鹤","鷗":"鸥","鴴":"鸻","鷸":"鹬","鵐":"鹀","鶲":"鹟","鵯":"鹎","鶇":"鸫","鴉":"鸦","鵲":"鹊",
+  "鴟":"鸱","鵑":"鹃","鶯":"莺","鷦":"鹪","鷯":"鹩","鴞":"鸮","雞":"鸡","鷿":"䴙","鸊":"䴘","鵜":"鹈","鸕":"鸬",
+  "黃":"黄","灣":"湾","濱":"滨","蹺":"跷","紅":"红","藍":"蓝","綠":"绿","烏":"乌","鳳":"凤","頭":"头","頸":"颈",
+  "長":"长","腳":"脚","翹":"翘","臉":"脸","極":"极","賊":"贼","蠣":"蛎","潛":"潜","鶘":"鹕","額":"额","鴻":"鸿","劍":"剑","寬":"宽","棲":"栖","漁":"渔","禿":"秃","細":"细","緋":"绯","脇":"胁","蒼":"苍","蘇":"苏","諾":"诺","遺":"遗","頂":"顶","簑":"蓑","東":"东","歐":"欧","亞":"亚","遷":"迁","鶺":"鹡","鴒":"鸰","鶉":"鹑","鵪":"鹌",
+  "雲":"云","華":"华","臺":"台","廣":"广","雙":"双","學":"学","體":"体","類":"类","種":"种","鳥":"鸟","鳴":"鸣","觀":"观","記":"记","錄":"录","據":"据"
+};
+function toSimplified(text) {
+  return String(text || "").replace(/[凍鵝鴨鴛鴦鵠鵰鷹鷂鷲鶚鶻鷺鶴鷗鴴鷸鵐鶲鵯鶇鴉鵲鴟鵑鶯鷦鷯鴞雞鷿鸊鵜鸕黃灣濱蹺紅藍綠烏鳳頭頸長腳翹臉極賊蠣潛鶘額鴻劍寬棲漁禿細緋脇蒼蘇諾遺頂簑東歐亞遷鶺鴒鶉鵪雲華臺廣雙學體類種鳥鳴觀記錄據]/g, c => TRAD_TO_SIMP[c] || c);
+}
+const normalize = (text) => toSimplified(text).trim().toLowerCase();
 
 const PINYIN_INITIALS = String.raw`
 a:阿啊
@@ -289,9 +300,8 @@ function setupSwipeCards() {
 let _locationMatch = null;
 
 function renderNewBook() {
-  const orderOptions = (appData.taxonomy.orders || []).map(o => `<option value="order:${esc(o.zh)}">${esc(o.zh)}</option>`).join("");
-  const familyOptions = (appData.taxonomy.families || []).map(f => `<option value="family:${esc(f.zh)}">${esc(f.zh)}</option>`).join("");
-  const habitatOptions = (appData.taxonomy.habitats || []).map(h => `<option value="habitat:${esc(h)}">${esc(h)}</option>`).join("");
+  const orderButtons = (appData.taxonomy.orders || []).map(o => `<button class="secondary pill active" data-value="${esc(o.zh)}">${esc(o.zh)}</button>`).join("");
+  const habitatButtons = (appData.taxonomy.habitats || []).map(h => `<button class="secondary pill active" data-value="${esc(h)}">${esc(h)}</button>`).join("");
   _locationMatch = null;
   app.innerHTML = $html`
     ${header("新增预习本")}
@@ -306,7 +316,18 @@ function renderNewBook() {
           ${ALL_MONTHS.map(m => `<button class="secondary pill" data-m="${m}">${m}月</button>`).join("")}
         </div>
       </div>
-      <div class="field"><label>想重点看哪类鸟？</label><select id="category"><option value="all">全部</option>${orderOptions}${familyOptions}${habitatOptions}</select></div>
+      <div class="field"><label>分类</label>
+        <div id="orderGrid" class="filter-grid" data-filter-group="orders">
+          <button class="secondary pill active" data-all="1">全部目</button>
+          ${orderButtons}
+        </div>
+      </div>
+      <div class="field"><label>生境</label>
+        <div id="habitatGrid" class="filter-grid" data-filter-group="habitats">
+          <button class="secondary pill active" data-all="1">全部生境</button>
+          ${habitatButtons}
+        </div>
+      </div>
       <div class="field"><label>预习本名称</label><input id="title" value=""></div>
       <button id="generate">生成预习本</button>
       <div id="newBookMsg" class="small"></div>
@@ -315,11 +336,12 @@ function renderNewBook() {
 
   const locInput = document.querySelector("#locInput");
   const locSuggest = document.querySelector("#locSuggest");
-  const category = document.querySelector("#category");
   const title = document.querySelector("#title");
 
   const allMonthBtns = [...document.querySelectorAll("#monthGrid .pill")];
   const monthAllBtn = document.querySelector("#monthAllBtn");
+  const orderGrid = document.querySelector("#orderGrid");
+  const habitatGrid = document.querySelector("#habitatGrid");
 
   function getSelectedMonths() {
     if (monthAllBtn?.classList.contains("active")) return ALL_MONTHS;
@@ -332,10 +354,43 @@ function renderNewBook() {
     return m.map(x => `${x}月`).join("、");
   }
 
+  function activeValues(grid) {
+    return [...grid.querySelectorAll(".pill:not([data-all]).active")].map(btn => btn.dataset.value);
+  }
+
+  function allValues(grid) {
+    return [...grid.querySelectorAll(".pill:not([data-all])")].map(btn => btn.dataset.value);
+  }
+
+  function isAllActive(grid) {
+    const all = allValues(grid);
+    const active = activeValues(grid);
+    return active.length === 0 || active.length === all.length;
+  }
+
+  function filterPartLabel(grid, allLabel) {
+    if (isAllActive(grid)) return allLabel;
+    const active = activeValues(grid);
+    if (active.length <= 2) return active.join("、");
+    return `${active[0]}等${active.length}项`;
+  }
+
+  function buildFilters() {
+    const selectedOrders = activeValues(orderGrid);
+    const selectedHabitats = activeValues(habitatGrid);
+    return {
+      orders: isAllActive(orderGrid) ? [] : selectedOrders,
+      families: [],
+      habitats: isAllActive(habitatGrid) ? [] : selectedHabitats
+    };
+  }
+
   function syncTitle() {
     const locName = _locationMatch ? _locationMatch.name : (locInput.value.trim() || "全国");
-    const catName = category.value === "all" ? "全部" : category.selectedOptions[0]?.textContent;
-    title.value = `${locName} · ${monthLabel()} · ${catName}`;
+    const orderLabel = filterPartLabel(orderGrid, "全部分类");
+    const habitatLabel = filterPartLabel(habitatGrid, "全部生境");
+    const filterLabel = orderLabel === "全部分类" && habitatLabel === "全部生境" ? "全部" : `${orderLabel} · ${habitatLabel}`;
+    title.value = `${locName} · ${monthLabel()} · ${filterLabel}`;
   }
 
   function setMonthActive() {
@@ -363,7 +418,8 @@ function renderNewBook() {
     };
   });
 
-  category.onchange = syncTitle;
+  setupMultiSelectGrid(orderGrid);
+  setupMultiSelectGrid(habitatGrid);
   syncTitle();
 
   locInput.oninput = () => {
@@ -393,7 +449,7 @@ function renderNewBook() {
     const location = buildLocationFromMatch(locInput.value.trim());
     const months = getSelectedMonths();
     if (!months.length) { document.querySelector("#newBookMsg").innerHTML = `<span class="error">请至少选择一个月份。</span>`; return; }
-    const filters = parseCategory(category.value);
+    const filters = buildFilters();
     const birdIds = generateRecommendedList({ location, months, filters });
     if (!birdIds.length) {
       document.querySelector("#newBookMsg").innerHTML = `<span class="error">暂无符合条件且有可靠记录的鸟种。${!location?.provinceCode ? " 可尝试从地点建议中选择一个已知地点。" : ""}</span>`;
@@ -404,6 +460,36 @@ function renderNewBook() {
     StorageService.saveList(list);
     navigate(`book?id=${list.listId}`);
   };
+
+  function setupMultiSelectGrid(grid) {
+    const allBtn = grid.querySelector("[data-all]");
+    const itemBtns = [...grid.querySelectorAll(".pill:not([data-all])")];
+    function syncAll() {
+      const activeCount = itemBtns.filter(btn => btn.classList.contains("active")).length;
+      allBtn.classList.toggle("active", activeCount === 0 || activeCount === itemBtns.length);
+      if (activeCount === 0) itemBtns.forEach(btn => btn.classList.add("active"));
+      syncTitle();
+    }
+    allBtn.onclick = () => {
+      itemBtns.forEach(btn => btn.classList.add("active"));
+      allBtn.classList.add("active");
+      syncTitle();
+    };
+    itemBtns.forEach(btn => {
+      btn.onclick = () => {
+        const wasAllActive = itemBtns.every(item => item.classList.contains("active"));
+        if (wasAllActive) {
+          itemBtns.forEach(item => item.classList.remove("active"));
+          btn.classList.add("active");
+          allBtn.classList.remove("active");
+          syncTitle();
+          return;
+        }
+        btn.classList.toggle("active");
+        syncAll();
+      };
+    });
+  }
 }
 
 function buildLocationFromMatch(freeText) {
@@ -414,36 +500,6 @@ function buildLocationFromMatch(freeText) {
     if (lm.level === "district") return { provinceCode: lm.parent?.parent?.code || "", provinceName: lm.parent?.parent?.name || "", cityCode: lm.parent?.code || "", cityName: lm.parent?.name || "", districtCode: lm.code, districtName: lm.name };
   }
   return { provinceCode: "", provinceName: freeText || "", cityCode: "", cityName: "", districtCode: "", districtName: "" };
-}
-
-function getSelectedLocation(province, city, district) {
-  return {
-    provinceCode: province.value,
-    provinceName: province.selectedOptions[0]?.textContent || "",
-    cityCode: city.value,
-    cityName: city.selectedOptions[0]?.textContent || "",
-    districtCode: district.value,
-    districtName: district.selectedOptions[0]?.textContent || ""
-  };
-}
-
-function getSelectedLocation(province, city, district) {
-  return {
-    provinceCode: province.value,
-    provinceName: province.selectedOptions[0]?.textContent || "",
-    cityCode: city.value,
-    cityName: city.selectedOptions[0]?.textContent || "",
-    districtCode: district.value,
-    districtName: district.selectedOptions[0]?.textContent || ""
-  };
-}
-
-function parseCategory(value) {
-  const filters = { orders: [], families: [], habitats: [] };
-  if (value.startsWith("order:")) filters.orders = [value.slice(6)];
-  if (value.startsWith("family:")) filters.families = [value.slice(7)];
-  if (value.startsWith("habitat:")) filters.habitats = [value.slice(8)];
-  return filters;
 }
 
 function generateRecommendedList({ location, months, filters }) {

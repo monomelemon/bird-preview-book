@@ -1,6 +1,6 @@
 {
   "system": "IOC / eBird-Clements 待统一",
-  "version": "v1-demo-2026-05-07",
+  "version": "v1-macaulay-2026-05-07",
   "orders": [
     {
       "zh": "䴙䴘目",
@@ -45,40 +45,148 @@
   ],
   "families": [
     {
-      "zh": "鸻科",
-      "en": "Charadriidae",
-      "orderZh": "鸻形目",
-      "sortOrder": 11
-    },
-    {
-      "zh": "反嘴鹬科",
-      "en": "Recurvirostridae",
-      "orderZh": "鸻形目",
-      "sortOrder": 12
-    },
-    {
-      "zh": "鹬科",
-      "en": "Scolopacidae",
-      "orderZh": "鸻形目",
-      "sortOrder": 13
-    },
-    {
-      "zh": "翠鸟科",
-      "en": "Alcedinidae",
-      "orderZh": "佛法僧目",
-      "sortOrder": 61
-    },
-    {
-      "zh": "鸦科",
-      "en": "Corvidae",
-      "orderZh": "雀形目",
+      "zh": "䴙䴘科",
+      "en": "Grebes",
+      "orderZh": "䴙䴘目",
       "sortOrder": 101
     },
     {
-      "zh": "鹎科",
-      "en": "Pycnonotidae",
+      "zh": "翠鸟科",
+      "en": "Kingfishers",
+      "orderZh": "佛法僧目",
+      "sortOrder": 201
+    },
+    {
+      "zh": "鸦科",
+      "en": "Crows, Jays, and Magpies",
       "orderZh": "雀形目",
-      "sortOrder": 102
+      "sortOrder": 301
+    },
+    {
+      "zh": "鹎科",
+      "en": "Bulbuls",
+      "orderZh": "雀形目",
+      "sortOrder": 302
+    },
+    {
+      "zh": "鸭科",
+      "en": "Ducks, Geese, and Waterfowl",
+      "orderZh": "雁形目",
+      "sortOrder": 401
+    },
+    {
+      "zh": "三趾鹑科",
+      "en": "Buttonquail",
+      "orderZh": "鸻形目",
+      "sortOrder": 501
+    },
+    {
+      "zh": "反嘴鹬科",
+      "en": "Stilts and Avocets",
+      "orderZh": "鸻形目",
+      "sortOrder": 502
+    },
+    {
+      "zh": "彩鹬科",
+      "en": "Painted-Snipes",
+      "orderZh": "鸻形目",
+      "sortOrder": 503
+    },
+    {
+      "zh": "水雉科",
+      "en": "Jacanas",
+      "orderZh": "鸻形目",
+      "sortOrder": 504
+    },
+    {
+      "zh": "海雀科",
+      "en": "Auks, Murres, and Puffins",
+      "orderZh": "鸻形目",
+      "sortOrder": 505
+    },
+    {
+      "zh": "燕鸻科",
+      "en": "Pratincoles and Coursers",
+      "orderZh": "鸻形目",
+      "sortOrder": 506
+    },
+    {
+      "zh": "蛎鹬科",
+      "en": "Oystercatchers",
+      "orderZh": "鸻形目",
+      "sortOrder": 507
+    },
+    {
+      "zh": "贼鸥科",
+      "en": "Skuas and Jaegers",
+      "orderZh": "鸻形目",
+      "sortOrder": 508
+    },
+    {
+      "zh": "鸥科",
+      "en": "Gulls, Terns, and Skimmers",
+      "orderZh": "鸻形目",
+      "sortOrder": 509
+    },
+    {
+      "zh": "鸻科",
+      "en": "Plovers and Lapwings",
+      "orderZh": "鸻形目",
+      "sortOrder": 510
+    },
+    {
+      "zh": "鹬科",
+      "en": "Sandpipers and Allies",
+      "orderZh": "鸻形目",
+      "sortOrder": 511
+    },
+    {
+      "zh": "鹮嘴鹬科",
+      "en": "Ibisbill",
+      "orderZh": "鸻形目",
+      "sortOrder": 512
+    },
+    {
+      "zh": "鹈鹕科",
+      "en": "Pelicans",
+      "orderZh": "鹈形目",
+      "sortOrder": 601
+    },
+    {
+      "zh": "鹭科",
+      "en": "Herons, Egrets, and Bitterns",
+      "orderZh": "鹈形目",
+      "sortOrder": 602
+    },
+    {
+      "zh": "鹮科",
+      "en": "Ibises and Spoonbills",
+      "orderZh": "鹈形目",
+      "sortOrder": 603
+    },
+    {
+      "zh": "秧鸡科",
+      "en": "Rails, Gallinules, and Coots",
+      "orderZh": "鹤形目",
+      "sortOrder": 701
+    },
+    {
+      "zh": "鹤科",
+      "en": "Cranes",
+      "orderZh": "鹤形目",
+      "sortOrder": 702
+    },
+    {
+      "zh": "鹗科",
+      "en": "Osprey",
+      "orderZh": "鹰形目",
+      "sortOrder": 801
+    },
+    {
+      "zh": "鹰科",
+      "en": "Hawks, Eagles, and Kites",
+      "orderZh": "鹰形目",
+      "sortOrder": 802
     }
   ],
   "habitats": [
