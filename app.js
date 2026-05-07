@@ -28,6 +28,42 @@ const nowISO = () => new Date().toISOString();
 const safeParse = (text, fallback) => { try { return JSON.parse(text); } catch { return fallback; } };
 const normalize = (text) => String(text || "").trim().toLowerCase();
 
+const PINYIN_INITIALS = String.raw`
+a:阿啊
+b:白百斑半宝北背本币碧扁冰波伯薄布
+c:仓草叉茶长朝潮彻匙翅崇丑出楚川锤雌赐粗簇翠村
+d:达大代带丹淡岛道地滇典点雕顶东冬董豆独渡短断对多
+e:俄峨额厄鄂鹗鹦耳洱二
+f:发番翻凡反饭范方飞非绯斐粉丰风冯凤佛夫弗浮福斧附复
+g:盖干甘刚高鸽歌格各庚工公狗古谷骨瓜关冠鹳灌光广龟贵桂郭
+h:哈海邯寒汉旱杭毫禾合河貉褐鹤黑恒横衡红虹鸿喉厚狐胡湖虎花华滑画槐环鹮黄蝗灰辉徽火
+j:叽鸡姬基极急棘几计纪季济加佳家甲尖间肩剪碱剑涧暗健箭江将交角脚教接揭节洁捷靛金锦近经颈九酒旧居菊巨鹃卷绢
+k:卡开堪坎看康科壳可克肯空口苦库矿阔
+l:拉蓝朗浪老勒雷类黎篱李里理力历丽栗笠连帘镰脸链良两根亮辽猎鬣林临鳞灵岭另琉硫鹨六龙隆娄卢芦鸬鹭绿峦轮罗裸
+m:麻马毛矛茅铆煤美门蒙猛梦迷米密绵冕面苗民闽名明鸣摸末漠墨牡木牧
+n:南瑙内尼泥拟鸟宁牛农浓弄努女暖诺
+p:爬帕牌攀盘胖刨炮佩盆蓬皮片漂拼品平瓶普通
+q:七齐奇旗企启千迁前潜浅茜强墙悄翘鞘亲秦青清庆琼丘秋鸲曲全拳雀群
+s:萨鳃三散沙沙山珊陕善上勺少蛇社深神升生声圣尸十石食史始鹬寿书舒疏鼠曙树数双水睡丝四松苏宿虽穗隼蓑缩索
+t:台苔太泰滩檀唐塘陶特提天田铁同铜童头秃图土团屯驼椭
+w:瓦弯玩晚万王网苇尾位魏文问翁乌无吴五鹉雾
+x:西吸希昔溪锡蟋习喜细瞎峡狭下先仙咸显线乡香湘想项小楔蝎斜谢心新星兴行杏胸熊修绣须旭悬雪血
+y:鸦鸭崖亚烟岩沿眼艳燕秧杨洋仰腰摇冶野叶夜一伊衣遗疑以异翼阴银隐印莺鹰迎影映硬勇尤有幼渝鱼羽雨玉鸢元园原圆缘远约月岳越云陨
+z:杂在赞灶泽贼增扎窄展占张章爪找赵赭浙针珍真枕震镇正郑枝织直志雉中肿重帚朱珠猪竹主煮住注柱砖妆壮追锥缀准卓资子紫棕纵走嘴最遵座
+`.trim().split("\n").reduce((map, line) => {
+  const [initial, chars] = line.split(":");
+  for (const c of chars) map[c] = initial;
+  return map;
+}, {});
+
+function getPinyinInitials(chineseText) {
+  let result = "";
+  for (const c of chineseText || "") {
+    result += PINYIN_INITIALS[c] || "";
+  }
+  return result;
+}
+
 function hashString(str) {
   let hash = 5381;
   for (let i = 0; i < str.length; i++) hash = ((hash << 5) + hash) + str.charCodeAt(i);
@@ -112,6 +148,24 @@ const StorageService = {
     localStorage.setItem(STORAGE_KEYS.lists, JSON.stringify(lists));
   },
   getList(listId) { return this.getLists().find(list => list.listId === listId); },
+  deleteList(listId) {
+    const lists = this.getLists().filter(item => item.listId !== listId);
+    localStorage.setItem(STORAGE_KEYS.lists, JSON.stringify(lists));
+    localStorage.removeItem(STORAGE_KEYS.checks(listId));
+    localStorage.removeItem(STORAGE_KEYS.notes(listId));
+  },
+  updateList(list) {
+    const lists = this.getLists().map(item => item.listId === list.listId ? { ...item, ...list, updatedAt: nowISO() } : item);
+    localStorage.setItem(STORAGE_KEYS.lists, JSON.stringify(lists));
+  },
+  addBirdToList(listId, birdId) {
+    const list = this.getList(listId);
+    if (!list || list.birdIds.includes(birdId)) return false;
+    list.birdIds = [...list.birdIds, birdId];
+    list.updatedAt = nowISO();
+    this.updateList(list);
+    return true;
+  },
   getChecks(listId) {
     const checks = safeParse(localStorage.getItem(STORAGE_KEYS.checks(listId)), null);
     if (!checks || !Array.isArray(checks.checkedBirdIds)) return { listId, checkedBirdIds: [], updatedAt: nowISO() };
@@ -169,16 +223,26 @@ function renderHome() {
     <div class="stack">
       <button onclick="navigate('new-book')">推荐清单</button>
       <button class="secondary" onclick="navigate('import-list')">录入清单</button>
-      <p class="muted small" style="text-align:center;margin:0;">支持手动输入或批量导入</p>
     </div>
     <h2 class="section-title">最近清单</h2>
     ${lists.length ? lists.map(list => `
-      <div class="card" onclick="navigate('book?id=${esc(list.listId)}')">
-        <strong>${esc(list.title)}</strong>
-        <div class="muted small">${esc(formatMonths(list.months))} · ${list.birdIds.length} 种</div>
+      <div class="card list-card" style="position:relative;">
+        <div onclick="navigate('book?id=${esc(list.listId)}')" style="flex:1;">
+          <strong>${esc(list.title)}</strong>
+          <div class="muted small">${esc(formatMonths(list.months))} · ${list.birdIds.length} 种</div>
+        </div>
+        <button class="ghost danger" style="position:absolute;top:8px;right:8px;" onclick="deleteRecentList(event, '${esc(list.listId)}')">×</button>
       </div>
     `).join("") : `<div class="card muted">还没有本地清单</div>`}
   `;
+}
+
+function deleteRecentList(event, listId) {
+  event.stopPropagation();
+  if (confirm("确定删除这个清单？\n已观察和笔记也会一并删除。")) {
+    StorageService.deleteList(listId);
+    render();
+  }
 }
 
 function renderNewBook() {
@@ -302,6 +366,9 @@ function sortBirdIds(a, b, occurrenceMap = null) {
   const ta = appData.taxonomySortMap.get(sa?.order?.zh) || 999;
   const tb = appData.taxonomySortMap.get(sb?.order?.zh) || 999;
   if (ta !== tb) return ta - tb;
+  const fa = appData.taxonomySortMap.get(sa?.family?.zh) || 999;
+  const fb = appData.taxonomySortMap.get(sb?.family?.zh) || 999;
+  if (fa !== fb) return fa - fb;
   const pa = occurrenceMap?.get(a)?.probabilityScore || 0;
   const pb = occurrenceMap?.get(b)?.probabilityScore || 0;
   if (pa !== pb) return pb - pa;
@@ -391,24 +458,38 @@ function renderBookDetail(listId, sharePayload = null) {
   const filter = sessionStorage.getItem(`filter:${list.listId}`) || "all";
   const sort = sessionStorage.getItem(`sort:${list.listId}`) || "taxonomy";
   const search = sessionStorage.getItem(`search:${list.listId}`) || "";
-  const birds = filterSortBirds(list.birdIds, list.listId, { filter, sort, search });
+  const birds = filterSortBirds(list.birdIds, list.listId, { filter, sort, search }, list);
+  const hasProb = hasProbabilityData(list);
+  const sortOptions = [
+    { value: "taxonomy", label: "按分类地位" },
+    { value: "check", label: "按观察状态" },
+    { value: "name", label: "按中文名" },
+    { value: "probability", label: "按出现概率", disabled: !hasProb }
+  ];
+  const sortHTML = sortOptions.map(o =>
+    `<option value="${o.value}"${o.disabled ? " disabled" : ""}>${esc(o.label)}${o.disabled ? "（暂无数据）" : ""}</option>`
+  ).join("");
   app.innerHTML = $html`
     <div class="page-header">
       <button class="ghost" onclick="navigate('home')">返回</button>
-      <h1 class="page-title">${esc(list.title)}</h1>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <h1 class="page-title" style="margin:0;">${esc(list.title)}</h1>
+        ${isShare ? `` : `<button class="ghost small" onclick="renameList('${esc(list.listId)}')" title="重命名">✎</button>`}
+      </div>
       ${isShare ? `<span></span>` : `<button class="ghost" onclick="shareList('${esc(list.listId)}')">分享</button>`}
     </div>
     <div class="card">
       <strong>已观察 ${checks.checkedBirdIds.length} / 共 ${list.birdIds.length} 种</strong>
       <div class="toolbar" style="margin-top:12px;">
-        <input id="search" placeholder="搜索鸟名、别名、学名、英文名" value="${esc(search)}">
+        <input id="search" placeholder="搜索鸟名、别名、学名、英文名（支持拼音首字母）" value="${esc(search)}">
         <div class="toolbar-grid">
           <select id="filter"><option value="all">全部</option><option value="unchecked">未观察</option><option value="checked">已观察</option></select>
-          <select id="sort"><option value="taxonomy">按分类地位</option><option value="probability">按出现概率</option><option value="check">按观察状态</option><option value="name">按中文名</option></select>
+          <select id="sort">${sortHTML}</select>
         </div>
       </div>
       ${birds.length ? birds.map(id => birdRow(list, id, isShare)).join("") : `<p class="muted">没有符合条件的鸟种。</p>`}
     </div>
+    ${isShare ? `` : `<button class="fab" onclick="showAddBirdModal('${esc(list.listId)}')" title="添加鸟种">+</button>`}
   `;
   document.querySelector("#filter").value = filter;
   document.querySelector("#sort").value = sort;
@@ -434,7 +515,7 @@ function birdRow(list, birdId, isShare) {
   </div>`;
 }
 
-function filterSortBirds(birdIds, listId, { filter, sort, search }) {
+function filterSortBirds(birdIds, listId, { filter, sort, search }, list) {
   const query = normalize(search);
   return birdIds.filter(id => {
     const checked = StorageService.isChecked(listId, id);
@@ -442,18 +523,42 @@ function filterSortBirds(birdIds, listId, { filter, sort, search }) {
     if (filter === "unchecked" && checked) return false;
     if (!query) return true;
     const sp = appData.speciesById.get(id);
+    const pinyinQuery = query.toLowerCase().replace(/\s/g, "");
+    const pinyinInitials = getPinyinInitials(sp?.chineseName || "");
+    if (pinyinQuery && pinyinInitials.toLowerCase().startsWith(pinyinQuery)) return true;
     const hay = [sp?.chineseName, sp?.scientificName, sp?.englishName, ...(sp?.aliases || [])].map(normalize).join(" ");
     return hay.includes(query);
   }).sort((a, b) => {
     if (sort === "name") return (appData.speciesById.get(a)?.chineseName || "").localeCompare(appData.speciesById.get(b)?.chineseName || "", "zh-Hans-CN");
     if (sort === "check") return Number(StorageService.isChecked(listId, a)) - Number(StorageService.isChecked(listId, b));
-    if (sort === "probability") return (bestProbability(b) - bestProbability(a));
+    if (sort === "probability") return ((locationProbability(b, list) || 0) - (locationProbability(a, list) || 0));
     return sortBirdIds(a, b);
   });
 }
 
 function bestProbability(birdId) {
   return Math.max(0, ...(appData.occurrencesByBirdId.get(birdId) || []).map(o => o.probabilityScore || 0));
+}
+
+function locationProbability(birdId, list) {
+  if (!list?.location || !list?.months?.length) return 0;
+  const occs = appData.occurrencesByBirdId.get(birdId) || [];
+  const scores = occs.filter(o =>
+    matchLocation(o, list.location) && o.months?.some(m => list.months.includes(m))
+  ).map(o => o.probabilityScore || 0);
+  return scores.length ? Math.max(...scores) : 0;
+}
+
+function hasProbabilityData(list) {
+  if (!list?.location || !list?.months?.length) return false;
+  return list.birdIds.some(birdId => {
+    const occs = appData.occurrencesByBirdId.get(birdId) || [];
+    return occs.some(o =>
+      o.probabilityScore != null && o.probabilityScore > 0 &&
+      matchLocation(o, list.location) &&
+      o.months?.some(m => list.months.includes(m))
+    );
+  });
 }
 
 function toggleAndRefresh(listId, birdId) {
@@ -560,6 +665,53 @@ function openNotePanel(listId, birdId) {
   document.body.appendChild(panel);
   document.querySelector("#closeNote").onclick = () => panel.remove();
   document.querySelector("#saveNote").onclick = () => { StorageService.saveNote(listId, birdId, document.querySelector("#noteText").value); panel.remove(); render(); };
+}
+
+function renameList(listId) {
+  const list = StorageService.getList(listId);
+  if (!list) return;
+  const newTitle = prompt("请输入新的预习本名称：", list.title);
+  if (newTitle && newTitle.trim()) {
+    StorageService.updateList({ ...list, title: newTitle.trim() });
+    render();
+  }
+}
+
+function showAddBirdModal(listId) {
+  const list = StorageService.getList(listId);
+  if (!list) return;
+  const panel = document.createElement("div");
+  panel.className = "note-panel";
+  panel.innerHTML = `<h3>添加鸟种</h3>
+    <input id="addBirdSearch" placeholder="输入鸟名、别名、学名或英文名" autocomplete="off" style="width:100%;">
+    <div id="addBirdResults" class="search-results"></div>
+    <div class="row" style="margin-top:12px;"><button class="secondary" id="closeAddBird">关闭</button></div>`;
+  document.body.appendChild(panel);
+  document.querySelector("#closeAddBird").onclick = () => panel.remove();
+  document.querySelector("#addBirdSearch").oninput = function() {
+    const query = normalize(this.value);
+    if (!query) { document.querySelector("#addBirdResults").innerHTML = ""; return; }
+    const results = appData.species.filter(sp => {
+      const match = normalize(sp.chineseName).includes(query) ||
+        normalize(sp.scientificName).includes(query) ||
+        normalize(sp.englishName).includes(query) ||
+        (sp.aliases || []).some(a => normalize(a).includes(query));
+      return match && !list.birdIds.includes(sp.birdId);
+    }).slice(0, 10);
+    document.querySelector("#addBirdResults").innerHTML = results.length
+      ? results.map(sp => `<div class="add-bird-item" onclick="addBirdToList('${esc(listId)}','${esc(sp.birdId)}','${esc(list.listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}</span></div>`).join("")
+      : `<p class="muted">未找到可添加的鸟种（可能已存在或未收录）。</p>`;
+  };
+}
+
+function addBirdToList(targetBirdId, listId, rerenderListId) {
+  const ok = StorageService.addBirdToList(rerenderListId, targetBirdId);
+  if (ok) {
+    document.querySelector(".note-panel")?.remove();
+    render();
+  } else {
+    alert("无法添加该鸟种（可能已存在）。");
+  }
 }
 
 function createSharePayload(list) {
