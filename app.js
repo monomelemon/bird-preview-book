@@ -518,14 +518,25 @@ function renderDistribution(rangeMap, birdId) {
   const occs = appData.occurrencesByBirdId.get(birdId) || [];
   const lines = occs.map(o => `${o.locationName}：${formatMonths(o.months)}（${o.reliability}）`).join("<br>");
   const map = rangeMap?.sourceUrl ? `<p><a href="${esc(rangeMap.sourceUrl)}" target="_blank">查看权威分布图</a></p>` : `<p class="muted">暂无可靠分布图</p>`;
-  return `${map}<p>${lines || "暂无该地区月份的可靠记录"}</p>`;
+  const occRefs = [...new Set(occs.flatMap(o => o.sourceRefs || []))];
+  const refs = occRefs.length ? `<div class="small muted">出现记录来源：${occRefs.map(renderSourcePill).join("")}</div>` : "";
+  return `${map}<p>${lines || "暂无该地区月份的可靠记录"}</p>${refs}`;
 }
 
 function renderSources(sp, media, identification) {
   const refs = [...(sp.sourceRefs || []), ...(identification.sourceRefs || [])];
   const mediaSources = [...(media.images || []).map(i => i.source), ...(media.sounds || []).map(s => s.source)].filter(Boolean);
   const all = [...new Set([...refs, ...mediaSources])];
-  return all.length ? all.map(s => `<span class="pill">${esc(s)}</span>`).join("") : `<p class="muted">暂无可靠来源</p>`;
+  return all.length ? all.map(renderSourcePill).join("") : `<p class="muted">暂无可靠来源</p>`;
+}
+
+function renderSourcePill(source) {
+  const text = String(source || "");
+  const match = text.match(/(https?:\/\/\S+)/);
+  if (!match) return `<span class="pill">${esc(text)}</span>`;
+  const url = match[1];
+  const label = text.replace(url, "").replace(/[：:|｜\s-]+$/, "").trim() || "来源";
+  return `<a class="pill" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 }
 
 function changeImage(offset, listId, birdId, isShare) {

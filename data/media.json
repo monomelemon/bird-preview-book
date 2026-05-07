@@ -20,14 +20,52 @@
     "sounds": [],
     "rangeMap": null
   },
-  "himantopus_himantopus": { "images": [], "sounds": [], "rangeMap": null },
+  "himantopus_himantopus": {
+    "images": [
+      { "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-black-winged-stilt.jpg", "type": "adult", "caption": "南堡黑翅长脚鹬", "source": "Wild Beijing", "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "author": "Wild Beijing", "license": "见来源页面" }
+    ],
+    "sounds": [],
+    "rangeMap": null
+  },
   "recurvirostra_avosetta": { "images": [], "sounds": [], "rangeMap": null },
   "charadrius_dubius": { "images": [], "sounds": [], "rangeMap": null },
-  "charadrius_alexandrinus": { "images": [], "sounds": [], "rangeMap": null },
+  "charadrius_alexandrinus": {
+    "images": [
+      { "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-kentish-plover.jpg", "type": "adult", "caption": "南堡环颈鸻", "source": "Wild Beijing", "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "author": "Wild Beijing", "license": "见来源页面" }
+    ],
+    "sounds": [],
+    "rangeMap": null
+  },
   "pluvialis_squatarola": { "images": [], "sounds": [], "rangeMap": null },
   "vanellus_vanellus": { "images": [], "sounds": [], "rangeMap": null },
   "actitis_hypoleucos": { "images": [], "sounds": [], "rangeMap": null },
   "tringa_totanus": { "images": [], "sounds": [], "rangeMap": null },
   "tringa_nebularia": { "images": [], "sounds": [], "rangeMap": null },
-  "numenius_arquata": { "images": [], "sounds": [], "rangeMap": null }
+  "numenius_arquata": { "images": [], "sounds": [], "rangeMap": null },
+  "pluvialis_fulva": { "images": [], "sounds": [], "rangeMap": null },
+  "charadrius_mongolus": { "images": [], "sounds": [], "rangeMap": null },
+  "limosa_lapponica": { "images": [], "sounds": [], "rangeMap": null },
+  "limosa_limosa": { "images": [], "sounds": [], "rangeMap": null },
+  "numenius_madagascariensis": { "images": [], "sounds": [], "rangeMap": null },
+  "calidris_tenuirostris": { "images": [], "sounds": [], "rangeMap": null },
+  "calidris_canutus": { "images": [], "sounds": [], "rangeMap": null },
+  "calidris_acuminata": {
+    "images": [
+      { "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-sharp-tailed-sandpiper.jpg", "type": "adult", "caption": "南堡尖尾滨鹬", "source": "Wild Beijing", "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "author": "Wild Beijing", "license": "见来源页面" }
+    ],
+    "sounds": [],
+    "rangeMap": null
+  },
+  "calidris_ruficollis": { "images": [], "sounds": [], "rangeMap": null },
+  "tringa_stagnatilis": {
+    "images": [
+      { "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-marsh-sandpiper.jpg", "type": "adult", "caption": "南堡泽鹬", "source": "Wild Beijing", "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "author": "Wild Beijing", "license": "见来源页面" }
+    ],
+    "sounds": [],
+    "rangeMap": null
+  },
+  "tringa_glareola": { "images": [], "sounds": [], "rangeMap": null },
+  "tringa_erythropus": { "images": [], "sounds": [], "rangeMap": null },
+  "xenus_cinereus": { "images": [], "sounds": [], "rangeMap": null },
+  "tringa_brevipes": { "images": [], "sounds": [], "rangeMap": null }
 }

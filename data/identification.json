@@ -22,5 +22,85 @@
     "behavior": "常从栖处俯冲入水捕食小鱼。",
     "sourceRefs": ["eBird", "IOC World Bird List"],
     "updatedAt": "2026-05-07"
+  },
+  "himantopus_himantopus": {
+    "keyPoints": ["黑白对比强，腿极长且粉红色。", "常在浅水、盐田或水塘边缘行走觅食。", "飞行时长腿明显伸出尾后。"],
+    "morphology": "体形修长，黑色翅背和白色身体形成强烈对比。",
+    "habitat": "浅水湿地、盐田、水塘和海岸滩涂。",
+    "behavior": "常成群活动，在浅水中缓慢行走觅食。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "recurvirostra_avosetta": {
+    "keyPoints": ["黑白花纹明显，嘴细长并向上弯。", "常在浅水中左右扫动嘴觅食。", "飞行时黑白翅纹和长腿较醒目。"],
+    "morphology": "中型涉禽，反曲的上弯嘴是最重要识别点。",
+    "habitat": "盐田、浅水湖泊、海岸湿地和潮间带。",
+    "behavior": "常小群或大群活动，在浅水中扫食。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "charadrius_dubius": {
+    "keyPoints": ["体型小，眼周有明显黄色眼圈。", "胸前有较完整黑色胸带，嘴短。", "常在河滩、泥地或浅水边快速奔跑停顿。"],
+    "morphology": "小型鸻类，黄色眼圈是与相近小鸻类区分的重要特征。",
+    "habitat": "河滩、泥滩、湿地边缘、农田水边。",
+    "behavior": "典型鸻类奔跑—停顿式觅食。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "charadrius_alexandrinus": {
+    "keyPoints": ["体型小，腿偏黑，整体颜色较淡。", "胸侧常有暗色斑块，胸带不如金眶鸻完整。", "多见于海岸沙地、盐田和潮间带。"],
+    "morphology": "小型浅色鸻类，常显得比金眶鸻更淡、更偏海岸环境。",
+    "habitat": "海岸、盐田、滩涂和裸露湿地。",
+    "behavior": "在开阔地面快速奔跑觅食，常与其他小型鸻类混群。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "pluvialis_squatarola": {
+    "keyPoints": ["体型较大而敦实，非繁殖羽整体灰白。", "飞行时腋羽黑色，是重要识别点。", "常在潮间带泥滩上单独或小群觅食。"],
+    "morphology": "较大型鸻类，灰色上体和黑色腋羽有助于识别。",
+    "habitat": "海岸潮间带、泥滩和盐田。",
+    "behavior": "多在开阔滩涂觅食，常与其他迁徙涉禽混群。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "actitis_hypoleucos": {
+    "keyPoints": ["体型小，上体褐色，下体白色，白色肩前楔入明显。", "常在水边石块或泥岸活动，尾部不断上下摆动。", "飞行低而直，翅上有明显白色翼带。"],
+    "morphology": "小型鹬类，白色肩前楔和摆尾习性很有帮助。",
+    "habitat": "河流、池塘、水库边、湿地和海岸。",
+    "behavior": "常单只活动，边走边摆尾。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "tringa_totanus": {
+    "keyPoints": ["腿橙红色，嘴基部红色、嘴端较暗。", "飞行时白色后缘和楔形白腰明显。", "常在潮沟、浅水湿地和盐田边缘觅食。"],
+    "morphology": "中型鹬类，红腿和飞行白色翼后缘是关键特征。",
+    "habitat": "海岸湿地、盐田、水塘和潮间带。",
+    "behavior": "受惊时常鸣叫起飞，常与其他鹬类混群。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "tringa_nebularia": {
+    "keyPoints": ["体型较大，腿偏青绿色，嘴长且略上翘。", "上体灰褐，下体较白，整体显得修长。", "常在浅水湿地、盐田和潮沟边觅食。"],
+    "morphology": "大型 Tringa 类鹬，略上翘的长嘴和青绿色腿较关键。",
+    "habitat": "海岸湿地、盐田、湖泊浅水区和河口。",
+    "behavior": "常单只或小群活动，觅食步伐较稳。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "calidris_acuminata": {
+    "keyPoints": ["中小型滨鹬，头顶和背部常显棕褐色，眉纹较明显。", "胸部细纹较多，腹部较白。", "常在盐田、水塘边缘和泥地上成群觅食。"],
+    "morphology": "中小型滨鹬，秋季个体常显棕褐色和较明显眉纹。",
+    "habitat": "浅水湿地、盐田、潮沟和泥滩。",
+    "behavior": "常与其他小型滨鹬混群，需要结合体型、花纹和行为观察。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
+  },
+  "tringa_stagnatilis": {
+    "keyPoints": ["体型修长，腿很长，嘴细直。", "整体比青脚鹬更纤细，嘴也更细。", "常在浅水中活动，姿态轻盈。"],
+    "morphology": "修长的 Tringa 类鹬，细直嘴和长腿是识别重点。",
+    "habitat": "浅水湿地、盐田、水塘和潮沟边缘。",
+    "behavior": "常小群活动，在浅水中快速觅食。",
+    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "updatedAt": "2026-05-07"
   }
 }

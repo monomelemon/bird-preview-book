@@ -1,14 +1,456 @@
 [
-  { "recordId": "occ_himantopus_tangshan_5_9", "birdId": "himantopus_himantopus", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5,9], "presence": "confirmed", "abundance": "common", "probabilityScore": 0.82, "habitats": ["湿地", "海岸"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_recurvirostra_tangshan_5_9", "birdId": "recurvirostra_avosetta", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5,9], "presence": "confirmed", "abundance": "uncommon", "probabilityScore": 0.62, "habitats": ["湿地", "海岸"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_charadrius_dubius_tangshan_5_9", "birdId": "charadrius_dubius", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5,9], "presence": "confirmed", "abundance": "common", "probabilityScore": 0.76, "habitats": ["湿地", "河流", "农田"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_charadrius_alexandrinus_tangshan_5_9", "birdId": "charadrius_alexandrinus", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5,9], "presence": "confirmed", "abundance": "uncommon", "probabilityScore": 0.58, "habitats": ["海岸", "湿地"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_pluvialis_squatarola_tangshan_9", "birdId": "pluvialis_squatarola", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [9], "presence": "confirmed", "abundance": "uncommon", "probabilityScore": 0.42, "habitats": ["海岸", "湿地"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_vanellus_tangshan_5", "birdId": "vanellus_vanellus", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5], "presence": "confirmed", "abundance": "rare", "probabilityScore": 0.24, "habitats": ["农田", "湿地"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_actitis_tangshan_5_9", "birdId": "actitis_hypoleucos", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5,9], "presence": "confirmed", "abundance": "common", "probabilityScore": 0.74, "habitats": ["河流", "湿地", "海岸"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_tringa_totanus_tangshan_5_9", "birdId": "tringa_totanus", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5,9], "presence": "confirmed", "abundance": "uncommon", "probabilityScore": 0.55, "habitats": ["湿地", "海岸"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_tringa_nebularia_tangshan_5_9", "birdId": "tringa_nebularia", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [5,9], "presence": "confirmed", "abundance": "uncommon", "probabilityScore": 0.53, "habitats": ["湿地", "海岸"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_numenius_arquata_tangshan_9", "birdId": "numenius_arquata", "locationCode": "130200", "locationName": "唐山市", "locationLevel": "city", "months": [9], "presence": "confirmed", "abundance": "rare", "probabilityScore": 0.28, "habitats": ["海岸", "湿地"], "sourceRefs": ["eBird Illustrated Checklist - Tangshan", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_pycnonotus_hebei_all", "birdId": "pycnonotus_sinensis", "locationCode": "130000", "locationName": "河北省", "locationLevel": "province", "months": [1,2,3,4,5,6,7,8,9,10,11,12], "presence": "confirmed", "abundance": "common", "probabilityScore": 0.8, "habitats": ["城市", "林地"], "sourceRefs": ["eBird", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" },
-  { "recordId": "occ_alcedo_hebei_all", "birdId": "alcedo_atthis", "locationCode": "130000", "locationName": "河北省", "locationLevel": "province", "months": [1,2,3,4,5,6,7,8,9,10,11,12], "presence": "confirmed", "abundance": "uncommon", "probabilityScore": 0.46, "habitats": ["河流", "湿地"], "sourceRefs": ["eBird", "IOC World Bird List"], "reliability": "medium", "updatedAt": "2026-05-07" }
+  {
+    "recordId": "occ_himantopus_tangshan_5_9",
+    "birdId": "himantopus_himantopus",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [5, 9],
+    "presence": "confirmed",
+    "abundance": "common",
+    "probabilityScore": 0.82,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_recurvirostra_tangshan_5_9",
+    "birdId": "recurvirostra_avosetta",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [5, 9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.62,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_charadrius_dubius_tangshan_5_9",
+    "birdId": "charadrius_dubius",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [5, 9],
+    "presence": "confirmed",
+    "abundance": "common",
+    "probabilityScore": 0.76,
+    "habitats": ["湿地", "河流", "农田"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_charadrius_alexandrinus_tangshan_5_9",
+    "birdId": "charadrius_alexandrinus",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [5, 9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.58,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_pluvialis_squatarola_tangshan_9",
+    "birdId": "pluvialis_squatarola",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.42,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_actitis_tangshan_5_9",
+    "birdId": "actitis_hypoleucos",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [5, 9],
+    "presence": "confirmed",
+    "abundance": "common",
+    "probabilityScore": 0.74,
+    "habitats": ["河流", "湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tringa_totanus_tangshan_5_9",
+    "birdId": "tringa_totanus",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [5, 9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.55,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tringa_nebularia_tangshan_5_9",
+    "birdId": "tringa_nebularia",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [5, 9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.53,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe",
+      "IOC World Bird List: https://www.worldbirdnames.org/new/"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_pluvialis_fulva_tangshan_9",
+    "birdId": "pluvialis_fulva",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "rare",
+    "probabilityScore": 0.31,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_charadrius_mongolus_tangshan_9",
+    "birdId": "charadrius_mongolus",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "rare",
+    "probabilityScore": 0.27,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_limosa_lapponica_tangshan_9",
+    "birdId": "limosa_lapponica",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.48,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_limosa_limosa_tangshan_9",
+    "birdId": "limosa_limosa",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.45,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_numenius_madagascariensis_tangshan_9",
+    "birdId": "numenius_madagascariensis",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "rare",
+    "probabilityScore": 0.3,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_numenius_arquata_tangshan_9",
+    "birdId": "numenius_arquata",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "rare",
+    "probabilityScore": 0.28,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_calidris_tenuirostris_tangshan_9",
+    "birdId": "calidris_tenuirostris",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.44,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Paulson Institute Luannan Coastal Wetlands: https://www.paulsoninstitute.org/conservation/wetlands-conservation/conservation-and-restoration-of-luannan-coastal-wetlands/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_calidris_canutus_tangshan_9",
+    "birdId": "calidris_canutus",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.4,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Paulson Institute Luannan Coastal Wetlands: https://www.paulsoninstitute.org/conservation/wetlands-conservation/conservation-and-restoration-of-luannan-coastal-wetlands/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_calidris_acuminata_tangshan_9",
+    "birdId": "calidris_acuminata",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "common",
+    "probabilityScore": 0.57,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_calidris_ruficollis_tangshan_9",
+    "birdId": "calidris_ruficollis",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.39,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tringa_stagnatilis_tangshan_9",
+    "birdId": "tringa_stagnatilis",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "common",
+    "probabilityScore": 0.6,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tringa_glareola_tangshan_9",
+    "birdId": "tringa_glareola",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.43,
+    "habitats": ["湿地", "河流"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tringa_erythropus_tangshan_9",
+    "birdId": "tringa_erythropus",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.41,
+    "habitats": ["湿地", "海岸"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_xenus_cinereus_tangshan_9",
+    "birdId": "xenus_cinereus",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "rare",
+    "probabilityScore": 0.29,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tringa_brevipes_tangshan_9",
+    "birdId": "tringa_brevipes",
+    "locationCode": "130200",
+    "locationName": "唐山市",
+    "locationLevel": "city",
+    "months": [9],
+    "presence": "confirmed",
+    "abundance": "rare",
+    "probabilityScore": 0.25,
+    "habitats": ["海岸", "湿地"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"
+    ],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_pycnonotus_hebei_all",
+    "birdId": "pycnonotus_sinensis",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "presence": "confirmed",
+    "abundance": "common",
+    "probabilityScore": 0.8,
+    "habitats": ["城市", "林地"],
+    "sourceRefs": ["Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_alcedo_hebei_all",
+    "birdId": "alcedo_atthis",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.46,
+    "habitats": ["河流", "湿地"],
+    "sourceRefs": ["Avibase Hebei checklist: https://avibase.bsc-eoc.org/checklist.jsp?list=howardmoore&region=CNhe"],
+    "reliability": "medium",
+    "updatedAt": "2026-05-07"
+  }
 ]
