@@ -9,6 +9,8 @@ const DATA_FILES = {
   similar: "data/similar.json"
 };
 
+const DATA_CACHE_VERSION = "v1-tangshan-2026-05-07";
+
 const STORAGE_KEYS = {
   lists: "birdPreviewBook:lists",
   checks: (listId) => `birdPreviewBook:checks:${listId}`,
@@ -58,7 +60,7 @@ function formatTaxonomy(species) {
 
 async function loadData() {
   const entries = await Promise.all(Object.entries(DATA_FILES).map(async ([key, url]) => {
-    const res = await fetch(url);
+    const res = await fetch(`${url}?v=${DATA_CACHE_VERSION}`, { cache: "no-store" });
     if (!res.ok) throw new Error(`无法加载 ${url}`);
     return [key, await res.json()];
   }));
