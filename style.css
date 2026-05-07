@@ -297,3 +297,18 @@ select option:disabled {
   color: var(--muted);
   background: #f0ece2;
 }
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.month-grid .pill.active {
+  background: var(--green) !important;
+  color: white !important;
+}
+
+#locInput { width: 100%; }
+
+#locSuggest:empty { display: none; }

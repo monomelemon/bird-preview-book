@@ -87,7 +87,7 @@ function base64urlDecode(text) {
 
 function formatMonths(months) {
   if (!months || months.length === 0 || months.length === 12) return "全年";
-  return months.map(m => `${m}月`).join(",");
+  return months.map(m => `${m}月`).join("、");
 }
 
 function formatTaxonomy(species) {
@@ -245,68 +245,144 @@ function deleteRecentList(event, listId) {
   }
 }
 
+let _locationMatch = null;
+
 function renderNewBook() {
-  const provinceOptions = appData.locations.map(p => `<option value="${p.code}">${esc(p.name)}</option>`).join("");
   const orderOptions = (appData.taxonomy.orders || []).map(o => `<option value="order:${esc(o.zh)}">${esc(o.zh)}</option>`).join("");
   const familyOptions = (appData.taxonomy.families || []).map(f => `<option value="family:${esc(f.zh)}">${esc(f.zh)}</option>`).join("");
   const habitatOptions = (appData.taxonomy.habitats || []).map(h => `<option value="habitat:${esc(h)}">${esc(h)}</option>`).join("");
+  _locationMatch = null;
   app.innerHTML = $html`
     ${header("新增预习本")}
     <div class="card stack">
-      <div class="field"><label>地点</label><select id="province">${provinceOptions}</select></div>
-      <div class="field"><select id="city"></select></div>
-      <div class="field"><select id="district"></select></div>
-      <div class="field"><label>时间</label><select id="month"><option value="all">全年</option>${ALL_MONTHS.map(m => `<option value="${m}">${m}月</option>`).join("")}</select></div>
+      <div class="field"><label>地点</label>
+        <input id="locInput" placeholder="输入省、市、区县或具体观鸟地点" autocomplete="off">
+        <div id="locSuggest" class="search-results" style="max-height:200px;"></div>
+      </div>
+      <div class="field"><label>时间</label>
+        <div id="monthGrid" class="month-grid">
+          <button class="secondary pill active" data-m="all" id="monthAllBtn">全年</button>
+          ${ALL_MONTHS.map(m => `<button class="secondary pill" data-m="${m}">${m}月</button>`).join("")}
+        </div>
+      </div>
       <div class="field"><label>想重点看哪类鸟？</label><select id="category"><option value="all">全部</option>${orderOptions}${familyOptions}${habitatOptions}</select></div>
       <div class="field"><label>预习本名称</label><input id="title" value=""></div>
       <button id="generate">生成预习本</button>
       <div id="newBookMsg" class="small"></div>
     </div>
   `;
-  const province = document.querySelector("#province");
-  const city = document.querySelector("#city");
-  const district = document.querySelector("#district");
-  const month = document.querySelector("#month");
+
+  const locInput = document.querySelector("#locInput");
+  const locSuggest = document.querySelector("#locSuggest");
   const category = document.querySelector("#category");
   const title = document.querySelector("#title");
 
-  function syncCities() {
-    const p = appData.locations.find(item => item.code === province.value);
-    city.innerHTML = (p.children || []).map(c => `<option value="${c.code}">${esc(c.name)}</option>`).join("");
-    syncDistricts();
+  const allMonthBtns = [...document.querySelectorAll("#monthGrid .pill")];
+  const monthAllBtn = document.querySelector("#monthAllBtn");
+
+  function getSelectedMonths() {
+    if (monthAllBtn?.classList.contains("active")) return ALL_MONTHS;
+    return allMonthBtns.filter(b => b !== monthAllBtn && b.classList.contains("active")).map(b => Number(b.dataset.m));
   }
-  function syncDistricts() {
-    const p = appData.locations.find(item => item.code === province.value);
-    const c = (p.children || []).find(item => item.code === city.value);
-    district.innerHTML = `<option value="">不选区县</option>` + (c?.children || []).map(d => `<option value="${d.code}">${esc(d.name)}</option>`).join("");
+
+  function monthLabel() {
+    const m = getSelectedMonths();
+    if (m.length === 0 || m.length === 12) return "全年";
+    return m.map(x => `${x}月`).join("、");
+  }
+
+  function syncTitle() {
+    const locName = _locationMatch ? _locationMatch.name : (locInput.value.trim() || "全国");
+    const catName = category.value === "all" ? "全部" : category.selectedOptions[0]?.textContent;
+    title.value = `${locName} · ${monthLabel()} · ${catName}`;
+  }
+
+  function setMonthActive() {
+    const m = getSelectedMonths();
+    monthAllBtn.classList.toggle("active", m.length === 12 || m.length === 0);
+    allMonthBtns.forEach(b => {
+      if (b === monthAllBtn) return;
+      b.classList.toggle("active", m.includes(Number(b.dataset.m)));
+    });
     syncTitle();
   }
-  function syncTitle() {
-    const cityName = city.selectedOptions[0]?.textContent || province.selectedOptions[0]?.textContent || "";
-    const monthName = month.value === "all" ? "全年" : `${month.value}月`;
-    const catName = category.value === "all" ? "全部" : category.selectedOptions[0]?.textContent;
-    title.value = `${cityName} · ${monthName} · ${catName}`;
-  }
-  province.onchange = syncCities;
-  city.onchange = syncDistricts;
-  district.onchange = syncTitle;
-  month.onchange = syncTitle;
+
+  monthAllBtn.onclick = () => {
+    allMonthBtns.forEach(b => b.classList.remove("active"));
+    monthAllBtn.classList.add("active");
+    syncTitle();
+  };
+
+  allMonthBtns.forEach(b => {
+    if (b === monthAllBtn) return;
+    b.onclick = () => {
+      monthAllBtn.classList.remove("active");
+      b.classList.toggle("active");
+      syncTitle();
+    };
+  });
+
   category.onchange = syncTitle;
-  syncCities();
+  syncTitle();
+
+  locInput.oninput = () => {
+    _locationMatch = null;
+    const q = normalize(locInput.value);
+    if (!q) { locSuggest.innerHTML = ""; syncTitle(); return; }
+    const allLocs = flattenLocations(appData.locations);
+    const matches = allLocs.filter(loc => normalize(loc.name).includes(q) || normalize(loc.parent?.name || "").includes(q)).slice(0, 8);
+    locSuggest.innerHTML = matches.map(loc => `<div class="add-bird-item" data-code="${esc(loc.code)}" data-name="${esc(loc.name)}" data-parent="${esc(loc.parent?.name || "")}"><strong>${esc(loc.name)}</strong> <span class="muted">${esc(loc.parent?.name || "")}</span></div>`).join("");
+    syncTitle();
+  };
+
+  locSuggest.onclick = e => {
+    const item = e.target.closest(".add-bird-item");
+    if (!item) return;
+    const code = item.dataset.code;
+    const name = item.dataset.name;
+    const parent = item.dataset.parent;
+    const loc = appData.locationsByCode.get(code);
+    _locationMatch = { code, name, parentName: parent, loc };
+    locInput.value = parent ? `${parent} ${name}` : name;
+    locSuggest.innerHTML = "";
+    syncTitle();
+  };
 
   document.querySelector("#generate").onclick = () => {
-    const location = getSelectedLocation(province, city, district);
-    const months = month.value === "all" ? ALL_MONTHS : [Number(month.value)];
+    const location = buildLocationFromMatch(locInput.value.trim());
+    const months = getSelectedMonths();
+    if (!months.length) { document.querySelector("#newBookMsg").innerHTML = `<span class="error">请至少选择一个月份。</span>`; return; }
     const filters = parseCategory(category.value);
     const birdIds = generateRecommendedList({ location, months, filters });
     if (!birdIds.length) {
-      document.querySelector("#newBookMsg").innerHTML = `<span class="error">暂无符合条件且有可靠记录的鸟种。</span>`;
+      document.querySelector("#newBookMsg").innerHTML = `<span class="error">暂无符合条件且有可靠记录的鸟种。${!location?.provinceCode ? " 可尝试从地点建议中选择一个已知地点。" : ""}</span>`;
       return;
     }
     const createdAt = nowISO();
     const list = { listId: `list_${hashString(JSON.stringify({ location, months, filters, birdIds, createdAt }))}`, title: title.value.trim(), mode: "recommended", location, months, filters, birdIds, createdAt, updatedAt: createdAt, dataVersion: appData.metadata.dataVersion };
     StorageService.saveList(list);
     navigate(`book?id=${list.listId}`);
+  };
+}
+
+function buildLocationFromMatch(freeText) {
+  if (_locationMatch) {
+    const lm = _locationMatch.loc;
+    if (lm.level === "province") return { provinceCode: lm.code, provinceName: lm.name, cityCode: "", cityName: "", districtCode: "", districtName: "" };
+    if (lm.level === "city") return { provinceCode: lm.parent?.code || "", provinceName: lm.parent?.name || "", cityCode: lm.code, cityName: lm.name, districtCode: "", districtName: "" };
+    if (lm.level === "district") return { provinceCode: lm.parent?.parent?.code || "", provinceName: lm.parent?.parent?.name || "", cityCode: lm.parent?.code || "", cityName: lm.parent?.name || "", districtCode: lm.code, districtName: lm.name };
+  }
+  return { provinceCode: "", provinceName: freeText || "", cityCode: "", cityName: "", districtCode: "", districtName: "" };
+}
+
+function getSelectedLocation(province, city, district) {
+  return {
+    provinceCode: province.value,
+    provinceName: province.selectedOptions[0]?.textContent || "",
+    cityCode: city.value,
+    cityName: city.selectedOptions[0]?.textContent || "",
+    districtCode: district.value,
+    districtName: district.selectedOptions[0]?.textContent || ""
   };
 }
 
@@ -489,6 +565,7 @@ function renderBookDetail(listId, sharePayload = null) {
       </div>
       ${birds.length ? birds.map(id => birdRow(list, id, isShare)).join("") : `<p class="muted">没有符合条件的鸟种。</p>`}
     </div>
+    ${isShare ? `<button class="secondary" style="width:100%;" onclick="cloneShareList('${esc(list.listId)}')">复制为我的清单（可编辑）</button>` : ``}
     ${isShare ? `` : `<button class="fab" onclick="showAddBirdModal('${esc(list.listId)}')" title="添加鸟种">+</button>`}
   `;
   document.querySelector("#filter").value = filter;
@@ -740,6 +817,26 @@ function renderShare(encoded) {
 
 function getShareListFromSession(listId) {
   return safeParse(sessionStorage.getItem(`share:${listId}`), null);
+}
+
+function cloneShareList(shareListId) {
+  const list = getShareListFromSession(shareListId);
+  if (!list) return alert("无法读取分享清单。");
+  const createdAt = nowISO();
+  const copy = {
+    listId: `list_${hashString(JSON.stringify({ birdIds: list.birdIds, createdAt }))}`,
+    title: list.title + "（副本）",
+    mode: "import",
+    location: list.location || null,
+    months: list.months || ALL_MONTHS,
+    filters: list.filters || { orders: [], families: [], habitats: [] },
+    birdIds: [...list.birdIds],
+    createdAt,
+    updatedAt: createdAt,
+    dataVersion: appData.metadata.dataVersion
+  };
+  StorageService.saveList(copy);
+  navigate(`book?id=${copy.listId}`);
 }
 
 function header(title) {
