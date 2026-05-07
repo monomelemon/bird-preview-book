@@ -1,0 +1,33 @@
+{
+  "urocissa_erythroryncha": {
+    "images": [
+      { "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Billed_Blue_Magpie.jpg", "type": "adult", "caption": "成鸟", "source": "Wikimedia Commons", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red_Billed_Blue_Magpie.jpg", "author": "Wikimedia Commons contributor", "license": "见来源页面" }
+    ],
+    "sounds": [],
+    "rangeMap": null
+  },
+  "pycnonotus_sinensis": {
+    "images": [
+      { "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Light-vented_Bulbul.jpg", "type": "adult", "caption": "成鸟", "source": "Wikimedia Commons", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Light-vented_Bulbul.jpg", "author": "Wikimedia Commons contributor", "license": "见来源页面" }
+    ],
+    "sounds": [],
+    "rangeMap": null
+  },
+  "alcedo_atthis": {
+    "images": [
+      { "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Kingfisher_Alcedo_atthis.jpg", "type": "adult", "caption": "成鸟", "source": "Wikimedia Commons", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg", "author": "Wikimedia Commons contributor", "license": "见来源页面" }
+    ],
+    "sounds": [],
+    "rangeMap": null
+  },
+  "himantopus_himantopus": { "images": [], "sounds": [], "rangeMap": null },
+  "recurvirostra_avosetta": { "images": [], "sounds": [], "rangeMap": null },
+  "charadrius_dubius": { "images": [], "sounds": [], "rangeMap": null },
+  "charadrius_alexandrinus": { "images": [], "sounds": [], "rangeMap": null },
+  "pluvialis_squatarola": { "images": [], "sounds": [], "rangeMap": null },
+  "vanellus_vanellus": { "images": [], "sounds": [], "rangeMap": null },
+  "actitis_hypoleucos": { "images": [], "sounds": [], "rangeMap": null },
+  "tringa_totanus": { "images": [], "sounds": [], "rangeMap": null },
+  "tringa_nebularia": { "images": [], "sounds": [], "rangeMap": null },
+  "numenius_arquata": { "images": [], "sounds": [], "rangeMap": null }
+}

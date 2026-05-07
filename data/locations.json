@@ -1,0 +1,36 @@
+[
+  {
+    "code": "130000",
+    "name": "河北省",
+    "level": "province",
+    "children": [
+      {
+        "code": "130200",
+        "name": "唐山市",
+        "level": "city",
+        "children": [
+          { "code": "130202", "name": "路南区", "level": "district" },
+          { "code": "130203", "name": "路北区", "level": "district" },
+          { "code": "130224", "name": "滦南县", "level": "district" },
+          { "code": "130225", "name": "乐亭县", "level": "district" }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "110000",
+    "name": "北京市",
+    "level": "province",
+    "children": [
+      {
+        "code": "110100",
+        "name": "北京市",
+        "level": "city",
+        "children": [
+          { "code": "110101", "name": "东城区", "level": "district" },
+          { "code": "110108", "name": "海淀区", "level": "district" }
+        ]
+      }
+    ]
+  }
+]

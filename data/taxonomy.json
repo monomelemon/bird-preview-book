@@ -1,0 +1,18 @@
+{
+  "system": "IOC / eBird-Clements 待统一",
+  "version": "v1-demo-2026-05-07",
+  "orders": [
+    { "zh": "鸻形目", "en": "Charadriiformes", "sortOrder": 10 },
+    { "zh": "佛法僧目", "en": "Coraciiformes", "sortOrder": 60 },
+    { "zh": "雀形目", "en": "Passeriformes", "sortOrder": 100 }
+  ],
+  "families": [
+    { "zh": "鸻科", "en": "Charadriidae", "orderZh": "鸻形目", "sortOrder": 11 },
+    { "zh": "反嘴鹬科", "en": "Recurvirostridae", "orderZh": "鸻形目", "sortOrder": 12 },
+    { "zh": "鹬科", "en": "Scolopacidae", "orderZh": "鸻形目", "sortOrder": 13 },
+    { "zh": "翠鸟科", "en": "Alcedinidae", "orderZh": "佛法僧目", "sortOrder": 61 },
+    { "zh": "鸦科", "en": "Corvidae", "orderZh": "雀形目", "sortOrder": 101 },
+    { "zh": "鹎科", "en": "Pycnonotidae", "orderZh": "雀形目", "sortOrder": 102 }
+  ],
+  "habitats": ["湿地", "海岸", "河流", "林地", "城市", "农田"]
+}

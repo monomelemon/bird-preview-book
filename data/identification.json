@@ -1,0 +1,26 @@
+{
+  "urocissa_erythroryncha": {
+    "keyPoints": ["体型较大，尾长，整体蓝色、黑白相间。", "嘴和脚红色，是很醒目的识别特征。", "常在林地、山地和村落附近活动，叫声响亮。"],
+    "morphology": "大型鸦科鸟，蓝色长尾醒目。",
+    "habitat": "常见于林地、山地、灌丛和村落附近。",
+    "behavior": "常成对或小群活动，叫声喧闹。",
+    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "updatedAt": "2026-05-07"
+  },
+  "pycnonotus_sinensis": {
+    "keyPoints": ["头顶至后颈白色，形成明显白头。", "耳羽后方有白色斑块。", "常见于城市、公园、林缘和灌丛。"],
+    "morphology": "中小型鸣禽，头部白色特征明显。",
+    "habitat": "常见于城市绿地、公园、林缘和灌丛。",
+    "behavior": "常成对或小群活动，鸣声明显。",
+    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "updatedAt": "2026-05-07"
+  },
+  "alcedo_atthis": {
+    "keyPoints": ["体型小，头大嘴长，常停在水边枝条或石头上。", "上体蓝绿色，下体橙棕色。", "常沿河流、池塘快速直线飞行。"],
+    "morphology": "小型翠鸟，蓝绿色背部和橙棕色下体醒目。",
+    "habitat": "河流、湖泊、池塘、湿地等水域附近。",
+    "behavior": "常从栖处俯冲入水捕食小鱼。",
+    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "updatedAt": "2026-05-07"
+  }
+}
