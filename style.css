@@ -313,11 +313,12 @@ select option:disabled {
 
 #locSuggest:empty { display: none; }
 
-.swipe-container {
+.swipe-card {
   position: relative;
-  overflow: hidden;
-  margin-bottom: 10px;
-  border-radius: 20px;
+  z-index: 1;
+  margin-bottom: 0;
+  transition: transform 0.2s ease;
+  touch-action: pan-y;
 }
 
 .swipe-delete {
@@ -333,12 +334,12 @@ select option:disabled {
   font-size: 24px;
   border-radius: 20px;
   cursor: pointer;
+  z-index: 0;
 }
 
-.swipe-card {
+.swipe-container {
   position: relative;
-  z-index: 1;
-  margin-bottom: 0;
-  transition: transform 0.2s ease;
-  touch-action: pan-y;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 20px;
 }
