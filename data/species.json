@@ -1945,5 +1945,2294 @@
       "eBird CN-13 Hebei checklist"
     ],
     "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "babcra1",
+    "chineseName": "斑脇秧雞",
+    "englishName": "斑脇秧雞",
+    "scientificName": "Zapornia paykullii",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "baepoc1",
+    "chineseName": "青头潛鸭",
+    "englishName": "青頭潛鴨",
+    "scientificName": "Aythya baeri",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bahgoo",
+    "chineseName": "斑头雁",
+    "englishName": "斑頭雁",
+    "scientificName": "Anser indicus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "baicra1",
+    "chineseName": "小秧雞",
+    "englishName": "小秧雞",
+    "scientificName": "Zapornia pusilla",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "baitea",
+    "chineseName": "巴鸭",
+    "englishName": "巴鴨",
+    "scientificName": "Sibirionetta formosa",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bcnher",
+    "chineseName": "夜鹭",
+    "englishName": "夜鷺",
+    "scientificName": "Nycticorax nycticorax",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "besra1",
+    "chineseName": "松雀鷹",
+    "englishName": "松雀鷹",
+    "scientificName": "Tachyspiza virgata",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bkskit1",
+    "chineseName": "黑翅鸢",
+    "englishName": "黑翅鳶",
+    "scientificName": "Elanus caeruleus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "blabaz1",
+    "chineseName": "黑冠鵑隼",
+    "englishName": "黑冠鵑隼",
+    "scientificName": "Aviceda leuphotes",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "blabit1",
+    "chineseName": "黄颈黑鹭",
+    "englishName": "黃頸黑鷺",
+    "scientificName": "Botaurus flavicollis",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "blakit1",
+    "chineseName": "黑鸢",
+    "englishName": "黑鳶",
+    "scientificName": "Milvus migrans",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "blfspo1",
+    "chineseName": "黑面琵鹭",
+    "englishName": "黑面琵鷺",
+    "scientificName": "Platalea minor",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Ibises and Spoonbills",
+      "en": "Ibises and Spoonbills"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "blhibi1",
+    "chineseName": "黑头白䴉",
+    "englishName": "黑頭白䴉",
+    "scientificName": "Threskiornis melanocephalus",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Ibises and Spoonbills",
+      "en": "Ibises and Spoonbills"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "blkswa",
+    "chineseName": "黑天鵝",
+    "englishName": "黑天鵝",
+    "scientificName": "Cygnus atratus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bncrai1",
+    "chineseName": "东亚秧雞",
+    "englishName": "東亞秧雞",
+    "scientificName": "Rallus indicus",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "booeag1",
+    "chineseName": "靴隼鵰",
+    "englishName": "靴隼鵰",
+    "scientificName": "Hieraaetus pennatus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "brant",
+    "chineseName": "黑雁",
+    "englishName": "黑雁",
+    "scientificName": "Branta bernicla",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "categr2",
+    "chineseName": "黄头鹭",
+    "englishName": "黃頭鷺",
+    "scientificName": "Ardea coromanda",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "chiegr",
+    "chineseName": "唐白鹭",
+    "englishName": "唐白鷺",
+    "scientificName": "Egretta eulophotes",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "chpher1",
+    "chineseName": "池鹭",
+    "englishName": "池鷺",
+    "scientificName": "Ardeola bacchus",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "cinbit1",
+    "chineseName": "栗小鹭",
+    "englishName": "栗小鷺",
+    "scientificName": "Botaurus cinnamomeus",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "cinvul1",
+    "chineseName": "禿鹫",
+    "englishName": "禿鷲",
+    "scientificName": "Aegypius monachus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "combuz6",
+    "chineseName": "东方𫛭",
+    "englishName": "東方鵟",
+    "scientificName": "Buteo japonicus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "comcra",
+    "chineseName": "灰鹤",
+    "englishName": "灰鶴",
+    "scientificName": "Grus grus",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Cranes",
+      "en": "Cranes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "comgol",
+    "chineseName": "鹊鸭",
+    "englishName": "鵲鴨",
+    "scientificName": "Bucephala clangula",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "commer",
+    "chineseName": "川秋沙",
+    "englishName": "川秋沙",
+    "scientificName": "Mergus merganser",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "commoo3",
+    "chineseName": "红冠水雞",
+    "englishName": "紅冠水雞",
+    "scientificName": "Gallinula chloropus",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "compoc",
+    "chineseName": "红头潛鸭",
+    "englishName": "紅頭潛鴨",
+    "scientificName": "Aythya ferina",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "comshe",
+    "chineseName": "花凫",
+    "englishName": "花鳧",
+    "scientificName": "Tadorna tadorna",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "copgoo1",
+    "chineseName": "棉鸭",
+    "englishName": "棉鴨",
+    "scientificName": "Nettapus coromandelianus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "cregos1",
+    "chineseName": "凤头蒼鷹",
+    "englishName": "鳳頭蒼鷹",
+    "scientificName": "Lophospiza trivirgata",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "dalpel1",
+    "chineseName": "卷羽鵜鶘",
+    "englishName": "卷羽鵜鶘",
+    "scientificName": "Pelecanus crispus",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Pelicans",
+      "en": "Pelicans"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "demcra1",
+    "chineseName": "簑羽鹤",
+    "englishName": "簑羽鶴",
+    "scientificName": "Grus virgo",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Cranes",
+      "en": "Cranes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "eargre",
+    "chineseName": "黑颈䴙䴘",
+    "englishName": "黑頸鸊鷉",
+    "scientificName": "Podiceps nigricollis",
+    "aliases": [],
+    "order": {
+      "zh": "䴙䴘目",
+      "en": "Podicipediformes"
+    },
+    "family": {
+      "zh": "Grebes",
+      "en": "Grebes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "easmah1",
+    "chineseName": "东方泽𫛭",
+    "englishName": "東方澤鵟",
+    "scientificName": "Circus spilonotus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "eurcoo",
+    "chineseName": "白冠雞",
+    "englishName": "白冠雞",
+    "scientificName": "Fulica atra",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "eurspa1",
+    "chineseName": "北雀鷹",
+    "englishName": "北雀鷹",
+    "scientificName": "Accipiter nisus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "eurspo1",
+    "chineseName": "白琵鹭",
+    "englishName": "白琵鷺",
+    "scientificName": "Platalea leucorodia",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Ibises and Spoonbills",
+      "en": "Ibises and Spoonbills"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "eurwig",
+    "chineseName": "赤颈鸭",
+    "englishName": "赤頸鴨",
+    "scientificName": "Mareca penelope",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "falduc",
+    "chineseName": "罗文鸭",
+    "englishName": "羅文鴨",
+    "scientificName": "Mareca falcata",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "ferduc",
+    "chineseName": "白眼潛鸭",
+    "englishName": "白眼潛鴨",
+    "scientificName": "Aythya nyroca",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gadwal",
+    "chineseName": "赤膀鸭",
+    "englishName": "赤膀鴨",
+    "scientificName": "Mareca strepera",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gargan",
+    "chineseName": "白眉鸭",
+    "englishName": "白眉鴨",
+    "scientificName": "Spatula querquedula",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gnwtea",
+    "chineseName": "小水鸭",
+    "englishName": "小水鴨",
+    "scientificName": "Anas crecca",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "goleag",
+    "chineseName": "金鵰",
+    "englishName": "金鵰",
+    "scientificName": "Aquila chrysaetos",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gragoo",
+    "chineseName": "灰雁",
+    "englishName": "灰雁",
+    "scientificName": "Anser anser",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "graher1",
+    "chineseName": "蒼鹭",
+    "englishName": "蒼鷺",
+    "scientificName": "Ardea cinerea",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "grcgre1",
+    "chineseName": "冠䴙䴘",
+    "englishName": "冠鸊鷉",
+    "scientificName": "Podiceps cristatus",
+    "aliases": [],
+    "order": {
+      "zh": "䴙䴘目",
+      "en": "Podicipediformes"
+    },
+    "family": {
+      "zh": "Grebes",
+      "en": "Grebes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "grebit1",
+    "chineseName": "大麻鹭",
+    "englishName": "大麻鷺",
+    "scientificName": "Botaurus stellaris",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "greegr",
+    "chineseName": "大白鹭",
+    "englishName": "大白鷺",
+    "scientificName": "Ardea alba",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gresca",
+    "chineseName": "斑背潛鸭",
+    "englishName": "斑背潛鴨",
+    "scientificName": "Aythya marila",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "grfhaw1",
+    "chineseName": "赤腹鷹",
+    "englishName": "赤腹鷹",
+    "scientificName": "Tachyspiza soloensis",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "grseag1",
+    "chineseName": "花鵰",
+    "englishName": "花鵰",
+    "scientificName": "Clanga clanga",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gwfgoo",
+    "chineseName": "白額雁",
+    "englishName": "白額雁",
+    "scientificName": "Anser albifrons",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gyfbuz1",
+    "chineseName": "灰面𫛭鷹",
+    "englishName": "灰面鵟鷹",
+    "scientificName": "Butastur indicus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "harduc",
+    "chineseName": "Harlequin Duck",
+    "englishName": "Harlequin Duck",
+    "scientificName": "Histrionicus histrionicus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "himgri1",
+    "chineseName": "Himalayan Griffon",
+    "englishName": "Himalayan Griffon",
+    "scientificName": "Gyps himalayensis",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "hoocra1",
+    "chineseName": "白头鹤",
+    "englishName": "白頭鶴",
+    "scientificName": "Grus monacha",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Cranes",
+      "en": "Cranes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "horgre",
+    "chineseName": "角䴙䴘",
+    "englishName": "角鸊鷉",
+    "scientificName": "Podiceps auritus",
+    "aliases": [],
+    "order": {
+      "zh": "䴙䴘目",
+      "en": "Podicipediformes"
+    },
+    "family": {
+      "zh": "Grebes",
+      "en": "Grebes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "impeag1",
+    "chineseName": "白肩鵰",
+    "englishName": "白肩鵰",
+    "scientificName": "Aquila heliaca",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "integr1",
+    "chineseName": "中白鹭",
+    "englishName": "中白鷺",
+    "scientificName": "Ardea intermedia",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "japspa1",
+    "chineseName": "日本松雀鷹",
+    "englishName": "日本松雀鷹",
+    "scientificName": "Tachyspiza gularis",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "litegr",
+    "chineseName": "小白鹭",
+    "englishName": "小白鷺",
+    "scientificName": "Egretta garzetta",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "litgre1",
+    "chineseName": "小䴙䴘",
+    "englishName": "小鸊鷉",
+    "scientificName": "Tachybaptus ruficollis",
+    "aliases": [],
+    "order": {
+      "zh": "䴙䴘目",
+      "en": "Podicipediformes"
+    },
+    "family": {
+      "zh": "Grebes",
+      "en": "Grebes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lotduc",
+    "chineseName": "长尾鸭",
+    "englishName": "長尾鴨",
+    "scientificName": "Clangula hyemalis",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lwfgoo",
+    "chineseName": "小白額雁",
+    "englishName": "小白額雁",
+    "scientificName": "Anser erythropus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "mallar3",
+    "chineseName": "绿头鸭",
+    "englishName": "綠頭鴨",
+    "scientificName": "Anas platyrhynchos",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "manduc",
+    "chineseName": "鴛鴦",
+    "englishName": "鴛鴦",
+    "scientificName": "Aix galericulata",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "musduc",
+    "chineseName": "疣鼻棲鸭",
+    "englishName": "疣鼻棲鴨",
+    "scientificName": "Cairina moschata",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "mutswa",
+    "chineseName": "疣鼻天鵝",
+    "englishName": "疣鼻天鵝",
+    "scientificName": "Cygnus olor",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "norgos1",
+    "chineseName": "蒼鷹",
+    "englishName": "蒼鷹",
+    "scientificName": "Astur gentilis",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "norhar1",
+    "chineseName": "灰泽𫛭",
+    "englishName": "灰澤鵟",
+    "scientificName": "Circus cyaneus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "norpin",
+    "chineseName": "尖尾鸭",
+    "englishName": "尖尾鴨",
+    "scientificName": "Anas acuta",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "norsho",
+    "chineseName": "琵嘴鸭",
+    "englishName": "琵嘴鴨",
+    "scientificName": "Spatula clypeata",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "orihob2",
+    "chineseName": "东方蜂鷹",
+    "englishName": "東方蜂鷹",
+    "scientificName": "Pernis ptilorhynchus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "osprey",
+    "chineseName": "鱼鷹",
+    "englishName": "魚鷹",
+    "scientificName": "Pandion haliaetus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Osprey",
+      "en": "Osprey"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "piehar1",
+    "chineseName": "花泽𫛭",
+    "englishName": "花澤鵟",
+    "scientificName": "Circus melanoleucos",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "purher1",
+    "chineseName": "紫鹭",
+    "englishName": "紫鷺",
+    "scientificName": "Ardea purpurea",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "rebgoo1",
+    "chineseName": "Red-breasted Goose",
+    "englishName": "Red-breasted Goose",
+    "scientificName": "Branta ruficollis",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "rebmer",
+    "chineseName": "红胸秋沙",
+    "englishName": "紅胸秋沙",
+    "scientificName": "Mergus serrator",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "reccra1",
+    "chineseName": "丹頂鹤",
+    "englishName": "丹頂鶴",
+    "scientificName": "Grus japonensis",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Cranes",
+      "en": "Cranes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "recpoc",
+    "chineseName": "赤嘴潛鸭",
+    "englishName": "赤嘴潛鴨",
+    "scientificName": "Netta rufina",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "rengre",
+    "chineseName": "赤颈䴙䴘",
+    "englishName": "赤頸鸊鷉",
+    "scientificName": "Podiceps grisegena",
+    "aliases": [],
+    "order": {
+      "zh": "䴙䴘目",
+      "en": "Podicipediformes"
+    },
+    "family": {
+      "zh": "Grebes",
+      "en": "Grebes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "rolhaw",
+    "chineseName": "毛足𫛭",
+    "englishName": "毛足鵟",
+    "scientificName": "Buteo lagopus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "rubcra1",
+    "chineseName": "緋秧雞",
+    "englishName": "緋秧雞",
+    "scientificName": "Zapornia fusca",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "rudshe",
+    "chineseName": "瀆凫",
+    "englishName": "瀆鳧",
+    "scientificName": "Tadorna ferruginea",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "sancra",
+    "chineseName": "沙丘鹤",
+    "englishName": "沙丘鶴",
+    "scientificName": "Antigone canadensis",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Cranes",
+      "en": "Cranes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "schbit1",
+    "chineseName": "秋小鹭",
+    "englishName": "秋小鷺",
+    "scientificName": "Botaurus eurhythmus",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "shteag1",
+    "chineseName": "Short-toed Snake-Eagle",
+    "englishName": "Short-toed Snake-Eagle",
+    "scientificName": "Circaetus gallicus",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "sibcra1",
+    "chineseName": "白鹤",
+    "englishName": "白鶴",
+    "scientificName": "Leucogeranus leucogeranus",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Cranes",
+      "en": "Cranes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "smew",
+    "chineseName": "白秋沙",
+    "englishName": "白秋沙",
+    "scientificName": "Mergellus albellus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "spbduc",
+    "chineseName": "花嘴鸭",
+    "englishName": "花嘴鴨",
+    "scientificName": "Anas zonorhyncha",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "steeag1",
+    "chineseName": "Steppe Eagle",
+    "englishName": "Steppe Eagle",
+    "scientificName": "Aquila nipalensis",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "strher1",
+    "chineseName": "绿簑鹭",
+    "englishName": "綠簑鷺",
+    "scientificName": "Butorides atricapilla",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "swagoo1",
+    "chineseName": "鴻雁",
+    "englishName": "鴻雁",
+    "scientificName": "Anser cygnoides",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "swirai1",
+    "chineseName": "Swinhoe's Rail",
+    "englishName": "Swinhoe's Rail",
+    "scientificName": "Coturnicops exquisitus",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "taibeg1",
+    "chineseName": "寒林豆雁",
+    "englishName": "寒林豆雁",
+    "scientificName": "Anser fabalis",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "tufduc",
+    "chineseName": "凤头潛鸭",
+    "englishName": "鳳頭潛鴨",
+    "scientificName": "Aythya fuligula",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "tunbeg1",
+    "chineseName": "凍原豆雁",
+    "englishName": "凍原豆雁",
+    "scientificName": "Anser serrirostris",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "tunswa",
+    "chineseName": "小天鵝",
+    "englishName": "小天鵝",
+    "scientificName": "Cygnus columbianus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "uplbuz1",
+    "chineseName": "大𫛭",
+    "englishName": "大鵟",
+    "scientificName": "Buteo hemilasius",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "waterc1",
+    "chineseName": "董雞",
+    "englishName": "董雞",
+    "scientificName": "Gallicrex cinerea",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "watrai1",
+    "chineseName": "西方秧雞",
+    "englishName": "西方秧雞",
+    "scientificName": "Rallus aquaticus",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whbwat1",
+    "chineseName": "白腹秧雞",
+    "englishName": "白腹秧雞",
+    "scientificName": "Amaurornis phoenicurus",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whncra1",
+    "chineseName": "白枕鹤",
+    "englishName": "白枕鶴",
+    "scientificName": "Antigone vipio",
+    "aliases": [],
+    "order": {
+      "zh": "鹤形目",
+      "en": "Gruiformes"
+    },
+    "family": {
+      "zh": "Cranes",
+      "en": "Cranes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whoswa",
+    "chineseName": "黄嘴天鵝",
+    "englishName": "黃嘴天鵝",
+    "scientificName": "Cygnus cygnus",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whteag",
+    "chineseName": "白尾海鵰",
+    "englishName": "白尾海鵰",
+    "scientificName": "Haliaeetus albicilla",
+    "aliases": [],
+    "order": {
+      "zh": "鹰形目",
+      "en": "Accipitriformes"
+    },
+    "family": {
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whwsco1",
+    "chineseName": "Stejneger's Scoter",
+    "englishName": "Stejneger's Scoter",
+    "scientificName": "Melanitta stejnegeri",
+    "aliases": [],
+    "order": {
+      "zh": "雁形目",
+      "en": "Anseriformes"
+    },
+    "family": {
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "yelbit",
+    "chineseName": "黄小鹭",
+    "englishName": "黃小鷺",
+    "scientificName": "Botaurus sinensis",
+    "aliases": [],
+    "order": {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes"
+    },
+    "family": {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
   }
 ]

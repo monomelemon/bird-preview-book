@@ -3,19 +3,44 @@
   "version": "v1-demo-2026-05-07",
   "orders": [
     {
+      "zh": "䴙䴘目",
+      "en": "䴙䴘目",
+      "sortOrder": 10
+    },
+    {
       "zh": "佛法僧目",
       "en": "佛法僧目",
-      "sortOrder": 10
+      "sortOrder": 20
     },
     {
       "zh": "雀形目",
       "en": "雀形目",
-      "sortOrder": 20
+      "sortOrder": 30
+    },
+    {
+      "zh": "雁形目",
+      "en": "雁形目",
+      "sortOrder": 40
     },
     {
       "zh": "鸻形目",
       "en": "鸻形目",
-      "sortOrder": 30
+      "sortOrder": 50
+    },
+    {
+      "zh": "鹈形目",
+      "en": "鹈形目",
+      "sortOrder": 60
+    },
+    {
+      "zh": "鹤形目",
+      "en": "鹤形目",
+      "sortOrder": 70
+    },
+    {
+      "zh": "鹰形目",
+      "en": "鹰形目",
+      "sortOrder": 80
     }
   ],
   "families": [

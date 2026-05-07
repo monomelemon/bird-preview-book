@@ -2557,5 +2557,3275 @@
     ],
     "reliability": "high",
     "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_babcra1_hebei_prov",
+    "birdId": "babcra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_baepoc1_hebei_prov",
+    "birdId": "baepoc1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_bahgoo_hebei_prov",
+    "birdId": "bahgoo",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_baicra1_hebei_prov",
+    "birdId": "baicra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_baitea_hebei_prov",
+    "birdId": "baitea",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_bcnher_hebei_prov",
+    "birdId": "bcnher",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_besra1_hebei_prov",
+    "birdId": "besra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_bkskit1_hebei_prov",
+    "birdId": "bkskit1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_blabaz1_hebei_prov",
+    "birdId": "blabaz1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_blabit1_hebei_prov",
+    "birdId": "blabit1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_blakit1_hebei_prov",
+    "birdId": "blakit1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_blfspo1_hebei_prov",
+    "birdId": "blfspo1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_blhibi1_hebei_prov",
+    "birdId": "blhibi1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_blkswa_hebei_prov",
+    "birdId": "blkswa",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_bncrai1_hebei_prov",
+    "birdId": "bncrai1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_booeag1_hebei_prov",
+    "birdId": "booeag1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_brant_hebei_prov",
+    "birdId": "brant",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_categr2_hebei_prov",
+    "birdId": "categr2",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_chiegr_hebei_prov",
+    "birdId": "chiegr",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_chpher1_hebei_prov",
+    "birdId": "chpher1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_cinbit1_hebei_prov",
+    "birdId": "cinbit1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_cinvul1_hebei_prov",
+    "birdId": "cinvul1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_combuz6_hebei_prov",
+    "birdId": "combuz6",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_comcra_hebei_prov",
+    "birdId": "comcra",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_comgol_hebei_prov",
+    "birdId": "comgol",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_commer_hebei_prov",
+    "birdId": "commer",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_commoo3_hebei_prov",
+    "birdId": "commoo3",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_compoc_hebei_prov",
+    "birdId": "compoc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_comshe_hebei_prov",
+    "birdId": "comshe",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_copgoo1_hebei_prov",
+    "birdId": "copgoo1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_cregos1_hebei_prov",
+    "birdId": "cregos1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_dalpel1_hebei_prov",
+    "birdId": "dalpel1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_demcra1_hebei_prov",
+    "birdId": "demcra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_eargre_hebei_prov",
+    "birdId": "eargre",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_easmah1_hebei_prov",
+    "birdId": "easmah1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_eurcoo_hebei_prov",
+    "birdId": "eurcoo",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_eurspa1_hebei_prov",
+    "birdId": "eurspa1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_eurspo1_hebei_prov",
+    "birdId": "eurspo1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_eurwig_hebei_prov",
+    "birdId": "eurwig",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_falduc_hebei_prov",
+    "birdId": "falduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_ferduc_hebei_prov",
+    "birdId": "ferduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_gadwal_hebei_prov",
+    "birdId": "gadwal",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_gargan_hebei_prov",
+    "birdId": "gargan",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_gnwtea_hebei_prov",
+    "birdId": "gnwtea",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_goleag_hebei_prov",
+    "birdId": "goleag",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_gragoo_hebei_prov",
+    "birdId": "gragoo",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_graher1_hebei_prov",
+    "birdId": "graher1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_grcgre1_hebei_prov",
+    "birdId": "grcgre1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_grebit1_hebei_prov",
+    "birdId": "grebit1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_greegr_hebei_prov",
+    "birdId": "greegr",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_gresca_hebei_prov",
+    "birdId": "gresca",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_grfhaw1_hebei_prov",
+    "birdId": "grfhaw1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_grseag1_hebei_prov",
+    "birdId": "grseag1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_gwfgoo_hebei_prov",
+    "birdId": "gwfgoo",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_gyfbuz1_hebei_prov",
+    "birdId": "gyfbuz1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_harduc_hebei_prov",
+    "birdId": "harduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_himgri1_hebei_prov",
+    "birdId": "himgri1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_hoocra1_hebei_prov",
+    "birdId": "hoocra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_horgre_hebei_prov",
+    "birdId": "horgre",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_impeag1_hebei_prov",
+    "birdId": "impeag1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_integr1_hebei_prov",
+    "birdId": "integr1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_japspa1_hebei_prov",
+    "birdId": "japspa1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_litegr_hebei_prov",
+    "birdId": "litegr",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_litgre1_hebei_prov",
+    "birdId": "litgre1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_lotduc_hebei_prov",
+    "birdId": "lotduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_lwfgoo_hebei_prov",
+    "birdId": "lwfgoo",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_mallar3_hebei_prov",
+    "birdId": "mallar3",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_manduc_hebei_prov",
+    "birdId": "manduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_musduc_hebei_prov",
+    "birdId": "musduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_mutswa_hebei_prov",
+    "birdId": "mutswa",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_norgos1_hebei_prov",
+    "birdId": "norgos1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_norhar1_hebei_prov",
+    "birdId": "norhar1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_norpin_hebei_prov",
+    "birdId": "norpin",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_norsho_hebei_prov",
+    "birdId": "norsho",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_orihob2_hebei_prov",
+    "birdId": "orihob2",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_osprey_hebei_prov",
+    "birdId": "osprey",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_piehar1_hebei_prov",
+    "birdId": "piehar1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_purher1_hebei_prov",
+    "birdId": "purher1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_rebgoo1_hebei_prov",
+    "birdId": "rebgoo1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_rebmer_hebei_prov",
+    "birdId": "rebmer",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_reccra1_hebei_prov",
+    "birdId": "reccra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_recpoc_hebei_prov",
+    "birdId": "recpoc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_rengre_hebei_prov",
+    "birdId": "rengre",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_rolhaw_hebei_prov",
+    "birdId": "rolhaw",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_rubcra1_hebei_prov",
+    "birdId": "rubcra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_rudshe_hebei_prov",
+    "birdId": "rudshe",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_sancra_hebei_prov",
+    "birdId": "sancra",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_schbit1_hebei_prov",
+    "birdId": "schbit1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_shteag1_hebei_prov",
+    "birdId": "shteag1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_sibcra1_hebei_prov",
+    "birdId": "sibcra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_smew_hebei_prov",
+    "birdId": "smew",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_spbduc_hebei_prov",
+    "birdId": "spbduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_steeag1_hebei_prov",
+    "birdId": "steeag1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_strher1_hebei_prov",
+    "birdId": "strher1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_swagoo1_hebei_prov",
+    "birdId": "swagoo1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_swirai1_hebei_prov",
+    "birdId": "swirai1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_taibeg1_hebei_prov",
+    "birdId": "taibeg1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tufduc_hebei_prov",
+    "birdId": "tufduc",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tunbeg1_hebei_prov",
+    "birdId": "tunbeg1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_tunswa_hebei_prov",
+    "birdId": "tunswa",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_uplbuz1_hebei_prov",
+    "birdId": "uplbuz1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_waterc1_hebei_prov",
+    "birdId": "waterc1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_watrai1_hebei_prov",
+    "birdId": "watrai1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_whbwat1_hebei_prov",
+    "birdId": "whbwat1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_whncra1_hebei_prov",
+    "birdId": "whncra1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_whoswa_hebei_prov",
+    "birdId": "whoswa",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_whteag_hebei_prov",
+    "birdId": "whteag",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_whwsco1_hebei_prov",
+    "birdId": "whwsco1",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "recordId": "occ_yelbit_hebei_prov",
+    "birdId": "yelbit",
+    "locationCode": "130000",
+    "locationName": "河北省",
+    "locationLevel": "province",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "presence": "confirmed",
+    "abundance": "uncommon",
+    "probabilityScore": 0.3,
+    "habitats": [],
+    "sourceRefs": [
+      "eBird CN-13 Hebei checklist"
+    ],
+    "reliability": "high",
+    "updatedAt": "2026-05-07"
   }
 ]
