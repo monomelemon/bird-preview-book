@@ -312,3 +312,33 @@ select option:disabled {
 #locInput { width: 100%; }
 
 #locSuggest:empty { display: none; }
+
+.swipe-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.swipe-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  background: var(--danger);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.swipe-card {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  transition: transform 0.2s ease;
+  touch-action: pan-y;
+}

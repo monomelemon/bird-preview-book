@@ -9,7 +9,7 @@ const DATA_FILES = {
   similar: "data/similar.json"
 };
 
-const DATA_CACHE_VERSION = "v1-tangshan-2026-05-07p4";
+const DATA_CACHE_VERSION = "v1-tangshan-2026-05-07p5";
 
 const STORAGE_KEYS = {
   lists: "birdPreviewBook:lists",
@@ -226,23 +226,64 @@ function renderHome() {
     </div>
     <h2 class="section-title">最近清单</h2>
     ${lists.length ? lists.map(list => `
-      <div class="card list-card" style="position:relative;">
-        <div onclick="navigate('book?id=${esc(list.listId)}')" style="flex:1;">
-          <strong>${esc(list.title)}</strong>
-          <div class="muted small">${esc(formatMonths(list.months))} · ${list.birdIds.length} 种</div>
+      <div class="swipe-container">
+        <div class="swipe-delete" onclick="deleteRecentList(event, '${esc(list.listId)}')">🗑</div>
+        <div class="card list-card swipe-card" data-listid="${esc(list.listId)}">
+          <div onclick="navigate('book?id=${esc(list.listId)}')" style="flex:1;">
+            <strong>${esc(list.title)}</strong>
+            <div class="muted small">${esc(formatMonths(list.months))} · ${list.birdIds.length} 种</div>
+          </div>
         </div>
-        <button class="ghost danger" style="position:absolute;top:8px;right:8px;" onclick="deleteRecentList(event, '${esc(list.listId)}')">×</button>
       </div>
     `).join("") : `<div class="card muted">还没有本地清单</div>`}
   `;
+  setupSwipeCards();
 }
 
 function deleteRecentList(event, listId) {
   event.stopPropagation();
-  if (confirm("确定删除这个清单？\n已观察和笔记也会一并删除。")) {
+  if (confirm("确定删除这个清单？已观察和笔记也会一并删除。")) {
     StorageService.deleteList(listId);
     render();
+  } else {
+    resetAllSwipes();
   }
+}
+
+function resetAllSwipes() {
+  document.querySelectorAll(".swipe-card").forEach(el => el.style.transform = "translateX(0)");
+}
+
+function setupSwipeCards() {
+  document.querySelectorAll(".swipe-container").forEach(container => {
+    const card = container.querySelector(".swipe-card");
+    let startX = 0, moved = false;
+
+    function reset() { card.style.transform = "translateX(0)"; }
+
+    card.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+      moved = false;
+      resetAllSwipes();
+    }, { passive: true });
+
+    card.addEventListener("touchmove", e => {
+      const dx = e.touches[0].clientX - startX;
+      if (dx < 0) { card.style.transform = `translateX(${Math.max(dx, -80)}px)`; moved = true; }
+    }, { passive: true });
+
+    card.addEventListener("touchend", () => {
+      if (!moved) return;
+      const currentX = parseInt(card.style.transform.replace(/[^-\d]/g, "")) || 0;
+      if (currentX < -40) card.style.transform = "translateX(-80px)";
+      else reset();
+    });
+
+    card.addEventListener("click", e => {
+      const currentX = parseInt(card.style.transform.replace(/[^-\d]/g, "")) || 0;
+      if (currentX < -40) { e.stopPropagation(); e.preventDefault(); resetAllSwipes(); }
+    });
+  });
 }
 
 let _locationMatch = null;
