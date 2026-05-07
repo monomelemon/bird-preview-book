@@ -2,13 +2,23 @@
   {
     "birdId": "urocissa_erythroryncha",
     "chineseName": "红嘴蓝鹊",
-    "englishName": "Red-billed Blue Magpie",
+    "englishName": "Red-billed Blue-Magpie",
     "scientificName": "Urocissa erythroryncha",
     "aliases": [],
-    "order": { "zh": "雀形目", "en": "Passeriformes" },
-    "family": { "zh": "鸦科", "en": "Corvidae" },
+    "order": {
+      "zh": "雀形目",
+      "en": "Passeriformes"
+    },
+    "family": {
+      "zh": "Crows, Jays, and Magpies",
+      "en": "Crows, Jays, and Magpies"
+    },
     "dataLevel": "B",
-    "sourceRefs": ["IOC World Bird List", "eBird"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -16,11 +26,23 @@
     "chineseName": "白头鹎",
     "englishName": "Light-vented Bulbul",
     "scientificName": "Pycnonotus sinensis",
-    "aliases": ["白头翁"],
-    "order": { "zh": "雀形目", "en": "Passeriformes" },
-    "family": { "zh": "鹎科", "en": "Pycnonotidae" },
+    "aliases": [
+      "白头翁"
+    ],
+    "order": {
+      "zh": "雀形目",
+      "en": "Passeriformes"
+    },
+    "family": {
+      "zh": "Bulbuls",
+      "en": "Bulbuls"
+    },
     "dataLevel": "B",
-    "sourceRefs": ["IOC World Bird List", "eBird"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -28,11 +50,23 @@
     "chineseName": "普通翠鸟",
     "englishName": "Common Kingfisher",
     "scientificName": "Alcedo atthis",
-    "aliases": ["翠鸟"],
-    "order": { "zh": "佛法僧目", "en": "Coraciiformes" },
-    "family": { "zh": "翠鸟科", "en": "Alcedinidae" },
+    "aliases": [
+      "翠鸟"
+    ],
+    "order": {
+      "zh": "佛法僧目",
+      "en": "Coraciiformes"
+    },
+    "family": {
+      "zh": "Kingfishers",
+      "en": "Kingfishers"
+    },
     "dataLevel": "B",
-    "sourceRefs": ["IOC World Bird List", "eBird"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -40,11 +74,23 @@
     "chineseName": "黑翅长脚鹬",
     "englishName": "Black-winged Stilt",
     "scientificName": "Himantopus himantopus",
-    "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "反嘴鹬科", "en": "Recurvirostridae" },
+    "aliases": [
+      "高蹺鸻"
+    ],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Stilts and Avocets",
+      "en": "Stilts and Avocets"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -52,47 +98,91 @@
     "chineseName": "反嘴鹬",
     "englishName": "Pied Avocet",
     "scientificName": "Recurvirostra avosetta",
-    "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "反嘴鹬科", "en": "Recurvirostridae" },
+    "aliases": [
+      "反嘴鸻"
+    ],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Stilts and Avocets",
+      "en": "Stilts and Avocets"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
     "birdId": "charadrius_dubius",
     "chineseName": "金眶鸻",
     "englishName": "Little Ringed Plover",
-    "scientificName": "Charadrius dubius",
+    "scientificName": "Thinornis dubius",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鸻科", "en": "Charadriidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
     "birdId": "charadrius_alexandrinus",
     "chineseName": "环颈鸻",
     "englishName": "Kentish Plover",
-    "scientificName": "Charadrius alexandrinus",
+    "scientificName": "Anarhynchus alexandrinus",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鸻科", "en": "Charadriidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
     "birdId": "pluvialis_squatarola",
     "chineseName": "灰斑鸻",
-    "englishName": "Grey Plover",
+    "englishName": "Black-bellied Plover",
     "scientificName": "Pluvialis squatarola",
-    "aliases": ["灰斑鴴"],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鸻科", "en": "Charadriidae" },
+    "aliases": [
+      "灰斑鴴"
+    ],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -101,10 +191,20 @@
     "englishName": "Northern Lapwing",
     "scientificName": "Vanellus vanellus",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鸻科", "en": "Charadriidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -113,10 +213,20 @@
     "englishName": "Common Sandpiper",
     "scientificName": "Actitis hypoleucos",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -125,10 +235,20 @@
     "englishName": "Common Redshank",
     "scientificName": "Tringa totanus",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -137,10 +257,20 @@
     "englishName": "Common Greenshank",
     "scientificName": "Tringa nebularia",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -149,10 +279,20 @@
     "englishName": "Eurasian Curlew",
     "scientificName": "Numenius arquata",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "eBird",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -161,10 +301,20 @@
     "englishName": "Pacific Golden-Plover",
     "scientificName": "Pluvialis fulva",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鸻科", "en": "Charadriidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -173,10 +323,19 @@
     "englishName": "Lesser Sand Plover",
     "scientificName": "Charadrius mongolus",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鸻科", "en": "Charadriidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "鸻科",
+      "en": "Charadriidae"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -185,10 +344,20 @@
     "englishName": "Bar-tailed Godwit",
     "scientificName": "Limosa lapponica",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -197,10 +366,20 @@
     "englishName": "Black-tailed Godwit",
     "scientificName": "Limosa limosa",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -209,10 +388,20 @@
     "englishName": "Far Eastern Curlew",
     "scientificName": "Numenius madagascariensis",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -221,10 +410,20 @@
     "englishName": "Great Knot",
     "scientificName": "Calidris tenuirostris",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -233,10 +432,20 @@
     "englishName": "Red Knot",
     "scientificName": "Calidris canutus",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -245,10 +454,20 @@
     "englishName": "Sharp-tailed Sandpiper",
     "scientificName": "Calidris acuminata",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -257,10 +476,20 @@
     "englishName": "Red-necked Stint",
     "scientificName": "Calidris ruficollis",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -269,10 +498,20 @@
     "englishName": "Marsh Sandpiper",
     "scientificName": "Tringa stagnatilis",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -281,10 +520,20 @@
     "englishName": "Wood Sandpiper",
     "scientificName": "Tringa glareola",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -293,10 +542,20 @@
     "englishName": "Spotted Redshank",
     "scientificName": "Tringa erythropus",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
@@ -305,22 +564,1386 @@
     "englishName": "Terek Sandpiper",
     "scientificName": "Xenus cinereus",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
     "updatedAt": "2026-05-07"
   },
   {
     "birdId": "tringa_brevipes",
     "chineseName": "灰尾漂鹬",
-    "englishName": "Grey-tailed Tattler",
+    "englishName": "Gray-tailed Tattler",
     "scientificName": "Tringa brevipes",
     "aliases": [],
-    "order": { "zh": "鸻形目", "en": "Charadriiformes" },
-    "family": { "zh": "鹬科", "en": "Scolopacidae" },
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
     "dataLevel": "C",
-    "sourceRefs": ["IOC World Bird List", "Avibase Hebei checklist"],
+    "sourceRefs": [
+      "IOC World Bird List",
+      "Avibase Hebei checklist",
+      "eBird API v2 taxonomy"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "spbsan1",
+    "chineseName": "琵嘴鹬",
+    "englishName": "琵嘴鷸",
+    "scientificName": "Calidris pygmaea",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "fragul",
+    "chineseName": "弗氏鸥",
+    "englishName": "弗氏鷗",
+    "scientificName": "Leucophaeus pipixcan",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "litcur",
+    "chineseName": "小杓鹬",
+    "englishName": "小杓鷸",
+    "scientificName": "Numenius minutus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "dunlin",
+    "chineseName": "黑腹滨鹬",
+    "englishName": "黑腹濱鷸",
+    "scientificName": "Calidris alpina",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bnhgul1",
+    "chineseName": "棕头鸥",
+    "englishName": "棕頭鷗",
+    "scientificName": "Chroicocephalus brunnicephalus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "grpsni1",
+    "chineseName": "彩鹬",
+    "englishName": "彩鷸",
+    "scientificName": "Rostratula benghalensis",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Painted-Snipes",
+      "en": "Painted-Snipes"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "solsni1",
+    "chineseName": "孤田鹬",
+    "englishName": "孤田鷸",
+    "scientificName": "Gallinago solitaria",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "rudtur",
+    "chineseName": "翻石鹬",
+    "englishName": "翻石鷸",
+    "scientificName": "Arenaria interpres",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bktgul",
+    "chineseName": "黑尾鸥",
+    "englishName": "黑尾鷗",
+    "scientificName": "Larus crassirostris",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "asidow1",
+    "chineseName": "半蹼鹬",
+    "englishName": "半蹼鷸",
+    "scientificName": "Limnodromus semipalmatus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "pitsni",
+    "chineseName": "针尾鹬",
+    "englishName": "針尾鷸",
+    "scientificName": "Gallinago stenura",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lessap2",
+    "chineseName": "蒙古鸻",
+    "englishName": "蒙古鴴",
+    "scientificName": "Anarhynchus mongolus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whwter",
+    "chineseName": "白翅黑燕鸥",
+    "englishName": "白翅黑燕鷗",
+    "scientificName": "Chlidonias leucopterus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lobmur",
+    "chineseName": "Long-billed Murrelet",
+    "englishName": "Long-billed Murrelet",
+    "scientificName": "Brachyramphus perdix",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Auks, Murres, and Puffins",
+      "en": "Auks, Murres, and Puffins"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "glagul",
+    "chineseName": "北極鸥",
+    "englishName": "北極鷗",
+    "scientificName": "Larus hyperboreus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "ibisbi1",
+    "chineseName": "Ibisbill",
+    "englishName": "Ibisbill",
+    "scientificName": "Ibidorhyncha struthersii",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Ibisbill",
+      "en": "Ibisbill"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "pecsan",
+    "chineseName": "美洲尖尾滨鹬",
+    "englishName": "美洲尖尾濱鷸",
+    "scientificName": "Calidris melanotos",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gyhlap1",
+    "chineseName": "跳鸻",
+    "englishName": "跳鴴",
+    "scientificName": "Vanellus cinereus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lecter2",
+    "chineseName": "小凤头燕鸥",
+    "englishName": "小鳳頭燕鷗",
+    "scientificName": "Thalasseus bengalensis",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bklkit",
+    "chineseName": "三趾鸥",
+    "englishName": "三趾鷗",
+    "scientificName": "Rissa tridactyla",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "litgul",
+    "chineseName": "小鸥",
+    "englishName": "小鷗",
+    "scientificName": "Hydrocoloeus minutus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lobdow",
+    "chineseName": "长嘴半蹼鹬",
+    "englishName": "長嘴半蹼鷸",
+    "scientificName": "Limnodromus scolopaceus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "oripra",
+    "chineseName": "燕鸻",
+    "englishName": "燕鴴",
+    "scientificName": "Glareola maldivarum",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Pratincoles and Coursers",
+      "en": "Pratincoles and Coursers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whimbr5",
+    "chineseName": "中杓鹬",
+    "englishName": "中杓鷸",
+    "scientificName": "Numenius phaeopus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "corplo",
+    "chineseName": "环颈鸻",
+    "englishName": "環頸鴴",
+    "scientificName": "Charadrius hiaticula",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "ancmur",
+    "chineseName": "扁嘴海雀",
+    "englishName": "扁嘴海雀",
+    "scientificName": "Synthliboramphus antiquus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Auks, Murres, and Puffins",
+      "en": "Auks, Murres, and Puffins"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "slbgul",
+    "chineseName": "灰背鸥",
+    "englishName": "灰背鷗",
+    "scientificName": "Larus schistisagus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "yelbut1",
+    "chineseName": "黄脚三趾鹌",
+    "englishName": "黃腳三趾鶉",
+    "scientificName": "Turnix tanki",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Buttonquail",
+      "en": "Buttonquail"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "norgre1",
+    "chineseName": "諾氏鹬",
+    "englishName": "諾氏鷸",
+    "scientificName": "Tringa guttifer",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "phtjac1",
+    "chineseName": "水雉",
+    "englishName": "水雉",
+    "scientificName": "Hydrophasianus chirurgus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Jacanas",
+      "en": "Jacanas"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "caster1",
+    "chineseName": "裏海燕鸥",
+    "englishName": "裏海燕鷗",
+    "scientificName": "Hydroprogne caspia",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "cursan",
+    "chineseName": "弯嘴滨鹬",
+    "englishName": "彎嘴濱鷸",
+    "scientificName": "Calidris ferruginea",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "swisni1",
+    "chineseName": "中地鹬",
+    "englishName": "中地鷸",
+    "scientificName": "Gallinago megala",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "brbsan",
+    "chineseName": "寬嘴鹬",
+    "englishName": "寬嘴鷸",
+    "scientificName": "Calidris falcinellus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "grsplo",
+    "chineseName": "铁嘴鸻",
+    "englishName": "鐵嘴鴴",
+    "scientificName": "Anarhynchus leschenaultii",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "eurwoo",
+    "chineseName": "山鹬",
+    "englishName": "山鷸",
+    "scientificName": "Scolopax rusticola",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lotsti",
+    "chineseName": "长趾滨鹬",
+    "englishName": "長趾濱鷸",
+    "scientificName": "Calidris subminuta",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "temsti",
+    "chineseName": "丹氏滨鹬",
+    "englishName": "丹氏濱鷸",
+    "scientificName": "Calidris temminckii",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lbbgul",
+    "chineseName": "小黑背鸥",
+    "englishName": "小黑背鷗",
+    "scientificName": "Larus fuscus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "sooter1",
+    "chineseName": "烏领燕鸥",
+    "englishName": "烏領燕鷗",
+    "scientificName": "Onychoprion fuscatus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lotjae",
+    "chineseName": "长尾賊鸥",
+    "englishName": "長尾賊鷗",
+    "scientificName": "Stercorarius longicaudus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Skuas and Jaegers",
+      "en": "Skuas and Jaegers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "euroys1",
+    "chineseName": "蠣鸻",
+    "englishName": "蠣鴴",
+    "scientificName": "Haematopus ostralegus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Oystercatchers",
+      "en": "Oystercatchers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "slbgul1",
+    "chineseName": "細嘴鸥",
+    "englishName": "細嘴鷗",
+    "scientificName": "Chroicocephalus genei",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "bkhgul",
+    "chineseName": "红嘴鸥",
+    "englishName": "紅嘴鷗",
+    "scientificName": "Chroicocephalus ridibundus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "litsti",
+    "chineseName": "小滨鹬",
+    "englishName": "小濱鷸",
+    "scientificName": "Calidris minuta",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "casgul4",
+    "chineseName": "蒙古银鸥",
+    "englishName": "蒙古銀鷗",
+    "scientificName": "Larus mongolicus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "whiter2",
+    "chineseName": "黑腹燕鸥",
+    "englishName": "黑腹燕鷗",
+    "scientificName": "Chlidonias hybrida",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "renpha",
+    "chineseName": "红领瓣足鹬",
+    "englishName": "紅領瓣足鷸",
+    "scientificName": "Phalaropus lobatus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "lobplo1",
+    "chineseName": "劍鸻",
+    "englishName": "劍鴴",
+    "scientificName": "Thinornis placidus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "grnsan",
+    "chineseName": "白腰草鹬",
+    "englishName": "白腰草鷸",
+    "scientificName": "Tringa ochropus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "oriplo1",
+    "chineseName": "東方红胸鸻",
+    "englishName": "東方紅胸鴴",
+    "scientificName": "Anarhynchus veredus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "jacsni",
+    "chineseName": "小鹬",
+    "englishName": "小鷸",
+    "scientificName": "Lymnocryptes minimus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "comsni",
+    "chineseName": "田鹬",
+    "englishName": "田鷸",
+    "scientificName": "Gallinago gallinago",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "saugul2",
+    "chineseName": "黑嘴鸥",
+    "englishName": "黑嘴鷗",
+    "scientificName": "Saundersilarus saundersi",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gbhgul2",
+    "chineseName": "漁鸥",
+    "englishName": "漁鷗",
+    "scientificName": "Ichthyaetus ichthyaetus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "mewgul",
+    "chineseName": "歐亞海鸥",
+    "englishName": "歐亞海鷗",
+    "scientificName": "Larus canus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "veggul1",
+    "chineseName": "西伯利亞银鸥",
+    "englishName": "西伯利亞銀鷗",
+    "scientificName": "Larus vegae",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "pomjae",
+    "chineseName": "中賊鸥",
+    "englishName": "中賊鷗",
+    "scientificName": "Stercorarius pomarinus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Skuas and Jaegers",
+      "en": "Skuas and Jaegers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "gubter2",
+    "chineseName": "鸥嘴燕鸥",
+    "englishName": "鷗嘴燕鷗",
+    "scientificName": "Gelochelidon nilotica",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "litter1",
+    "chineseName": "小燕鸥",
+    "englishName": "小燕鷗",
+    "scientificName": "Sternula albifrons",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "comter",
+    "chineseName": "燕鸥",
+    "englishName": "燕鷗",
+    "scientificName": "Sterna hirundo",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "sander",
+    "chineseName": "三趾滨鹬",
+    "englishName": "三趾濱鷸",
+    "scientificName": "Calidris alba",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "relgul2",
+    "chineseName": "遺鸥",
+    "englishName": "遺鷗",
+    "scientificName": "Ichthyaetus relictus",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
+    "updatedAt": "2026-05-07"
+  },
+  {
+    "birdId": "ruff",
+    "chineseName": "流蘇鹬",
+    "englishName": "流蘇鷸",
+    "scientificName": "Calidris pugnax",
+    "aliases": [],
+    "order": {
+      "zh": "鸻形目",
+      "en": "Charadriiformes"
+    },
+    "family": {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies"
+    },
+    "dataLevel": "C",
+    "sourceRefs": [
+      "eBird API v2 taxonomy",
+      "eBird CN-13 Hebei checklist"
+    ],
     "updatedAt": "2026-05-07"
   }
 ]

@@ -1,7 +1,10 @@
 {
   "appName": "观鸟预习本",
-  "dataVersion": "v1-tangshan-2026-05-07",
+  "dataVersion": "v1-ebird-2026-05-07",
   "taxonomySystem": "IOC / eBird-Clements 待统一",
   "updatedAt": "2026-05-07",
-  "sourcePolicy": "所有鸟类资料必须来自可靠来源；缺失时显示暂无可靠数据。"
+  "sourcePolicy": "所有鸟类资料必须来自可靠来源；缺失时显示暂无可靠数据。",
+  "sources": [
+    "eBird API v2 (taxonomy, CN-13 Hebei checklist)"
+  ]
 }

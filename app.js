@@ -9,7 +9,7 @@ const DATA_FILES = {
   similar: "data/similar.json"
 };
 
-const DATA_CACHE_VERSION = "v1-tangshan-2026-05-07p6";
+const DATA_CACHE_VERSION = "v1-ebird-2026-05-07";
 
 const STORAGE_KEYS = {
   lists: "birdPreviewBook:lists",
