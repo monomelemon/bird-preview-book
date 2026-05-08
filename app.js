@@ -173,9 +173,17 @@ const StorageService = {
     return Array.isArray(lists) ? lists : [];
   },
   saveList(list) {
-    const lists = this.getLists().filter(item => item.listId !== list.listId);
-    lists.unshift(list);
-    localStorage.setItem(STORAGE_KEYS.lists, JSON.stringify(lists));
+    try {
+      const lists = this.getLists().filter(item => item.listId !== list.listId);
+      lists.unshift(list);
+      localStorage.setItem(STORAGE_KEYS.lists, JSON.stringify(lists));
+    } catch (err) {
+      showModal({
+        title: "保存失败",
+        message: "存储空间不足，请清理一些旧清单后重试。",
+        buttons: [{ label: "确定" }]
+      });
+    }
   },
   getList(listId) { return this.getLists().find(list => list.listId === listId); },
   deleteList(listId) {
@@ -360,15 +368,8 @@ function renderNewBook() {
         </div>
       </div>
       <div class="field"><label>预习本名称</label><input id="title" value=""></div>
-      <button id="generate">生成预览</button>
+      <button id="generate">生成预习本</button>
       <div id="newBookMsg" class="small"></div>
-      <div id="previewSection" style="display:none;">
-        <div class="card">
-          <strong id="previewCount"></strong>
-          <div id="previewBirdList" class="preview-list small" style="max-height:200px;overflow-y:auto;"></div>
-        </div>
-        <div class="row"><button id="savePreview">保存预习本</button><button class="danger" id="discardPreview">放弃</button></div>
-      </div>
     </div>
   `;
 
@@ -536,51 +537,16 @@ function renderNewBook() {
       return;
     }
     document.querySelector("#newBookMsg").innerHTML = "";
-    document.querySelector("#generate").style.display = "none";
-
-    const previewSection = document.querySelector("#previewSection");
-    previewSection.style.display = "block";
-    document.querySelector("#previewCount").textContent = `预计 ${birdIds.length} 种鸟`;
-
-    const birdNames = birdIds.map(id => {
-      const sp = appData.speciesById.get(id);
-      return sp ? `${esc(sp.chineseName)}（${esc(formatTaxonomy(sp))}）` : id;
-    }).join("、");
-    document.querySelector("#previewBirdList").textContent = birdNames;
-
-    window._unsavedPreview = { location, months, filters, birdIds, title: title.value.trim() };
-
-    document.querySelector("#savePreview").onclick = () => {
-      StorageService.addLocationHistory({ name: locInput.value.trim(), match: JSON.stringify(_locationMatch) });
-      savePreviewToStorage();
-    };
-
-    document.querySelector("#discardPreview").onclick = () => {
-      window._unsavedPreview = null;
-      document.querySelector("#previewSection").style.display = "none";
-      document.querySelector("#generate").style.display = "";
-    };
+    StorageService.addLocationHistory({ name: locInput.value.trim(), match: JSON.stringify(_locationMatch) });
+    saveGeneratedList({ location, months, filters, birdIds, title: title.value.trim() });
   };
 }
 
 function handleNewBookBack() {
-  if (window._unsavedPreview) {
-    showModal({
-      title: "确认返回",
-      message: "你还没有保存这个预习本。",
-      buttons: [
-        { label: "取消" },
-        { label: "不保存", action: () => { window._unsavedPreview = null; navigate("home"); } },
-        { label: "保存", cls: "", action: () => savePreviewToStorage() }
-      ]
-    });
-  } else {
-    navigate("home");
-  }
+  navigate("home");
 }
 
-function savePreviewToStorage() {
-  const p = window._unsavedPreview;
+function saveGeneratedList(p) {
   if (!p) return;
   const createdAt = nowISO();
   const list = {
@@ -593,6 +559,7 @@ function savePreviewToStorage() {
     birdIds: p.birdIds,
     createdAt,
     updatedAt: createdAt,
+    saved: true,
     dataVersion: appData.metadata.dataVersion
   };
   StorageService.saveList(list);
@@ -725,7 +692,7 @@ function createImportList() {
     return;
   }
   const createdAt = nowISO();
-  const list = { listId: `import_${hashString(JSON.stringify({ birdIds, createdAt }))}`, title: document.querySelector("#importTitle").value.trim() || `自定义预习本 · ${birdIds.length}种`, mode: "import", location: null, months: ALL_MONTHS, filters: { orders: [], families: [], habitats: [] }, birdIds, createdAt, updatedAt: createdAt, dataVersion: appData.metadata.dataVersion };
+  const list = { listId: `import_${hashString(JSON.stringify({ birdIds, createdAt }))}`, title: document.querySelector("#importTitle").value.trim() || `自定义预习本 · ${birdIds.length}种`, mode: "import", location: null, months: ALL_MONTHS, filters: { orders: [], families: [], habitats: [] }, birdIds, createdAt, updatedAt: createdAt, saved: true, dataVersion: appData.metadata.dataVersion };
   StorageService.saveList(list);
   navigate(`book?id=${list.listId}`);
 }
@@ -749,12 +716,12 @@ function renderBookDetail(listId, sharePayload = null) {
   ).join("");
   app.innerHTML = $html`
     <div class="page-header">
-      <button class="ghost" onclick="navigate('home')">返回</button>
+      <button class="ghost" onclick="handleBookBack('${esc(list.listId)}')">返回</button>
       <div style="display:flex;align-items:center;gap:6px;">
         <h1 class="page-title" style="margin:0;">${esc(list.title)}</h1>
         ${isShare ? `` : `<button class="ghost small" onclick="renameList('${esc(list.listId)}')" title="重命名">✎</button>`}
       </div>
-      ${isShare ? `<span></span>` : `<button class="ghost" onclick="shareList('${esc(list.listId)}')">分享</button>`}
+      ${isShare ? `<span></span>` : `<div style="display:flex;align-items:center;gap:6px;">${list.saved ? `` : `<button class="ghost" onclick="saveBookList('${esc(list.listId)}')">保存预习本</button>`}<button class="ghost" onclick="shareList('${esc(list.listId)}')">分享</button></div>`}
     </div>
     <div class="card">
       <strong>已观察 ${checks.checkedBirdIds.length} / 共 ${list.birdIds.length} 种</strong>
@@ -775,6 +742,30 @@ function renderBookDetail(listId, sharePayload = null) {
   document.querySelector("#search").oninput = e => { sessionStorage.setItem(`search:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
   document.querySelector("#filter").onchange = e => { sessionStorage.setItem(`filter:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
   document.querySelector("#sort").onchange = e => { sessionStorage.setItem(`sort:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
+}
+
+function handleBookBack(listId) {
+  const list = StorageService.getList(listId);
+  if (!list || list.saved === true) {
+    navigate("home");
+    return;
+  }
+  showModal({
+    title: "确认返回",
+    message: "你还没有保存这个预习本",
+    buttons: [
+      { label: "取消" },
+      { label: "不保存", cls: "danger", action: () => navigate("home") },
+      { label: "保存", action: () => { saveBookList(listId); navigate("home"); } }
+    ]
+  });
+}
+
+function saveBookList(listId) {
+  const list = StorageService.getList(listId);
+  if (!list) return;
+  StorageService.updateList({ ...list, saved: true });
+  render();
 }
 
 function birdRow(list, birdId, isShare) {
@@ -865,7 +856,7 @@ function renderKeyPoints(points = []) {
 
 function renderSounds(sounds = []) {
   if (!sounds.length) return `<p class="muted">暂无可靠鸣声</p>`;
-  return sounds.map(s => `<div class="card"><strong>${esc(s.caption || s.type || "鸣声")}</strong><br><audio controls src="${esc(s.url)}"></audio><div class="small muted">${esc(s.source || "")} ${s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">来源</a>` : ""}</div></div>`).join("");
+  return sounds.map(s => `<div class="card"><audio controls controlsList="nodownload noplaybackrate" src="${esc(s.url)}"></audio><div class="small muted">${esc(s.source || "")} ${s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">来源</a>` : ""}</div></div>`).join("");
 }
 
 function renderDistribution(rangeMap, sp) {

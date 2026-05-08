@@ -2,13 +2,23 @@
   "urocissa_erythroryncha": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656783206/1200",
+        "type": "photo",
+        "caption": "红嘴蓝鹊",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656783206",
+        "author": "Paul Fenwick",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Billed_Blue_Magpie.jpg",
         "type": "adult",
         "caption": "成鸟",
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red_Billed_Blue_Magpie.jpg",
         "author": "Wikimedia Commons contributor",
-        "license": "见来源页面"
+        "license": "见来源页面",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Red-billed_Blue-Magpie_by_Tisha_Mukherjee_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -17,16 +27,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-billed_Blue-Magpie_by_Tisha_Mukherjee_04.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:Tisha_Mukherjee\" title=\"User:Tisha Mukherjee\">Tisha Mukherjee</a>",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656783206/1200",
-        "type": "photo",
-        "caption": "红嘴蓝鹊",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656783206",
-        "author": "Paul Fenwick",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -35,13 +37,23 @@
   "pycnonotus_sinensis": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656782438/1200",
+        "type": "photo",
+        "caption": "白头鹎",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656782438",
+        "author": "美鈴 魏",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Light-vented_Bulbul.jpg",
         "type": "adult",
         "caption": "成鸟",
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Light-vented_Bulbul.jpg",
         "author": "Wikimedia Commons contributor",
-        "license": "见来源页面"
+        "license": "见来源页面",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Av_Light-Vented_Bulbul_%28Taiwan%29_JG.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -50,16 +62,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Av_Light-Vented_Bulbul_(Taiwan)_JG.jpg",
         "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:JeffreyGammon&amp",
-        "license": "CC BY 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656782438/1200",
-        "type": "photo",
-        "caption": "白头鹎",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656782438",
-        "author": "美鈴 魏",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -68,13 +72,23 @@
   "alcedo_atthis": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787252/1200",
+        "type": "photo",
+        "caption": "普通翠鸟",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656787252",
+        "author": "F S",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Kingfisher_Alcedo_atthis.jpg",
         "type": "adult",
         "caption": "成鸟",
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg",
         "author": "Wikimedia Commons contributor",
-        "license": "见来源页面"
+        "license": "见来源页面",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Alcedo_atthis_-_Riserve_naturali_e_aree_contigue_della_fascia_fluviale_del_Po.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -83,16 +97,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alcedo_atthis_-_Riserve_naturali_e_aree_contigue_della_fascia_fluviale_del_Po.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:Luca_Casale\" title=\"User:Luca Casale\">Luca Casale</a>",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787252/1200",
-        "type": "photo",
-        "caption": "普通翠鸟",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656787252",
-        "author": "F S",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -101,13 +107,23 @@
   "himantopus_himantopus": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787317/1200",
+        "type": "photo",
+        "caption": "黑翅长脚鹬",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656787317",
+        "author": "Biray Pinar",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-black-winged-stilt.jpg",
         "type": "adult",
         "caption": "南堡黑翅长脚鹬",
         "source": "Wild Beijing",
         "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
         "author": "Wild Beijing",
-        "license": "见来源页面"
+        "license": "见来源页面",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Black-winged_stilt_courtship_behaviour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -116,16 +132,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-winged_stilt_courtship_behaviour.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:Ryzhkov_Sergey\" title=\"User:Ryzhkov Sergey\">Ryzhkov Sergey</a>",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787317/1200",
-        "type": "photo",
-        "caption": "黑翅长脚鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656787317",
-        "author": "Biray Pinar",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -134,13 +142,23 @@
   "recurvirostra_avosetta": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656786915/1200",
+        "type": "photo",
+        "caption": "反嘴鹬",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656786915",
+        "author": "Daniel Gil",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Avocette_%C3%A9l%C3%A9gante_Thyna019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "type": "adult",
         "caption": "反嘴鹬",
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante_Thyna019.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:El_Golli_Mohamed\" title=\"User:El Golli Mohamed\">El Golli Mohamed</a>",
-        "license": "CC BY-SA 4.0"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Pied_avocet_%28Recurvirostra_avosetta%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -149,16 +167,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pied_avocet_(Recurvirostra_avosetta).jpg",
         "author": "<bdi><a href=\"https://www.wikidata.org/wiki/Q54800218\" class=\"extiw\" title=\"d:Q54800218\"><span title=\"Scottish wildlife photographer\">Charles J. Sharp</span></a></bdi>",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656786915/1200",
-        "type": "photo",
-        "caption": "反嘴鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656786915",
-        "author": "Daniel Gil",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -167,13 +177,23 @@
   "charadrius_dubius": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787468/1200",
+        "type": "photo",
+        "caption": "金眶鸻",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656787468",
+        "author": "F S",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Charadrius_dubius_-_Little_ringed_plover_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "type": "adult",
         "caption": "金眶鸻",
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charadrius_dubius_-_Little_ringed_plover_05.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:Zcebeci\" title=\"User:Zcebeci\">Zeynel Cebeci</a>",
-        "license": "CC BY-SA 4.0"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Charadrius_dubius_curonicus_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -182,16 +202,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charadrius_dubius_curonicus_MHNT.jpg",
         "author": "<div class=\"fn value\">\n<a href=\"//commons.wikimedia.org/wiki/User:Archaeodontosaurus\" title=\"User:Archaeodontosaurus\">Didier Descouens</a></div>",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787468/1200",
-        "type": "photo",
-        "caption": "金眶鸻",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656787468",
-        "author": "F S",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -199,15 +211,6 @@
   },
   "charadrius_alexandrinus": {
     "images": [
-      {
-        "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-kentish-plover.jpg",
-        "type": "adult",
-        "caption": "南堡环颈鸻",
-        "source": "Wild Beijing",
-        "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
-        "author": "Wild Beijing",
-        "license": "见来源页面"
-      },
       {
         "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787288/1200",
         "type": "photo",
@@ -225,6 +228,16 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/656787289",
         "author": "Cheng-Hung Wu",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-kentish-plover.jpg",
+        "type": "adult",
+        "caption": "南堡环颈鸻",
+        "source": "Wild Beijing",
+        "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+        "author": "Wild Beijing",
+        "license": "见来源页面",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -266,13 +279,23 @@
   "vanellus_vanellus": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787108/1200",
+        "type": "photo",
+        "caption": "凤头麦鸡",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656787108",
+        "author": "Ivan Nevtípil",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Black-headed_lapwing_%28Vanellus_tectus_tectus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "type": "adult",
         "caption": "凤头麦鸡",
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black-headed_lapwing_(Vanellus_tectus_tectus).jpg",
         "author": "<bdi><a href=\"https://www.wikidata.org/wiki/Q54800218\" class=\"extiw\" title=\"d:Q54800218\"><span title=\"Scottish wildlife photographer\">Charles J. Sharp</span></a></bdi>",
-        "license": "CC BY-SA 4.0"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Northern_lapwing_2025_09_27_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -281,16 +304,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Northern_lapwing_2025_09_27_02.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:Alexis_Lours\" title=\"User:Alexis Lours\">Alexis Lours</a>",
-        "license": "CC BY 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787108/1200",
-        "type": "photo",
-        "caption": "凤头麦鸡",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656787108",
-        "author": "Ivan Nevtípil",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -398,13 +413,23 @@
   "numenius_arquata": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787526/1200",
+        "type": "photo",
+        "caption": "白腰杓鹬",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656787526",
+        "author": "Andy Ryde",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Chiurlo_Maggiore_%28Numenius_arquata%29_DSC7954.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "type": "adult",
         "caption": "白腰杓鹬",
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiurlo_Maggiore_(Numenius_arquata)_DSC7954.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:Artemio_Terna\" title=\"User:Artemio Terna\">Artemio Terna</a>",
-        "license": "CC BY-SA 3.0"
+        "license": "CC BY-SA 3.0",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Curlew_%28Numenius_arquata%29_%2812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -413,16 +438,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Curlew_(Numenius_arquata)_(12).jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:Ken_Billington\" title=\"User:Ken Billington\">Ken Billington</a>",
-        "license": "CC BY-SA 3.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787526/1200",
-        "type": "photo",
-        "caption": "白腰杓鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656787526",
-        "author": "Andy Ryde",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 3.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -634,13 +651,23 @@
   "calidris_acuminata": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787135/1200",
+        "type": "photo",
+        "caption": "尖尾滨鹬",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656787135",
+        "author": "George Vaughan",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-sharp-tailed-sandpiper.jpg",
         "type": "adult",
         "caption": "南堡尖尾滨鹬",
         "source": "Wild Beijing",
         "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
         "author": "Wild Beijing",
-        "license": "见来源页面"
+        "license": "见来源页面",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Calidris_acuminata_-_Hexham_Swamp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -649,16 +676,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calidris_acuminata_-_Hexham_Swamp.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:JJ_Harrison\" title=\"User:JJ Harrison\">JJ Harrison</a> (<a rel=\"nofollow\" class=\"external free\" href=\"https://www.jjharrison.com.au/\">https://www.jjharrison.com.au/</a>)",
-        "license": "CC BY-SA 3.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787135/1200",
-        "type": "photo",
-        "caption": "尖尾滨鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656787135",
-        "author": "George Vaughan",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 3.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],
@@ -700,13 +719,23 @@
   "tringa_stagnatilis": {
     "images": [
       {
+        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787192/1200",
+        "type": "photo",
+        "caption": "泽鹬",
+        "source": "Macaulay Library / eBird",
+        "sourceUrl": "https://macaulaylibrary.org/asset/656787192",
+        "author": "SUBHASH GHULE",
+        "license": "Any Lab Use=eBird"
+      },
+      {
         "url": "https://i0.wp.com/wildbeijing.org/wp-content/uploads/2011/08/2011-07-31-marsh-sandpiper.jpg",
         "type": "adult",
         "caption": "南堡泽鹬",
         "source": "Wild Beijing",
         "sourceUrl": "https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
         "author": "Wild Beijing",
-        "license": "见来源页面"
+        "license": "见来源页面",
+        "note": "待确认是否为实物照片"
       },
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Chevalier_stagnatile005_thyna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -715,16 +744,8 @@
         "source": "Wikimedia Commons",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevalier_stagnatile005_thyna.jpg",
         "author": "<a href=\"//commons.wikimedia.org/wiki/User:El_Golli_Mohamed\" title=\"User:El Golli Mohamed\">El Golli Mohamed</a>",
-        "license": "CC BY-SA 4.0"
-      },
-      {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/656787192/1200",
-        "type": "photo",
-        "caption": "泽鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/656787192",
-        "author": "SUBHASH GHULE",
-        "license": "Any Lab Use=eBird"
+        "license": "CC BY-SA 4.0",
+        "note": "待确认是否为实物照片"
       }
     ],
     "sounds": [],

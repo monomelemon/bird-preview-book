@@ -1,8 +1,8 @@
 {
   "appName": "观鸟预习本",
-  "dataVersion": "v2-china-2026-05-07",
+  "dataVersion": "v2-fix-2026-05-08",
   "taxonomySystem": "IOC / eBird-Clements 待统一",
-  "updatedAt": "2026-05-07",
+  "updatedAt": "2026-05-08",
   "sourcePolicy": "所有鸟类资料必须来自可靠来源；缺失时显示暂无可靠数据。",
   "sources": [
     "eBird API v2 taxonomy (11,209 taxa)",
