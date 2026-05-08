@@ -9,7 +9,7 @@ const DATA_FILES = {
   similar: "data/similar.json"
 };
 
-const DATA_CACHE_VERSION = "v2-2026-05-08";
+const DATA_CACHE_VERSION = "v2-fix-2026-05-08";
 
 const STORAGE_KEYS = {
   lists: "birdPreviewBook:lists",
@@ -25,7 +25,7 @@ let state = { imageIndex: 0, matchResults: [] };
 const $html = (strings, ...values) => strings.reduce((out, str, i) => out + str + (values[i] ?? ""), "");
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
 const nowISO = () => new Date().toISOString();
-const safeParse = (text, fallback) => { try { return JSON.parse(text); } catch { return fallback; } };
+const safeParse = (text, fallback) => { if (text == null) return fallback; try { return JSON.parse(text); } catch { return fallback; } };
 const TRAD_TO_SIMP = {
   "凍":"冻","鵝":"鹅","鴨":"鸭","鴛":"鸳","鴦":"鸯","鵠":"鹄","鵰":"雕","鷹":"鹰","鷂":"鹞","鷲":"鹫","鶚":"鹗","鶻":"鹘",
   "鷺":"鹭","鶴":"鹤","鷗":"鸥","鴴":"鸻","鷸":"鹬","鵐":"鹀","鶲":"鹟","鵯":"鹎","鶇":"鸫","鴉":"鸦","鵲":"鹊",
