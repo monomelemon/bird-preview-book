@@ -1,106 +1,626 @@
 {
   "urocissa_erythroryncha": {
-    "keyPoints": ["体型较大，尾长，整体蓝色、黑白相间。", "嘴和脚红色，是很醒目的识别特征。", "常在林地、山地和村落附近活动，叫声响亮。"],
+    "keyPoints": [
+      "体型较大，尾长，整体蓝色、黑白相间。",
+      "嘴和脚红色，是很醒目的识别特征。",
+      "常在林地、山地和村落附近活动，叫声响亮。"
+    ],
     "morphology": "大型鸦科鸟，蓝色长尾醒目。",
     "habitat": "常见于林地、山地、灌丛和村落附近。",
     "behavior": "常成对或小群活动，叫声喧闹。",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "eBird",
+      "IOC World Bird List"
+    ],
     "updatedAt": "2026-05-07"
   },
   "pycnonotus_sinensis": {
-    "keyPoints": ["头顶至后颈白色，形成明显白头。", "耳羽后方有白色斑块。", "常见于城市、公园、林缘和灌丛。"],
+    "keyPoints": [
+      "头顶至后颈白色，形成明显白头。",
+      "耳羽后方有白色斑块。",
+      "常见于城市、公园、林缘和灌丛。"
+    ],
     "morphology": "中小型鸣禽，头部白色特征明显。",
     "habitat": "常见于城市绿地、公园、林缘和灌丛。",
     "behavior": "常成对或小群活动，鸣声明显。",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "eBird",
+      "IOC World Bird List"
+    ],
     "updatedAt": "2026-05-07"
   },
   "alcedo_atthis": {
-    "keyPoints": ["体型小，头大嘴长，常停在水边枝条或石头上。", "上体蓝绿色，下体橙棕色。", "常沿河流、池塘快速直线飞行。"],
+    "keyPoints": [
+      "体型小，头大嘴长，常停在水边枝条或石头上。",
+      "上体蓝绿色，下体橙棕色。",
+      "常沿河流、池塘快速直线飞行。"
+    ],
     "morphology": "小型翠鸟，蓝绿色背部和橙棕色下体醒目。",
     "habitat": "河流、湖泊、池塘、湿地等水域附近。",
     "behavior": "常从栖处俯冲入水捕食小鱼。",
-    "sourceRefs": ["eBird", "IOC World Bird List"],
+    "sourceRefs": [
+      "eBird",
+      "IOC World Bird List"
+    ],
     "updatedAt": "2026-05-07"
   },
   "himantopus_himantopus": {
-    "keyPoints": ["黑白对比强，腿极长且粉红色。", "常在浅水、盐田或水塘边缘行走觅食。", "飞行时长腿明显伸出尾后。"],
+    "keyPoints": [
+      "黑白对比强，腿极长且粉红色。",
+      "常在浅水、盐田或水塘边缘行走觅食。",
+      "飞行时长腿明显伸出尾后。"
+    ],
     "morphology": "体形修长，黑色翅背和白色身体形成强烈对比。",
     "habitat": "浅水湿地、盐田、水塘和海岸滩涂。",
     "behavior": "常成群活动，在浅水中缓慢行走觅食。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "recurvirostra_avosetta": {
-    "keyPoints": ["黑白花纹明显，嘴细长并向上弯。", "常在浅水中左右扫动嘴觅食。", "飞行时黑白翅纹和长腿较醒目。"],
+    "keyPoints": [
+      "黑白花纹明显，嘴细长并向上弯。",
+      "常在浅水中左右扫动嘴觅食。",
+      "飞行时黑白翅纹和长腿较醒目。"
+    ],
     "morphology": "中型涉禽，反曲的上弯嘴是最重要识别点。",
     "habitat": "盐田、浅水湖泊、海岸湿地和潮间带。",
     "behavior": "常小群或大群活动，在浅水中扫食。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "charadrius_dubius": {
-    "keyPoints": ["体型小，眼周有明显黄色眼圈。", "胸前有较完整黑色胸带，嘴短。", "常在河滩、泥地或浅水边快速奔跑停顿。"],
+    "keyPoints": [
+      "体型小，眼周有明显黄色眼圈。",
+      "胸前有较完整黑色胸带，嘴短。",
+      "常在河滩、泥地或浅水边快速奔跑停顿。"
+    ],
     "morphology": "小型鸻类，黄色眼圈是与相近小鸻类区分的重要特征。",
     "habitat": "河滩、泥滩、湿地边缘、农田水边。",
     "behavior": "典型鸻类奔跑—停顿式觅食。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "charadrius_alexandrinus": {
-    "keyPoints": ["体型小，腿偏黑，整体颜色较淡。", "胸侧常有暗色斑块，胸带不如金眶鸻完整。", "多见于海岸沙地、盐田和潮间带。"],
+    "keyPoints": [
+      "体型小，腿偏黑，整体颜色较淡。",
+      "胸侧常有暗色斑块，胸带不如金眶鸻完整。",
+      "多见于海岸沙地、盐田和潮间带。"
+    ],
     "morphology": "小型浅色鸻类，常显得比金眶鸻更淡、更偏海岸环境。",
     "habitat": "海岸、盐田、滩涂和裸露湿地。",
     "behavior": "在开阔地面快速奔跑觅食，常与其他小型鸻类混群。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "pluvialis_squatarola": {
-    "keyPoints": ["体型较大而敦实，非繁殖羽整体灰白。", "飞行时腋羽黑色，是重要识别点。", "常在潮间带泥滩上单独或小群觅食。"],
+    "keyPoints": [
+      "体型较大而敦实，非繁殖羽整体灰白。",
+      "飞行时腋羽黑色，是重要识别点。",
+      "常在潮间带泥滩上单独或小群觅食。"
+    ],
     "morphology": "较大型鸻类，灰色上体和黑色腋羽有助于识别。",
     "habitat": "海岸潮间带、泥滩和盐田。",
     "behavior": "多在开阔滩涂觅食，常与其他迁徙涉禽混群。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "actitis_hypoleucos": {
-    "keyPoints": ["体型小，上体褐色，下体白色，白色肩前楔入明显。", "常在水边石块或泥岸活动，尾部不断上下摆动。", "飞行低而直，翅上有明显白色翼带。"],
+    "keyPoints": [
+      "体型小，上体褐色，下体白色，白色肩前楔入明显。",
+      "常在水边石块或泥岸活动，尾部不断上下摆动。",
+      "飞行低而直，翅上有明显白色翼带。"
+    ],
     "morphology": "小型鹬类，白色肩前楔和摆尾习性很有帮助。",
     "habitat": "河流、池塘、水库边、湿地和海岸。",
     "behavior": "常单只活动，边走边摆尾。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "tringa_totanus": {
-    "keyPoints": ["腿橙红色，嘴基部红色、嘴端较暗。", "飞行时白色后缘和楔形白腰明显。", "常在潮沟、浅水湿地和盐田边缘觅食。"],
+    "keyPoints": [
+      "腿橙红色，嘴基部红色、嘴端较暗。",
+      "飞行时白色后缘和楔形白腰明显。",
+      "常在潮沟、浅水湿地和盐田边缘觅食。"
+    ],
     "morphology": "中型鹬类，红腿和飞行白色翼后缘是关键特征。",
     "habitat": "海岸湿地、盐田、水塘和潮间带。",
     "behavior": "受惊时常鸣叫起飞，常与其他鹬类混群。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "tringa_nebularia": {
-    "keyPoints": ["体型较大，腿偏青绿色，嘴长且略上翘。", "上体灰褐，下体较白，整体显得修长。", "常在浅水湿地、盐田和潮沟边觅食。"],
+    "keyPoints": [
+      "体型较大，腿偏青绿色，嘴长且略上翘。",
+      "上体灰褐，下体较白，整体显得修长。",
+      "常在浅水湿地、盐田和潮沟边觅食。"
+    ],
     "morphology": "大型 Tringa 类鹬，略上翘的长嘴和青绿色腿较关键。",
     "habitat": "海岸湿地、盐田、湖泊浅水区和河口。",
     "behavior": "常单只或小群活动，觅食步伐较稳。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "calidris_acuminata": {
-    "keyPoints": ["中小型滨鹬，头顶和背部常显棕褐色，眉纹较明显。", "胸部细纹较多，腹部较白。", "常在盐田、水塘边缘和泥地上成群觅食。"],
+    "keyPoints": [
+      "中小型滨鹬，头顶和背部常显棕褐色，眉纹较明显。",
+      "胸部细纹较多，腹部较白。",
+      "常在盐田、水塘边缘和泥地上成群觅食。"
+    ],
     "morphology": "中小型滨鹬，秋季个体常显棕褐色和较明显眉纹。",
     "habitat": "浅水湿地、盐田、潮沟和泥滩。",
     "behavior": "常与其他小型滨鹬混群，需要结合体型、花纹和行为观察。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
   },
   "tringa_stagnatilis": {
-    "keyPoints": ["体型修长，腿很长，嘴细直。", "整体比青脚鹬更纤细，嘴也更细。", "常在浅水中活动，姿态轻盈。"],
+    "keyPoints": [
+      "体型修长，腿很长，嘴细直。",
+      "整体比青脚鹬更纤细，嘴也更细。",
+      "常在浅水中活动，姿态轻盈。"
+    ],
     "morphology": "修长的 Tringa 类鹬，细直嘴和长腿是识别重点。",
     "habitat": "浅水湿地、盐田、水塘和潮沟边缘。",
     "behavior": "常小群活动，在浅水中快速觅食。",
-    "sourceRefs": ["Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/", "eBird Species Pages"],
+    "sourceRefs": [
+      "Wild Beijing Nanpu Tangshan 2011: https://wildbeijing.org/2011/08/09/waders-at-nanpu-tangshan/",
+      "eBird Species Pages"
+    ],
     "updatedAt": "2026-05-07"
+  },
+  "phiduc1": {
+    "wikipediaSummary": "棕颈鸭（台湾作菲律賓鸭）（学名：Anas luzonica），又名吕宋鸭，是雁形目鸭科的一种鸟类。\n其本地名稱為 papan。它是菲律賓的特有种。\n它以蝦、魚、昆蟲和植物為食，並且經常出現在各类濕地中。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "棕頸鴨",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E6%A3%95%E9%A0%B8%E9%B4%A8",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "tunbeg1": {
+    "wikipediaSummary": "短嘴豆雁（香港作冻原豆雁，台湾作冻原豆雁）（学名：Anser serrirostris）是繁殖於北西伯利亚的一种雁鸭科鸟类。本种與寒林豆雁被美國鸟类学會與國際鸟类学者協會視為不同种，但英國鸟类学會將兩者視為同种，統稱為豆雁。本种是冬天會往南迁移的亚洲鸟类。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "凍原豆雁",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%87%8D%E5%8E%9F%E8%B1%86%E9%9B%81",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "cacgoo1": {
+    "wikipediaSummary": "小美洲黑雁（台湾作小加拿大雁）（学名：Branta hutchinsii），是一种分佈於北美的雁鸭科黑雁屬黑色鹅类，外型有較大面積的黑色羽毛，可與其它灰色的雁屬物种區分。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "小加拿大雁",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%B0%8F%E5%8A%A0%E6%8B%BF%E5%A4%A7%E9%9B%81",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "taibeg1": {
+    "wikipediaSummary": "豆雁（香港作寒林豆雁，台湾作寒林豆雁）（学名：Anser fabalis），又名大雁、䵙、东方豆雁、西伯利亚豆雁、普通大雁、麦鹅。本种與短嘴豆雁被美國鸟类学會與國際鸟类学者協會視為不同种，但英國鸟类学會將兩者視為同种，統稱為豆雁。本种是冬天會往南迁移的亚洲鸟类。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "豆雁",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E8%B1%86%E9%9B%81",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "ibisbi1": {
+    "wikipediaSummary": "鹮嘴鹬（学名：Ibidorhyncha struthersii）是鸻形目的单型科鹮嘴鹬科中的唯一一种。在中国大陆，分布于新疆、青海、甘肃、内蒙古、宁夏、陕西、山西、河北、河南、四川、云南、西藏等地。该物种的模式产地在喜马拉雅山脉。",
+    "wikipediaDistribution": "在中国大陆，分布于新疆、青海、甘肃、内蒙古、宁夏、陕西、山西、河北、河南、四川、云南、西藏等地。该物种的模式产地在喜马拉雅山脉。",
+    "wikipediaTitle": "鹮嘴鹬",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E9%B9%AE%E5%98%B4%E9%B9%AC",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "swisni1": {
+    "wikipediaSummary": "大沙锥（台湾作中地鸬）（学名：Gallinago megala）是鸻形目丘鹬科的一种鸟类。\n是一种中等大小的长喙迁徙涉禽（体长27–29公分，翼展38–44公分，体重120克）。\n這個常見名稱是為了紀念英國博物学家羅伯特·斯文豪，他在1861年首次物种描述。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "大沙锥",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%B2%99%E9%94%A5",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "pieavo1": {
+    "wikipediaSummary": "反嘴鸬（yù）（学名：Recurvirostra avosetta），又称反嘴鴴（héng）、反嘴长脚鸬，为反嘴鹬科反嘴鸬屬的鸟类。这物种分布在欧洲，西亚和中亚的温带地区。这是一个迁徙物种，大部分冬季迁徙至非洲或亚洲南部。部分冬季停留在分布地区最温暖的区域，例如西班牙南部和英格兰南部。在中国大陆，分布于华北和华南等地。该物种的模式产地在意大利。反嘴鸬是非欧亚迁移性水鸟協定（AEWA）適用的物种之一。",
+    "wikipediaDistribution": "在中国大陆，分布于华北和华南等地。该物种的模式产地在意大利。反嘴鸬是非欧亚迁移性水鸟協定（AEWA）適用的物种之一。",
+    "wikipediaTitle": "反嘴鹬",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%8F%8D%E5%98%B4%E9%B9%AC",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "orihob2": {
+    "wikipediaSummary": "凤头蜂鹰（学名：Pernis ptilorhynchus），亦稱蜂鹰、雕头鹰或东方蜂鹰，为鹰科蜂鹰属的鸟类。為东亚地區主要的迁徙性猛禽之一，迁移路線橫越日本、琉球、中国、印尼、馬來西亚 、台湾及菲律賓。体长57-60公分，屬於中等体型的猛禽。一般築巢於大而多葉的樹上。该物种的模式产地在印尼的爪哇和苏门答腊。。辨認方式以头部判斷，头特別小，似鴿子狀，易於鑽头進蜂巢裡覓食。其脸部缺乏明顯眉骨，因此长相並不像是典型的猛禽。尾羽长，有短冠羽。雌雄之間的体型差異並不明顯，可透過虹膜顏色辨認性成熟的個体:雄鸟是暗红褐色，雌鸟是鮮黄色，但部分亚种不論雌雄都擁有鮮黄色的虹膜。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "凤头蜂鹰",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%87%A4%E5%A4%B4%E8%9C%82%E9%B9%B0",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "brakit1": {
+    "wikipediaSummary": "栗鸢（学名：Haliastur indus）为鹰科栗鸢属的鸟类，該科還包括許多其他日行性猛禽，如鹰、鵟和鹞，分佈於印度次大陸、东南亚和澳洲。栗鳶主要栖息在海岸和內陸濕地，捕食死魚和其他獵物。成鸟具有红褐色的体羽，與白色的头部和胸部形成鮮明對比，易於與其他猛禽區分。该物种的模式产地在印度本地治里。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "栗鸢",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E6%A0%97%E9%B8%A2",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "rolhaw": {
+    "wikipediaSummary": "毛脚鵟（学名：Buteo lagopus）为鹰科鵟属的鸟类，又名毛足鵟，它是一种生活在北方纬度比较高的地方的鸟类，几乎在所有环北冰洋陆地上均有出现，只有在格陵兰、冰岛和斯瓦尔巴群岛没有。\n通常毛脚鵟分四个亚种，但是这些亚种之间的差异非常小。一般来说在欧亚大陆上的鸟越向东其羽毛的颜色越浅，体型越大。生活在全北区的亚种B. l. sanctijohannis的体型最小，羽毛颜色最深。",
+    "wikipediaDistribution": "在欧亚大陆上的鸟越向东其羽毛的颜色越浅，体型越大。生活在全北区的亚种B. l. sa",
+    "wikipediaTitle": "毛脚鵟",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E6%AF%9B%E8%84%9A%E9%B5%9F",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "norhar1": {
+    "wikipediaSummary": "白尾鹞（学名：Circus cyaneus），为鹰科鹞属的鸟类。多生活于沼泽以及牧场。该物种的模式产地在欧洲、非洲。\n它會在冬季迁徙到更南方的地區。欧亚大陸的鸟类會移動到南欧和南方溫帶亚洲。在氣候最溫和的地區，如法國和大不列顛，灰澤鵟全年都可能出現，但冬季高地大多無人居住。\n北方澤鵟曾被認為是灰澤鵟的一個亚种。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "白尾鹞",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%99%BD%E5%B0%BE%E9%B9%9E",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "gyfbuz1": {
+    "wikipediaSummary": "灰脸鵟鹰（台湾作灰面鵟鹰，学名：Butastur indicus），又稱灰面鹫，是鹰科鵟鹰屬的猛禽，台湾彰化一帶稱為南路鹰（台羅：lâm-lōo-ing），台湾屏东滿州當地稱為山後鸟（台羅：suann-āu-tsiáu），而在台湾屏东小琉球則叫做飛乌鸟（台羅：pue-oo-tsiáu）。灰面鵟鹰於每年10月10日前後約5日，自北至南過冬，其中重要過境停栖點為台湾的八卦台地及恆春半島。因10月10日為中华民國國慶日，而又有國慶鸟之稱。台湾彰化縣縣鸟。\n灰面鵟鹰 是一种亚洲的猛禽。牠的身长通常為41—46 cm（16—18英寸），屬於小型猛禽。牠在滿洲、韓國和日本繁殖；冬季迁徙到东南亚。\n這是一种生活在開闊地區的鸟类。牠以蜥蜴、小型哺乳動物和大型昆蟲為食。\n成鸟具有灰色的头部、胸部和颈部，白色的喉部，黑色的鬍鬚和正中條紋，棕色的背部和上翼，以及棕色條紋的白色下部和下翼。幼鸟的上部為棕色並有斑點，下部為淺色並帶有棕色條紋，並且有一條宽广的白色眉紋和棕色的脸部。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "灰面鵟鷹",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%81%B0%E9%9D%A2%E9%B5%9F%E9%B7%B9",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "whteag": {
+    "wikipediaSummary": "白尾海雕（学名：Haliaeetus albicilla），是鹰科中一种非常大型的猛禽。很多人認為牠們是美國白头海雕的近親，並深信牠們在舊大陸居住在同一個生態位。",
+    "wikipediaDistribution": "在舊大陸居住在同一個生態位。",
+    "wikipediaTitle": "白尾海雕",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%99%BD%E5%B0%BE%E6%B5%B7%E9%9B%95",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "comchi1": {
+    "wikipediaSummary": "叽咋柳莺（学名：Phylloscopus collybita），又名囂鴓鸟，为柳莺科柳莺属的鸟类。是一种常見且广泛分佈的柳鹩，主要在北欧及溫帶欧洲和古北界的開闊林地中繁殖。\n這是一种迁徙性雀形目鸟类，冬季栖息於欧洲南部和西部、亚洲南部以及北非。其上半身呈绿褐色，下半身為灰白色，因其簡單的chiff-chaff鸣聲聲而得名，這是一個擬聲詞。嘰喳柳鹩有多個亚种，其中一些現在被視為獨立物种。雌鸟在地面或靠近地面的地方築巢，並負責大部分的孵卵和餵養雛鸟，而雄鸟在築巢方面參與較少，但會保護其領地，並攻擊潜在的捕食者。\n作為一种小型食蟲鸟，它容易受到哺乳動物（如貓和鼬科動物）以及猛禽（特別是鹰屬的猛禽）的捕食。其广泛的分佈範圍和龐大种群意味著其狀況安全，但其中一個亚种可能已經滅絕。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "叽喳柳莺",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%8F%BD%E5%96%B3%E6%9F%B3%E8%8E%BA",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "chithr2": {
+    "wikipediaSummary": "宝兴歌鸫（学名：Turdus mupinensis）为鶇科的鸟类，也是耳鶇屬的唯一物种，俗名花穿草鸡、歌鸫。其分布範圍包括中國及越南最北部。其天然栖地為溫帶森林及亚熱帶或熱帶潮濕的山地森林。\n在中國分布于内蒙古、北京、河北、甘肃、贵州、四川、云南、山东、浙江等地，多见于海拔1300-3200米的针阔混交林中。该物种的模式产地在四川宝兴。\n最近的一項分子研究顯示，寶興歌鶇的最近親為羽色相似的欧洲物种，包括欧歌鶇（T. philomelos）及槲鶇（T. viscivorus），這三种鶇科鸟类皆為鶇屬（Turdus）在全球擴散過程中的早期分支。",
+    "wikipediaDistribution": "在中國分布于内蒙古、北京、河北、甘肃、贵州、四川、云南、山东、浙江等地，多见于海拔1300-3200米的针阔混交林中。该物种的模式产地在四川宝兴。\n最近的一項分子研究顯示，寶興歌鶇的最近親為羽色相似的欧洲物",
+    "wikipediaTitle": "宝兴歌鸫",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%AE%9D%E5%85%B4%E6%AD%8C%E9%B8%AB",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "commyn": {
+    "wikipediaSummary": "家八哥（学名：Acridotheres tristis），俗稱禽吉了，为椋鸟科八哥属的鸟类，原產於中亚、南亚和中國，後來引入美洲、非洲等世界其他地區。\n家八哥是雜食性鸟类，喜歡開放的樹林，並且有強烈的領地意識，對城市地區環境適應良好。\n家八哥的分佈範圍增长速度如此之快，以至於在2000年，國際自然保護聯盟物种存續委員會將其列為全球最具入侵物种之一，也是唯一列入《全球最具危害的外來入侵物种100种》中的三种鸟类之一，對生物多樣性、農業和人类利益構成威脅。 特別是在澳洲，該物种對當地生態系統造成嚴重威脅，並於2008年被評為「最重要的害蟲/問題」。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "家八哥",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%AE%B6%E5%85%AB%E5%93%A5",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "melthr": {
+    "wikipediaSummary": "大陸畫眉（学名：Garrulax canorus），又称金畫眉、虎鸫、如意鸟、英雄鸟，闽南语中又名花眉，是噪鹛科噪鹛属的一种鸟类，由于婉转悦耳的鸣唱和雄性间好斗的特性，是传统的“四大笼养鸟”之一，早在北宋时期就有饲养。最初于1758年由卡尔·林奈描述并命名，台湾画眉曾被认为是其亚种，目前公认有2个亚种。主要分布于华南、华东、华中、云南、四川、陕西南部、海南以及东南亚的老挝、越南北部，但也引入了台湾、新加坡、日本和夏威夷。\n大陸畫眉遍体棕褐色，其腹部中央呈污灰色；尾羽呈深棕色，且带有细微黑色横斑；头部有深色细小纵纹，具有明显的白色眼圈，并在眼后延长，因而得名“畫眉”。上喙偏灰，下喙黄色。雌鸟与雄鸟几乎没有差别。幼鸟上身纵纹较少，尾羽也无横斑。主要栖息在海拔1800米以下，灌丛、低林地、乡村和城市的公园。其行动隐秘，性格羞怯，一般隐藏在枯叶间穿行觅食，主要食虫，但在入秋后也会取食作物和野果。雄性繁殖期尤爱高歌，声音婉转、高亢且富有变化，也善效鸣；而雌性的鸣叫则比较单调。\n大陸畫眉的繁殖期在四月至七月间，一般一年两窝，为一夫一妻制，雄性之间常为争夺雌性而发生打斗，甚至会致死。鸟窝呈杯状，一般位置较低，但随着季节推进，到夏季时巢位也会相对较高。雄鸟主要负责警戒和觅食，而雌鸟则负责筑巢、孵卵和育雏保暖等。\n大陸畫眉的种群数量在中华人民共和国境内比较常见，尚处稳定，因而被IUCN评为无危物种；但在越南和老挝可能已经比较少见。这主要是因为笼鸟贸易，由于人工繁育技术尚不成熟，所以用作笼鸟的大陸畫眉主要是通过野捕获得。为了保护其免受野捕和贸易的影响，大陸畫眉已经被纳入《瀕危野生動植物种國際貿易公約》附录二；且2021年，中华人民共和国将大陸畫眉列为国家二级保护动物。",
+    "wikipediaDistribution": "分布于华南、华东、华中、云南、四川、陕西南部、海南以及东南亚的老挝、越南北部，但也引入了台湾、新加坡、日本和夏威夷。\n大陸畫眉遍体棕褐色，其腹部中央呈污灰色；尾羽呈深棕色，且带有细微黑色横斑；头部有深色细小",
+    "wikipediaTitle": "画眉",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%94%BB%E7%9C%89",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "carcro1": {
+    "wikipediaSummary": "小嘴乌鸦（学名：Corvus corone）又名老鸦、老鸹、通称乌鸦。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "小嘴乌鸦",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E5%B0%8F%E5%98%B4%E4%B9%8C%E9%B8%A6",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "bladro1": {
+    "wikipediaSummary": "黑卷尾（学名：Dicrurus macrocercus，英語：Black drongo）为卷尾科卷尾属的一种，又名大卷尾，俗名吃杯茶、铁炼甲、篱鸡、铁燕子、黑黎鸡。在台湾俗稱乌鶖或乌秋。牠們是熱帶南亚大部分地區的常見留鸟，從伊朗西南部經巴基斯坦、印度、孟加拉和斯里蘭卡，一直到中國南部和印尼，偶爾也會造訪日本。大卷尾全身黑色，具有顯著的叉狀尾巴，体长28 cm（11英寸）。以昆蟲為食，常見於開闊的農田和稀疏森林中，牠們喜歡栖息在裸露的樹枝上，或沿著電線或電話線停留。\n此物种以對更大体型鸟类的攻擊行為著稱，例如對乌鸦毫不猶豫地進行俯衝攻擊，當猛禽侵入其領域時，大卷尾也會毫不退縮。這种行為為牠贏得了「鸦王」的非正式稱號。小型鸟类經常在大卷尾的巢附近築巢，以利用其強力保護作用。過去大卷尾曾與非洲的叉尾卷尾（Dicrurus adsimilis）歸為同一物种，但亚洲的型態現被視為獨立物种，且有多個不同的族群。\n由於分佈範圍广泛且數量相對穩定，大卷尾被國際自然保護聯盟（IUCN）列為無危物种。然而，牠們已被引入至部分太平洋島嶼，並繁殖旺盛，甚至威脅到當地特有鸟种的生存，導致某些鸟类的滅絕。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "黑卷尾",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E9%BB%91%E5%8D%B7%E5%B0%BE",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "piewhe1": {
+    "wikipediaSummary": "白顶䳭（台湾作斑鴝）（学名：Oenanthe pleschanka），是雀形目鹟科的一种鸟类。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "白顶䳭",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%99%BD%E9%A1%B6%E4%B3%AD",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "norwhe": {
+    "wikipediaSummary": "穗䳭（学名：Oenanthe oenanthe）为鶲科䳭属的鸟类，俗名石栖鸟、麦穗。分布于欧洲、亚洲、非洲、北美洲，包括中国大陆的内蒙古、新疆、山西等地，一般生活于海拔2400-3000米或更高的山地草原多石地段以及曾偶见于长白山海拔800-1800米间针阔混交林带路旁。该物种的模式产地在瑞典。",
+    "wikipediaDistribution": "分布于欧洲、亚洲、非洲、北美洲，包括中国大陆的内蒙古、新疆、山西等地，一般生活于海拔2400-3000米或更高的山地草原多石地段以及曾偶见于长白山海拔800-1800米间针阔混交林带路旁。该物种的模式产地在",
+    "wikipediaTitle": "穗䳭",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%A9%97%E4%B3%AD",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "padwar1": {
+    "wikipediaSummary": "稻田苇莺（学名：Acrocephalus agricola）为鶲科苇莺属的鸟类。该物种主要分布在中亚和南亚地区，其模式产地在印度。它以前被歸入「舊大陸葦鹩」集合。遠东葦鹩（A. tangorum）曾經（有時仍然）被包含在A. agricola中作為亚种。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "稻田苇莺",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%A8%BB%E7%94%B0%E8%8B%87%E8%8E%BA",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "taifly1": {
+    "wikipediaSummary": "红喉姬鹟（学名：Ficedula albicilla）是雀形目鹟科的一种鸟类。該物种曾被認為是红胸姬鶲的亚种。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "红喉姬鹟",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%BA%A2%E5%96%89%E5%A7%AC%E9%B9%9F",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "redcro": {
+    "wikipediaSummary": "红交嘴雀（学名：Loxia curvirostra）是一种稀少的燕雀，為雀科下的鸣禽。交嘴雀以其獨特的喙而聞名，喙尖交叉，這使得它們能夠從針葉樹的毬果或其他果實中取出种子。\n主要栖息於北美洲、欧洲與亚洲的云杉林裡；部份种类則於此三大陸的松樹林裡孵育；亦有部份在北美洲的道格拉斯冷杉處生育。會於針葉樹上築巢，並會生下三至五隻鸟蛋在巢裡。\n成鸟通常顏色鮮豔，雄鸟呈红色或橙色，雌鸟則是绿色或黄色，但喙的大小和形狀，以及叫聲类型都有很大變異，因此不同的變种被歸為不同亚种。這种鸟在北美被稱為「红交嘴雀」，在欧洲則稱為「普通交嘴雀」。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "紅交嘴雀",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%B4%85%E4%BA%A4%E5%98%B4%E9%9B%80",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "reblei": {
+    "wikipediaSummary": "红嘴相思鸟（学名：Leiothrix lutea）又稱相思鸟、红嘴玉、五彩相思鸟、红嘴鸟等，噪鶥科相思鸟属两种鸟之一，是海拔迁徙的候鸟。原產於中國南部和喜馬拉雅山地區。成鸟擁有鮮红的喙，眼睛周圍有一圈暗黄的環。牠們的背部為暗橄欖绿色，喉部呈亮黄色橙色，並帶有黄色的下巴；雌鸟顏色比雄鸟稍暗淡，幼鸟的喙為黑色。此鸟种也被引入世界各地，1980年代以來，在日本有少量由籠中逃出的個体繁衍。红嘴相思鸟成為了常見的籠鸟，在鸟类愛好者之間有多种名稱，如北京鹩、北京夜鹩、日本夜鹩和日本山鹩，但後兩個名稱是誤用，因為它並非日本原生物种（儘管已被引入並自然化）。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "红嘴相思鸟",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%BA%A2%E5%98%B4%E7%9B%B8%E6%80%9D%E9%B8%9F",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "blabul1": {
+    "wikipediaSummary": "黑短脚鹎（学名：Hypsipetes leucocephalus，台湾作红嘴黑鸗，英語：Black Bulbul、Himalayan Black Bulbul，台湾話：红喙嗶仔）是雀形目鸗科短脚鸗屬下的一种鸟类。這個雜食性的物种主要分布於印度、尼泊爾一帶至台湾之間的連續地帶間，以其灰黑色的身体與红嘴為其特徵，而指名亚种則额外有全白色的头部，目前一共有十個亚种。\n這個物种主要居住於中海拔的常绿闊葉林或落葉林中，隨著食物供應的變換可能有垂直迁徙或跨國移動的行為。其繁殖季位於四月下半起至九月之間，卵每次產2—4枚，其他繁殖資料則較為稀少；叫聲則甚為聒噪而豐富多變。目前红嘴黑鸗因其栖地广大、族群趨勢穩定且數量無虞，在《國際自然保護聯盟瀕危物种红色名录》中無危物种。",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "紅嘴黑鵯",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%B4%85%E5%98%B4%E9%BB%91%E9%B5%AF",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "blttit2": {
+    "wikipediaSummary": "红头长尾山雀（学名：Aegithalos concinnus）为长尾山雀科长尾山雀属的雀形目鸟类，又名红头山雀或红顶山雀、俗稱小老虎、红宝宝儿、红白面只，常见於东亚、南亚等地區中低海拔山區，分布于巴基斯坦、尼泊尔、锡金、不丹、印度、孟加拉、缅甸、老挝、越南、台湾以及中国的自西藏、长江流域从四川东抵江苏沿海地带、北至甘肃、陕西、河南等省南部、南抵云南、贵州、广西、广东、福建等地，一般栖息于灌丛或乔木间。该物种的模式产地在浙江舟山。红头长尾山雀經常與山雀科和畫眉科的鸟类混淆。",
+    "wikipediaDistribution": "分布于巴基斯坦、尼泊尔、锡金、不丹、印度、孟加拉、缅甸、老挝、越南、台湾以及中国的自西藏、长江流域从四川东抵江苏沿海地带、北至甘肃、陕西、河南等省南部、南抵云南、贵州、广西、广东、福建等地，一般栖息于灌丛或",
+    "wikipediaTitle": "红头长尾山雀",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%BA%A2%E5%A4%B4%E9%95%BF%E5%B0%BE%E5%B1%B1%E9%9B%80",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "whbpig1": {
+    "wikipediaSummary": "红翅绿鸠（学名：Treron sieboldii）又稱绿鸠、白嘴绿鸠、白腹绿鳩、白腹楔尾鸠或白腹楔尾绿鸠，为鸠鸽科绿鸠属的鸟类。分布于日本（主要四大島與琉球群島）、千島群島、庫頁島、朝鮮半島、中南半島、台湾以及中国大陆自秦岭至长江口以南范围、西至云南、河北等地，多见於山区的森林或多树地带。该物种的模式产地在日本。种名來自德國生物学家菲利普·法蘭茲·馮·西博德。",
+    "wikipediaDistribution": "分布于日本（主要四大島與琉球群島）、千島群島、庫頁島、朝鮮半島、中南半島、台湾以及中国大陆自秦岭至长江口以南范围、西至云南、河北等地，多见於山区的森林或多树地带。该物种的模式产地在日本。种名來自德國生物学家",
+    "wikipediaTitle": "红翅绿鸠",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%BA%A2%E7%BF%85%E7%BB%BF%E9%B8%A0",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "recdov1": {
+    "wikipediaSummary": "火斑鸠（学名：Streptopelia tranquebarica），又名红鸠或红斑鳩；俗稱斑鴿、火鹘（台湾話）、红鴿鹘、火鸪鹪。是一种小型的鳩鴿科斑鳩屬鸟类，主要分布於北绯10度以北的副熱帶與熱帶季風亚洲，常見於平原、草地成群覓食。分布于印度、尼泊尔、不丹、孟加拉、缅甸、中南半岛、台湾、菲律宾以及中国大陆自华北以南各地、西抵四川、西藏、长江以北各地等地，主要栖息于开阔田野以及村庄附近。红鳩的种名係指位於印度坦米爾納德邦的城鎮特蘭奎巴，為本种的模式產地。",
+    "wikipediaDistribution": "分布于印度、尼泊尔、不丹、孟加拉、缅甸、中南半岛、台湾、菲律宾以及中国大陆自华北以南各地、西抵四川、西藏、长江以北各地等地，主要栖息于开阔田野以及村庄附近。红鳩的种名係指位於印度坦米爾納德邦的城鎮特蘭奎巴，",
+    "wikipediaTitle": "火斑鸠",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%81%AB%E6%96%91%E9%B8%A0",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "daupar1": {
+    "wikipediaSummary": "斑翅山鹑（学名：Perdix dauurica）为雉科山鹑属的鸟类，俗名须山鹑。分布于西伯利亚、东达乌苏里边区、南抵帕米尔高原西部以及中国大陆的新疆、东北、内蒙古、山西、陕西、青海等地，多生活于山坡、山麓田野以及草原。该物种的模式产地在道里西。",
+    "wikipediaDistribution": "分布于西伯利亚、东达乌苏里边区、南抵帕米尔高原西部以及中国大陆的新疆、东北、内蒙古、山西、陕西、青海等地，多生活于山坡、山麓田野以及草原。该物种的模式产地在道里西。",
+    "wikipediaTitle": "斑翅山鹑",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E6%96%91%E7%BF%85%E5%B1%B1%E9%B9%91",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "emedov2": {
+    "wikipediaSummary": "翠翼鳩（学名：Chalcophaps indica）为鸠鸽科翠翼鳩屬的鸟类，又名翠翼鸠，俗名绿背金鸠。分布于自印度、斯里兰卡，经孟加拉、缅甸、中南半岛，东达先島群島、台湾、菲律宾群岛，向南经马来半岛、印度尼西亚、伊里安岛以至澳大利亚以及中国的珠江以南地區，一般栖息于山地及山沟等处。该物种的模式产地在印度尼西亚安波那。\n种名indica意为印度的。",
+    "wikipediaDistribution": "分布于自印度、斯里兰卡，经孟加拉、缅甸、中南半岛，东达先島群島、台湾、菲律宾群岛，向南经马来半岛、印度尼西亚、伊里安岛以至澳大利亚以及中国的珠江以南地區，一般栖息于山地及山沟等处。该物种的模式产地在印度尼西",
+    "wikipediaTitle": "绿翅金鸠",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%BB%BF%E7%BF%85%E9%87%91%E9%B8%A0",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "jawpig1": {
+    "wikipediaSummary": "黑林鸽（学名：Columba janthina）为鸠鸽科鸽属的鸟类，俗名黑果鸽、鸦鸽。分布于日本南部岛屿、南抵琉球群岛、硫黄群岛、小笠原群岛以及中国大陆的山东等地，多栖息于多林小岛上的稠密常绿林间。该物种的模式产地在日本。",
+    "wikipediaDistribution": "分布于日本南部岛屿、南抵琉球群岛、硫黄群岛、小笠原群岛以及中国大陆的山东等地，多栖息于多林小岛上的稠密常绿林间。该物种的模式产地在日本。",
+    "wikipediaTitle": "黑林鸽",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E9%BB%91%E6%9E%97%E9%B8%BD",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
+  },
+  "reephe1": {
+    "wikipediaSummary": "白冠长尾雉（学名：Syrmaticus reevesii）又名长尾雉、鸐、山雉、鸐雉、鸐鸡、山鸡。是雉科长尾雉屬的一种，與同屬物种白颈长尾雉同為中國的特有种。其雄鸟尾巴的长度也是所有鸟类中最长的一种。\n　",
+    "wikipediaDistribution": null,
+    "wikipediaTitle": "白冠长尾雉",
+    "wikipediaUrl": "https://zh.wikipedia.org/wiki/%E7%99%BD%E5%86%A0%E9%95%BF%E5%B0%BE%E9%9B%89",
+    "wikipediaRetrievedAt": "2026-05-07",
+    "wikipediaLicense": "CC BY-SA 4.0",
+    "keyPoints": [],
+    "morphology": "暂无可靠数据",
+    "habitat": "暂无可靠数据",
+    "behavior": "暂无可靠数据",
+    "sourceRefs": []
   }
 }

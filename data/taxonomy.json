@@ -1,192 +1,767 @@
 {
-  "system": "IOC / eBird-Clements 待统一",
-  "version": "v1-macaulay-2026-05-07",
+  "system": "eBird/Clements 2024 + IOC reconciliation",
+  "version": "v2-china-2026-05-07",
   "orders": [
     {
-      "zh": "䴙䴘目",
-      "en": "䴙䴘目",
+      "zh": "雁形目",
+      "en": "Anseriformes",
       "sortOrder": 10
     },
     {
-      "zh": "佛法僧目",
-      "en": "佛法僧目",
+      "zh": "䴙䴘目",
+      "en": "Podicipediformes",
       "sortOrder": 20
     },
     {
-      "zh": "雀形目",
-      "en": "雀形目",
-      "sortOrder": 30
+      "zh": "鸡形目",
+      "en": "Galliformes",
+      "sortOrder": 21
     },
     {
-      "zh": "雁形目",
-      "en": "雁形目",
-      "sortOrder": 40
+      "zh": "鸽形目",
+      "en": "Columbiformes",
+      "sortOrder": 22
     },
     {
-      "zh": "鸻形目",
-      "en": "鸻形目",
-      "sortOrder": 50
-    },
-    {
-      "zh": "鹈形目",
-      "en": "鹈形目",
-      "sortOrder": 60
+      "zh": "沙鸡目",
+      "en": "Pterocliformes",
+      "sortOrder": 23
     },
     {
       "zh": "鹤形目",
-      "en": "鹤形目",
-      "sortOrder": 70
+      "en": "Gruiformes",
+      "sortOrder": 30
+    },
+    {
+      "zh": "鸻形目",
+      "en": "Charadriiformes",
+      "sortOrder": 40
+    },
+    {
+      "zh": "鹈形目",
+      "en": "Pelecaniformes",
+      "sortOrder": 50
     },
     {
       "zh": "鹰形目",
-      "en": "鹰形目",
+      "en": "Accipitriformes",
+      "sortOrder": 60
+    },
+    {
+      "zh": "鸮形目",
+      "en": "Strigiformes",
+      "sortOrder": 61
+    },
+    {
+      "zh": "佛法僧目",
+      "en": "Coraciiformes",
+      "sortOrder": 70
+    },
+    {
+      "zh": "啄木鸟目",
+      "en": "Piciformes",
+      "sortOrder": 71
+    },
+    {
+      "zh": "隼形目",
+      "en": "Falconiformes",
+      "sortOrder": 72
+    },
+    {
+      "zh": "雀形目",
+      "en": "Passeriformes",
       "sortOrder": 80
+    },
+    {
+      "zh": "鹃形目",
+      "en": "Cuculiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "鲣鸟目",
+      "en": "Suliformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "犀鸟目",
+      "en": "Bucerotiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "鹦形目",
+      "en": "Psittaciformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "夜鹰目",
+      "en": "Caprimulgiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "鹱形目",
+      "en": "Procellariiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "潜鸟目",
+      "en": "Gaviiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "鹲形目",
+      "en": "Phaethontiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "鹳形目",
+      "en": "Ciconiiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "鸨形目",
+      "en": "Otidiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "红鹳目",
+      "en": "Phoenicopteriformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "雨燕目",
+      "en": "Apodiformes",
+      "sortOrder": 900
+    },
+    {
+      "zh": "咬鹃目",
+      "en": "Trogoniformes",
+      "sortOrder": 900
     }
   ],
   "families": [
     {
-      "zh": "䴙䴘科",
-      "en": "Grebes",
-      "orderZh": "䴙䴘目",
+      "zh": "Ducks, Geese, and Waterfowl",
+      "en": "Ducks, Geese, and Waterfowl",
+      "orderZh": "雁形目",
       "sortOrder": 101
     },
     {
-      "zh": "翠鸟科",
-      "en": "Kingfishers",
-      "orderZh": "佛法僧目",
+      "zh": "Grebes",
+      "en": "Grebes",
+      "orderZh": "䴙䴘目",
       "sortOrder": 201
     },
     {
-      "zh": "鸦科",
-      "en": "Crows, Jays, and Magpies",
-      "orderZh": "雀形目",
+      "zh": "Guineafowl",
+      "en": "Guineafowl",
+      "orderZh": "鸡形目",
+      "sortOrder": 211
+    },
+    {
+      "zh": "Pheasants, Grouse, and Allies",
+      "en": "Pheasants, Grouse, and Allies",
+      "orderZh": "鸡形目",
+      "sortOrder": 212
+    },
+    {
+      "zh": "Pigeons and Doves",
+      "en": "Pigeons and Doves",
+      "orderZh": "鸽形目",
+      "sortOrder": 221
+    },
+    {
+      "zh": "Cranes",
+      "en": "Cranes",
+      "orderZh": "鹤形目",
       "sortOrder": 301
     },
     {
-      "zh": "鹎科",
-      "en": "Bulbuls",
-      "orderZh": "雀形目",
+      "zh": "Rails, Gallinules, and Coots",
+      "en": "Rails, Gallinules, and Coots",
+      "orderZh": "鹤形目",
       "sortOrder": 302
     },
     {
-      "zh": "鸭科",
-      "en": "Ducks, Geese, and Waterfowl",
-      "orderZh": "雁形目",
+      "zh": "Auks, Murres, and Puffins",
+      "en": "Auks, Murres, and Puffins",
+      "orderZh": "鸻形目",
       "sortOrder": 401
     },
     {
-      "zh": "三趾鹑科",
+      "zh": "Buttonquail",
       "en": "Buttonquail",
       "orderZh": "鸻形目",
+      "sortOrder": 402
+    },
+    {
+      "zh": "Gulls, Terns, and Skimmers",
+      "en": "Gulls, Terns, and Skimmers",
+      "orderZh": "鸻形目",
+      "sortOrder": 403
+    },
+    {
+      "zh": "Ibisbill",
+      "en": "Ibisbill",
+      "orderZh": "鸻形目",
+      "sortOrder": 404
+    },
+    {
+      "zh": "Jacanas",
+      "en": "Jacanas",
+      "orderZh": "鸻形目",
+      "sortOrder": 405
+    },
+    {
+      "zh": "Oystercatchers",
+      "en": "Oystercatchers",
+      "orderZh": "鸻形目",
+      "sortOrder": 406
+    },
+    {
+      "zh": "Painted-Snipes",
+      "en": "Painted-Snipes",
+      "orderZh": "鸻形目",
+      "sortOrder": 407
+    },
+    {
+      "zh": "Plovers and Lapwings",
+      "en": "Plovers and Lapwings",
+      "orderZh": "鸻形目",
+      "sortOrder": 408
+    },
+    {
+      "zh": "Pratincoles and Coursers",
+      "en": "Pratincoles and Coursers",
+      "orderZh": "鸻形目",
+      "sortOrder": 409
+    },
+    {
+      "zh": "Sandpipers and Allies",
+      "en": "Sandpipers and Allies",
+      "orderZh": "鸻形目",
+      "sortOrder": 410
+    },
+    {
+      "zh": "Skuas and Jaegers",
+      "en": "Skuas and Jaegers",
+      "orderZh": "鸻形目",
+      "sortOrder": 411
+    },
+    {
+      "zh": "Stilts and Avocets",
+      "en": "Stilts and Avocets",
+      "orderZh": "鸻形目",
+      "sortOrder": 412
+    },
+    {
+      "zh": "Herons, Egrets, and Bitterns",
+      "en": "Herons, Egrets, and Bitterns",
+      "orderZh": "鹈形目",
       "sortOrder": 501
     },
     {
-      "zh": "反嘴鹬科",
-      "en": "Stilts and Avocets",
-      "orderZh": "鸻形目",
+      "zh": "Ibises and Spoonbills",
+      "en": "Ibises and Spoonbills",
+      "orderZh": "鹈形目",
       "sortOrder": 502
     },
     {
-      "zh": "彩鹬科",
-      "en": "Painted-Snipes",
-      "orderZh": "鸻形目",
+      "zh": "Pelicans",
+      "en": "Pelicans",
+      "orderZh": "鹈形目",
       "sortOrder": 503
     },
     {
-      "zh": "水雉科",
-      "en": "Jacanas",
-      "orderZh": "鸻形目",
-      "sortOrder": 504
-    },
-    {
-      "zh": "海雀科",
-      "en": "Auks, Murres, and Puffins",
-      "orderZh": "鸻形目",
-      "sortOrder": 505
-    },
-    {
-      "zh": "燕鸻科",
-      "en": "Pratincoles and Coursers",
-      "orderZh": "鸻形目",
-      "sortOrder": 506
-    },
-    {
-      "zh": "蛎鹬科",
-      "en": "Oystercatchers",
-      "orderZh": "鸻形目",
-      "sortOrder": 507
-    },
-    {
-      "zh": "贼鸥科",
-      "en": "Skuas and Jaegers",
-      "orderZh": "鸻形目",
-      "sortOrder": 508
-    },
-    {
-      "zh": "鸥科",
-      "en": "Gulls, Terns, and Skimmers",
-      "orderZh": "鸻形目",
-      "sortOrder": 509
-    },
-    {
-      "zh": "鸻科",
-      "en": "Plovers and Lapwings",
-      "orderZh": "鸻形目",
-      "sortOrder": 510
-    },
-    {
-      "zh": "鹬科",
-      "en": "Sandpipers and Allies",
-      "orderZh": "鸻形目",
-      "sortOrder": 511
-    },
-    {
-      "zh": "鹮嘴鹬科",
-      "en": "Ibisbill",
-      "orderZh": "鸻形目",
-      "sortOrder": 512
-    },
-    {
-      "zh": "鹈鹕科",
-      "en": "Pelicans",
-      "orderZh": "鹈形目",
+      "zh": "Hawks, Eagles, and Kites",
+      "en": "Hawks, Eagles, and Kites",
+      "orderZh": "鹰形目",
       "sortOrder": 601
     },
     {
-      "zh": "鹭科",
-      "en": "Herons, Egrets, and Bitterns",
-      "orderZh": "鹈形目",
+      "zh": "Osprey",
+      "en": "Osprey",
+      "orderZh": "鹰形目",
       "sortOrder": 602
     },
     {
-      "zh": "鹮科",
-      "en": "Ibises and Spoonbills",
-      "orderZh": "鹈形目",
-      "sortOrder": 603
+      "zh": "Barn-Owls",
+      "en": "Barn-Owls",
+      "orderZh": "鸮形目",
+      "sortOrder": 611
     },
     {
-      "zh": "秧鸡科",
-      "en": "Rails, Gallinules, and Coots",
-      "orderZh": "鹤形目",
+      "zh": "Owls",
+      "en": "Owls",
+      "orderZh": "鸮形目",
+      "sortOrder": 612
+    },
+    {
+      "zh": "Bee-eaters",
+      "en": "Bee-eaters",
+      "orderZh": "佛法僧目",
       "sortOrder": 701
     },
     {
-      "zh": "鹤科",
-      "en": "Cranes",
-      "orderZh": "鹤形目",
+      "zh": "Kingfishers",
+      "en": "Kingfishers",
+      "orderZh": "佛法僧目",
       "sortOrder": 702
     },
     {
-      "zh": "鹗科",
-      "en": "Osprey",
-      "orderZh": "鹰形目",
+      "zh": "Rollers",
+      "en": "Rollers",
+      "orderZh": "佛法僧目",
+      "sortOrder": 703
+    },
+    {
+      "zh": "Asian Barbets",
+      "en": "Asian Barbets",
+      "orderZh": "啄木鸟目",
+      "sortOrder": 711
+    },
+    {
+      "zh": "Woodpeckers",
+      "en": "Woodpeckers",
+      "orderZh": "啄木鸟目",
+      "sortOrder": 712
+    },
+    {
+      "zh": "Falcons and Caracaras",
+      "en": "Falcons and Caracaras",
+      "orderZh": "隼形目",
+      "sortOrder": 721
+    },
+    {
+      "zh": "Accentors",
+      "en": "Accentors",
+      "orderZh": "雀形目",
       "sortOrder": 801
     },
     {
-      "zh": "鹰科",
-      "en": "Hawks, Eagles, and Kites",
-      "orderZh": "鹰形目",
+      "zh": "Bearded Reedling",
+      "en": "Bearded Reedling",
+      "orderZh": "雀形目",
       "sortOrder": 802
+    },
+    {
+      "zh": "Bulbuls",
+      "en": "Bulbuls",
+      "orderZh": "雀形目",
+      "sortOrder": 803
+    },
+    {
+      "zh": "Bush Warblers and Allies",
+      "en": "Bush Warblers and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 804
+    },
+    {
+      "zh": "Cisticolas and Allies",
+      "en": "Cisticolas and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 805
+    },
+    {
+      "zh": "Crows, Jays, and Magpies",
+      "en": "Crows, Jays, and Magpies",
+      "orderZh": "雀形目",
+      "sortOrder": 806
+    },
+    {
+      "zh": "Cuckooshrikes",
+      "en": "Cuckooshrikes",
+      "orderZh": "雀形目",
+      "sortOrder": 807
+    },
+    {
+      "zh": "Cupwings",
+      "en": "Cupwings",
+      "orderZh": "雀形目",
+      "sortOrder": 808
+    },
+    {
+      "zh": "Dippers",
+      "en": "Dippers",
+      "orderZh": "雀形目",
+      "sortOrder": 809
+    },
+    {
+      "zh": "Drongos",
+      "en": "Drongos",
+      "orderZh": "雀形目",
+      "sortOrder": 810
+    },
+    {
+      "zh": "Fairy Flycatchers",
+      "en": "Fairy Flycatchers",
+      "orderZh": "雀形目",
+      "sortOrder": 811
+    },
+    {
+      "zh": "Finches, Euphonias, and Allies",
+      "en": "Finches, Euphonias, and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 812
+    },
+    {
+      "zh": "Flowerpeckers",
+      "en": "Flowerpeckers",
+      "orderZh": "雀形目",
+      "sortOrder": 813
+    },
+    {
+      "zh": "Grassbirds and Allies",
+      "en": "Grassbirds and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 814
+    },
+    {
+      "zh": "Ground Babblers and Allies",
+      "en": "Ground Babblers and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 815
+    },
+    {
+      "zh": "Kinglets",
+      "en": "Kinglets",
+      "orderZh": "雀形目",
+      "sortOrder": 816
+    },
+    {
+      "zh": "Larks",
+      "en": "Larks",
+      "orderZh": "雀形目",
+      "sortOrder": 817
+    },
+    {
+      "zh": "Laughingthrushes and Allies",
+      "en": "Laughingthrushes and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 818
+    },
+    {
+      "zh": "Leaf Warblers",
+      "en": "Leaf Warblers",
+      "orderZh": "雀形目",
+      "sortOrder": 819
+    },
+    {
+      "zh": "Leafbirds",
+      "en": "Leafbirds",
+      "orderZh": "雀形目",
+      "sortOrder": 820
+    },
+    {
+      "zh": "Long-tailed Tits",
+      "en": "Long-tailed Tits",
+      "orderZh": "雀形目",
+      "sortOrder": 821
+    },
+    {
+      "zh": "Longspurs and Snow Buntings",
+      "en": "Longspurs and Snow Buntings",
+      "orderZh": "雀形目",
+      "sortOrder": 822
+    },
+    {
+      "zh": "Monarch Flycatchers",
+      "en": "Monarch Flycatchers",
+      "orderZh": "雀形目",
+      "sortOrder": 823
+    },
+    {
+      "zh": "New World Sparrows",
+      "en": "New World Sparrows",
+      "orderZh": "雀形目",
+      "sortOrder": 824
+    },
+    {
+      "zh": "Nuthatches",
+      "en": "Nuthatches",
+      "orderZh": "雀形目",
+      "sortOrder": 825
+    },
+    {
+      "zh": "Old World Buntings",
+      "en": "Old World Buntings",
+      "orderZh": "雀形目",
+      "sortOrder": 826
+    },
+    {
+      "zh": "Old World Flycatchers",
+      "en": "Old World Flycatchers",
+      "orderZh": "雀形目",
+      "sortOrder": 827
+    },
+    {
+      "zh": "Old World Orioles",
+      "en": "Old World Orioles",
+      "orderZh": "雀形目",
+      "sortOrder": 828
+    },
+    {
+      "zh": "Old World Sparrows",
+      "en": "Old World Sparrows",
+      "orderZh": "雀形目",
+      "sortOrder": 829
+    },
+    {
+      "zh": "Parrotbills",
+      "en": "Parrotbills",
+      "orderZh": "雀形目",
+      "sortOrder": 830
+    },
+    {
+      "zh": "Penduline-Tits",
+      "en": "Penduline-Tits",
+      "orderZh": "雀形目",
+      "sortOrder": 831
+    },
+    {
+      "zh": "Pittas",
+      "en": "Pittas",
+      "orderZh": "雀形目",
+      "sortOrder": 832
+    },
+    {
+      "zh": "Reed Warblers and Allies",
+      "en": "Reed Warblers and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 833
+    },
+    {
+      "zh": "Shrikes",
+      "en": "Shrikes",
+      "orderZh": "雀形目",
+      "sortOrder": 834
+    },
+    {
+      "zh": "Spotted Elachura",
+      "en": "Spotted Elachura",
+      "orderZh": "雀形目",
+      "sortOrder": 835
+    },
+    {
+      "zh": "Starlings",
+      "en": "Starlings",
+      "orderZh": "雀形目",
+      "sortOrder": 836
+    },
+    {
+      "zh": "Sunbirds and Spiderhunters",
+      "en": "Sunbirds and Spiderhunters",
+      "orderZh": "雀形目",
+      "sortOrder": 837
+    },
+    {
+      "zh": "Swallows",
+      "en": "Swallows",
+      "orderZh": "雀形目",
+      "sortOrder": 838
+    },
+    {
+      "zh": "Sylviid Warblers and Allies",
+      "en": "Sylviid Warblers and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 839
+    },
+    {
+      "zh": "Thrushes and Allies",
+      "en": "Thrushes and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 840
+    },
+    {
+      "zh": "Tits, Chickadees, and Titmice",
+      "en": "Tits, Chickadees, and Titmice",
+      "orderZh": "雀形目",
+      "sortOrder": 841
+    },
+    {
+      "zh": "Tree-Babblers, Scimitar-Babblers, and Allies",
+      "en": "Tree-Babblers, Scimitar-Babblers, and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 842
+    },
+    {
+      "zh": "Treecreepers",
+      "en": "Treecreepers",
+      "orderZh": "雀形目",
+      "sortOrder": 843
+    },
+    {
+      "zh": "Vangas, Helmetshrikes, and Allies",
+      "en": "Vangas, Helmetshrikes, and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 844
+    },
+    {
+      "zh": "Vireos, Shrike-Babblers, and Erpornis",
+      "en": "Vireos, Shrike-Babblers, and Erpornis",
+      "orderZh": "雀形目",
+      "sortOrder": 845
+    },
+    {
+      "zh": "Wagtails and Pipits",
+      "en": "Wagtails and Pipits",
+      "orderZh": "雀形目",
+      "sortOrder": 846
+    },
+    {
+      "zh": "Wallcreeper",
+      "en": "Wallcreeper",
+      "orderZh": "雀形目",
+      "sortOrder": 847
+    },
+    {
+      "zh": "Waxbills and Allies",
+      "en": "Waxbills and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 848
+    },
+    {
+      "zh": "Waxwings",
+      "en": "Waxwings",
+      "orderZh": "雀形目",
+      "sortOrder": 849
+    },
+    {
+      "zh": "White-eyes, Yuhinas, and Allies",
+      "en": "White-eyes, Yuhinas, and Allies",
+      "orderZh": "雀形目",
+      "sortOrder": 850
+    },
+    {
+      "zh": "Whydahs and Indigobirds",
+      "en": "Whydahs and Indigobirds",
+      "orderZh": "雀形目",
+      "sortOrder": 851
+    },
+    {
+      "zh": "Wrens",
+      "en": "Wrens",
+      "orderZh": "雀形目",
+      "sortOrder": 852
+    },
+    {
+      "zh": "Albatrosses",
+      "en": "Albatrosses",
+      "orderZh": "鹱形目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Boobies and Gannets",
+      "en": "Boobies and Gannets",
+      "orderZh": "鲣鸟目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Bustards",
+      "en": "Bustards",
+      "orderZh": "鸨形目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Cockatoos",
+      "en": "Cockatoos",
+      "orderZh": "鹦形目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Cormorants and Shags",
+      "en": "Cormorants and Shags",
+      "orderZh": "鲣鸟目",
+      "sortOrder": 9002
+    },
+    {
+      "zh": "Cuckoos",
+      "en": "Cuckoos",
+      "orderZh": "鹃形目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Flamingos",
+      "en": "Flamingos",
+      "orderZh": "红鹳目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Frigatebirds",
+      "en": "Frigatebirds",
+      "orderZh": "鲣鸟目",
+      "sortOrder": 9003
+    },
+    {
+      "zh": "Hoopoes",
+      "en": "Hoopoes",
+      "orderZh": "犀鸟目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Loons",
+      "en": "Loons",
+      "orderZh": "潜鸟目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Nightjars and Allies",
+      "en": "Nightjars and Allies",
+      "orderZh": "夜鹰目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Northern Storm-Petrels",
+      "en": "Northern Storm-Petrels",
+      "orderZh": "鹱形目",
+      "sortOrder": 9002
+    },
+    {
+      "zh": "Old World Parrots",
+      "en": "Old World Parrots",
+      "orderZh": "鹦形目",
+      "sortOrder": 9002
+    },
+    {
+      "zh": "Sandgrouse",
+      "en": "Sandgrouse",
+      "orderZh": "Pterocliformes",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Shearwaters and Petrels",
+      "en": "Shearwaters and Petrels",
+      "orderZh": "鹱形目",
+      "sortOrder": 9003
+    },
+    {
+      "zh": "Southern Storm-Petrels",
+      "en": "Southern Storm-Petrels",
+      "orderZh": "鹱形目",
+      "sortOrder": 9004
+    },
+    {
+      "zh": "Storks",
+      "en": "Storks",
+      "orderZh": "鹳形目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Swifts",
+      "en": "Swifts",
+      "orderZh": "雨燕目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Trogons",
+      "en": "Trogons",
+      "orderZh": "咬鹃目",
+      "sortOrder": 9001
+    },
+    {
+      "zh": "Tropicbirds",
+      "en": "Tropicbirds",
+      "orderZh": "鹲形目",
+      "sortOrder": 9001
     }
   ],
   "habitats": [

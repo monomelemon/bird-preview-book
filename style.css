@@ -313,6 +313,94 @@ select option:disabled {
   color: white !important;
 }
 
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  padding: 12px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  color: var(--muted);
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.dropdown-panel {
+  position: absolute;
+  z-index: 20;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.14);
+  padding: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+  width: calc(100% - 32px);
+  max-width: 528px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.dropdown-item:hover { background: var(--green-soft); }
+.dropdown-item input { width: auto; min-height: auto; cursor: pointer; }
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 4px 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal-box {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 24px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+}
+
+.modal-box h3 { margin: 0 0 8px; font-size: 19px; }
+.modal-box p { color: var(--muted); margin: 0 0 4px; }
+
+.loc-history {
+  margin-top: 8px;
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.preview-list {
+  margin-top: 8px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
 #locInput { width: 100%; }
 
 #locSuggest:empty { display: none; }

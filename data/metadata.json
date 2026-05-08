@@ -1,12 +1,13 @@
 {
   "appName": "观鸟预习本",
-  "dataVersion": "v1-macaulay-2026-05-07",
+  "dataVersion": "v2-china-2026-05-07",
   "taxonomySystem": "IOC / eBird-Clements 待统一",
   "updatedAt": "2026-05-07",
   "sourcePolicy": "所有鸟类资料必须来自可靠来源；缺失时显示暂无可靠数据。",
   "sources": [
-    "eBird API v2 (taxonomy, CN-13 Hebei checklist)",
-    "Macaulay Library / eBird photos",
-    "eBird API v2 taxonomy"
+    "eBird API v2 taxonomy (11,209 taxa)",
+    "eBird CN-01~CN-34 subnational checklists",
+    "Macaulay Library / eBird (photos + audio)",
+    "Wikipedia (zh.wikipedia.org, CC BY-SA)"
   ]
 }
