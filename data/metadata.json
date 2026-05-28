@@ -1,13 +1,13 @@
 {
   "appName": "观鸟预习本",
-  "dataVersion": "v2-fix-2026-05-08",
+  "dataVersion": "v3-cbr-2026-05-08",
   "taxonomySystem": "IOC / eBird-Clements 待统一",
   "updatedAt": "2026-05-08",
   "sourcePolicy": "所有鸟类资料必须来自可靠来源；缺失时显示暂无可靠数据。",
   "sources": [
-    "eBird API v2 taxonomy (11,209 taxa)",
-    "eBird CN-01~CN-34 subnational checklists",
-    "Macaulay Library / eBird (photos + audio)",
-    "Wikipedia (zh.wikipedia.org, CC BY-SA)"
+    "IOC World Bird List v15.2 (Multilingual Version)",
+    "CBR Checklist of Birds of China (2005) - partial extraction",
+    "eBird API v2 taxonomy",
+    "Wild Beijing Nanpu Tangshan 2011 manual records"
   ]
 }
