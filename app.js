@@ -336,6 +336,7 @@ function setupSwipeCards() {
 }
 
 let _locationMatch = null;
+let _currentAudio = null;
 
 function renderNewBook() {
   const orderCheckboxesHtml = (appData.taxonomy.orders || []).map(o => `<label class="dropdown-item"><input type="checkbox" class="order-check" value="${esc(o.zh)}" checked> ${esc(o.zh)}</label>`).join("");
@@ -386,7 +387,7 @@ function renderNewBook() {
     if (history.length) {
       locHistory.style.display = "block";
       locHistory.innerHTML = history.map(h =>
-        `<div class="add-bird-item" data-name="${esc(h.name)}" data-match="${esc(JSON.stringify(h.match))}"><span>📍 ${esc(h.name)}</span></div>`
+        `<div class="add-bird-item" data-name="${esc(h.name)}" data-match="${esc(h.match)}"><span>📍 ${esc(h.name)}</span></div>`
       ).join("");
       locHistory.querySelectorAll(".add-bird-item").forEach(item => {
         item.onclick = () => {
@@ -847,6 +848,15 @@ function renderBirdDetail(listId, birdId, isShare) {
       <button ${index >= list.birdIds.length - 1 ? "disabled" : ""} onclick="goBird('${esc(list.listId)}', '${esc(list.birdIds[index + 1])}', ${isShare})">下一种</button>
     </div>
   `;
+  document.querySelectorAll("audio").forEach(audio => {
+    audio.addEventListener("play", function() {
+      if (_currentAudio && _currentAudio !== this) _currentAudio.pause();
+      _currentAudio = this;
+    });
+    audio.addEventListener("ended", function() {
+      if (_currentAudio === this) _currentAudio = null;
+    });
+  });
 }
 
 function renderKeyPoints(points = []) {
