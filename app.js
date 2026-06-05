@@ -351,12 +351,7 @@ function renderNewBook() {
         <div id="locHistory" class="loc-history" style="display:none;"></div>
         <div id="locSuggest" class="search-results" style="max-height:200px;"></div>
       </div>
-      <div class="field"><label>时间</label>
-        <div id="monthGrid" class="month-grid">
-          <button class="secondary pill active" data-m="all" id="monthAllBtn">全年</button>
-          ${ALL_MONTHS.map(m => `<button class="secondary pill" data-m="${m}">${m}月</button>`).join("")}
-        </div>
-      </div>
+
       <div class="field"><label>分类</label>
         <div id="orderDropdown" class="dropdown-trigger">
           <span id="orderDropdownLabel">全部目</span>
@@ -402,20 +397,6 @@ function renderNewBook() {
   };
   locInput.onblur = () => { setTimeout(() => { locHistory.style.display = "none"; }, 200); };
 
-  const allMonthBtns = [...document.querySelectorAll("#monthGrid .pill")];
-  const monthAllBtn = document.querySelector("#monthAllBtn");
-
-  function getSelectedMonths() {
-    if (monthAllBtn?.classList.contains("active")) return ALL_MONTHS;
-    return allMonthBtns.filter(b => b !== monthAllBtn && b.classList.contains("active")).map(b => Number(b.dataset.m));
-  }
-
-  function monthLabel() {
-    const m = getSelectedMonths();
-    if (m.length === 0 || m.length === 12) return "全年";
-    return m.map(x => `${x}月`).join("、");
-  }
-
   const orderDropdown = document.querySelector("#orderDropdown");
   const orderDropdownPanel = document.querySelector("#orderDropdownPanel");
   const orderAllCheck = document.querySelector("#orderAllCheck");
@@ -432,10 +413,10 @@ function renderNewBook() {
     const locName = _locationMatch ? _locationMatch.name : (locInput.value.trim() || "全国");
     const allChecked = [...orderChecks].every(c => c.checked);
     if (allChecked) {
-      title.value = `${locName} · ${monthLabel()}`;
+      title.value = locName;
     } else {
       const selected = [...orderChecks].filter(c => c.checked).map(c => c.value);
-      title.value = `${locName} · ${monthLabel()} · ${selected.join("、")}`;
+      title.value = `${locName} · ${selected.join("、")}`;
     }
   }
 
@@ -477,31 +458,6 @@ function renderNewBook() {
     };
   });
 
-  function setMonthActive() {
-    const m = getSelectedMonths();
-    monthAllBtn.classList.toggle("active", m.length === 12 || m.length === 0);
-    allMonthBtns.forEach(b => {
-      if (b === monthAllBtn) return;
-      b.classList.toggle("active", m.includes(Number(b.dataset.m)));
-    });
-    syncTitle();
-  }
-
-  monthAllBtn.onclick = () => {
-    allMonthBtns.forEach(b => b.classList.remove("active"));
-    monthAllBtn.classList.add("active");
-    syncTitle();
-  };
-
-  allMonthBtns.forEach(b => {
-    if (b === monthAllBtn) return;
-    b.onclick = () => {
-      monthAllBtn.classList.remove("active");
-      b.classList.toggle("active");
-      syncTitle();
-    };
-  });
-
   syncTitle();
 
   locInput.oninput = () => {
@@ -529,8 +485,7 @@ function renderNewBook() {
 
   document.querySelector("#generate").onclick = () => {
     const location = buildLocationFromMatch(locInput.value.trim());
-    const months = getSelectedMonths();
-    if (!months.length) { document.querySelector("#newBookMsg").innerHTML = `<span class="error">请至少选择一个月。</span>`; return; }
+    const months = ALL_MONTHS;
     const filters = buildFilters();
     const birdIds = generateRecommendedList({ location, months, filters });
     if (!birdIds.length) {
@@ -966,7 +921,7 @@ function addBirdToList(targetBirdId, listId, rerenderListId) {
 }
 
 function createSharePayload(list) {
-  return { type: "birdPreviewBookShare", app: "观鸟预习本", version: 1, title: list.title, mode: list.mode, location: list.location, months: list.months, filters: list.filters, birdIds: list.birdIds, dataVersion: list.dataVersion };
+  return { type: "birdPreviewBookShare", app: "观鸟预习本", version: 1, title: list.title, mode: list.mode, location: list.location, months: null, filters: list.filters, birdIds: list.birdIds, dataVersion: list.dataVersion };
 }
 
 function shareList(listId) {
