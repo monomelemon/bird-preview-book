@@ -97,7 +97,8 @@ function base64urlDecode(text) {
 }
 
 function formatMonths(months) {
-  if (!months || months.length === 0 || months.length === 12) return "全年";
+  if (!months || months.length === 0) return "全年";
+  if (months.length === 12) return "";
   return months.map(m => `${m}月`).join("、");
 }
 
@@ -278,7 +279,7 @@ function renderHome() {
         <div class="card list-card swipe-card" data-listid="${esc(list.listId)}">
           <div onclick="navigate('book?id=${esc(list.listId)}')" style="flex:1;">
             <strong>${esc(list.title)}</strong>
-            <div class="muted small">${esc(formatMonths(list.months))} · ${list.birdIds.length} 种</div>
+            <div class="muted small">${formatMonths(list.months) ? `${esc(formatMonths(list.months))} · ` : ''}${list.birdIds.length} 种</div>
           </div>
         </div>
       </div>
@@ -507,7 +508,7 @@ function saveGeneratedList(p) {
   const createdAt = nowISO();
   const list = {
     listId: `list_${hashString(JSON.stringify({ location: p.location, months: p.months, filters: p.filters, birdIds: p.birdIds, createdAt }))}`,
-    title: p.title || `${p.location?.provinceName || "全国"} · ${formatMonths(p.months)}`,
+    title: p.title || `${p.location?.provinceName || "全国"}${formatMonths(p.months) ? ` · ${formatMonths(p.months)}` : ''}`,
     mode: "recommended",
     location: p.location,
     months: p.months,
