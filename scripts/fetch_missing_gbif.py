@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Fetch GBIF province+month occurrence data for all species.
+"""Fetch GBIF data for 21 species that were missed due to IOC/GBlF name mismatch.
 
-Calls GBIF occurrence search API per species. Extracts stateProvince and month
-facets, normalises province names to Chinese, filters counts >= 3, and writes
-data/gbif_raw.json as {birdId: {province_zh: [month_int, ...]}}.
+Uses the same logic as fetch_gbif.py but only processes the 21 fixable species
+and merges results into the existing gbif_raw.json.
 """
 
 import json
@@ -17,7 +16,6 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
-# IOC name -> GBIF-compatible name (GBIF backbone hasn't adopted 2024 IOC taxonomy)
 GBIF_NAME_MAP: dict[str, str] = {
     "Botaurus cinnamomeus": "Ixobrychus cinnamomeus",
     "Botaurus eurhythmus": "Ixobrychus eurhythmus",
@@ -41,9 +39,8 @@ GBIF_NAME_MAP: dict[str, str] = {
     "Tarsiger albocoeruleus": "Tarsiger cyanurus",
 }
 
-# Species with homonym issues — use taxonKey directly
 GBIF_TAXON_KEY_MAP: dict[str, int] = {
-    "Chloris sinica": 6101015,  # homonym with plant genus Chloris
+    "Chloris sinica": 6101015,
 }
 
 PROVINCE_MAP = {
@@ -84,17 +81,6 @@ PROVINCE_MAP = {
     "Xinjiang Uygur": "新疆",
     "Sinkiang": "新疆",
 }
-
-
-def read_json(name):
-    with (DATA / name).open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def write_json(name, obj):
-    with (DATA / name).open("w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
-        f.write("\n")
 
 
 def normalise_province(raw: str) -> str | None:
@@ -170,44 +156,56 @@ def fetch_species_gbif(scientific_name, taxon_key=None):
 
 
 def main():
-    species_list = read_json("species.json")
-    total = len(species_list)
+    species_list = json.loads((DATA / "species.json").read_text(encoding="utf-8"))
+    gbif_data = json.loads((DATA / "gbif_raw.json").read_text(encoding="utf-8"))
 
-    result: dict[str, dict[str, list[int]]] = {}
-    success_count = 0
-    error_count = 0
+    fixable_ids = set()
+    for sci in GBIF_NAME_MAP:
+        for sp in species_list:
+            if sp["scientificName"] == sci:
+                fixable_ids.add(sp["birdId"])
+                break
+    for sci in GBIF_TAXON_KEY_MAP:
+        for sp in species_list:
+            if sp["scientificName"] == sci:
+                fixable_ids.add(sp["birdId"])
+                break
 
-    print(f"Fetching GBIF data for {total} species...")
-    print(f"Rate limit: 1 s delay between calls (est. {total // 60 + 1} min)\n")
+    print(f"Missing species with fixable names: {len(fixable_ids)}")
+    count_new = 0
 
-    for i, sp in enumerate(species_list, start=1):
+    for sp in species_list:
         bird_id = sp["birdId"]
+        if bird_id not in fixable_ids:
+            continue
+        if bird_id in gbif_data:
+            print(f"  SKIP {bird_id} — already in gbif_raw.json")
+            continue
+
         sci_name = sp["scientificName"]
+        query_name = GBIF_NAME_MAP.get(sci_name, sci_name)
+        taxon_key = GBIF_TAXON_KEY_MAP.get(sci_name)
+
+        print(f"  [{bird_id}] {sci_name} -> {query_name}" +
+              (f" (taxonKey={taxon_key})" if taxon_key else ""))
+
+        result = fetch_species_gbif(query_name, taxon_key=taxon_key)
+        if result:
+            gbif_data[bird_id] = result
+            count_new += 1
+            provinces = list(result.keys())
+            print(f"    OK: {len(provinces)} provinces — {', '.join(provinces[:5])}{'...' if len(provinces) > 5 else ''}")
+        else:
+            print(f"    NO DATA (even with mapped name)")
 
         time.sleep(1)
 
-        if i % 50 == 0 or i == 1 or i == total:
-            print(f"  [{i}/{total}] {sci_name} ...")
+    (DATA / "gbif_raw.json").write_text(
+        json.dumps(gbif_data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
-        query_name = GBIF_NAME_MAP.get(sci_name, sci_name)
-        taxon_key = GBIF_TAXON_KEY_MAP.get(sci_name)
-        gbif_data = fetch_species_gbif(query_name, taxon_key=taxon_key)
-        if gbif_data:
-            result[bird_id] = gbif_data
-            success_count += 1
-        else:
-            error_count += 1
-
-    write_json("gbif_raw.json", result)
-
-    provinces = set()
-    for bird_data in result.values():
-        provinces.update(bird_data.keys())
-
-    print(f"\n{'─' * 40}")
-    print(f"Done: {success_count} species had GBIF data ({error_count} had none)")
-    print(f"{len(provinces)} provinces covered: {', '.join(sorted(provinces))}")
-    print(f"Output written to data/gbif_raw.json")
+    print(f"\nDone: {count_new} species added, total now {len(gbif_data)} in gbif_raw.json")
 
 
 if __name__ == "__main__":

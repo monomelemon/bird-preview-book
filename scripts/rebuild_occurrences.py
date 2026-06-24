@@ -51,6 +51,33 @@ def load_gbif_raw() -> dict[str, dict[str, list[int]]]:
         return json.load(f)
 
 
+BIRDID_MAPPING = {
+    "himantopus_himantopus": "bkwsti",
+    "recurvirostra_avosetta": "pieavo1",
+    "charadrius_dubius": "lirplo",
+    "charadrius_alexandrinus": "kenplo1",
+    "pluvialis_squatarola": "bkbplo",
+    "actitis_hypoleucos": "comsan",
+    "tringa_totanus": "comred1",
+    "tringa_nebularia": "comgre",
+    "pluvialis_fulva": "pagplo",
+    "charadrius_mongolus": "lessap2",
+    "limosa_lapponica": "batgod",
+    "limosa_limosa": "bktgod",
+    "numenius_madagascariensis": "faecur",
+    "numenius_arquata": "eurcur",
+    "calidris_tenuirostris": "grekno",
+    "calidris_canutus": "redkno",
+    "calidris_acuminata": "shtsan",
+    "calidris_ruficollis": "rensti",
+    "tringa_stagnatilis": "marsan",
+    "tringa_glareola": "woosan",
+    "tringa_erythropus": "spored",
+    "xenus_cinereus": "tersan",
+    "tringa_brevipes": "gyttat1",
+}
+
+
 def extract_v1_city_records() -> list[dict]:
     try:
         result = subprocess.run(
@@ -63,13 +90,20 @@ def extract_v1_city_records() -> list[dict]:
         all_records = json.loads(result.stdout)
         city_records = [r for r in all_records if r.get("locationLevel") == "city"]
 
+        mapped_records = []
         for record in city_records:
+            old_id = record.get("birdId", "")
+            if old_id in BIRDID_MAPPING:
+                record["birdId"] = BIRDID_MAPPING[old_id]
+
             record["reliability"] = "high"
             marker = "manual: Wild Beijing Nanpu 2011"
             if marker not in record.get("sourceRefs", []):
                 record["sourceRefs"] = list(record.get("sourceRefs", [])) + [marker]
 
-        return city_records
+            mapped_records.append(record)
+
+        return mapped_records
     except subprocess.CalledProcessError as e:
         print(f"ERROR: Failed to extract V1 data: {e}", file=sys.stderr)
         print("Make sure commit 08cba9d exists in this repository.", file=sys.stderr)
@@ -214,6 +248,15 @@ def main() -> None:
 
     print("[4/4] Merging and deduplicating...")
     merged = merge_occurrences(v1_records, gbif_records)
+
+    species_list = json.loads((ROOT / "data" / "species.json").read_text(encoding="utf-8"))
+    valid_ids = {s["birdId"] for s in species_list}
+    filtered = [r for r in merged if r.get("birdId", "") in valid_ids]
+    removed = len(merged) - len(filtered)
+    if removed:
+        print(f"  Filtered out {removed} records for non-existent birdIds")
+    merged = filtered
+
     print(f"  Merged total: {len(merged)} records")
 
     print("=== Validating ===")

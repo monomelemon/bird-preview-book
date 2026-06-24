@@ -1,6 +1,6 @@
 {
   "appName": "观鸟预习本",
-  "dataVersion": "v3-nomonth-2026-05-08",
+  "dataVersion": "v2-fix-2026-05-08",
   "taxonomySystem": "IOC / eBird-Clements 待统一",
   "updatedAt": "2026-05-08",
   "sourcePolicy": "所有鸟类资料必须来自可靠来源；缺失时显示暂无可靠数据。",
@@ -8,6 +8,7 @@
     "IOC World Bird List v15.2 (Multilingual Version)",
     "CBR Checklist of Birds of China (2005) - partial extraction",
     "eBird API v2 taxonomy",
-    "Wild Beijing Nanpu Tangshan 2011 manual records"
+    "Wild Beijing Nanpu Tangshan 2011 manual records",
+    "GBIF.org (2026-05-08) occurrence data"
   ]
 }
