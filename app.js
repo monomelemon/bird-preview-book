@@ -21,6 +21,7 @@ const ALL_MONTHS = [1,2,3,4,5,6,7,8,9,10,11,12];
 const app = document.querySelector("#app");
 let appData = null;
 let state = { imageIndex: 0, matchResults: [] };
+let _lastRouteName = "";
 
 const $html = (strings, ...values) => strings.reduce((out, str, i) => out + str + (values[i] ?? ""), "");
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
@@ -257,6 +258,13 @@ function getRoute() {
 function render() {
   const route = getRoute();
   state.imageIndex = 0;
+  window.scrollTo(0, 0);
+  if (route.name === "book" && route.params?.id && _lastRouteName !== "bird") {
+    sessionStorage.removeItem(`search:${route.params.id}`);
+    sessionStorage.removeItem(`filter:${route.params.id}`);
+    sessionStorage.removeItem(`sort:${route.params.id}`);
+  }
+  _lastRouteName = route.name;
   if (route.name === "new-book") return renderNewBook();
   if (route.name === "import-list") return renderImportList();
   if (route.name === "book") return renderBookDetail(route.params?.id);
@@ -749,7 +757,7 @@ function birdRow(list, birdId, isShare) {
   const checked = StorageService.isChecked(list.listId, birdId);
   const shareParam = isShare ? "&share=1" : "";
   return `<div class="bird-row ${checked ? "checked-row" : ""}">
-    ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}">` : `<div class="thumb">🐦</div>`}
+    ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">` : `<div class="thumb" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">🐦</div>`}
     <div class="bird-main" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">
       <div class="bird-name">${esc(sp.chineseName)}</div>
       <div class="bird-taxonomy">${esc(formatTaxonomy(sp))}</div>
@@ -809,8 +817,8 @@ function renderBirdDetail(listId, birdId, isShare) {
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-counter">${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</div>
     ${media.images?.length > 1 ? `<div class="row"><button class="secondary" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">上一张</button><button class="secondary" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">下一张</button></div>` : ""}
-    <details open><summary>识别要点</summary>${renderKeyPoints(identification.keyPoints)}</details>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
+    <details open><summary>识别要点</summary>${renderKeyPoints(identification.keyPoints)}</details>
     <details><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp)}</details>
     <details><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
     <details><summary>资料来源</summary>${renderSources(sp, media, identification)}</details>
