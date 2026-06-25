@@ -40,27 +40,29 @@ function toSimplified(text) {
 const normalize = (text) => toSimplified(text).trim().toLowerCase();
 
 const PINYIN_INITIALS = String.raw`
-a:阿啊
-b:白百斑半宝北背本币碧扁冰波伯薄布
-c:仓草叉茶长朝潮彻匙翅崇丑出楚川锤雌赐粗簇翠村
-d:达大代带丹淡岛道地滇典点雕顶东冬董豆独渡短断对多
-e:俄峨额厄鄂鹗耳洱二
-f:发番翻凡反饭范方飞非绯斐粉丰风冯凤佛夫弗浮福斧附复
-g:盖干甘刚高鸽歌格各庚工公狗古谷骨瓜关冠鹳灌光广龟贵桂郭
-h:哈海邯寒汉旱杭毫禾合河貉褐鹤黑恒横衡红虹鸿喉厚狐胡湖虎花华滑画槐环鹮黄蝗灰辉徽火
-j:叽鸡姬基极急棘几计纪季济加佳家甲尖间肩剪碱剑涧暗健箭江将交角脚教接揭节洁捷靛金锦近经颈九酒旧居菊巨鹃卷绢
-k:卡开堪坎看康科壳可克肯空口苦库矿阔
-l:拉蓝朗浪老勒雷类黎篱李里理力历丽栗笠连帘镰脸链良两根亮辽猎鬣林临鳞灵岭另琉硫鹨六龙隆娄卢芦鸬鹭绿峦轮罗裸
-m:麻马毛矛茅铆煤美门蒙猛梦迷米密绵冕面苗民闽名明鸣摸末漠墨牡木牧
-n:南瑙内尼泥拟鸟宁牛农浓弄努女暖诺
-p:爬帕牌攀盘胖刨炮佩盆蓬皮片漂拼品平瓶普
-q:七齐奇旗企启千迁前潜浅茜强墙悄翘鞘亲秦青清庆琼丘秋鸲曲全拳雀群
-s:萨鳃三散沙沙山珊陕善上勺少蛇社深神升生声圣尸十石食史始鹬寿书舒疏鼠曙树数双水睡丝四松苏宿虽穗隼蓑缩索
-t:台苔太泰滩檀唐塘陶特提天田铁通同铜童头秃图土团屯驼椭
-w:瓦弯玩晚万王网苇尾位魏文问翁乌无吴五鹉雾
-x:西吸希昔溪锡蟋习喜细瞎峡狭下先仙咸显线乡香湘想项小楔蝎斜谢心新星兴行杏胸熊修绣须旭悬雪血
-y:鸦鸭崖亚烟岩沿眼艳燕秧杨洋仰腰摇冶野叶夜一伊衣遗疑以异翼阴银隐印莺鹰迎影映硬勇尤有幼渝鱼羽雨玉鸢元园原圆缘远约月岳越云陨鹦
-z:杂在赞灶泽贼增扎窄展占张章爪找赵赭浙针珍真枕震镇正郑枝织直志雉中肿重帚朱珠猪竹主煮住注柱砖妆壮追锥缀准卓资子紫棕纵走嘴最遵座
+a:阿啊鹌
+b:八百白斑半宝北背本鼻比币碧扁冰滨波伯薄布瓣暴壁杓鸨膀鹎
+c:仓草叉茶长朝潮彻匙翅崇丑出楚川锤雌赐粗簇翠村纯苍藏赤橙池察彩塍鹑鹚
+d:达大代带丹淡岛道地滇典点雕顶东冬董豆独渡短断对多戴旦杜稻端钝鸫
+e:俄峨额厄鄂鹗耳洱二恶鹅
+f:发番翻凡反饭范方飞非绯斐粉丰风冯凤佛夫弗浮福斧附复凫缝翡腹蜂费
+g:盖干甘刚高鸽歌格各庚工公狗古谷骨瓜关冠鹳灌光广龟贵桂郭哥孤钩鬼鸪
+h:哈海邯寒汉旱杭毫禾合河貉褐鹤黑恒横衡红虹鸿喉厚狐胡湖虎花华滑画槐环鹮黄蝗灰辉徽火荒贺鸻鹕鹱
+j:叽鸡姬基极急棘几计纪季济加佳家甲尖间肩剪碱剑涧暗健箭江将交角脚教接揭节洁捷靛金锦近经颈九酒旧居菊巨鹃卷绢军椒矶舰颊鲣鳽鵙鸠䳭鹡鹪鹫
+k:卡开堪坎看康科壳可克肯空口苦库矿阔孔眶颏鵟
+l:拉蓝朗浪老勒雷类黎篱李里理力历丽栗笠连帘镰脸链良两根亮辽猎鬣林临鳞灵岭另琉硫鹨六龙隆娄卢芦鸬鹭绿峦轮罗裸乐兰利劳旅柳椋流璃蛎蜡领鸰鹂鹠鹩䴕
+m:麻马毛矛茅铆煤美门蒙猛梦迷米密绵冕面苗民闽名明鸣摸末漠墨牡木牧棉眉蜜鹛鹲麦
+n:南瑙内尼泥拟鸟宁牛农浓弄努女暖诺拿
+o:欧鸥
+p:爬帕牌攀盘胖刨炮佩盆蓬皮片漂拼品平瓶普䴙圃琵蹼
+q:七齐奇旗企启千迁前潜浅茜强墙悄翘鞘亲秦青清庆琼丘秋鸲曲全拳雀群栖球琴祁鹊
+r:日绒
+s:萨鳃三散沙沙山珊陕善上勺少蛇社深神升生声圣尸十石食史始鹬寿书舒疏鼠曙树数双水睡丝四松苏宿虽穗隼蓑缩索思扇氏胜色䴓
+t:台苔太泰滩檀唐塘陶特提天田铁通同铜童头秃图土团屯驼椭䴘他腿臀鹈
+w:瓦弯玩晚万王网苇尾位魏文问翁乌无吴五鹉雾兀哇纹维鹀鹟
+x:西吸希昔溪锡蟋习喜细瞎峡狭下先仙咸显线乡香湘想项小楔蝎斜谢心新星兴行杏胸熊修绣须旭悬雪血信啸巽旋玄相稀笑胁锈靴鸮鸺鹇
+y:鸦鸭崖亚烟岩沿眼艳燕秧杨洋仰腰摇冶野叶夜一伊衣遗疑以异翼阴银隐印莺鹰迎影映硬勇尤有幼渝鱼羽雨玉鸢元园原圆缘远约月岳越云陨鹦咬渔游疣蚁阳雁页鸯鸳鹞
+z:杂在赞灶泽贼增扎窄展占张章爪找赵赭浙针珍真枕震镇正郑枝织直志雉中肿重帚朱珠猪竹主煮住注柱砖妆壮追锥缀准卓资子紫棕纵走嘴最遵座啄喳噪榛沼洲足趾鹧
 `.trim().split("\n").reduce((map, line) => {
   const [initial, chars] = line.split(":");
   for (const c of chars) map[c] = initial;
@@ -694,11 +696,19 @@ function renderBookDetail(listId, sharePayload = null) {
     ${isShare ? `<button class="secondary" style="width:100%;" onclick="cloneShareList('${esc(list.listId)}')">复制为我的清单（可编辑）</button>` : ``}
     ${isShare ? `` : `<button class="fab" onclick="showAddBirdModal('${esc(list.listId)}')" title="添加鸟种">+</button>`}
   `;
+  const wasSearchFocused = document.activeElement?.id === "search";
   document.querySelector("#filter").value = filter;
   document.querySelector("#sort").value = sort;
   document.querySelector("#search").oninput = e => { sessionStorage.setItem(`search:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
   document.querySelector("#filter").onchange = e => { sessionStorage.setItem(`filter:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
   document.querySelector("#sort").onchange = e => { sessionStorage.setItem(`sort:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
+  if (wasSearchFocused) {
+    const searchInput = document.querySelector("#search");
+    if (searchInput) {
+      searchInput.focus();
+      searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+    }
+  }
 }
 
 function handleBookBack(listId) {
