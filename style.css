@@ -144,10 +144,11 @@ textarea {
 .bird-taxonomy { color: var(--muted); font-size: 13px; margin-top: 2px; }
 
 .taxonomy-inline {
-  font-size: 0.65em;
+  font-size: 0.55em;
   font-weight: 400;
   color: var(--muted);
   white-space: nowrap;
+  margin-left: 0.4em;
 }
 
 .thumb {
@@ -202,6 +203,14 @@ textarea {
 
 .detail-name h1 { margin: 8px 0 4px; }
 .latin { font-style: italic; color: var(--muted); }
+.latin.inline { white-space: nowrap; }
+
+.name-sub {
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1ex;
+}
 
 details {
   background: var(--card);
