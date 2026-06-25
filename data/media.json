@@ -2548,14 +2548,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659102489/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/679603745/large.jpg",
         "type": "photo",
         "caption": "蛎鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659102489",
-        "author": "Paul Cole",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/371927806",
+        "author": "Олеся",
+        "license": "cc-by"
       }
     ],
     "sounds": [
@@ -2948,14 +2947,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659062744/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/152988487/large.jpg",
         "type": "photo",
         "caption": "白腰草鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659062744",
-        "author": "Weronika W",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/92399883",
+        "author": "Jonas Till Jäschke",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -3182,6 +3180,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659069677",
         "author": "Torben Langer",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/495437718/large.jpeg",
+        "type": "photo",
+        "caption": "渔鸥",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/275790746",
+        "author": "Пакалнис Дэниел",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/210419801/large.jpg",
+        "type": "photo",
+        "caption": "渔鸥",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/124161384",
+        "author": "richfisc",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -5448,6 +5464,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659097225",
         "author": "Ken Rosenberg",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/94439035/large.jpg",
+        "type": "photo",
+        "caption": "雀鹰",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/59118487",
+        "author": "Евгений Гурьевских",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/266765419/large.jpg",
+        "type": "photo",
+        "caption": "雀鹰",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/154390068",
+        "author": "Valia Pavlou",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -5482,6 +5516,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659103912",
         "author": "Andrea Conway",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/109132098/large.jpeg",
+        "type": "photo",
+        "caption": "白琵鹭",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/67533336",
+        "author": "Vitalii Kolomiichuk",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/35345523/large.jpeg",
+        "type": "photo",
+        "caption": "白琵鹭",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/22805262",
+        "author": "Samuele Devidè",
+        "license": null
       }
     ],
     "sounds": [
@@ -5527,14 +5579,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659103933/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/2795088/large.jpg",
         "type": "photo",
         "caption": "赤颈鸭",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659103933",
-        "author": "Shankar Tiwari",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/2491393",
+        "author": "Kim",
+        "license": "cc-by"
       }
     ],
     "sounds": [
@@ -5569,6 +5620,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659103386",
         "author": "Gavin Bieber",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/393477091/large.jpg",
+        "type": "photo",
+        "caption": "罗纹鸭",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/222147675",
+        "author": "djpmapfer",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/456535608/large.jpg",
+        "type": "photo",
+        "caption": "罗纹鸭",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/254828988",
+        "author": "jtajax",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -5666,14 +5735,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659100995/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/452828625/large.jpg",
         "type": "photo",
         "caption": "赤膀鸭",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659100995",
-        "author": "Fabian Christen",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/252936255",
+        "author": "Roberto Corvino",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -5855,6 +5923,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659103778",
         "author": "Andrea Conway",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/258321754/large.jpeg",
+        "type": "photo",
+        "caption": "灰雁",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/149870412",
+        "author": "Ximena Magaña",
+        "license": null
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/65803384/large.jpg",
+        "type": "photo",
+        "caption": "灰雁",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/41478833",
+        "author": "jmcpeak111",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -5941,6 +6027,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659103884",
         "author": "Andrea Conway",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/48761987/large.jpg",
+        "type": "photo",
+        "caption": "凤头䴙䴘",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/31172305",
+        "author": "Emmanuelle Raymond",
+        "license": null
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/54016160/large.jpg",
+        "type": "photo",
+        "caption": "凤头䴙䴘",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/34332300",
+        "author": "naturecandids",
+        "license": null
       }
     ],
     "sounds": [
@@ -6228,14 +6332,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659076761/1200",
+        "url": "https://static.inaturalist.org/photos/178753078/large.jpeg",
         "type": "photo",
         "caption": "白额雁",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659076761",
-        "author": "Amy Leach",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/106412123",
+        "author": "Anne Bekker",
+        "license": null
       }
     ],
     "sounds": [
@@ -6374,6 +6477,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659060291",
         "author": "Hans Nicolai",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/67270327/large.jpeg",
+        "type": "photo",
+        "caption": "高山兀鹫",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/42369257",
+        "author": "Homemountain/Shan Gui",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/298095731/large.jpg",
+        "type": "photo",
+        "caption": "高山兀鹫",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/171766897",
+        "author": "no rights reserved",
+        "license": "cc0"
       }
     ],
     "sounds": [
@@ -6419,14 +6540,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/658320642/1200",
+        "url": "https://static.inaturalist.org/photos/325202496/large.jpeg",
         "type": "photo",
         "caption": "白头鹤",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/658320642",
-        "author": "aoi matsuoka",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/186126187",
+        "author": "slavalad",
+        "license": null
       }
     ],
     "sounds": [
@@ -9683,6 +9803,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659103640",
         "author": "Keith Pritchard",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/94890528/large.jpg",
+        "type": "photo",
+        "caption": "灰翅鸥",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/59390171",
+        "author": "Ted Goshulak",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/243835751/large.jpeg",
+        "type": "photo",
+        "caption": "灰翅鸥",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/142245056",
+        "author": "abhi s",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -9953,14 +10091,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/658992866/1200",
+        "url": "https://static.inaturalist.org/photos/268164955/large.jpeg",
         "type": "photo",
         "caption": "大滨鹬",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/658992866",
-        "author": "Kuan Chia Hsiu",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/155157152",
+        "author": "Oscar Ho",
+        "license": null
       }
     ],
     "sounds": [
@@ -14819,6 +14956,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659104092",
         "author": "Andrea Conway",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/289334247/large.jpeg",
+        "type": "photo",
+        "caption": "斑姬鹟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/167047957",
+        "author": "I Vombat",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/232585806/large.jpeg",
+        "type": "photo",
+        "caption": "斑姬鹟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/136293799",
+        "author": "persilou",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -15020,14 +15175,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659103671/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/122037700/large.jpg",
         "type": "photo",
         "caption": "灰冠金翅雀",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659103671",
-        "author": "Aniruddha  Roy",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/74653796",
+        "author": "Анна Голубева",
+        "license": "cc-by-nc-nd"
       }
     ],
     "sounds": [
@@ -15105,6 +15259,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659103088",
         "author": "Soo sing Loke",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/591074053/large.jpg",
+        "type": "photo",
+        "caption": "灰头灰雀",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/326367570",
+        "author": "Sheelagh Halsey",
+        "license": "cc-by"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/425159854/large.jpg",
+        "type": "photo",
+        "caption": "灰头灰雀",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/238782277",
+        "author": "Mengshuai Ge",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -15234,6 +15406,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/658931829",
         "author": "Abhisekh Dewangan",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/322122128/large.jpg",
+        "type": "photo",
+        "caption": "灰翅鸫",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/184530773",
+        "author": "pelagicgraf",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/28566929/large.jpg",
+        "type": "photo",
+        "caption": "灰翅鸫",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/18661334",
+        "author": "Wild Chroma",
+        "license": null
       }
     ],
     "sounds": [
@@ -15417,14 +15607,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659053187/1200",
+        "url": "https://static.inaturalist.org/photos/239821309/large.jpeg",
         "type": "photo",
         "caption": "黑喉红尾鸲",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659053187",
-        "author": "Hans Nicolai",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/140130378",
+        "author": "Mori P",
+        "license": null
       }
     ],
     "sounds": [
@@ -20582,6 +20771,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659071596",
         "author": "Dermot Breen",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/108294990/large.jpg",
+        "type": "photo",
+        "caption": "山蓝仙鹟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/67084278",
+        "author": "Joshua Dezentje",
+        "license": null
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/186688369/large.jpg",
+        "type": "photo",
+        "caption": "山蓝仙鹟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/110646528",
+        "author": "Rejoice Gassah",
+        "license": "cc-by"
       }
     ],
     "sounds": [
@@ -21781,6 +21988,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659081628",
         "author": "Bjarne Verhaeghe",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/134922831/large.jpg",
+        "type": "photo",
+        "caption": "暗绿柳莺",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/82218725",
+        "author": "Katty_li",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/153892605/large.jpg",
+        "type": "photo",
+        "caption": "暗绿柳莺",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/92900776",
+        "author": "Александр",
+        "license": "cc-by-nc-sa"
       }
     ],
     "sounds": [
@@ -22749,6 +22974,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/658650026",
         "author": "一叶知秋 ～",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/112604502/large.jpeg",
+        "type": "photo",
+        "caption": "棕腹大仙鹟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/69406335",
+        "author": "Oscar Ho",
+        "license": null
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/246377192/large.jpg",
+        "type": "photo",
+        "caption": "棕腹大仙鹟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/143640339",
+        "author": "Tony furguson",
+        "license": null
       }
     ],
     "sounds": [
@@ -23682,6 +23925,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659078626",
         "author": "Mohammad Fallah",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/266903040/large.jpg",
+        "type": "photo",
+        "caption": "淡眉柳莺",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/154468026",
+        "author": "Sergo Travelian",
+        "license": null
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/239639715/large.jpeg",
+        "type": "photo",
+        "caption": "淡眉柳莺",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/140040457",
+        "author": "Kurt Saxum",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -24012,14 +24273,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659040988/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/363149283/large.jpg",
         "type": "photo",
         "caption": "灰喉山椒鸟",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659040988",
-        "author": "Andy Wang",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/205383115",
+        "author": "watermargin",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -24619,14 +24879,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659098836/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/347327537/large.jpg",
         "type": "photo",
         "caption": "灰鹡鸰",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659098836",
-        "author": "Koji Tachimori",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/197233179",
+        "author": "SteveM4560",
+        "license": "cc-by"
       }
     ],
     "sounds": [
@@ -25680,6 +25939,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659085094",
         "author": "Zak Pohlen",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/529703584/large.jpg",
+        "type": "photo",
+        "caption": "白眉鸫",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/294293344",
+        "author": "Peter Ericsson",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/200526950/large.jpg",
+        "type": "photo",
+        "caption": "白眉鸫",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/118669840",
+        "author": "Анна Голубева",
+        "license": "cc-by-nc-nd"
       }
     ],
     "sounds": [
@@ -28082,14 +28359,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659076753/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/333141474/large.jpg",
         "type": "photo",
         "caption": "锡嘴雀",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659076753",
-        "author": "Eugenia Boggiano",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/190082699",
+        "author": "Valia Pavlou",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -28229,6 +28505,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659104065",
         "author": "Andrea Conway",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/609972539/large.jpg",
+        "type": "photo",
+        "caption": "普通䴓",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/335736129",
+        "author": "Василий Вишневский",
+        "license": null
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/69125341/large.jpeg",
+        "type": "photo",
+        "caption": "普通䴓",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/43569513",
+        "author": "Нурхайдарова Татьяна",
+        "license": "cc-by"
       }
     ],
     "sounds": [
@@ -28469,6 +28763,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/658716665",
         "author": "Yuxuan Hu",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/470541188/large.jpg",
+        "type": "photo",
+        "caption": "苍眉蝗莺",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/261865238",
+        "author": "Natalya Andreyenkova",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/526488240/large.jpg",
+        "type": "photo",
+        "caption": "苍眉蝗莺",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/292556704",
+        "author": "Александр Кочетков",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -28503,6 +28815,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659063491",
         "author": "Hans Nicolai",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/62141150/large.jpg",
+        "type": "photo",
+        "caption": "蓝喉太阳鸟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/39190018",
+        "author": "robert ferguson",
+        "license": "cc-by-nc-nd"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/141616461/large.jpeg",
+        "type": "photo",
+        "caption": "蓝喉太阳鸟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/86008550",
+        "author": "Marco Chan",
+        "license": "cc-by"
       }
     ],
     "sounds": [
@@ -30575,14 +30905,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659054360/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/347668315/large.jpg",
         "type": "photo",
         "caption": "绿背山雀",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659054360",
-        "author": "Hans Nicolai",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/197402321",
+        "author": "pelagicgraf",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -30784,14 +31113,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659043901/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/550888460/large.jpg",
         "type": "photo",
         "caption": "发冠卷尾",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659043901",
-        "author": "sandeep wadke",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/305534006",
+        "author": "Sihan (Max) Chen",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -31587,6 +31915,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659093769",
         "author": "瑞珍 楊",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/177544237/large.jpg",
+        "type": "photo",
+        "caption": "黄雀",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/105770575",
+        "author": "Mikhail Ezdakov",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/112348316/large.jpg",
+        "type": "photo",
+        "caption": "黄雀",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/69258950",
+        "author": "Biotura info",
+        "license": "cc-by-nc-nd"
       }
     ],
     "sounds": [
@@ -34130,14 +34476,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659100605/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/172462544/large.jpg",
         "type": "photo",
         "caption": "花尾榛鸡",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659100605",
-        "author": "Graham Higgins",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/103089173",
+        "author": "Alexander Yakovlev",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -34310,6 +34655,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659015801",
         "author": "MKBP Mahapatra",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/174145471/large.jpg",
+        "type": "photo",
+        "caption": "珠鸡",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/103972001",
+        "author": "colleensilvermine",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/257630838/large.jpeg",
+        "type": "photo",
+        "caption": "珠鸡",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/149504016",
+        "author": "Przemyslaw Zdunek",
+        "license": null
       }
     ],
     "sounds": [
@@ -34568,6 +34931,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659019507",
         "author": "Geert Bouke Kortleve",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/581392377/large.jpg",
+        "type": "photo",
+        "caption": "红腹锦鸡",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/321471486",
+        "author": "Victoria Dunbar",
+        "license": null
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/233914195/large.jpeg",
+        "type": "photo",
+        "caption": "红腹锦鸡",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/137004333",
+        "author": "Xiaogang Zhou",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -35457,6 +35838,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659053496",
         "author": "Gerrit Jan Klop",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/116778117/large.jpg",
+        "type": "photo",
+        "caption": "三趾啄木鸟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/71701455",
+        "author": "Griha Hasanov",
+        "license": null
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/91785010/large.jpeg",
+        "type": "photo",
+        "caption": "三趾啄木鸟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/57542912",
+        "author": "Christoph Moning",
+        "license": "cc-by"
       }
     ],
     "sounds": [
@@ -36002,6 +36401,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659102327",
         "author": "Mamta Munjal",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/28360307/large.jpg",
+        "type": "photo",
+        "caption": "灰头绿啄木鸟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/18538790",
+        "author": "Александр",
+        "license": "cc-by-nc-nd"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/476073531/large.jpg",
+        "type": "photo",
+        "caption": "灰头绿啄木鸟",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/265078921",
+        "author": "Manuel Raab",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -36203,14 +36620,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659101291/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/230266217/large.jpg",
         "type": "photo",
         "caption": "燕隼",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659101291",
-        "author": "Fabian Christen",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/135036813",
+        "author": "Анна Голубева",
+        "license": "cc-by-nc-nd"
       }
     ],
     "sounds": [
@@ -36737,14 +37153,13 @@
         "license": "Any Lab Use=eBird"
       },
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659103444/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/340468237/large.jpg",
         "type": "photo",
         "caption": "普通鸬鹚",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659103444",
-        "author": "李 喜喜",
-        "license": "Any Lab Use=eBird",
-        "note": "画质较低，待替换"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/193788714",
+        "author": "Lioneska",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -36779,6 +37194,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659101608",
         "author": "Hossein Shirian",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/183186808/large.jpeg",
+        "type": "photo",
+        "caption": "戴胜",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/108764466",
+        "author": "joy_tansey",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/1843019/large.jpg",
+        "type": "photo",
+        "caption": "戴胜",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/1487250",
+        "author": "adiashkenazi",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
@@ -37254,6 +37687,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/658988797",
         "author": "kang kang",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/170583451/large.jpeg",
+        "type": "photo",
+        "caption": "普通夜鹰",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/102085003",
+        "author": "Oscar Ho",
+        "license": null
+      },
+      {
+        "url": "https://static.inaturalist.org/photos/105083249/large.jpeg",
+        "type": "photo",
+        "caption": "普通夜鹰",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/65303951",
+        "author": "熊盛志",
+        "license": null
       }
     ],
     "sounds": [
@@ -38139,6 +38590,24 @@
         "sourceUrl": "https://macaulaylibrary.org/asset/659081474",
         "author": "Bill Hubick",
         "license": "Any Lab Use=eBird"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/285206631/large.jpg",
+        "type": "photo",
+        "caption": "大鸨",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/164808631",
+        "author": "felicey123",
+        "license": "cc-by-nc"
+      },
+      {
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/638506193/large.jpg",
+        "type": "photo",
+        "caption": "大鸨",
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/349981277",
+        "author": "doug",
+        "license": "cc-by-nc"
       }
     ],
     "sounds": [
