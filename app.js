@@ -809,8 +809,10 @@ function renderBirdDetail(listId, birdId, isShare) {
       <button class="ghost check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${checked ? "✓" : ""}</button>
     </div>
     <div class="detail-name">
-      <h1>${esc(sp.chineseName)}<span class="taxonomy-inline">${esc(formatTaxonomy(sp))}</span></h1>
-      <div class="name-row"><span class="name-row-left">${esc(sp.englishName || "暂无可靠数据")}</span> <span class="latin">${esc(sp.scientificName || "暂无可靠数据")}</span></div>
+      <h1>${esc(sp.chineseName)}</h1>
+      <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
+      <div class="taxonomy-left">${esc(formatTaxonomy(sp))}</div>
+      <div class="latin name-right">${esc(sp.scientificName || "暂无可靠数据")}</div>
     </div>
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-counter">${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</div>
