@@ -614,7 +614,15 @@ function matchInputName(input) {
   const key = normalize(input);
   const exact = appData.speciesByChineseName.get(key) || appData.speciesByAlias.get(key) || appData.speciesByScientificName.get(key) || appData.speciesByEnglishName.get(key);
   if (exact) return { input, status: "matched", species: exact };
-  const candidates = appData.species.filter(sp => normalize(sp.chineseName).includes(key) || key.includes(normalize(sp.chineseName))).slice(0, 5);
+  const candidates = appData.species.filter(sp => {
+    const cn = normalize(sp.chineseName);
+    if (cn.includes(key) || key.includes(cn)) return true;
+    const keySet = new Set([...key]);
+    const cnSet = new Set([...cn]);
+    const overlap = [...keySet].filter(c => cnSet.has(c)).length;
+    const minLen = Math.min(key.length, cn.length);
+    return overlap >= Math.max(2, Math.ceil(minLen * 0.5));
+  }).slice(0, 5);
   if (candidates.length) return { input, status: "candidate", candidates, selected: null };
   return { input, status: "unmatched" };
 }
