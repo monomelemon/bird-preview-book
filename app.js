@@ -667,13 +667,13 @@ function renderBookDetail(listId, sharePayload = null) {
   const search = sessionStorage.getItem(`search:${list.listId}`) || "";
   const birds = filterSortBirds(list.birdIds, list.listId, { filter, sort, search }, list);
   const sortOptions = [
-    { value: "taxonomy", label: "按分类地位" },
-    { value: "check", label: "按观察状态" },
+    { value: "taxonomy", label: "按分类" },
     { value: "name", label: "按中文名" }
   ];
   const sortHTML = sortOptions.map(o =>
     `<option value="${o.value}">${esc(o.label)}</option>`
   ).join("");
+  const wasSearchFocused = document.activeElement?.id === "search";
   app.innerHTML = $html`
     <div class="page-header">
       <button class="ghost" onclick="handleBookBack('${esc(list.listId)}')">返回</button>
@@ -685,19 +685,16 @@ function renderBookDetail(listId, sharePayload = null) {
     </div>
     <div class="card">
       <strong>已观察 ${checks.checkedBirdIds.length} / 共 ${list.birdIds.length} 种</strong>
-      <div class="toolbar" style="margin-top:12px;">
-        <input id="search" placeholder="搜索鸟名、别名、学名、英文名（支持拼音首字母）" value="${esc(search)}">
-        <div class="toolbar-grid">
-          <select id="filter"><option value="all">全部</option><option value="unchecked">未观察</option><option value="checked">已观察</option></select>
-          <select id="sort">${sortHTML}</select>
-        </div>
+      <div style="display:flex;gap:8px;margin-top:12px;margin-bottom:12px;">
+        <input id="search" placeholder="搜索鸟名（支持拼音首字母）" value="${esc(search)}" style="flex:1;min-width:0;">
+        <select id="filter"><option value="all">全部</option><option value="unchecked">未观察</option><option value="checked">已观察</option></select>
+        <select id="sort">${sortHTML}</select>
       </div>
       ${birds.length ? birds.map(id => birdRow(list, id, isShare)).join("") : `<p class="muted">没有符合条件的鸟种。</p>`}
     </div>
     ${isShare ? `<button class="secondary" style="width:100%;" onclick="cloneShareList('${esc(list.listId)}')">复制为我的清单（可编辑）</button>` : ``}
     ${isShare ? `` : `<button class="fab" onclick="showAddBirdModal('${esc(list.listId)}')" title="添加鸟种">+</button>`}
   `;
-  const wasSearchFocused = document.activeElement?.id === "search";
   document.querySelector("#filter").value = filter;
   document.querySelector("#sort").value = sort;
   document.querySelector("#search").oninput = e => { sessionStorage.setItem(`search:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
@@ -768,7 +765,6 @@ function filterSortBirds(birdIds, listId, { filter, sort, search }, list) {
     return hay.includes(query);
   }).sort((a, b) => {
     if (sort === "name") return (appData.speciesById.get(a)?.chineseName || "").localeCompare(appData.speciesById.get(b)?.chineseName || "", "zh-Hans-CN");
-    if (sort === "check") return Number(StorageService.isChecked(listId, a)) - Number(StorageService.isChecked(listId, b));
     return sortBirdIds(a, b);
   });
 }

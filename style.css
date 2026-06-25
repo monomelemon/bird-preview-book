@@ -167,18 +167,7 @@ textarea {
 
 .checked-row { background: linear-gradient(90deg, transparent, var(--green-soft)); }
 
-.toolbar {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  margin-bottom: 12px;
-}
 
-.toolbar-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
 
 .hero-image {
   width: 100%;
