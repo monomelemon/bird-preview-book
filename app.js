@@ -687,8 +687,8 @@ function renderBookDetail(listId, sharePayload = null) {
       <strong>已观察 ${checks.checkedBirdIds.length} / 共 ${list.birdIds.length} 种</strong>
       <div style="display:flex;gap:8px;margin-top:12px;margin-bottom:12px;">
         <input id="search" placeholder="搜索鸟名（支持拼音首字母）" value="${esc(search)}" style="flex:1;min-width:0;">
-        <select id="filter"><option value="all">全部</option><option value="unchecked">未观察</option><option value="checked">已观察</option></select>
-        <select id="sort">${sortHTML}</select>
+        <select id="filter" style="flex-shrink:0;width:70px;"><option value="all">全部</option><option value="unchecked">未观察</option><option value="checked">已观察</option></select>
+        <select id="sort" style="flex-shrink:0;width:80px;">${sortHTML}</select>
       </div>
       ${birds.length ? birds.map(id => birdRow(list, id, isShare)).join("") : `<p class="muted">没有符合条件的鸟种。</p>`}
     </div>
