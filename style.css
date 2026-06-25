@@ -144,11 +144,11 @@ textarea {
 .bird-taxonomy { color: var(--muted); font-size: 13px; margin-top: 2px; }
 
 .taxonomy-inline {
-  font-size: 0.55em;
+  font-size: 0.45em;
   font-weight: 400;
   color: var(--muted);
   white-space: nowrap;
-  margin-left: 0.4em;
+  text-align: right;
 }
 
 .thumb {
@@ -201,15 +201,21 @@ textarea {
   margin-bottom: 12px;
 }
 
-.detail-name h1 { margin: 8px 0 4px; }
-.latin { font-style: italic; color: var(--muted); }
-.latin.inline { white-space: nowrap; }
-
-.name-sub {
-  color: var(--muted);
+.detail-name h1 {
+  margin: 8px 0 4px;
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 1ex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.latin { font-style: italic; color: var(--muted); white-space: nowrap; }
+
+.name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  color: var(--muted);
 }
 
 details {

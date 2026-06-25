@@ -810,7 +810,7 @@ function renderBirdDetail(listId, birdId, isShare) {
     </div>
     <div class="detail-name">
       <h1>${esc(sp.chineseName)}<span class="taxonomy-inline">${esc(formatTaxonomy(sp))}</span></h1>
-      <div class="name-sub"><span>${esc(sp.englishName || "暂无可靠数据")}</span> <span class="latin inline">${esc(sp.scientificName || "暂无可靠数据")}</span></div>
+      <div class="name-row"><span class="name-row-left">${esc(sp.englishName || "暂无可靠数据")}</span> <span class="latin">${esc(sp.scientificName || "暂无可靠数据")}</span></div>
     </div>
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-counter">${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</div>
