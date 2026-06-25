@@ -6314,13 +6314,13 @@
   "gwfgoo": {
     "images": [
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659080741/1200",
+        "url": "https://static.inaturalist.org/photos/109596678/large.jpeg",
         "type": "photo",
         "caption": "白额雁",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659080741",
-        "author": "Paul Kinzer",
-        "license": "Any Lab Use=eBird"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/67779078",
+        "author": "Siyul LEE",
+        "license": "cc-by-nc"
       },
       {
         "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659079569/1200",
