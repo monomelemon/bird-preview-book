@@ -267,6 +267,7 @@ function render() {
 
 function renderHome() {
   const lists = StorageService.getLists();
+  const savedLists = lists.filter(l => l.saved === true);
   app.innerHTML = $html`
     <h1 class="home-title">观鸟预习本</h1>
     <p class="home-subtitle">可能会看到什么鸟？</p>
@@ -275,7 +276,7 @@ function renderHome() {
       <button class="secondary" onclick="navigate('import-list')">录入清单</button>
     </div>
     <h2 class="section-title">最近清单</h2>
-    ${lists.length ? lists.map(list => `
+    ${savedLists.length ? savedLists.map(list => `
       <div class="swipe-container">
         <div class="swipe-delete" onclick="deleteRecentList(event, '${esc(list.listId)}')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
         <div class="card list-card swipe-card" data-listid="${esc(list.listId)}">
@@ -518,7 +519,7 @@ function saveGeneratedList(p) {
     birdIds: p.birdIds,
     createdAt,
     updatedAt: createdAt,
-    saved: true,
+    saved: false,
     dataVersion: appData.metadata.dataVersion
   };
   StorageService.saveList(list);
@@ -651,7 +652,7 @@ function createImportList() {
     return;
   }
   const createdAt = nowISO();
-  const list = { listId: `import_${hashString(JSON.stringify({ birdIds, createdAt }))}`, title: document.querySelector("#importTitle").value.trim() || `自定义预习本 · ${birdIds.length}种`, mode: "import", location: null, months: ALL_MONTHS, filters: { orders: [], families: [], habitats: [] }, birdIds, createdAt, updatedAt: createdAt, saved: true, dataVersion: appData.metadata.dataVersion };
+  const list = { listId: `import_${hashString(JSON.stringify({ birdIds, createdAt }))}`, title: document.querySelector("#importTitle").value.trim() || `自定义预习本 · ${birdIds.length}种`, mode: "import", location: null, months: ALL_MONTHS, filters: { orders: [], families: [], habitats: [] }, birdIds, createdAt, updatedAt: createdAt, saved: false, dataVersion: appData.metadata.dataVersion };
   StorageService.saveList(list);
   navigate(`book?id=${list.listId}`);
 }
@@ -722,7 +723,7 @@ function handleBookBack(listId) {
     message: "你还没有保存这个预习本",
     buttons: [
       { label: "取消" },
-      { label: "不保存", cls: "danger", action: () => navigate("home") },
+      { label: "不保存", cls: "danger", action: () => { StorageService.deleteList(listId); navigate("home"); } },
       { label: "保存", action: () => { saveBookList(listId); navigate("home"); } }
     ]
   });
