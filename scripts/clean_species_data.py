@@ -3,39 +3,16 @@
 
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 SCRIPTS = ROOT / "scripts"
 
-# ─── Traditional → Simplified Chinese (from app.js lines 29-36) ───
-TRAD_TO_SIMP = str.maketrans({
-    # From app.js lines 30-36
-    "凍": "冻", "鵝": "鹅", "鴨": "鸭", "鴛": "鸳", "鴦": "鸯", "鵠": "鹄", "鵰": "雕", "鷹": "鹰",
-    "鷂": "鹞", "鷲": "鹫", "鶚": "鹗", "鶻": "鹘",
-    "鷺": "鹭", "鶴": "鹤", "鷗": "鸥", "鴴": "鸻", "鷸": "鹬", "鵐": "鹀", "鶲": "鹟",
-    "鵯": "鹎", "鶇": "鸫", "鴉": "鸦", "鵲": "鹊",
-    "鴟": "鸱", "鵑": "鹃", "鶯": "莺", "鷦": "鹪", "鷯": "鹩", "鴞": "鸮", "雞": "鸡",
-    "鷿": "\u4d59", "鸊": "\u4d58", "鵜": "鹈", "鸕": "鸬",  # 䴙䴘
-    "黃": "黄", "灣": "湾", "濱": "滨", "蹺": "跷", "紅": "红", "藍": "蓝", "綠": "绿",
-    "烏": "乌", "鳳": "凤", "頭": "头", "頸": "颈",
-    "長": "长", "腳": "脚", "翹": "翘", "臉": "脸", "極": "极", "賊": "贼", "蠣": "蛎",
-    "潛": "潜", "鶘": "鹕", "額": "额", "鴻": "鸿", "劍": "剑", "寬": "宽",
-    "棲": "栖", "漁": "渔", "禿": "秃", "細": "细", "緋": "绯", "脇": "胁", "蒼": "苍",
-    "蘇": "苏", "諾": "诺", "遺": "遗", "頂": "顶", "簑": "蓑", "東": "东", "歐": "欧",
-    "亞": "亚", "遷": "迁", "鶺": "鹡", "鴒": "鸰", "鶉": "鹑", "鵪": "鹌",
-    "雲": "云", "華": "华", "臺": "台", "廣": "广", "雙": "双", "學": "学", "體": "体",
-    "類": "类", "種": "种", "鳥": "鸟", "鳴": "鸣", "觀": "观", "記": "记", "錄": "录", "據": "据",
-    # Additional mappings for species data not in app.js
-    "鳩": "鸠", "鴿": "鸽", "鸌": "鹱", "鸛": "鹳",
-    "鶿": "鹚", "鷀": "鹚", "鰹": "鲣", "鵐": "鹀",
-})
-
-
-def to_simplified(text):
-    return str(text or "").translate(TRAD_TO_SIMP)
-
+# Import shared utilities
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from text_utils import to_simplified
 
 # ─── Family name English → Chinese mapping (ALL 104 families) ───
 FAMILY_MAP = {

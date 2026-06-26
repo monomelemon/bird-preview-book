@@ -8,30 +8,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
-TRAD_TO_SIMP = str.maketrans({
-    "凍": "冻", "鵝": "鹅", "鴨": "鸭", "鴛": "鸳", "鴦": "鸯", "鵠": "鹄", "鵰": "雕", "鷹": "鹰",
-    "鷂": "鹞", "鷲": "鹫", "鶚": "鹗", "鶻": "鹘",
-    "鷺": "鹭", "鶴": "鹤", "鷗": "鸥", "鴴": "鸻", "鷸": "鹬", "鵐": "鹀", "鶲": "鹟",
-    "鵯": "鹎", "鶇": "鸫", "鴉": "鸦", "鵲": "鹊",
-    "鴟": "鸱", "鵑": "鹃", "鶯": "莺", "鷦": "鹪", "鷯": "鹩", "鴞": "鸮", "雞": "鸡",
-    "鷿": "\u4d59", "鸊": "\u4d58", "鵜": "鹈", "鸕": "鸬",
-    "黃": "黄", "灣": "湾", "濱": "滨", "蹺": "跷", "紅": "红", "藍": "蓝", "綠": "绿",
-    "烏": "乌", "鳳": "凤", "頭": "头", "頸": "颈",
-    "長": "长", "腳": "脚", "翹": "翘", "臉": "脸", "極": "极", "賊": "贼", "蠣": "蛎",
-    "潛": "潜", "鶘": "鹕", "額": "额", "鴻": "鸿", "劍": "剑", "寬": "宽",
-    "棲": "栖", "漁": "渔", "禿": "秃", "細": "细", "緋": "绯", "脇": "胁", "蒼": "苍",
-    "蘇": "苏", "諾": "诺", "遺": "遗", "頂": "顶", "簑": "蓑", "東": "东", "歐": "欧",
-    "亞": "亚", "遷": "迁", "鶺": "鹡", "鴒": "鸰", "鶉": "鹑", "鵪": "鹌",
-    "雲": "云", "華": "华", "臺": "台", "廣": "广", "雙": "双", "學": "学", "體": "体",
-    "類": "类", "種": "种", "鳥": "鸟", "鳴": "鸣", "觀": "观", "記": "记", "錄": "录", "據": "据",
-    "鳩": "鸠", "鴿": "鸽", "鸌": "鹱", "鸛": "鹳",
-})
+# Import shared utilities
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from text_utils import to_simplified
 
 DIST_RE = re.compile(
-    r"(\u5206\u5e03[\uff1a:][^\n]{10,100})|"
-    r"(\u5206\u5e03\u4e8e[^\n]{10,100})|"
-    r"(\u5728[^\n]{0,8}(\u4e2d\u56fd|\u4e2d\u570b|\u5927\u9646|\u5927\u9678|"
-    r"\u534e\u5317|\u534e\u5357|\u534e\u4e1c|\u4e1c\u5317|\u897f\u5357|\u897f\u5317)[^\n]{5,100})",
+    r"分布[：:\s][^\n]{10,150}|"
+    r"分布[在於于][^\n]{10,150}|"
+    r"[仅僅]?分布[於于]?[^\n]{10,150}|"
+    r"[仅僅]?(?:主要|广泛|泛|廣)?分[布佈][在於于]?[^\n]{10,150}|"
+    r"广布[在於于][^\n]{10,150}|"
+    r"[仅僅]见[於于][^\n]{10,120}|"
+    r"常见[於于][^\n]{10,120}|"
+    r"繁殖[在於于][^\n]{10,120}|"
+    r"[栖棲]息[在於于][^\n]{10,120}|"
+    r"(?:地区|區域)特有[於于]?[^\n]{5,120}",
     re.IGNORECASE)
 
 
@@ -44,10 +35,6 @@ def write_json(name, obj):
     with (DATA / name).open("w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
         f.write("\n")
-
-
-def to_simplified(text):
-    return str(text or "").translate(TRAD_TO_SIMP)
 
 
 def fetch_wiki_extract(title):
@@ -75,12 +62,16 @@ def extract_distribution(extract):
     if not extract:
         return None
     matches = DIST_RE.findall(extract)
-    parts = []
-    for m in matches:
-        for g in m:
-            if g and len(g) > 8:
-                parts.append(g.strip())
-    return "\uff1b".join(parts[:2]) if parts else None
+    parts = [m.strip() for m in matches if len(m) > 8]
+    if not parts:
+        return None
+    seen = set()
+    unique = []
+    for p in parts:
+        if p not in seen:
+            seen.add(p)
+            unique.append(p)
+    return "；".join(unique[:2])
 
 
 def main():
@@ -117,10 +108,10 @@ def main():
         }
 
     batch = species[:total]
-    batch_size = 20
+    batch_size = 8
     for i in range(0, len(batch), batch_size):
         chunk = batch[i:i + batch_size]
-        with ThreadPoolExecutor(max_workers=min(batch_size, 15)) as pool:
+        with ThreadPoolExecutor(max_workers=4) as pool:
             futures = [pool.submit(fetch_one, sp) for sp in chunk]
             for future in as_completed(futures):
                 bird_id, wiki_data = future.result()
@@ -130,9 +121,9 @@ def main():
                         species_index[bird_id]["distribution"] = wiki_data["distribution"]
                     updated += 1
                 done += 1
-                if done % 25 == 0:
+                if done % 50 == 0:
                     print(f"  wiki: {done}/{total} (updated {updated})", flush=True)
-        time.sleep(0.2)
+        time.sleep(1.0)
 
     with_desc = sum(1 for sp in species if sp.get("description"))
     with_dist = sum(1 for sp in species if sp.get("distribution"))

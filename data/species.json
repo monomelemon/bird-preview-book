@@ -21,7 +21,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "blksco2",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "黑海番鸭是鸭科海番鸭属鸟类，可以指：\n\nMelanitta americana，中国大陆和香港称为黑海番鸭，IOC世界鸟类多语言名录的繁体中文名为美洲黑海番鸭。\nMelanitta nigra，美洲黑海番鸭曾为其亚种，拆分前该物种称为黑海番鸭，拆分后中国大陆称为普通海番鸭，IOC世界鸟类多语言名录的繁体中文名为黑海番鸭或普通海番鸭（港台无此物种分布，因此香港鸟类名录和台湾鸟类名录均未提供其中文名）。"
   },
   {
     "birdId": "cangoo",
@@ -45,7 +46,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "cangoo",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "加拿大雁（学名：Branta canadensis），屬於雁形目鸭科黑雁屬；种名canadensis为拉丁文，「來自加拿大」之意。"
   },
   {
     "birdId": "harduc",
@@ -70,7 +72,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "harduc",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "丑鸭（学名：Histrionicus histrionicus；英语：Harlequin duck）是鸭科丑鸭属（Histrionicus）的唯一一种生物，其属名和种加词均来自拉丁语“histrio”，意思是“演员”。这种海鸟分布于太平洋和大西洋北部沿海。",
+    "distribution": "分布于太平洋和大西洋北部沿海。"
   },
   {
     "birdId": "rebgoo1",
@@ -95,7 +99,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "rebgoo1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红胸黑雁（学名：Branta ruficollis）为鸭科黑雁属的鸟类。分布于俄罗斯以及中国的湖南、广西等地，常见于海湾、海港、河口、离湖较近的盐沼地以及内陆咸水湖区。该物种的模式产地在西伯利亚的鄂毕河下游。",
+    "distribution": "分布于俄罗斯以及中国的湖南、广西等地，常见于海湾、海港、河口、离湖较近的盐沼地以及内陆咸水湖区。该物种的模式产地在西伯利亚的鄂毕河下游。"
   },
   {
     "birdId": "snogoo",
@@ -119,7 +125,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "snogoo",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "雪雁（学名：Anser caerulescens）为鸭科雁属的鸟类，俗名白雁。分布于北美洲、东至梅尔维尔和哈得孙湾东岸、北极各岛、西伯利亚、日本以及中国大陆的河北、长江口等地，一般栖息于沿海。该物种的模式产地在加拿大的哈德孙湾。\n\n",
+    "distribution": "分布于北美洲、东至梅尔维尔和哈得孙湾东岸、北极各岛、西伯利亚、日本以及中国大陆的河北、长江口等地，一般栖息于沿海。该物种的模式产地在加拿大的哈德孙湾。"
   },
   {
     "birdId": "whwsco1",
@@ -144,7 +152,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "whwsco1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "斑脸海番鸭（学名：Melanitta stejnegeri）为鸭科海番鸭属的鸟类，俗名海番鸭、奇嘴鸭。分布于西伯利亚东部、勘察加、鄂霍次克海、南至朝鲜、日本、中国东北及东部海域。该物种的模式产地在西伯利亚堪察加及日本。。多栖息于沿海海滩、内陆淡水河湖间以及湖沼地区。该物种原为绒海番鸭的西伯利亚亚种（学名：M. f. stejnegeri），物种拆分前的中文名亦为斑脸海番鸭。",
+    "distribution": "分布于西伯利亚东部、勘察加、鄂霍次克海、南至朝鲜、日本、中国东北及东部海域。该物种的模式产地在西伯利亚堪察加及日本。。多栖息于沿海海滩、内陆淡水河湖间以及湖沼地区。该物种原为绒海番鸭的西伯利亚亚种（学名：M"
   },
   {
     "birdId": "whwsco3",
@@ -168,7 +178,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "whwsco3",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "绒海番鸭（学名：Melanitta fusca）为鸭科海番鸭属的鸟类，俗名海番鸭、奇嘴鸭。多栖息于沿海海滩、内陆淡水河湖间以及湖沼地区。该物种的模式产地在瑞典。斑脸海番鸭原为其西伯利亚亚种（学名：M. f. stejnegeri），现一般被视为独立物种，拆分前的物种中文名为斑脸海番鸭。"
   },
   {
     "birdId": "whhduc1",
@@ -192,7 +203,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "whhduc1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "白头硬尾鸭（学名：学名：Oxyura leucocephala），屬於鸭科，非常典型地群居型水鸭类。"
   },
   {
     "birdId": "tunbeg1",
@@ -217,7 +229,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "tunbeg1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "短嘴豆雁（香港作冻原豆雁，台湾作冻原豆雁）（学名：Anser serrirostris）是繁殖於北西伯利亚的一种雁鸭科鸟类。本种與寒林豆雁被美國鸟类学會與國際鸟类学者協會視为不同种，但英國鸟类学會將兩者視为同种，統稱为豆雁。本种是冬天會往南迁移的亚洲鸟类。"
   },
   {
     "birdId": "phiduc1",
@@ -241,7 +254,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "phiduc1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "棕颈鸭（台湾作菲律賓鸭）（学名：Anas luzonica），又名吕宋鸭，是雁形目鸭科的一种鸟类。\n其本地名稱为 papan。它是菲律賓的特有种。\n它以蝦、鱼、昆蟲和植物为食，並且經常出現在各类濕地中。"
   },
   {
     "birdId": "scsmer1",
@@ -292,7 +306,7 @@
     ],
     "speciesCode": "taibeg1",
     "updatedAt": "2026-05-08",
-    "description": "豆雁（香港作寒林豆雁，台湾作寒林豆雁）（学名：Anser fabalis），又名大雁、鸿、东方豆雁、西伯利亚豆雁、普通大雁、麦鹅。本种與短嘴豆雁被美國鸟类学會與國際鸟类学者協會視為不同种，但英國鸟类学會將兩者視為同种，統稱為豆雁。本种是冬天會往南迁移的亚洲鸟类。"
+    "description": "豆雁（香港作寒林豆雁，台湾作寒林豆雁）（学名：Anser fabalis），又名大雁、鸿、东方豆雁、西伯利亚豆雁、普通大雁、麦鹅。本种與短嘴豆雁被美國鸟类学會與國際鸟类学者協會視为不同种，但英國鸟类学會將兩者視为同种，統稱为豆雁。本种是冬天會往南迁移的亚洲鸟类。"
   },
   {
     "birdId": "cacgoo1",
@@ -316,7 +330,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "cacgoo1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "小美洲黑雁（台湾作小加拿大雁）（学名：Branta hutchinsii），是一种分佈於北美的雁鸭科黑雁屬黑色鹅类，外型有較大面積的黑色羽毛，可與其它灰色的雁屬物种區分。\n\n"
   },
   {
     "birdId": "tunswa",
@@ -339,7 +354,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "tunswa",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "小天鹅（学名：Cygnus columbianus），又名鹄或白鹄，是一种体型比大天鹅小的天鹅。\n\n"
   },
   {
     "birdId": "gnwtea",
@@ -364,7 +380,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "gnwtea",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "绿翅鸭（香港作绿翅鸭，台湾作小水鸭）（学名：Anas crecca），又名小凫、小麻鸭、小蚬鸭、小食鸭。"
   },
   {
     "birdId": "lwfgoo",
@@ -565,7 +582,7 @@
     "englishName": "Ruddy Shelduck",
     "scientificName": "Tadorna ferruginea",
     "aliases": [
-      "瀆鳧"
+      "渎鳧"
     ],
     "order": {
       "zh": "雁形目",
@@ -1867,7 +1884,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "watrai1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "西方秧鸡（学名：Rallus aquaticus）为秧鸡科秧鸡属的鸟类。该物种的模式产地在英格兰。\n近年来研究把西方秧鸡（原普通秧鸡）分为了两个物种，其中把之前的 R. a. indicus 亚种，及也就是主要分布在远东和中南半岛的亚种独立为一个物种。现在中国地区把原物种R. auaticus称为西方秧鸡，把R. indicus称为普通秧鸡。\n西方秧鸡繁殖於欧洲、亚洲和北非的植被茂密的濕地。北方和东方的族群是迁徙性的，但在較溫暖的繁殖地區，這种物种是常年定居的。成鸟长度为23—28 cm（9—11英寸），與其他秧鸡一樣，牠的身体側面扁平，便於穿越牠們栖息的蘆葦灘。牠的上半部主要是棕色，下半部是蓝灰色，側面有黑色條紋，脚趾长，尾巴短，喙长且呈红色。未成熟的鸟类在外观上與成鸟相似，但牠們的羽毛中的蓝灰色部分被淺棕色取代。剛孵化的雏鸟全身黑色，與所有秧鸡相同。原亚种R. indicus具有明顯的標记和不同於西部族群的豬般尖叫聲，通常被劃分为一個單獨的物种，稱为东亚秧鸡。\n西方秧鸡在蘆葦灘和其他具有高密度植被的沼澤地區繁殖，牠們利用附近可獲得的植物在水面上方不遠處築巢。淡白色帶有斑点的蛋主要由雌鸟孵化，毛茸茸的雏鸟在19至22天內孵化。雌鸟會保護牠的蛋和幼鸟免受入侵者侵害，或在巢被發現時將它們轉移到其他地方。這种鸟类在第一年後即可繁殖，通常每個繁殖季節能孵育兩窩蛋。西方秧鸡是杂食性動物，夏季主要以無脊椎動物为食，冬季則以漿果或植物莖为主。即使在繁殖之後，牠們仍然具有領域性，並且會在冬季積极保衛覓食區域。\n這些秧鸡易受洪水或冰冻條件、栖地喪失以及哺乳動物和大型鸟类的掠食威脅。外來入侵的美洲水鼬已經消滅了一些島嶼上的族群，但整体而言，該物种分佈範圍广泛且數量龐大，因此不被認为處於瀕危狀態。\n\n",
+    "distribution": "在中国地区把原物种R. auaticus称为西方秧鸡，把R. indicus称为普通秧鸡。"
   },
   {
     "birdId": "baisan",
@@ -1891,7 +1910,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "baisan",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "白腹滨鹬（台湾作黑腰滨鹬）（学名：Calidris bairdii），是鸻形目丘鹬科的一种鸟类。"
   },
   {
     "birdId": "casgul2",
@@ -2013,7 +2033,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "lobmur",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "长嘴斑海雀（台湾作长嘴海雀）（学名：Brachyramphus perdix），也称斑海雀，是鸻形目海雀科的一种鸟类。\n2022年，为了反映其从亚种提升为新种后的形态特征，“中国鸟类名录”10.0版将斑海雀中文名修改为长嘴斑海雀。\n\n"
   },
   {
     "birdId": "sander",
@@ -2084,7 +2105,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "swisni1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "大沙锥（台湾作中地鹬）（学名：Gallinago megala）是鸻形目丘鹬科的一种鸟类。\n是一种中等大小的长喙迁徙涉禽（体长27–29公分，翼展38–44公分，体重120克）。\n這個常見名稱是为了紀念英國博物学家羅伯特·斯文豪，他在1861年首次物种描述。\n\n"
   },
   {
     "birdId": "whimbr5",
@@ -2107,7 +2129,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "whimbr5",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "中杓鹬（学名：Numenius phaeopus）为鹬科杓鹬属的鸟类。是一种屬於鹬科（Scolopacidae）的大型涉禽。牠是分布最广的杓鹬之一，繁殖範圍覆蓋了大部分亚洲和欧洲的亚北极區，最南可達苏格蘭。這個物种與哈德遜中杓鹬最近被分成兩個獨立物种，儘管一些分类学權威仍然認为牠們是同种異名。该物种的模式产地在瑞典。\n\n"
   },
   {
     "birdId": "pomjae",
@@ -2130,7 +2153,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "pomjae",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "中贼鸥（学名：Stercorarius pomarinus）为贼鸥科贼鸥属的鸟类，环球分布。它是一种候鸟，在熱帶海洋過冬。在中国大陆，出现于山西、江苏、广东等地。该物种的模式产地在欧洲的北极地区。\n\n",
+    "distribution": "在熱帶海洋過冬。在中国大陆，出现于山西、江苏、广东等地。该物种的模式产地在欧洲的北极地区。"
   },
   {
     "birdId": "temsti",
@@ -2180,7 +2205,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "lobplo1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "长嘴剑鸻（学名：Charadrius placidus），台湾又称为长嘴鸻、剑鸻，为鸻科鸻属的鸟类。 它分佈在孟加拉國、不丹、汶萊、柬埔寨、中國、香港、印度、印尼、日本、寮國、馬來西亚、蒙古、緬甸、尼泊爾、北韓、俄羅斯、南韓、斯里蘭卡、台湾、泰國和越南。 在中国大陆，分布于华南、华北等地。该物种的模式产地在尼泊尔。\n剑鸻是候鸟，因此它在不同區域繁殖和過冬。 這种鸟类經常出現在河流、溪流的岸邊，濕地和稻田中。 它主要在岸邊覓食水生昆蟲、昆蟲幼蟲和其他無脊椎動物。 由於雄性和雌性個体擁有相似的羽毛，所以很難區分牠們的性別。 繁殖季節從二月底或三月初開始，至七月結束。 一對雄性和雌性會形成單配偶制關係，並在整個繁殖季節維護牠們的領域。 2016年的一項全球种群調查將剑鸻評估为國際自然保護聯盟瀕危物种红色名录上的無危物种。\n\n",
+    "distribution": "在中国大陆，分布于华南、华北等地。该物种的模式产地在尼泊尔。"
   },
   {
     "birdId": "glagul",
@@ -2226,7 +2253,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "asidow1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "半蹼鹬（学名：Limnodromus semipalmatus）为鹬科半蹼鹬属的鸟类。在中国大陆，分布于黑龙江、内蒙古、河北、湖北、上海、福建、广东等地。该物种的模式产地在印度。\n\n",
+    "distribution": "在中国大陆，分布于黑龙江、内蒙古、河北、湖北、上海、福建、广东等地。该物种的模式产地在印度。"
   },
   {
     "birdId": "sabgul",
@@ -2274,7 +2303,9 @@
       "IOC World Bird List"
     ],
     "speciesCode": "pieavo1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "反嘴鹬（yù）（学名：Recurvirostra avosetta），又称反嘴鸻（héng）、反嘴长脚鹬，为反嘴鹬科反嘴鹬屬的鸟类。这物种分布在欧洲，西亚和中亚的温带地区。这是一个迁徙物种，大部分冬季迁徙至非洲或亚洲南部。部分冬季停留在分布地区最温暖的区域，例如西班牙南部和英格兰南部。在中国大陆，分布于华北和华南等地。该物种的模式产地在意大利。反嘴鹬是非欧亚迁移性水鸟協定（AEWA）適用的物种之一。\n\n",
+    "distribution": "在中国大陆，分布于华北和华南等地。该物种的模式产地在意大利。反嘴鹬是非欧亚迁移性水鸟協定（AEWA）適用的物种之一。"
   },
   {
     "birdId": "tersan",
@@ -3831,7 +3862,7 @@
     "englishName": "Caspian Tern",
     "scientificName": "Hydroprogne caspia",
     "aliases": [
-      "裏海燕鸥"
+      "里海燕鸥"
     ],
     "order": {
       "zh": "鸻形目",
@@ -4021,7 +4052,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "pitsni",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "针尾沙锥（台湾作針尾鹬）（学名：Gallinago stenura），是鸻形目鹬科的一种鸟类。\n\n"
   },
   {
     "birdId": "grsplo",
@@ -4191,7 +4223,8 @@
       "IOC World Bird List"
     ],
     "speciesCode": "bkwsti",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "黑翅长脚鹬（学名：Himantopus himantopus，台湾作高跷鸻），又名长脚鹬、红腿娘子，为长脚鹬科长脚鹬屬下的一个种。\n\n"
   },
   {
     "birdId": "grcter1",
@@ -4239,7 +4272,9 @@
       "IOC World Bird List"
     ],
     "speciesCode": "spored",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "鹤鹬（学名：Tringa erythropus）为鸟纲鸻形目鹬科鹬属的一种鸟类。是一种大型涉禽（岸鸟）。屬名Tringa是乌利塞·阿爾德羅萬迪在1599年根据古希臘語trungas（亚里士多德提到的一种像画眉鸟大小、擁有白色臀部且會上下擺動尾巴的涉水鸟）給予白腰草鹬的新拉丁語名稱。种名erythropus源自古希臘語eruthros，意为「红色」，和pous，意为「脚」。\n鹤鹬在北斯堪的納維亚和北部古北界广泛繁殖，並迁徙至地中海、英國南部、法國、熱帶非洲和熱帶亚洲過冬。偶爾會有流浪鸟到達澳大利亚和北美洲。在中国大陆，分布于新疆、东部、西至甘肃、四川、贵州、西藏等地。该物种的模式产地在荷兰。\n\n",
+    "distribution": "在中国大陆，分布于新疆、东部、西至甘肃、四川、贵州、西藏等地。该物种的模式产地在荷兰。"
   },
   {
     "birdId": "gubter2",
@@ -4264,7 +4299,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "gubter2",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "鸥嘴噪鸥（学名：Gelochelidon nilotica，台湾作鸥嘴燕鸥）为鸥科噪鸥属的鸟类。這种燕鸥分布广泛，在欧洲、亚洲、西北非和美洲的零星地區繁殖。澳洲鸥嘴燕鸥之前被視为其一個亚种。该物种的模式产地在埃及。\n\n",
+    "distribution": "在欧洲、亚洲、西北非和美洲的零星地區繁殖。澳洲鸥嘴燕鸥之前被視为其一個亚种。该物种的模式产地在埃及。"
   },
   {
     "birdId": "woosan",
@@ -4337,7 +4374,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "yelbut1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "黄脚三趾鹑（学名：Turnix tanki）为三趾鹑科三趾鹑属的鸟类。是一种三趾鹑，屬於一個小型鸟类家族，牠們與真正的鹑类似，但並不相關。這個家族的特点是雌性比雄性更大且更为鮮豔，並且是多配偶制。该物种的模式产地在孟加拉国。\n\n"
   },
   {
     "birdId": "gyttat1",
@@ -4459,7 +4497,8 @@
       "IOC World Bird List"
     ],
     "speciesCode": "bktgod",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "黑尾塍鹬（学名：Limosa limosa）又名黑尾鹬，为鹬科塍鹬属的鸟类。是一种大型、长腿、长喙的涉禽，最早由卡爾·林奈於1758年描述。共有四個亚种，所有亚种在繁殖期擁有橙色的头部、颈部和胸部羽毛，冬季則呈現暗灰棕色，並在任何時候都顯示出獨特的黑白翼斑。\n其繁殖範圍從冰島延伸到欧洲及中亚地區。黑尾鹬在（北半球）冬季迁徙至印度次大陸、澳大利亚、新西蘭、西欧和西非等多樣化地區。該物种在沼澤、湖邊、潮濕草地、荒原和泥炭地繁殖，而在（北半球）冬季則使用河口、沼澤和洪水區；相比类似的斑尾鹬，它更可能出現在內陸和淡水區域。全球黑尾鹬的估計數量为634,000至805,000隻，並被列为近危物种。黑尾鹬是荷蘭的國鸟。\n该物种的模式产地在瑞典。\n\n"
   },
   {
     "birdId": "blkter",
@@ -4556,7 +4595,8 @@
       "IOC World Bird List"
     ],
     "speciesCode": "faecur",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "大杓鹬（学名：Numenius madagascariensis）又名红腰杓鹬，屬於鹬科杓鹬属鸟类，是体型最大的鹬，且喙部與白腰杓鹬並列为鹬科中最长者。\n黦鹬是一种大型的涉禽，外观上與长嘴杓鹬最为相似，但稍大一些。牠主要呈棕色，與其他杓鹬的區別在於其單一、無圖案的棕色翼下覆羽。牠不僅是最大的杓鹬，可能也是世界上最大的鹬科鸟类，体长達到60—66 cm（24—26英寸），翼展110 cm（43英寸）。据報導，其体重为565—1,150 g（1.246—2.535磅），這可能與白腰杓鹬相當。极长的喙长達12.8—20.1 cm（5.0—7.9英寸），與其近親长嘴杓鹬的喙长度相當，是鹬科鸟类中喙最长的之一。\n\n"
   },
   {
     "birdId": "wenher1",
@@ -4580,7 +4620,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "wenher1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "海南鳽（学名：Oroanassa magnifica），又名海南虎斑鳽、海南麻鹭，为鹭科海南𫛚属（学名：Oroanassa）的唯一物种，有時亦有「鸟中大熊貓」的稱號。分布于中国海南、广西、安徽、福建、浙江等地和越南，一般生活于山间河谷及附近水域。该物种的模式产地在海南五指山。\n其种加词“Magnificus ”意为“极好的”、“华丽的”。\n\n",
+    "distribution": "分布于中国海南、广西、安徽、福建、浙江等地和越南，一般生活于山间河谷及附近水域。该物种的模式产地在海南五指山。"
   },
   {
     "birdId": "integr1",
@@ -4747,7 +4789,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "litegr",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "白鹭（学名：Egretta garzetta），又称小白鹭，是鹭科中的一种小型鹭。牠是一种白色的鸟，具有细长的黑色喙、长黑腿，以及在西部种群中有黄色的脚。作为一种水鸟，牠在淺水和陸地上覓食，食用各种小型生物。繁殖有群居習性，常與其他水鸟一起，在樹、灌木或蘆葦灘上用樹枝搭建巢穴。每窩產下三到五枚蓝绿色的蛋，由双親共同孵育約三週。幼鸟大約在六週大時长出成鸟羽毛。\n牠的繁殖區分佈在溫暖的溫帶到熱帶的亚洲、非洲、澳洲和欧洲的濕地。作为一個成功的外來物种，其分佈範圍逐漸向北擴展，目前在英國已有穩定且能持續的种群。\n在較溫暖的地區，大多數小白鹭是留鸟；北方的种群，包括許多欧洲的個体，會迁徙到非洲和南亚過冬。繁殖季節結束後，這些鸟在夏末可能也會向北流浪，牠們的分散傾向可能有助於最近分佈範圍的擴大。曾經是西欧的常見物种，於19世紀因大量獵捕來裝飾帽子的羽毛而在西北欧當地滅絕，在南部變得稀少。大約在1950年，南欧開始引入保護法來保護這個物种，其數量開始增加。到21世紀初，再次在法國、荷蘭、愛爾蘭和英國繁殖。其分佈範圍持續向西擴展，並開始擴散到新大陸；1954年首次在巴巴多斯被發現，並於1994年首次在該地有繁殖紀录。國際自然保護聯盟評估其全球保護狀況为「無危」。\n\n",
+    "distribution": "在西北欧當地滅絕，在南部變得稀少。大約在1950年，南欧開始引入保護法來保護這個物种，其數量開始增加。到21世紀初，再次在法國、荷蘭、愛爾蘭和英國繁殖。其分佈範圍持續向西擴展，並開始擴散到新大陸；1954年"
   },
   {
     "birdId": "pacreh1",
@@ -6052,7 +6096,7 @@
     "englishName": "Osprey",
     "scientificName": "Pandion haliaetus",
     "aliases": [
-      "魚鹰"
+      "鱼鹰"
     ],
     "order": {
       "zh": "鹰形目",
@@ -7294,7 +7338,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "godbun1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "戈氏岩鹀（学名：Emberiza godlewskii），也称灰眉岩鹀，俗名灰眉子、灰眉雀，是雀形目鹀科的一种鸟类。\n2022年，“中国鸟类名录”10.0版采用较常见的名称，将戈氏岩鹀的中文名修改为灰眉岩鹀。"
   },
   {
     "birdId": "eurgol2",
@@ -7414,7 +7459,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "gysscb1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "华南斑胸钩嘴鹛（学名：Erythrogenys swinhoei），是画眉科钩嘴鹛属的一种，为中国大陆的特有种。该物种的保护状况被评为无危。\n华南斑胸钩嘴鹛的栖息地包括亚热带或热带的湿润低地林、亚热带或热带的（低地）湿润疏灌丛和亚热带或热带的湿润山地林。\n\n"
   },
   {
     "birdId": "gywbla1",
@@ -7486,7 +7532,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "gnlthr",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "黑领噪鹛（学名：Pterorhinus pectoralis），是画眉科噪鹛属的一种，分布于美国（引进种）、不丹、孟加拉国、老挝、中国大陆、越南、印度、泰国、缅甸和尼泊尔。全球活动范围约为2,170,000平方千米。该物种的保护状况被评为无危。\n黑领噪鹛的平均体重约为145.5克。栖息地包括亚热带或热带的（低地）湿润疏灌丛、亚热带或热带的湿润低地林、种植园、温带疏灌丛、温带森林和亚热带或热带的湿润山地林。\n\n",
+    "distribution": "分布于美国（引进种）、不丹、孟加拉国、老挝、中国大陆、越南、印度、泰国、缅甸和尼泊尔。全球活动范围约为2,170,000平方千米。该物种的保护状况被评为无危。"
   },
   {
     "birdId": "grsbab1",
@@ -7654,7 +7702,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "comcan",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "金丝雀（学名：Serinus canaria），属燕雀科丝雀属，属于鸣禽，毛色分黄色、白色和红色三种，翼长20－23厘米，体长約12.5厘米，体重15－20克。有野生的金絲雀以及作为家养宠物的金丝雀。野生金丝雀喜欢在灌木和树林间筑巢。马德拉群岛、亚速尔群岛以及加那利群岛是金丝雀的繁殖地。作为家養寵物的金絲雀，鸣啭时间长而不间断，这是400年来人工选育的结果。笼养者平均寿命10-15年，有的能活20多年。\n种名canaria來源於加那利群島，意思是「狗」。"
   },
   {
     "birdId": "klolew1",
@@ -9732,7 +9781,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "bladro1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "黑卷尾（学名：Dicrurus macrocercus，英語：Black drongo）为卷尾科卷尾属的一种，又名大卷尾，俗名吃杯茶、铁炼甲、篱鸡、铁燕子、黑黎鸡。在台湾俗稱乌鶖或乌秋。牠們是熱帶南亚大部分地區的常見留鸟，從伊朗西南部經巴基斯坦、印度、孟加拉和斯里蘭卡，一直到中國南部和印尼，偶爾也會造訪日本。大卷尾全身黑色，具有顯著的叉狀尾巴，体长28 cm（11英寸）。以昆蟲为食，常見於開闊的農田和稀疏森林中，牠們喜歡栖息在裸露的樹枝上，或沿著電線或電話線停留。\n此物种以對更大体型鸟类的攻擊行为著稱，例如對乌鸦毫不猶豫地進行俯衝攻擊，當猛禽侵入其領域時，大卷尾也會毫不退縮。這种行为为牠贏得了「鸦王」的非正式稱號。小型鸟类經常在大卷尾的巢附近築巢，以利用其強力保護作用。過去大卷尾曾與非洲的叉尾卷尾（Dicrurus adsimilis）歸为同一物种，但亚洲的型態現被視为獨立物种，且有多個不同的族群。\n由於分佈範圍广泛且數量相對穩定，大卷尾被國際自然保護聯盟（IUCN）列为無危物种。然而，牠們已被引入至部分太平洋島嶼，並繁殖旺盛，甚至威脅到當地特有鸟种的生存，導致某些鸟类的滅絕。\n\n"
   },
   {
     "birdId": "ricpip1",
@@ -9740,7 +9790,7 @@
     "englishName": "Richard's Pipit",
     "scientificName": "Anthus richardi",
     "aliases": [
-      "大花鷚"
+      "大花鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -9764,7 +9814,7 @@
     "englishName": "Chinese Hwamei",
     "scientificName": "Garrulax canorus",
     "aliases": [
-      "大陸畫眉"
+      "大陸画眉"
     ],
     "order": {
       "zh": "雀形目",
@@ -10034,7 +10084,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "brrmin1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "小灰山椒鸟（学名：Pericrocotus cantonensis）为山椒鸟科山椒鸟属的鸟类。該物种於1861年由羅伯特·斯文豪首次描述。\n分布于中南半岛以及中国大陆的北起四川、陕西、河南、安徽、东至长江下游、浙江、南抵贵州、江西、湖南、广西、广东、海南、福建、云南等地。该物种的模式产地在广东广州。\n它在中國繁殖，並在东南亚大陸越冬。其天然栖地包括溫帶森林、亚熱帶或熱帶潮濕低地森林及亚熱帶或熱帶潮濕的山地森林。\n\n",
+    "distribution": "分布于中南半岛以及中国大陆的北起四川、陕西、河南、安徽、东至长江下游、浙江、南抵贵州、江西、湖南、广西、广东、海南、福建、云南等地。该物种的模式产地在广东广州。；在中國繁殖，並在东南亚大陸越冬。其天然栖地包括溫帶森林、亚熱帶或熱帶潮濕低地森林及亚熱帶或熱帶潮濕的山地森林。"
   },
   {
     "birdId": "pagwar1",
@@ -10056,7 +10108,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "pagwar1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "小蝗莺（学名：Helopsaltes certhiola）为蝗莺科Helopsaltes属的鸟类。繁殖於古北界东部，分布範圍從阿爾泰山、蒙古和外贝加爾地區到中國东北、朝鮮半島，以及鄂霍次克海的島嶼（庫頁島和千島群島）。此物种为迁徙鸟类，冬季從印度往东迁徙至印尼，在斯里蘭卡为罕見的迁徙鸟。\n\n"
   },
   {
     "birdId": "orisky1",
@@ -10100,7 +10153,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "litbun",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "小鹀（学名：Emberiza pusilla）为鹀科鹀属的鸟类，俗名麦寂寂、花椒子儿、高粱头、铁脸儿、虎头儿。\n\n"
   },
   {
     "birdId": "bfbwar1",
@@ -10124,7 +10178,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "bfbwar1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "强脚树莺（学名：Horornis fortipes）又名小莺，为樹莺科山樹莺屬的鸟类。该物种分布在南亚地区，其模式产地在印度。\n强脚树莺体长约11-12.5厘米，整体棕褐色，鼻至枕后有细长淡黄色眉纹，且具暗褐色贯眼纹，尾羽和飞羽暗褐色，颏、喉及腹部中央白色而稍有灰色，跗跖及趾较强壮。\n\n"
   },
   {
     "birdId": "pywbab1",
@@ -10148,7 +10203,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "pywbab1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "小鳞胸鹪鹛（学名：Pnoepyga pusilla）为鹟科鳞胸鹪鹛属的鸟类，俗名小鹪鹛、鳞胸鹪鹩。分布于从尼泊尔以至中南半岛、南抵印度尼西亚、中国大陆的云南、四川、广西、东抵福建、北达陕西等地，一般生活于山林以及高山稠密灌木丛或竹林的树根间。该物种的模式产地在尼泊尔。\n\n",
+    "distribution": "分布于从尼泊尔以至中南半岛、南抵印度尼西亚、中国大陆的云南、四川、广西、东抵福建、北达陕西等地，一般生活于山林以及高山稠密灌木丛或竹林的树根间。该物种的模式产地在尼泊尔。"
   },
   {
     "birdId": "rucbab1",
@@ -10172,7 +10229,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "rucbab1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红头穗鹛（学名：Cyanoderma ruficeps），又名山红头，是画眉科的一种。其分佈範圍從东喜馬拉雅山脈至北泰國、寮國、东中國至越南和台湾。它栖息於密生灌木或竹林的溫帶森林中，在IUCN红色名录上被列为無危物种。\n\n"
   },
   {
     "birdId": "hibfly1",
@@ -10238,7 +10296,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "russpa2",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "山麻雀（学名：Passer cinnamomeus）是雀科麻雀屬的一种鸟类，見於亚洲森林和村落，主要出現在山區。這种小型食种子鸟擁有粗壯的喙，体长14至15 cm（5.5—5.9英寸）。其羽毛主要为上部溫暖的赤褐色，下部灰色。牠展現兩性異形，兩性羽毛的圖案與家麻雀的相對應性別相似。牠的叫聲为甜美且富有音樂感的啁啾聲，連續發出時形成一首歌曲。\n有三個亚种被認可，它們主要在下腹部的黄色程度上有所不同。亚种rutilans和intensior在东亚部分地區繁殖，通常生活在輕林地，而亚种cinnamomeus則在喜馬拉雅山脈繁殖，通常與梯田農業相關。山麻雀是人类居住區的典型麻雀，特別是在沒有家麻雀和麻雀的城鎮中。在其分布區的南部，山麻雀偏愛高海拔地區，但在北部則靠近海邊繁殖。山麻雀在喜馬拉雅山脈中知名度較高，在某些語言中有特定的名稱，並且出現在日本藝術中。\n山麻雀为台湾稀有留鸟。山麻雀在台湾海拔分布200-2200公尺之間，集中於云林縣、嘉義縣、台南市、高雄市及屏东縣等地山區，近幾年面臨急速消失危機，剩不到1000隻，成为瀕臨絕种保育类動物。\n山麻雀主要以草本植物和穀物的种子为食，但在繁殖季節也會吃漿果和昆蟲。這种飲食使牠在農業區成为小害蟲，但同時也是昆蟲害蟲的捕食者。繁殖期間牠並不群居，牠們的巢分佈較为分散。當不在繁殖期時，牠會形成群体，儘管不常與其他鸟类物种一起活動。在牠的某些分布區，山麻雀會迁徙，至少會迁往低海拔地區。牠們的巢通常位於樹洞、懸崖或建築物的洞中。雄性在找到伴侶前會選擇巢址，並利用巢進行求偶展示。通常的巢卵數为五到六顆白色卵。双親共同孵蛋並餵養幼鸟。\n\n"
   },
   {
     "birdId": "eurcrm1",
@@ -10268,7 +10327,7 @@
     "englishName": "Alpine Accentor",
     "scientificName": "Prunella collaris",
     "aliases": [
-      "岩鷚"
+      "岩鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -10362,7 +10421,7 @@
     "englishName": "Blyth's Pipit",
     "scientificName": "Anthus godlewskii",
     "aliases": [
-      "布萊氏鷚"
+      "布萊氏鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -10526,7 +10585,7 @@
     "englishName": "Dusky Thrush",
     "scientificName": "Turdus eunomus",
     "aliases": [
-      "斑點鸫"
+      "斑点鸫"
     ],
     "order": {
       "zh": "雀形目",
@@ -10990,7 +11049,7 @@
     "englishName": "Tree Pipit",
     "scientificName": "Anthus trivialis",
     "aliases": [
-      "林鷚"
+      "林鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -11128,7 +11187,7 @@
     "englishName": "Siberian Accentor",
     "scientificName": "Prunella montanella",
     "aliases": [
-      "棕眉山岩鷚"
+      "棕眉山岩鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -11382,7 +11441,7 @@
     "englishName": "Olive-backed Pipit",
     "scientificName": "Anthus hodgsoni",
     "aliases": [
-      "樹鷚"
+      "樹鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -11592,7 +11651,7 @@
     "englishName": "Water Pipit",
     "scientificName": "Anthus spinoletta",
     "aliases": [
-      "水鷚"
+      "水鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -12594,7 +12653,7 @@
     "englishName": "Collared Finchbill",
     "scientificName": "Spizixos semitorques",
     "aliases": [
-      "白環鸚嘴鹎"
+      "白環鹦嘴鹎"
     ],
     "order": {
       "zh": "雀形目",
@@ -12754,7 +12813,7 @@
     "englishName": "Pechora Pipit",
     "scientificName": "Anthus gustavi",
     "aliases": [
-      "白背鷚"
+      "白背鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -13263,7 +13322,7 @@
     "englishName": "Rosy Pipit",
     "scientificName": "Anthus roseatus",
     "aliases": [
-      "粉红胸鷚"
+      "粉红胸鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -13279,7 +13338,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "rospip1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "粉红胸鹨（学名：Anthus roseatus）为鹡鸰科鹨属的鸟类。分布于阿富汗、喜马拉雅山脉南坡、缅甸、印度、越南以及中国大陆的新疆、甘肃、宁夏、青海、西藏、四川、湖北、云南、贵州、陕西、山西、河北、海南等地，主要栖息于山地、林缘、灌木丛、草原、河谷地带以及最高可达海拔4200-4500米的草甸、灌木丛地带。该物种的模式产地在尼泊尔。\n\n",
+    "distribution": "分布于阿富汗、喜马拉雅山脉南坡、缅甸、印度、越南以及中国大陆的新疆、甘肃、宁夏、青海、西藏、四川、湖北、云南、贵州、陕西、山西、河北、海南等地，主要栖息于山地、林缘、灌木丛、草原、河谷地带以及最高可达海拔4"
   },
   {
     "birdId": "vitpar1",
@@ -13287,7 +13348,7 @@
     "englishName": "Vinous-throated Parrotbill",
     "scientificName": "Suthora webbiana",
     "aliases": [
-      "粉红鸚嘴"
+      "粉红鹦嘴"
     ],
     "order": {
       "zh": "雀形目",
@@ -13303,7 +13364,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "vitpar1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "棕头鸦雀（台湾作粉红鹦嘴，学名：Sinosuthora webbiana）为鸦雀科棕头鸦雀属的鸟类。過去曾被歸类於莺科或画眉科。它分布於中國、日本、韓國、蒙古、俄羅斯、台湾和越南。其自然栖地为亚熱帶或熱帶潮濕的山地森林。\n\n"
   },
   {
     "birdId": "redcro",
@@ -13349,7 +13411,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "taifly1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红喉姬鹟（学名：Ficedula albicilla）是雀形目鹟科的一种鸟类。該物种曾被認为是红胸姬鹟的亚种。\n\n"
   },
   {
     "birdId": "rebcho1",
@@ -13371,7 +13434,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "rebcho1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红嘴山鸦（学名：Pyrrhocorax pyrrhocorax）为鸦科山鸦属的鸟类，俗名红嘴老鸹、红嘴乌鸦。分布于欧洲西部、南部和东部地区、地中海沿岸、亚洲西部和南部地区、非洲北部和东部地区以及中国大陆的东北、内蒙古、新疆、河北、河南、山西、宁夏、甘肃、青海、陕西、四川、山东、西藏、云南等地，一般栖息于较开阔的河滩地、山坡耕地、平原耕地山间沟坎、半荒漠草地等处、繁殖期在巢周围500-1000m 地域内活动以及筑巢于沟坎土崖壁的凹陷或缝隙处。该物种的模式产地在英国。\n這种山鸦全身覆蓋漆黑的羽毛，特徵为长而彎曲的鮮豔的红嘴，红色的鸟爪和尖銳的叫聲。其特有的扇形展開的尾翼讓它們可以以高超的杂技技巧在空中翱翔。红嘴山鸦是一夫一妻制，而且有返回原宗地（一般为峭壁上的洞穴或裂縫）繁殖的習慣。它們會用樹枝建巢，一般一次產三個鸟蛋。它們常常在沉積地或是短草草原捕食，它們的主食为小型無脊椎動物。\n雖然红嘴山鸦同時受到捕食和寄生的威脅，但是使它們在欧洲數量銳減和分佈地區分散的主要原因來自農業推广，儘管如此，红嘴山鸦在全球範圍內仍屬於無危鸟类。\n它們的英語名字衍生於寒鸦，原來被稱为縱火犯，同時和聖托馬斯·贝克特和康沃爾郡有深厚的關係。不少國家出版過以红嘴山鸦为主題的郵票，包括印刷了四种不同版本郵票的曼島和當地並沒有红嘴山鸦的岡比亚。\n\n",
+    "distribution": "分布于欧洲西部、南部和东部地区、地中海沿岸、亚洲西部和南部地区、非洲北部和东部地区以及中国大陆的东北、内蒙古、新疆、河北、河南、山西、宁夏、甘肃、青海、陕西、四川、山东、西藏、云南等地，一般栖息于较开阔的河"
   },
   {
     "birdId": "reblei",
@@ -13561,7 +13626,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "rewbul",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红耳鹎，（学名：Pycnonotus jocosus），又名红颊鹎，俗名高髻冠、高鸡冠、高冠鸟、黑头公、红屎忽、gel头雀等，原產於亚洲熱帶的鹎屬鸟类。是一种定居性食果動物，主要分佈於熱帶亚洲地區。它作为观賞鸟被引入到世界上許多熱帶地區，並已在這些地區建立了族群。红耳鹎有著響亮的三或四音節叫聲，主要以水果和小型昆蟲为食，喜歡顯眼地栖息在樹上。它常見於山林和城市花園。\n\n"
   },
   {
     "birdId": "rebshr1",
@@ -13585,7 +13651,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "rebshr1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红背伯劳（学名：Lanius collurio）为伯劳科伯劳属的一种。分布于自英国、欧洲西部、亚洲中部、在中东、非洲越冬以及中国大陆的新疆等地。该物种的模式产地在瑞典。\n\n",
+    "distribution": "分布于自英国、欧洲西部、亚洲中部、在中东、非洲越冬以及中国大陆的新疆等地。该物种的模式产地在瑞典。"
   },
   {
     "birdId": "fibflo1",
@@ -13609,7 +13677,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "fibflo1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红胸啄花鸟（学名：Dicaeum ignipectus），是啄花鸟科啄花鸟屬的一种，分佈於印度次大陸和东南亚。像其他啄花鸟一樣，這种小型鸟类以果實为食，並在果樹植物的种子傳播中扮演重要角色。 不同於許多同屬的物种，這种鸟类具有顯著的兩性異形，雄鸟的上部和下部顏色對比鮮明，並有一個亮橙色的胸斑，而雌鸟則顏色黯淡。\n\n"
   },
   {
     "birdId": "rebfly",
@@ -13833,7 +13902,7 @@
     "englishName": "White-bellied Erpornis",
     "scientificName": "Erpornis zantholeuca",
     "aliases": [
-      "绿畫眉"
+      "绿画眉"
     ],
     "order": {
       "zh": "雀形目",
@@ -13977,7 +14046,7 @@
     "englishName": "Meadow Pipit",
     "scientificName": "Anthus pratensis",
     "aliases": [
-      "草地鷚"
+      "草地鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -14521,7 +14590,7 @@
     "englishName": "Red-throated Pipit",
     "scientificName": "Anthus cervinus",
     "aliases": [
-      "赤喉鷚"
+      "赤喉鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -15109,7 +15178,7 @@
     "englishName": "Varied Tit",
     "scientificName": "Sittiparus varius",
     "aliases": [
-      "雜色山雀"
+      "杂色山雀"
     ],
     "order": {
       "zh": "雀形目",
@@ -15615,7 +15684,7 @@
     "englishName": "Siberian Pipit",
     "scientificName": "Anthus japonicus",
     "aliases": [
-      "黄腹鷚"
+      "黄腹鹨"
     ],
     "order": {
       "zh": "雀形目",
@@ -16483,7 +16552,7 @@
     "englishName": "Tawny Fish-Owl",
     "scientificName": "Ketupa flavipes",
     "aliases": [
-      "黄魚鸮"
+      "黄鱼鸮"
     ],
     "order": {
       "zh": "鸮形目",
@@ -16635,7 +16704,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "spodov",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "珠颈斑鸠（学名：Spilopelia chinensis），又名鴣雕、鴣鸟、中斑、花斑鸠、花脖斑鸠、珍珠鸠、斑颈鸠、珠颈鸽、斑鸽（台語，白話字：pan-kah）、鵓鴣（海陸客語，白話字：phu̍k-kû）、咕姑固（粵語）、古菇顧、核突颈鸠，是分布在南亚、东南亚地區以及中國南方广大地區的一种常見的鸠鸽科副斑鸠屬物种。\n\n"
   },
   {
     "birdId": "recdov1",
@@ -16849,7 +16919,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "cabtra1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "黄腹角雉（学名：Tragopan caboti），别名角鸡、功曹鸟、吐绶鸟、吐綬鸡、綬鸟、鷊，是中国特产的一种鸟，主要分布在浙江，福建、广东、湖南、江西、广西等亚熱帶山地森林內海拔800到2000m的常绿闊葉林和針闊混交林內，目前其全球數量稀少，僅4000多隻。食物主要是植物的果实。目前，中国唯一的黄腹角雉保护地为乌岩岭。雄性黄腹角雉的下巴长有彩色的肉裙，平时收拢，发情时向下展开，宛若口吐绶带，所以古人称之为“吐绶鸡”、“吐绶鸟”。然而现代人却把不会“吐绶”的火鸡为“吐绶鸡”。\n\n"
   },
   {
     "birdId": "chifra1",
@@ -16969,7 +17040,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "hazgro1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "花尾榛鸡（Hazel Grouse），在分类学上屬於鸡形目松鸡科榛鸡屬。這种鸟在滿語中被叫做“斐耶楞古”（滿語：ᡶ᠋ᡳᠶᡝᠯᡝᠩᡤᡠ，羅馬化：fiyelenggu），對應漢語为“樹鸡”；後來取其諧音，稱为“飛龍”。"
   },
   {
     "birdId": "kokphe1",
@@ -16993,7 +17065,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "kokphe1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "勺鸡（学名：Pucrasia macrolopha）为雉科勺鸡属的鸟类，俗名角鸡、柳叶鸡。为中国国家二级重点保护野生动物。"
   },
   {
     "birdId": "reephe1",
@@ -17041,7 +17114,9 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "whnpar2",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "白眉山鹧鸪（学名：Arborophila gingica）又称白额山鹧鸪，为雉科山鹧鸪属的鸟类，俗名山鸡、新竹鸡，是中国的特有物种。分布于福建、广东、广西等地，一般生活于树木茂密的山地。该物种的模式产地在福建。",
+    "distribution": "分布于福建、广东、广西等地，一般生活于树木茂密的山地。该物种的模式产地在福建。"
   },
   {
     "birdId": "helgui",
@@ -17157,7 +17232,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "silphe",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "白鷴（学名：Lophura nycthemera），又名銀鸡、越禽、白鹇鸡、白雉、雗、鵫雉、閒客、白雗、啞瑞、白鷳等，與黑鹇是近緣种。主要分布在东亚與中南半島，包括中國、越南、寮國、緬甸與泰國等地。"
   },
   {
     "birdId": "redjun",
@@ -17295,7 +17371,8 @@
       "eBird CN-839 provincial checklists"
     ],
     "speciesCode": "chwcuc1",
-    "updatedAt": "2026-05-08"
+    "updatedAt": "2026-05-08",
+    "description": "红翅凤头鹃（学名：Clamator coromandus），又名冠郭公、栗翅凤鹃、红翅凤头郭公，为杜鹃科凤鹃屬的鸟类。是一种分布於东南亚和南亚部分地區的杜鹃。它擁有深色有光澤的上半部、黑色头部並帶有长冠、栗色翅膀、长而漸層的光澤黑色尾巴、棕红色喉部、暗色腹部，以及一條狹窄的白色後颈半圈。它們在喜馬拉雅山一帶繁殖，冬季迁徙至斯里蘭卡、印度南部和包括印尼、泰國及菲律賓部分地區的熱帶东南亚。這种鸟类約有47 cm（19英寸）长。\n\n"
   },
   {
     "birdId": "oricuc2",
@@ -18359,7 +18436,7 @@
     "englishName": "Alexandrine Parakeet",
     "scientificName": "Psittacula eupatria",
     "aliases": [
-      "亚歷山大鸚鵡"
+      "亚歷山大鹦鹉"
     ],
     "order": {
       "zh": "鹦形目",
@@ -18407,7 +18484,7 @@
     "englishName": "Rose-ringed Parakeet",
     "scientificName": "Psittacula krameri",
     "aliases": [
-      "红領绿鸚鵡"
+      "红領绿鹦鹉"
     ],
     "order": {
       "zh": "鹦形目",
@@ -18431,7 +18508,7 @@
     "englishName": "Budgerigar",
     "scientificName": "Melopsittacus undulatus",
     "aliases": [
-      "虎皮鸚鵡"
+      "虎皮鹦鹉"
     ],
     "order": {
       "zh": "鹦形目",
@@ -18479,7 +18556,7 @@
     "englishName": "Cockatiel",
     "scientificName": "Nymphicus hollandicus",
     "aliases": [
-      "鸡尾鸚鵡"
+      "鸡尾鹦鹉"
     ],
     "order": {
       "zh": "鹦形目",

@@ -61,7 +61,7 @@ def main():
                 entry.setdefault("images", [])
                 entry.setdefault("sounds", [])
                 entry.setdefault("rangeMap", None)
-                if len(entry["sounds"]) >= 2:
+                if len(entry["sounds"]) >= 4:
                     return sp["birdId"], 0, True
                 try:
                     audios = fetch_audio(sp["speciesCode"], 5)
@@ -75,7 +75,7 @@ def main():
                         entry.setdefault("sounds", []).append(ae)
                         existing_urls.add(ae["url"])
                         new_audio += 1
-                        if len(entry["sounds"]) >= 2:
+                        if len(entry["sounds"]) >= 4:
                             break
                 return sp["birdId"], new_audio, True
 

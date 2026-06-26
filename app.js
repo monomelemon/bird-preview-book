@@ -866,7 +866,13 @@ function renderBirdDetail(listId, birdId, isShare) {
 
 function renderSounds(sounds = []) {
   if (!sounds.length) return `<p class="muted">暂无可靠鸣声</p>`;
-  return sounds.map(s => `<div class="card"><audio controls controlsList="nodownload noplaybackrate" src="${esc(s.url)}"></audio><div class="small muted">${esc(s.source || "")} ${s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">来源</a>` : ""}</div></div>`).join("");
+  const audios = sounds.map((s, i) =>
+    `<audio controls controlsList="nodownload noplaybackrate" src="${esc(s.url)}"${i > 0 ? ' style="margin-top:8px"' : ''}></audio>`
+  ).join("");
+  const links = sounds.map((s, i) =>
+    s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">鸣声${i + 1}</a>` : `鸣声${i + 1}`
+  ).join(" · ");
+  return `<div class="card">${audios}</div><p class="small muted" style="margin-top:4px">鸣声来源：Macaulay Library / eBird（${links}）</p>`;
 }
 
 function renderDistribution(rangeMap, sp, identification) {
