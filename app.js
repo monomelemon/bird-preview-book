@@ -596,8 +596,8 @@ function renderImportList() {
     ${header("录入清单")}
     <div class="card stack">
       <p class="muted">支持手动输入或批量导入</p>
-      <div class="small muted">批量导入格式要求：可每行输入一种鸟；也可用逗号分隔多个鸟名；支持中文名、别名、学名或英文名；可直接从表格复制一列鸟名。</div>
-      <textarea id="importText" placeholder="红嘴蓝鹊，白头鹎，普通翠鸟"></textarea>
+      <div class="small muted">批量导入格式要求：可每行输入一种鸟；也可用逗号或顿号分隔多个鸟名；支持中文名、别名、学名或英文名；可直接从表格复制一列鸟名。</div>
+      <textarea id="importText" placeholder="红嘴蓝鹊、白头鹎、普通翠鸟"></textarea>
       <div class="row">
         <button class="secondary" id="demo">使用示例</button>
         <button class="danger" id="clear">清空</button>
@@ -609,14 +609,14 @@ function renderImportList() {
       <div id="importMsg" class="small"></div>
     </div>
   `;
-  document.querySelector("#demo").onclick = () => document.querySelector("#importText").value = "红嘴蓝鹊，白头鹎，普通翠鸟";
+  document.querySelector("#demo").onclick = () => document.querySelector("#importText").value = "红嘴蓝鹊、白头鹎、普通翠鸟";
   document.querySelector("#clear").onclick = () => { document.querySelector("#importText").value = ""; document.querySelector("#matchResults").innerHTML = ""; };
   document.querySelector("#match").onclick = runImportMatch;
   document.querySelector("#createImport").onclick = createImportList;
 }
 
 function parseImportText(text) {
-  return [...new Set(text.split(/[\n,，]/).map(item => item.trim()).filter(Boolean))];
+  return [...new Set(text.split(/[\n,，、]/).map(item => item.trim()).filter(Boolean))];
 }
 
 function matchInputName(input) {
