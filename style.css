@@ -223,6 +223,21 @@ textarea {
   margin-bottom: 12px;
 }
 
+.image-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.image-nav span {
+  color: var(--muted);
+  font-size: 13px;
+  min-width: 32px;
+  text-align: center;
+}
+
 .detail-name {
   display: grid;
   grid-template-columns: 1fr auto;

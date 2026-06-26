@@ -842,8 +842,7 @@ function renderBirdDetail(listId, birdId, isShare) {
       <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
     </div>
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
-    <div class="image-counter">${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</div>
-    ${media.images?.length > 1 ? `<div class="row"><button class="secondary" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">上一张</button><button class="secondary" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">下一张</button></div>` : ""}
+    <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span>${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
     <details open><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
     <details><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
@@ -870,7 +869,7 @@ function renderSounds(sounds = []) {
     `<audio controls controlsList="nodownload noplaybackrate" src="${esc(s.url)}"${i > 0 ? ' style="margin-top:8px"' : ''}></audio>`
   ).join("");
   const links = sounds.map((s, i) =>
-    s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">${i + 1}</a>` : `${i + 1}`
+    s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">鸣声${i + 1}</a>` : `鸣声${i + 1}`
   ).join(" · ");
   return `<div class="audio-card">${audios}</div><p class="small muted" style="margin-top:4px">来源：Macaulay Library / eBird（${links}）</p>`;
 }
