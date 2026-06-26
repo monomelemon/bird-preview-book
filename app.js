@@ -37,10 +37,34 @@ const TRAD_TO_SIMP = {
   "雲":"云","華":"华","臺":"台","廣":"广","雙":"双","學":"学","體":"体","類":"类","種":"种","鳥":"鸟","鳴":"鸣","觀":"观","記":"记","錄":"录","據":"据",
   "爲":"为","與":"与","稱":"称","經":"经","裡":"里","裏":"里","後":"后","於":"于","牠":"它","們":"们","應":"应","區":"区",
   "國":"国","對":"对","說":"说","會":"会","時":"时","來":"来","過":"过","開":"开","個":"个","關":"关","係":"系","產":"产","電":"电",
-  "佈":"布","匯":"汇","僅":"仅","際":"际","現":"现","實":"实","業":"业","異":"异","處":"处"
+  "佈":"布","匯":"汇","僅":"仅","際":"际","現":"现","實":"实","業":"业","異":"异","處":"处",
+  "並":"并","動":"动","勢":"势","參":"参","問":"问","單":"单","圍":"围",
+  "導":"导","島":"岛","嶼":"屿","強":"强","從":"从","擊":"击","樹":"树",
+  "歡":"欢","歸":"归","氣":"气","滅":"灭","為":"为","熱":"热","狀":"状",
+  "猶":"犹","獨":"独","環":"环","畫":"画","當":"当","積":"积","穩":"稳",
+  "範":"范","築":"筑","簡":"简","約":"约","納":"纳","絕":"绝","統":"统",
+  "線":"线","縣":"县","縮":"缩","續":"续","聯":"联","脅":"胁","葉":"叶",
+  "著":"着","蘭":"兰","號":"号","蟲":"虫","衝":"冲","見":"见","視":"视",
+  "親":"亲","訪":"访","許":"许","評":"评","話":"话","認":"认","語":"语",
+  "誤":"误","論":"论","護":"护","變":"变","負":"负","責":"责","貿":"贸",
+  "資":"资","贏":"赢","較":"较","農":"农","這":"这","連":"连","進":"进",
+  "遠":"远","適":"适","還":"还","間":"间","陸":"陆","隨":"随","隻":"只",
+  "頁":"页","項":"项","領":"领","題":"题","顯":"显","風":"风","飛":"飞",
+  "養":"养","馬":"马","魚":"鱼","鴿":"鸽","點":"点",
+  "內":"内","兩":"两","別":"别","則":"则","協":"协","員":"员","嚴":"严",
+  "囂":"嚣","夠":"够","寶":"宝","屬":"属","帶":"带","庫":"库","愛":"爱",
+  "態":"态","慶":"庆","換":"换","擁":"拥","擬":"拟","擴":"扩","數":"数",
+  "斷":"断","條":"条","構":"构","樣":"样","橫":"横","淺":"浅","溫":"温",
+  "滿":"满","澤":"泽","濕":"湿","無":"无","爾":"尔","獵":"猎","紀":"纪",
+  "紋":"纹","羅":"罗","聞":"闻","興":"兴","舊":"旧","茲":"兹","葦":"苇",
+  "蝦":"虾","覓":"觅","詞":"词","該":"该","識":"识","豐":"丰","豔":"艳",
+  "貓":"猫","賓":"宾","趨":"趋","針":"针","鎮":"镇","鑽":"钻","闊":"阔",
+  "雛":"雏","雜":"杂","韓":"韩","顏":"颜","顛":"颠","餵":"喂","馮":"冯",
+  "鮮":"鲜","鳩":"鸠","鳶":"鸢","鴓":"䴓","鴝":"鸲","鵟":"𫛭","鶖":"鹙",
+  "鶥":"鹛","鸐":"𬸘","鸗":"𬸶","龐":"庞"
 };
 function toSimplified(text) {
-  return String(text || "").replace(/[凍鵝鴨鴛鴦鵠鵰鷹鷂鷲鶚鶻鷺鶴鷗鴴鷸鵐鶲鵯鶇鴉鵲鴟鵑鶯鷦鷯鴞雞鷿鸊鵜鸕黃灣濱蹺紅藍綠烏鳳頭頸長腳翹臉極賊蠣潛鶘額鴻劍寬棲漁禿細緋脇蒼蘇諾遺頂簑東歐亞遷鶺鴒鶉鵪雲華臺廣雙學體類種鳥鳴觀記錄據爲與稱經裡裏後於牠們應區國對說會時來過開個關係產電佈匯僅際現實業異處]/g, c => TRAD_TO_SIMP[c] || c);
+  return String(text || "").replace(/[並亞佈來係個們僅內兩凍別則劍動勢匯區協參員問單嚴囂國圍夠學實寬寶對導屬島嶼帶庫廣強後從愛態慶應換擁擊據擬擴數斷於時會東條棲業極構樣樹橫歐歡歸氣淺溫滅滿漁潛澤濕濱灣為烏無熱爲爾牠狀猶獨獵現環產畫異當禿種稱積穩範築簑簡紀約紅紋納細絕統經綠緋線縣縮續羅翹聞聯脅脇腳臉臺與興舊茲華葉著葦蒼藍蘇蘭處號蝦蟲蠣衝裏裡見覓視親觀記訪許評詞話該認語誤說論諾識護變豐豔貓負責貿資賊賓贏趨蹺較農這連進過遠適遷遺還針錄鎮鑽長開間闊關陸際隨隻雙雛雜雞雲電韓頁頂項領頭頸題額顏顛類顯風飛養餵馬馮體魚鮮鳥鳩鳳鳴鳶鴉鴒鴓鴛鴝鴞鴟鴦鴨鴴鴻鴿鵐鵑鵜鵝鵟鵠鵪鵯鵰鵲鶇鶉鶖鶘鶚鶥鶯鶲鶴鶺鶻鷂鷗鷦鷯鷲鷸鷹鷺鷿鸊鸐鸕鸗黃點龐]/g, c => TRAD_TO_SIMP[c] || c);
 }
 const normalize = (text) => toSimplified(text).trim().toLowerCase();
 
@@ -821,8 +845,8 @@ function renderBirdDetail(listId, birdId, isShare) {
     <div class="image-counter">${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</div>
     ${media.images?.length > 1 ? `<div class="row"><button class="secondary" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">上一张</button><button class="secondary" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">下一张</button></div>` : ""}
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
+    <details open><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
     <details><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
-    <details><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
     <details><summary>资料来源</summary>${renderSources(sp, media, identification)}</details>
     <div class="bottom-nav">
       <button class="secondary" ${index <= 0 ? "disabled" : ""} onclick="goBird('${esc(list.listId)}', '${esc(list.birdIds[index - 1])}', ${isShare})">上一种</button>
@@ -852,13 +876,17 @@ function renderDistribution(rangeMap, sp, identification) {
   return `${map}${body}`;
 }
 
+function stripWikiIntro(text) {
+  return text.replace(/^[^（(]+[（(](?:学名|學名)[：:].+?[）)]\s*/, "");
+}
+
 function stripDistSentences(text) {
   return text.replace(/[^。\n]+(?:分布[于在]|模式产地|分布於|分布在)[^。\n]*[。\n]?/g, "").replace(/^[。\s]+|[。\s]+$/g, "").replace(/\n{2,}/g, "\n");
 }
 
 function renderDescription(sp, identification) {
   const wiki = toSimplified(identification?.wikipediaSummary || sp?.description || "");
-  const cleanWiki = stripDistSentences(wiki);
+  const cleanWiki = stripDistSentences(stripWikiIntro(wiki));
   const fallback = identification?.morphology || identification?.habitat || identification?.behavior;
   const parts = [];
   parts.push(`<p class="latin" style="margin:0 0 8px;">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
