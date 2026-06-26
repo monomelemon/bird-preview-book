@@ -881,7 +881,7 @@ function stripWikiIntro(text) {
 }
 
 function stripDistSentences(text) {
-  return text.replace(/[^。\n]+(?:分布[于在]|模式产地|分布於|分布在)[^。\n]*[。\n]?/g, "").replace(/^[。\s]+|[。\s]+$/g, "").replace(/\n{2,}/g, "\n");
+  return text.replace(/[^。\n]*(?:分布[于在]|模式产地|分布於|分布在|常见[於于].{1,40}(?:地区|區域|大陆|國家)|广布[於于]|从.{1,60}?(?:经|到).{2,60}(?:到|一直).{2,60}|留鸟.{0,40}从.{2,60}到.{2,60}|造访.{0,30}(?:日本|韩国|朝鲜|台湾))[^。\n]*[。\n]?/g, "").replace(/^[。\s]+|[。\s]+$/g, "").replace(/\n{2,}/g, "\n");
 }
 
 function renderDescription(sp, identification) {
