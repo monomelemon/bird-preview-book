@@ -34,10 +34,13 @@ const TRAD_TO_SIMP = {
   "鴟":"鸱","鵑":"鹃","鶯":"莺","鷦":"鹪","鷯":"鹩","鴞":"鸮","雞":"鸡","鷿":"䴙","鸊":"䴘","鵜":"鹈","鸕":"鸬",
   "黃":"黄","灣":"湾","濱":"滨","蹺":"跷","紅":"红","藍":"蓝","綠":"绿","烏":"乌","鳳":"凤","頭":"头","頸":"颈",
   "長":"长","腳":"脚","翹":"翘","臉":"脸","極":"极","賊":"贼","蠣":"蛎","潛":"潜","鶘":"鹕","額":"额","鴻":"鸿","劍":"剑","寬":"宽","棲":"栖","漁":"渔","禿":"秃","細":"细","緋":"绯","脇":"胁","蒼":"苍","蘇":"苏","諾":"诺","遺":"遗","頂":"顶","簑":"蓑","東":"东","歐":"欧","亞":"亚","遷":"迁","鶺":"鹡","鴒":"鸰","鶉":"鹑","鵪":"鹌",
-  "雲":"云","華":"华","臺":"台","廣":"广","雙":"双","學":"学","體":"体","類":"类","種":"种","鳥":"鸟","鳴":"鸣","觀":"观","記":"记","錄":"录","據":"据"
+  "雲":"云","華":"华","臺":"台","廣":"广","雙":"双","學":"学","體":"体","類":"类","種":"种","鳥":"鸟","鳴":"鸣","觀":"观","記":"记","錄":"录","據":"据",
+  "爲":"为","與":"与","稱":"称","經":"经","裡":"里","裏":"里","後":"后","於":"于","牠":"它","們":"们","應":"应","區":"区",
+  "國":"国","對":"对","說":"说","會":"会","時":"时","來":"来","過":"过","開":"开","個":"个","關":"关","係":"系","產":"产","電":"电",
+  "佈":"布","匯":"汇","僅":"仅","際":"际","現":"现","實":"实","業":"业","異":"异","處":"处"
 };
 function toSimplified(text) {
-  return String(text || "").replace(/[凍鵝鴨鴛鴦鵠鵰鷹鷂鷲鶚鶻鷺鶴鷗鴴鷸鵐鶲鵯鶇鴉鵲鴟鵑鶯鷦鷯鴞雞鷿鸊鵜鸕黃灣濱蹺紅藍綠烏鳳頭頸長腳翹臉極賊蠣潛鶘額鴻劍寬棲漁禿細緋脇蒼蘇諾遺頂簑東歐亞遷鶺鴒鶉鵪雲華臺廣雙學體類種鳥鳴觀記錄據]/g, c => TRAD_TO_SIMP[c] || c);
+  return String(text || "").replace(/[凍鵝鴨鴛鴦鵠鵰鷹鷂鷲鶚鶻鷺鶴鷗鴴鷸鵐鶲鵯鶇鴉鵲鴟鵑鶯鷦鷯鴞雞鷿鸊鵜鸕黃灣濱蹺紅藍綠烏鳳頭頸長腳翹臉極賊蠣潛鶘額鴻劍寬棲漁禿細緋脇蒼蘇諾遺頂簑東歐亞遷鶺鴒鶉鵪雲華臺廣雙學體類種鳥鳴觀記錄據爲與稱經裡裏後於牠們應區國對說會時來過開個關係產電佈匯僅際現實業異處]/g, c => TRAD_TO_SIMP[c] || c);
 }
 const normalize = (text) => toSimplified(text).trim().toLowerCase();
 
@@ -818,11 +821,7 @@ function renderBirdDetail(listId, birdId, isShare) {
     <div class="image-counter">${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</div>
     ${media.images?.length > 1 ? `<div class="row"><button class="secondary" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">上一张</button><button class="secondary" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">下一张</button></div>` : ""}
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
-    <details open><summary>识别要点</summary>
-      <p class="latin" style="margin:0 0 8px;">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>
-      ${renderKeyPoints(identification.keyPoints)}
-    </details>
-    <details><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp)}</details>
+    <details><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
     <details><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
     <details><summary>资料来源</summary>${renderSources(sp, media, identification)}</details>
     <div class="bottom-nav">
@@ -841,26 +840,39 @@ function renderBirdDetail(listId, birdId, isShare) {
   });
 }
 
-function renderKeyPoints(points = []) {
-  if (!points.length) return `<p class="muted">暂无可靠辨识资料</p>`;
-  return `<ol>${points.map(p => `<li>${esc(p)}</li>`).join("")}</ol>`;
-}
-
 function renderSounds(sounds = []) {
   if (!sounds.length) return `<p class="muted">暂无可靠鸣声</p>`;
   return sounds.map(s => `<div class="card"><audio controls controlsList="nodownload noplaybackrate" src="${esc(s.url)}"></audio><div class="small muted">${esc(s.source || "")} ${s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">来源</a>` : ""}</div></div>`).join("");
 }
 
-function renderDistribution(rangeMap, sp) {
-  const dist = sp?.distribution;
-  const body = dist ? `<p>${esc(dist)}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
+function renderDistribution(rangeMap, sp, identification) {
+  const dist = identification?.wikipediaDistribution || sp?.distribution;
+  const body = dist ? `<p>${esc(toSimplified(dist))}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
   const map = rangeMap?.sourceUrl ? `<p><a href="${esc(rangeMap.sourceUrl)}" target="_blank">查看权威分布图</a></p>` : "";
   return `${map}${body}`;
 }
 
+function stripDistSentences(text) {
+  return text.replace(/[^。\n]+(?:分布[于在]|模式产地|分布於|分布在)[^。\n]*[。\n]?/g, "").replace(/^[。\s]+|[。\s]+$/g, "").replace(/\n{2,}/g, "\n");
+}
+
 function renderDescription(sp, identification) {
-  const desc = sp?.description || identification?.morphology || identification?.habitat || identification?.behavior;
-  return desc ? `<p>${esc(desc)}</p>` : `<p class="muted">暂无可靠资料</p>`;
+  const wiki = toSimplified(identification?.wikipediaSummary || sp?.description || "");
+  const cleanWiki = stripDistSentences(wiki);
+  const fallback = identification?.morphology || identification?.habitat || identification?.behavior;
+  const parts = [];
+  parts.push(`<p class="latin" style="margin:0 0 8px;">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
+  if (cleanWiki) {
+    parts.push(`<p>${esc(cleanWiki)}</p>`);
+    if (identification?.wikipediaUrl) {
+      parts.push(`<p class="small muted">来源：<a href="${esc(identification.wikipediaUrl)}" target="_blank" rel="noopener">维基百科</a>（CC BY-SA）</p>`);
+    }
+  } else if (fallback) {
+    parts.push(`<p>${esc(toSimplified(fallback))}</p>`);
+  } else {
+    parts.push(`<p class="muted">暂无可靠资料</p>`);
+  }
+  return parts.join("");
 }
 
 function renderSources(sp, media, identification) {
