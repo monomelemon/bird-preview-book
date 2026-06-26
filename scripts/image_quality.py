@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Image quality filter: same-photographer dedup + Laplacian variance blur detection."""
+"""Image quality filter: same-photographer dedup + Laplacian blur + screen photo detection."""
 
 import json
 import os
@@ -20,6 +20,10 @@ BLUR_THRESHOLD = 100.0
 CACHE_DIR = Path("/tmp/ml_image_cache")
 MAX_WORKERS = 12
 
+# Screen photo detection thresholds
+SCREEN_CORNER_STD_MIN = 60.0    # high corner variance (camera UI text)
+SCREEN_SATURATION_MAX = 30.0    # low saturation (screen washout)
+
 
 def read_json(name):
     with (DATA / name).open("r", encoding="utf-8") as f:
@@ -32,175 +36,138 @@ def write_json(name, obj):
         f.write("\n")
 
 
-def asset_id_from_url(url):
-    parts = url.split("/")
-    for p in parts:
-        if p.isdigit() and len(p) >= 8:
-            return p
-    return None
-
-
-def download_image(url):
-    asset_id = asset_id_from_url(url) or hashlib.md5(url.encode()).hexdigest()[:12]
-    cache_path = CACHE_DIR / f"{asset_id}.jpg"
+def download(url):
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    url_hash = hashlib.md5(url.encode()).hexdigest()[:12]
+    cache_path = CACHE_DIR / f"{url_hash}.jpg"
     if cache_path.exists():
-        return str(cache_path), asset_id
-
+        return str(cache_path)
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "BirdPreviewBook/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = resp.read()
+        urllib.request.urlretrieve(url, cache_path)
+        return str(cache_path)
     except Exception:
-        return None, asset_id
-
-    cache_path.write_bytes(data)
-    return str(cache_path), asset_id
+        return None
 
 
 def compute_sharpness(path):
-    """Laplacian variance — higher = sharper. <BLUR_THRESHOLD = blurry."""
     img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     if img is None:
-        return 0.0
-    h, w = img.shape
-    if w < 200 or h < 200:
-        img = cv2.resize(img, (max(w, 200), max(h, 200)))
-    return float(cv2.Laplacian(img, cv2.CV_64F).var())
+        return None
+    return cv2.Laplacian(img, cv2.CV_64F).var()
 
 
-def score_image_tasks(images):
-    tasks = []
-    for idx, img in enumerate(images):
-        url = img.get("url", "")
-        if not url:
-            tasks.append((idx, None, None))
-            continue
-        path, aid = download_image(url)
-        if path:
+def detect_screen_photo(path):
+    """Check if photo appears to be a screen capture (low saturation, camera UI artifacts)."""
+    img = cv2.imread(path)
+    if img is None:
+        return False
+    h, w = img.shape[:2]
+
+    # Check bottom-right corner for camera UI elements (text, icons, date stamps)
+    corner = img[-60:, -200:] if h > 60 and w > 200 else img
+    corner_gray = cv2.cvtColor(corner, cv2.COLOR_BGR2GRAY)
+    corner_std = float(np.std(corner_gray))
+
+    # Check overall color saturation (screen photos tend to be washed out)
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    saturation = float(np.mean(hsv[:, :, 1]))
+
+    return corner_std >= SCREEN_CORNER_STD_MIN and saturation <= SCREEN_SATURATION_MAX
+
+
+def process_photos(images):
+    """Deduplicate by photographer + detect blur + detect screen photos."""
+    seen_authors = set()
+    valid = []
+
+    # Download images in parallel
+    paths = {}
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        futures = {pool.submit(download, img["url"]): i for i, img in enumerate(images)}
+        for f in as_completed(futures):
+            idx = futures[f]
             try:
-                sharp = compute_sharpness(path)
+                paths[idx] = f.result()
             except Exception:
-                sharp = 0.0
-            tasks.append((idx, sharp, aid))
-        else:
-            tasks.append((idx, None, aid))
-    return tasks
+                paths[idx] = None
 
+    # Score images
+    scored = []
+    for i, img in enumerate(images):
+        path = paths.get(i)
+        if not path:
+            continue
 
-def process_species_batch(batch):
-    results = {}
-    for bird_id, images in batch:
-        tasks = score_image_tasks(images)
-        scored = []
-        for idx, sharp, aid in tasks:
-            img = images[idx]
-            scored.append((sharp or 0.0, img, aid))
+        sharp = compute_sharpness(path)
+        if sharp is None:
+            continue
 
-        # Same-photographer dedup: keep only the sharpest per author
-        author_best = {}
-        uncredited_count = 0
-        for s, img, aid in scored:
-            author = img.get("author", "").strip()
-            if not author:
-                uncredited_count += 1
-                author = f"__uncredited_{uncredited_count}"
-            if author in author_best:
-                if s > author_best[author][0]:
-                    author_best[author] = (s, img, aid)
-            else:
-                author_best[author] = (s, img, aid)
+        is_screen = detect_screen_photo(path)
 
-        dup_removed = len(scored) - len(author_best)
-        deduped = list(author_best.values())
-        deduped.sort(key=lambda x: x[0], reverse=True)
+        entry = dict(img)
+        entry["_sharp"] = sharp
+        entry["_screen"] = is_screen
+        scored.append(entry)
 
-        new_images = []
-        blurry_count = 0
-        for sharp, img, aid in deduped[:3]:
-            entry = dict(img)
-            if sharp < BLUR_THRESHOLD:
-                entry["note"] = "画质较低，待替换"
-                blurry_count += 1
-            else:
-                entry.pop("note", None)
-            new_images.append(entry)
+    # Same-photographer dedup: keep sharpest per author
+    author_best = {}
+    for e in scored:
+        author = e.get("author", "")
+        if author not in author_best or e["_sharp"] > author_best[author]["_sharp"]:
+            author_best[author] = e
 
-        results[bird_id] = {
-            "images": new_images,
-            "dup_removed": dup_removed,
-            "blurry": blurry_count,
-        }
-    return results
+    # Sort by sharpness, mark blur and screen
+    result = []
+    for e in sorted(author_best.values(), key=lambda x: x["_sharp"], reverse=True):
+        note = e.get("note", "")
+        if e["_sharp"] < BLUR_THRESHOLD and "画质较低" not in note:
+            note = "画质较低，待替换"
+        if e["_screen"] and "翻拍" not in note:
+            note = f"{note}；疑似翻拍屏幕照片" if note else "疑似翻拍屏幕照片"
+        e.pop("_sharp", None)
+        e.pop("_screen", None)
+        if note:
+            e["note"] = note
+        result.append(e)
+
+    return result
 
 
 def main():
-    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-
     media = read_json("media.json")
-    species = read_json("species.json")
-    sp_names = {s["birdId"]: s["chineseName"] for s in species}
 
-    items = []
-    for bird_id, entry in media.items():
-        images = entry.get("images", [])
-        if len(images) >= 2:
-            items.append((bird_id, images))
-
-    total = len(items)
-    print(f"Processing {total} species with {sum(len(imgs) for _, imgs in items)} images...")
-
-    all_results = {}
-    total_dup = 0
+    total_removed = 0
     total_blur = 0
+    total_screen = 0
 
-    batch_size = 30
-    for i in range(0, len(items), batch_size):
-        batch = items[i : i + batch_size]
+    for bird_id, item in media.items():
+        images = item.get("images", [])
+        if not images:
+            continue
 
-        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-            futures = {pool.submit(process_species_batch, [b]): b[0] for b in batch}
-            for future in as_completed(futures):
-                results = future.result()
-                for bid, r in results.items():
-                    cn = sp_names.get(bid, bid)
-                    total_dup += r["dup_removed"]
-                    total_blur += r["blurry"]
-                    all_results[bid] = r
+        new_images = process_photos(images)
+        old_count = len(images)
+        new_count = len(new_images)
 
-                    flags = []
-                    if r["dup_removed"]:
-                        flags.append(f"去重{r['dup_removed']}张")
-                    if r["blurry"]:
-                        flags.append(f"{r['blurry']}张模糊")
-                    if flags:
-                        print(f"  {cn} ({bid}): {', '.join(flags)}")
+        # Count notes
+        screen_count = sum(1 for i in new_images if "翻拍" in (i.get("note") or ""))
+        blur_count = sum(1 for i in new_images if "画质较低" in (i.get("note") or ""))
 
-        done = min(i + batch_size, total)
-        print(f"  progress: {done}/{total}, dup={total_dup}, blur={total_blur}")
+        if old_count != new_count:
+            removed = old_count - new_count
+            total_removed += removed
+        total_blur += blur_count
+        total_screen += screen_count
 
-        if len(items) > batch_size:
-            time.sleep(0.3)
+        item["images"] = new_images[:3]  # Cap at 3
 
-    # Apply results to media
-    for bid, r in all_results.items():
-        media[bid]["images"] = r["images"]
+        sp_name = read_json("species.json")
+        sp_name = next((s.get("chineseName", bird_id) for s in sp_name if s["birdId"] == bird_id), bird_id)
+        if screen_count or blur_count or old_count != new_count:
+            print(f"  {sp_name}: {old_count}→{new_count} blur={blur_count} screen={screen_count}")
 
     write_json("media.json", media)
-
-    kept = sum(len(v.get("images", [])) for v in media.values())
-    print(f"\nDone. {total_dup} same-photographer duplicates removed, {total_blur} blurry images flagged.")
-    print(f"Total images kept: {kept}")
-
-    # Print summary for the two species of interest
-    print("\n=== Verification ===")
-    for bid in ["dalpel1", "gwfgoo"]:
-        if bid in media:
-            cn = sp_names.get(bid, bid)
-            images = media[bid].get("images", [])
-            print(f"\n{cn} ({bid}): {len(images)} images")
-            for i, img in enumerate(images):
-                note = f" [{img.get('note')}]" if img.get("note") else ""
-                print(f"  [{i}] {img['author']}{note}")
+    print(f"\nDone: removed {total_removed} duplicates, {total_blur} blur, {total_screen} screen photos")
 
 
 if __name__ == "__main__":

@@ -6764,13 +6764,13 @@
   "litegr": {
     "images": [
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/659103089/1200",
+        "url": "https://static.inaturalist.org/photos/592974637/large.jpg",
         "type": "photo",
         "caption": "白鹭",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/659103089",
-        "author": "Paul Chapman",
-        "license": "Any Lab Use=eBird"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/327318296",
+        "author": "Rangga Indonesia",
+        "license": null
       },
       {
         "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/30271689/large.jpg",
@@ -32971,13 +32971,13 @@
   "himowl1": {
     "images": [
       {
-        "url": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/658777913/1200",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/35636269/large.jpeg",
         "type": "photo",
         "caption": "灰林鸮",
-        "source": "Macaulay Library / eBird",
-        "sourceUrl": "https://macaulaylibrary.org/asset/658777913",
-        "author": "문 준우",
-        "license": "Any Lab Use=eBird"
+        "source": "iNaturalist",
+        "sourceUrl": "https://www.inaturalist.org/observations/22988157",
+        "author": "Alexis Tinker-Tsavalas",
+        "license": "cc-by"
       },
       {
         "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/683415870/large.jpg",
