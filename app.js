@@ -964,15 +964,17 @@ function showAddBirdModal(listId) {
   document.querySelector("#addBirdSearch").oninput = function() {
     const query = normalize(this.value);
     if (!query) { document.querySelector("#addBirdResults").innerHTML = ""; return; }
+    const pinyinQuery = query.toLowerCase().replace(/\s/g, "");
     const results = appData.species.filter(sp => {
       const match = normalize(sp.chineseName).includes(query) ||
         normalize(sp.scientificName).includes(query) ||
         normalize(sp.englishName).includes(query) ||
-        (sp.aliases || []).some(a => normalize(a).includes(query));
+        (sp.aliases || []).some(a => normalize(a).includes(query)) ||
+        (pinyinQuery && getPinyinInitials(sp.chineseName).toLowerCase().startsWith(pinyinQuery));
       return match && !list.birdIds.includes(sp.birdId);
     }).slice(0, 10);
     document.querySelector("#addBirdResults").innerHTML = results.length
-      ? results.map(sp => `<div class="add-bird-item" onclick="addBirdToList('${esc(listId)}','${esc(sp.birdId)}','${esc(list.listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}</span></div>`).join("")
+      ? results.map(sp => `<div class="add-bird-item" onclick="addBirdToList('${esc(sp.birdId)}','${esc(listId)}','${esc(list.listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}</span></div>`).join("")
       : `<p class="muted">未找到可添加的鸟种（可能已存在或未收录）。</p>`;
   };
 }
