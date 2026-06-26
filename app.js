@@ -25,7 +25,7 @@ let _lastRouteName = "";
 
 const $html = (strings, ...values) => strings.reduce((out, str, i) => out + str + (values[i] ?? ""), "");
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
-const birdCheckIcon = (checked) => `<svg class="bird-icon" viewBox="0 0 32 32"><g class="${checked ? "bird-solid" : "bird-outline"}"><polygon points="8,16 1,11 4,20"/><ellipse cx="16" cy="16" rx="7" ry="5"/><circle cx="23" cy="12" r="3.5"/><polygon points="26,10 30,11 26,13"/><line x1="13" y1="21" x2="12" y2="28"/><line x1="17" y1="21" x2="18" y2="28"/></g></svg>`;
+const birdCheckIcon = (checked) => `<svg class="bird-icon ${checked ? "bird-solid" : "bird-outline"}" viewBox="0 0 24 24"><path d="M16 7h.01"/><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"/><path d="m20 7 2 .5-2 .5"/><path d="M10 18v3"/><path d="M14 17.75V21"/><path d="M7 18a6 6 0 0 0 3.84-10.61"/></svg>`;
 const nowISO = () => new Date().toISOString();
 const safeParse = (text, fallback) => { if (text == null) return fallback; try { return JSON.parse(text); } catch { return fallback; } };
 const TRAD_TO_SIMP = {
