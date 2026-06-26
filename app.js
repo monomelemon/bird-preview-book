@@ -871,7 +871,9 @@ function renderSounds(sounds = []) {
 
 function renderDistribution(rangeMap, sp, identification) {
   const dist = identification?.wikipediaDistribution || sp?.distribution;
-  const body = dist ? `<p>${esc(toSimplified(dist))}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
+  const wikiDist = extractDistFromWiki(toSimplified(identification?.wikipediaSummary || ""));
+  const combined = [toSimplified(dist), wikiDist].filter(Boolean).join("；");
+  const body = combined ? `<p>${esc(combined)}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
   const map = rangeMap?.sourceUrl ? `<p><a href="${esc(rangeMap.sourceUrl)}" target="_blank">查看权威分布图</a></p>` : "";
   return `${map}${body}`;
 }
@@ -880,8 +882,16 @@ function stripWikiIntro(text) {
   return text.replace(/^[^（(]+[（(](?:学名|學名)[：:].+?[）)]\s*/, "");
 }
 
+const DIST_RE = /[^。\n]*(?:分布[于在]|模式产地|分布於|分布在|常见[於于].{1,40}(?:地区|區域|大陆|國家)|广布[於于]|从.{1,60}(?:经|到).{2,60}(?:到|一直).{2,60}|留鸟.{0,40}从.{2,60}到.{2,60}|造访.{0,30}(?:日本|韩国|朝鲜|台湾))[^。\n]*?[。\n]?/g;
+
+function extractDistFromWiki(text) {
+  const matches = text.match(DIST_RE);
+  if (!matches) return "";
+  return matches.map(s => s.trim()).filter(Boolean).join("；");
+}
+
 function stripDistSentences(text) {
-  return text.replace(/[^。\n]*(?:分布[于在]|模式产地|分布於|分布在|常见[於于].{1,40}(?:地区|區域|大陆|國家)|广布[於于]|从.{1,60}?(?:经|到).{2,60}(?:到|一直).{2,60}|留鸟.{0,40}从.{2,60}到.{2,60}|造访.{0,30}(?:日本|韩国|朝鲜|台湾))[^。\n]*[。\n]?/g, "").replace(/^[。\s]+|[。\s]+$/g, "").replace(/\n{2,}/g, "\n");
+  return text.replace(DIST_RE, "").replace(/^[。\s]+|[。\s]+$/g, "").replace(/\n{2,}/g, "\n");
 }
 
 function renderDescription(sp, identification) {
