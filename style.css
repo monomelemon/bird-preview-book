@@ -100,6 +100,12 @@ button:disabled {
   box-shadow: var(--shadow);
 }
 
+.audio-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 12px;
+}
+
 .stack { display: grid; gap: 12px; }
 .row { display: flex; gap: 10px; align-items: center; }
 .between { justify-content: space-between; }

@@ -870,9 +870,9 @@ function renderSounds(sounds = []) {
     `<audio controls controlsList="nodownload noplaybackrate" src="${esc(s.url)}"${i > 0 ? ' style="margin-top:8px"' : ''}></audio>`
   ).join("");
   const links = sounds.map((s, i) =>
-    s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">鸣声${i + 1}</a>` : `鸣声${i + 1}`
+    s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">${i + 1}</a>` : `${i + 1}`
   ).join(" · ");
-  return `<div class="card">${audios}</div><p class="small muted" style="margin-top:4px">鸣声来源：Macaulay Library / eBird（${links}）</p>`;
+  return `<div class="audio-card">${audios}</div><p class="small muted" style="margin-top:4px">来源：Macaulay Library / eBird（${links}）</p>`;
 }
 
 function renderDistribution(rangeMap, sp, identification) {
