@@ -25,6 +25,7 @@ let _lastRouteName = "";
 
 const $html = (strings, ...values) => strings.reduce((out, str, i) => out + str + (values[i] ?? ""), "");
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
+const birdCheckIcon = (checked) => `<svg class="bird-icon" viewBox="0 0 32 32"><g class="${checked ? "bird-solid" : "bird-outline"}"><polygon points="8,16 1,11 4,20"/><ellipse cx="16" cy="16" rx="7" ry="5"/><circle cx="23" cy="12" r="3.5"/><polygon points="26,10 30,11 26,13"/><line x1="13" y1="21" x2="12" y2="28"/><line x1="17" y1="21" x2="18" y2="28"/></g></svg>`;
 const nowISO = () => new Date().toISOString();
 const safeParse = (text, fallback) => { if (text == null) return fallback; try { return JSON.parse(text); } catch { return fallback; } };
 const TRAD_TO_SIMP = {
@@ -762,7 +763,7 @@ function birdRow(list, birdId, isShare) {
       <div class="bird-name">${esc(sp.chineseName)}</div>
       <div class="bird-taxonomy">${esc(formatTaxonomy(sp))}</div>
     </div>
-    <div class="check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${checked ? "✓" : ""}</div>
+    <div class="check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${birdCheckIcon(checked)}</div>
   </div>`;
 }
 
@@ -806,7 +807,7 @@ function renderBirdDetail(listId, birdId, isShare) {
       <button class="ghost" onclick="${isShare ? `renderBookDetail('${esc(list.listId)}', getShareListFromSession('${esc(list.listId)}'))` : `navigate('book?id=${esc(list.listId)}')`}">返回清单</button>
       <strong>${index + 1}/${list.birdIds.length}</strong>
       <button class="ghost" onclick="openNotePanel('${esc(list.listId)}','${esc(birdId)}')">笔记${notes[birdId] ? "•" : ""}</button>
-      <button class="ghost check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${checked ? "✓" : ""}</button>
+      <button class="ghost check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${birdCheckIcon(checked)}</button>
     </div>
     <div class="detail-name">
       <h1>${esc(sp.chineseName)}</h1>

@@ -160,10 +160,30 @@ textarea {
   height: 44px;
   display: grid;
   place-items: center;
-  color: var(--green);
-  font-size: 24px;
-  font-weight: 800;
   border-radius: 14px;
+  cursor: pointer;
+}
+
+.bird-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.bird-outline > * {
+  fill: transparent;
+  stroke: #bcc9b8;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bird-solid > * {
+  fill: var(--green);
+  stroke: none;
+}
+
+.check-zone:hover .bird-outline > * {
+  stroke: var(--green);
 }
 
 .checked-row { background: linear-gradient(90deg, transparent, var(--green-soft)); }
