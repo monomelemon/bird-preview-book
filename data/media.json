@@ -35435,13 +35435,13 @@
         "license": "cc-by-nc"
       },
       {
-        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/32668122/large.jpg",
+        "url": "https://static.inaturalist.org/photos/593451896/large.jpg",
         "type": "photo",
         "caption": "大杜鹃",
         "source": "iNaturalist",
-        "sourceUrl": "https://www.inaturalist.org/observations/21134730",
-        "author": "M. Goff",
-        "license": "cc-by-nc-sa"
+        "sourceUrl": "https://www.inaturalist.org/observations/327559659",
+        "author": "Eliza G",
+        "license": null
       }
     ],
     "sounds": [
