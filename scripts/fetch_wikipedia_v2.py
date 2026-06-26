@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch Chinese Wikipedia summaries and write description/distribution into species.json."""
+"""Fetch Wikipedia summaries (zh→en) and write description/distribution into species.json."""
 
 import json, re, sys, time, urllib.request, urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -37,17 +37,17 @@ def write_json(name, obj):
         f.write("\n")
 
 
-def fetch_wiki_extract(title):
+def fetch_wiki_extract(title, lang="zh"):
     q = urllib.parse.urlencode({
         "action": "query", "titles": title, "prop": "extracts",
         "exintro": "1", "explaintext": "1", "format": "json", "redirects": "1",
     })
-    url = f"https://zh.wikipedia.org/w/api.php?{q}"
+    url = f"https://{lang}.wikipedia.org/w/api.php?{q}"
     req = urllib.request.Request(url, headers={
         "User-Agent": "BirdPreviewBook/2.0 (educational; monomelemon/bird-preview-book)",
     })
     try:
-        with urllib.request.urlopen(req, timeout=15) as r:
+        with urllib.request.urlopen(req, timeout=8) as r:
             data = json.loads(r.read().decode())
         pages = data.get("query", {}).get("pages", {})
         for pid, page in pages.items():
@@ -89,15 +89,22 @@ def main():
 
     def fetch_one(sp):
         cn = sp["chineseName"]
-        result = fetch_wiki_extract(cn)
+        eb = sp.get("englishName", "")
+        sci = sp.get("scientificName", "")
+
+        result = fetch_wiki_extract(cn, "zh")
         if not result:
-            eb = sp.get("englishName", "")
             if eb and eb != cn:
-                result = fetch_wiki_extract(eb)
+                result = fetch_wiki_extract(eb, "zh")
         if not result:
-            sci = sp.get("scientificName", "")
             if sci and sci != cn:
-                result = fetch_wiki_extract(sci)
+                result = fetch_wiki_extract(sci, "zh")
+
+        if not result and eb:
+            result = fetch_wiki_extract(eb, "en")
+        if not result and sci:
+            result = fetch_wiki_extract(sci, "en")
+
         if not result:
             return sp["birdId"], None
         extract = result["extract"]
@@ -107,11 +114,17 @@ def main():
             "distribution": dist,
         }
 
-    batch = species[:total]
-    batch_size = 8
+    batch = [sp for sp in species[:total] if not sp.get("description")]
+    total = len(batch)
+    if total == 0:
+        print("all species already have descriptions")
+        return
+    print(f"fetching Wikipedia for {total} species (skipping {len(species) - total} with existing description)")
+
+    batch_size = 25
     for i in range(0, len(batch), batch_size):
         chunk = batch[i:i + batch_size]
-        with ThreadPoolExecutor(max_workers=4) as pool:
+        with ThreadPoolExecutor(max_workers=10) as pool:
             futures = [pool.submit(fetch_one, sp) for sp in chunk]
             for future in as_completed(futures):
                 bird_id, wiki_data = future.result()
@@ -123,7 +136,7 @@ def main():
                 done += 1
                 if done % 50 == 0:
                     print(f"  wiki: {done}/{total} (updated {updated})", flush=True)
-        time.sleep(1.0)
+        time.sleep(0.3)
 
     with_desc = sum(1 for sp in species if sp.get("description"))
     with_dist = sum(1 for sp in species if sp.get("distribution"))

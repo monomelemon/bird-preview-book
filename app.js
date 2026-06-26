@@ -828,7 +828,9 @@ function renderBirdDetail(listId, birdId, isShare) {
   const checked = StorageService.isChecked(list.listId, birdId);
   const notes = StorageService.getNotes(list.listId);
   const index = list.birdIds.indexOf(birdId);
-  const image = media.images?.[state.imageIndex];
+    const image = media.images?.[state.imageIndex];
+    const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))));
+
   app.innerHTML = $html`
     <div class="page-header">
       <button class="ghost" onclick="${isShare ? `renderBookDetail('${esc(list.listId)}', getShareListFromSession('${esc(list.listId)}'))` : `navigate('book?id=${esc(list.listId)}')`}">返回清单</button>
@@ -845,7 +847,7 @@ function renderBirdDetail(listId, birdId, isShare) {
     <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span>${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
     <details open><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
-    <details><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
+    <details${hasDist ? " open" : ""}><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
     <details><summary>资料来源</summary>${renderSources(sp, media, identification)}</details>
     <div class="bottom-nav">
       <button class="secondary" ${index <= 0 ? "disabled" : ""} onclick="goBird('${esc(list.listId)}', '${esc(list.birdIds[index - 1])}', ${isShare})">上一种</button>
