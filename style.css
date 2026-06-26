@@ -224,8 +224,8 @@ textarea {
   align-items: baseline;
   margin: 8px 0 4px;
 }
-.detail-name h1 { margin: 0; grid-column: 1; grid-row: 1; }
-.name-right { text-align: right; white-space: nowrap; font-size: 15px; color: var(--muted); }
+.detail-name h1 { margin: 0; font-weight: 400; grid-column: 1 / -1; }
+.name-right { text-align: right; white-space: nowrap; font-size: 15px; color: var(--muted); grid-column: 2; grid-row: 2; }
 .taxonomy-left {
   font-size: 15px;
   color: var(--muted);

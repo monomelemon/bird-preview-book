@@ -811,15 +811,17 @@ function renderBirdDetail(listId, birdId, isShare) {
     </div>
     <div class="detail-name">
       <h1>${esc(sp.chineseName)}</h1>
-      <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
       <div class="taxonomy-left">${esc(formatTaxonomy(sp))}</div>
-      <div class="latin name-right">${esc(sp.scientificName || "暂无可靠数据")}</div>
+      <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
     </div>
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-counter">${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</div>
     ${media.images?.length > 1 ? `<div class="row"><button class="secondary" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">上一张</button><button class="secondary" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">下一张</button></div>` : ""}
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
-    <details open><summary>识别要点</summary>${renderKeyPoints(identification.keyPoints)}</details>
+    <details open><summary>识别要点</summary>
+      <p class="latin" style="margin:0 0 8px;">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>
+      ${renderKeyPoints(identification.keyPoints)}
+    </details>
     <details><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp)}</details>
     <details><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
     <details><summary>资料来源</summary>${renderSources(sp, media, identification)}</details>
