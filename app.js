@@ -877,11 +877,10 @@ function renderSounds(sounds = []) {
 }
 
 function renderDistribution(rangeMap, sp, identification) {
-  const dist = identification?.wikipediaDistribution || sp?.distribution;
-  const distText = dist ? toSimplified(dist) : "";
   const wikiSource = toSimplified(identification?.wikipediaSummary || sp?.description || "");
-  const wikiDist = distText ? "" : extractDistFromWiki(wikiSource);
-  const combined = [distText, wikiDist].filter(Boolean).join("；");
+  const wikiDist = extractDistFromWiki(wikiSource);
+  const preDist = toSimplified(identification?.wikipediaDistribution || sp?.distribution || "");
+  const combined = wikiDist || preDist;
   const body = combined ? `<p>${esc(combined)}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
   const map = rangeMap?.sourceUrl ? `<p><a href="${esc(rangeMap.sourceUrl)}" target="_blank">查看权威分布图</a></p>` : "";
   return `${map}${body}`;
