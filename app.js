@@ -1400,7 +1400,7 @@ function renderDistribution(rangeMap, sp, identification) {
 }
 
 function cleanText(text) {
-  return text.replace(/。。+/g, "。").replace(/））+/g, "）").replace(/，，+/g, "，").replace(/：：+/g, "：").replace(/；；+/g, "；");
+  return text.replace(/。。+/g, "。").replace(/））+/g, "）").replace(/，，+/g, "，").replace(/：：+/g, "：").replace(/；；+/g, "；").replace(/。；/g, "；").replace(/；。+/g, "。").replace(/^[；，]/, "");
 }
 
 function stripWikiIntro(text) {
@@ -1414,7 +1414,7 @@ const DIST_KW_RE = /(?:分布[于在]|模式产地|分布於|分布在|常见[�
 function extractDistFromWiki(text) {
   const matches = (text || "").match(DIST_KW_RE);
   if (!matches) return "";
-  return matches.map(s => s.trim().replace(/[。；]+$/g, "")).filter(Boolean).join("；");
+  return matches.map(s => s.trim()).filter(Boolean).join("");
 }
 
 function stripDistSentences(text) {
