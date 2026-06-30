@@ -61,10 +61,13 @@ const TRAD_TO_SIMP = {
   "貓":"猫","賓":"宾","趨":"趋","針":"针","鎮":"镇","鑽":"钻","闊":"阔",
   "雛":"雏","雜":"杂","韓":"韩","顏":"颜","顛":"颠","餵":"喂","馮":"冯",
   "鮮":"鲜","鳩":"鸠","鳶":"鸢","鴓":"䴓","鴝":"鸲","鵟":"𫛭","鶖":"鹙",
-  "鶥":"鹛","鸐":"𬸘","鸗":"𬸶","龐":"庞"
+  "鶥":"鹛","鸐":"𬸘","鸗":"𬸶","龐":"庞","節":"节",
+  "將":"将","層":"层","機":"机","權":"权","結":"结","術":"术",
+  "輕":"轻","轉":"转","達":"达","選":"选","邊":"边","鐵":"铁",
+  "離":"离","難":"难","靈":"灵","麥":"麦","龍":"龙","龜":"龟"
 };
 function toSimplified(text) {
-  return String(text || "").replace(/[並亞佈來係個們僅內兩凍別則劍動勢匯區協參員問單嚴囂國圍夠學實寬寶對導屬島嶼帶庫廣強後從愛態慶應換擁擊據擬擴數斷於時會東條棲業極構樣樹橫歐歡歸氣淺溫滅滿漁潛澤濕濱灣為烏無熱爲爾牠狀猶獨獵現環產畫異當禿種稱積穩節範築簑簡紀約紅紋納細絕統經綠緋線縣縮續羅翹聞聯脅脇腳臉臺與興舊茲華葉著葦蒼藍蘇蘭處號蝦蟲蠣衝裏裡見覓視親觀記訪許評詞話該認語誤說論諾識護變豐豔貓負責貿資賊賓贏趨蹺較農這連進過遠適遷遺還針錄鎮鑽長開間闊關陸際隨隻雙雛雜雞雲電韓頁頂項領頭頸題額顏顛類顯風飛養餵馬馮體魚鮮鳥鳩鳳鳴鳶鴉鴒鴓鴛鴝鴞鴟鴦鴨鴴鴻鴿鵐鵑鵜鵝鵟鵠鵪鵯鵰鵲鶇鶉鶖鶘鶚鶥鶯鶲鶴鶺鶻鷂鷗鷦鷯鷲鷸鷹鷺鷿鸊鸐鸕鸗黃點龐節]/g, c => TRAD_TO_SIMP[c] || c);
+  return String(text || "").replace(/[並亞佈來係個們僅內兩凍別則劍動勢匯區協參員問單嚴囂國圍夠學實寬寶將對導層屬島嶼帶庫廣強後從愛態慶應換擁擊據擬擴數斷於時會東條棲業極構樣樹機橫權歐歡歸氣淺溫滅滿漁潛澤濕濱灣為烏無熱爲爾牠狀猶獨獵現環產畫異當禿種稱積穩節範築簑簡紀約紅紋納細結絕統經綠緋線縣縮續羅翹聞聯脅脇腳臉臺與興舊茲華葉著葦蒼藍蘇蘭處號蝦蟲蠣術衝裏裡見覓視親觀記訪許評詞話該認語誤說論諾識護變豐豔貓負責貿資賊賓贏趨蹺較輕轉農這連進過達遠適遷選遺還邊針錄鎮鐵鑽長開間闊關陸際隨隻雙雛雜雞離難雲電靈韓頁頂項領頭頸題額顏顛類顯風飛養餵馬馮體魚鮮鳥鳩鳳鳴鳶鴉鴒鴓鴛鴝鴞鴟鴦鴨鴴鴻鴿鵐鵑鵜鵝鵟鵠鵪鵯鵰鵲鶇鶉鶖鶘鶚鶥鶯鶲鶴鶺鶻鷂鷗鷦鷯鷲鷸鷹鷺鷿鸊鸐鸕鸗麥黃點龍龐龜]/g, c => TRAD_TO_SIMP[c] || c);
 }
 const normalize = (text) => toSimplified(text).trim().toLowerCase();
 
@@ -881,9 +884,13 @@ function renderDistribution(rangeMap, sp, identification) {
   const wikiDist = extractDistFromWiki(wikiSource);
   const preDist = toSimplified(identification?.wikipediaDistribution || sp?.distribution || "");
   const combined = wikiDist || preDist;
-  const body = combined ? `<p>${esc(combined)}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
+  const body = combined ? `<p>${esc(cleanText(combined))}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
   const map = rangeMap?.sourceUrl ? `<p><a href="${esc(rangeMap.sourceUrl)}" target="_blank">查看权威分布图</a></p>` : "";
   return `${map}${body}`;
+}
+
+function cleanText(text) {
+  return text.replace(/。。+/g, "。").replace(/））+/g, "）").replace(/，，+/g, "，").replace(/：：+/g, "：").replace(/；；+/g, "；");
 }
 
 function stripWikiIntro(text) {
@@ -909,12 +916,12 @@ function renderDescription(sp, identification) {
   const parts = [];
   parts.push(`<p class="latin" style="margin:0 0 8px;">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
   if (cleanWiki) {
-    parts.push(`<p>${esc(cleanWiki)}</p>`);
+    parts.push(`<p>${esc(cleanText(cleanWiki))}</p>`);
     if (identification?.wikipediaUrl) {
       parts.push(`<p class="small muted">来源：<a href="${esc(identification.wikipediaUrl)}" target="_blank" rel="noopener">维基百科</a>（CC BY-SA）</p>`);
     }
   } else if (fallback) {
-    parts.push(`<p>${esc(toSimplified(fallback))}</p>`);
+    parts.push(`<p>${esc(cleanText(toSimplified(fallback)))}</p>`);
   } else {
     parts.push(`<p class="muted">暂无可靠资料</p>`);
   }
