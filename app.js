@@ -1331,6 +1331,35 @@ function toggleAndRefresh(listId, birdId) {
   render();
 }
 
+const TAG_LABELS = {
+  critically_endangered: { text: "极危", cls: "tag-iucn-cr" },
+  endangered:           { text: "濒危", cls: "tag-iucn-en" },
+  vulnerable:           { text: "易危", cls: "tag-iucn-vu" },
+  near_threatened:      { text: "近危", cls: "tag-iucn-nt" },
+  endemic:             { text: "中国特有", cls: "tag-endemism" },
+  breeding_endemic:    { text: "中国繁殖特有", cls: "tag-endemism-sub" },
+  near_endemic:        { text: "近中国特有", cls: "tag-endemism-sub" },
+  rare:                { text: "稀见/偶见", cls: "tag-occurrence-rare" },
+  introduced:          { text: "引入种", cls: "tag-occurrence-introduced" },
+  extirpated:          { text: "区域性灭绝", cls: "tag-occurrence-extirpated" },
+  exotic:              { text: "非本土宠物种", cls: "tag-occurrence-exotic" },
+};
+
+function renderTags(sp) {
+  const tags = [];
+  if (sp.iucnStatus && TAG_LABELS[sp.iucnStatus]) {
+    tags.push(TAG_LABELS[sp.iucnStatus]);
+  }
+  if (sp.endemism && TAG_LABELS[sp.endemism]) {
+    tags.push(TAG_LABELS[sp.endemism]);
+  }
+  if (sp.occurrenceType && TAG_LABELS[sp.occurrenceType]) {
+    tags.push(TAG_LABELS[sp.occurrenceType]);
+  }
+  if (!tags.length) return "";
+  return `<div class="tag-row">${tags.map(t => `<span class="tag ${t.cls}">${esc(t.text)}</span>`).join("")}</div>`;
+}
+
 function renderBirdDetail(listId, birdId, isShare) {
   const list = isShare ? getShareListFromSession(listId) : StorageService.getList(listId);
   const sp = appData.speciesById.get(birdId);
@@ -1342,7 +1371,7 @@ function renderBirdDetail(listId, birdId, isShare) {
   const notes = StorageService.getNotes(list.listId);
   const index = list.birdIds.indexOf(birdId);
     const image = media.images?.[state.imageIndex];
-    const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))));
+    const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))) || (sp?.description && extractDistFromWiki(toSimplified(sp.description))));
 
   app.innerHTML = $html`
     <div class="page-header">
@@ -1356,6 +1385,7 @@ function renderBirdDetail(listId, birdId, isShare) {
       <div class="taxonomy-left">${esc(formatTaxonomy(sp))}</div>
       <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
     </div>
+    ${renderTags(sp)}
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span>${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
