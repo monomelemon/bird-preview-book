@@ -308,6 +308,35 @@ summary { font-weight: 700; cursor: pointer; }
   text-decoration: none;
 }
 
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.tag-iucn-cr { background: #e53e3e; color: #fff; }
+.tag-iucn-en { background: #e53e3e; color: #fff; }
+.tag-iucn-vu { background: #dd6b20; color: #fff; }
+.tag-iucn-nt { background: #d69e2e; color: #fff; }
+.tag-endemism { background: #553c9a; color: #fff; }
+.tag-endemism-sub { background: #805ad5; color: #fff; }
+.tag-occurrence-rare { background: #a0aec0; color: #fff; }
+.tag-occurrence-introduced { background: #38a169; color: #fff; }
+.tag-occurrence-extirpated { background: #4a5568; color: #fff; }
+.tag-occurrence-exotic { background: #cbd5e0; color: #4a5568; }
+
 .error { color: var(--danger); }
 .success { color: var(--green); }
 
