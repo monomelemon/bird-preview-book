@@ -244,7 +244,15 @@ textarea {
   align-items: baseline;
   margin: 8px 0 4px;
 }
-.detail-name h1 { margin: 0; font-weight: 400; grid-column: 1 / -1; }
+.detail-name h1 {
+  margin: 0;
+  font-weight: 400;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
 .name-right { text-align: right; white-space: nowrap; font-size: 15px; color: var(--muted); grid-column: 2; grid-row: 2; }
 .taxonomy-left {
   font-size: 15px;
@@ -253,6 +261,11 @@ textarea {
   grid-row: 2;
 }
 .latin { font-style: italic; color: var(--muted); white-space: nowrap; font-size: 15px; }
+.detail-tags {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
 
 details {
   background: var(--card);
@@ -308,34 +321,22 @@ summary { font-weight: 700; cursor: pointer; }
   text-decoration: none;
 }
 
-.tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 4px 0;
+.iucn-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  flex: 0 0 auto;
 }
 
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  padding: 2px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.tag-iucn-cr { background: #e53e3e; color: #fff; }
-.tag-iucn-en { background: #e53e3e; color: #fff; }
-.tag-iucn-vu { background: #dd6b20; color: #fff; }
-.tag-iucn-nt { background: #d69e2e; color: #fff; }
-.tag-endemism { background: #553c9a; color: #fff; }
-.tag-endemism-sub { background: #805ad5; color: #fff; }
-.tag-occurrence-rare { background: #a0aec0; color: #fff; }
-.tag-occurrence-introduced { background: #38a169; color: #fff; }
-.tag-occurrence-extirpated { background: #4a5568; color: #fff; }
-.tag-occurrence-exotic { background: #cbd5e0; color: #4a5568; }
+.iucn-badge-cr { background: #d92d20; color: #fff; }
+.iucn-badge-en { background: #f38744; color: #fff; }
+.iucn-badge-vu { background: #f4d35e; color: #1f2937; }
+.iucn-badge-nt { background: #b7e4a5; color: #1f2937; }
 
 .error { color: var(--danger); }
 .success { color: var(--green); }

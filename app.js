@@ -1353,33 +1353,39 @@ function toggleAndRefresh(listId, birdId) {
   render();
 }
 
-const TAG_LABELS = {
-  critically_endangered: { text: "极危", cls: "tag-iucn-cr" },
-  endangered:           { text: "濒危", cls: "tag-iucn-en" },
-  vulnerable:           { text: "易危", cls: "tag-iucn-vu" },
-  near_threatened:      { text: "近危", cls: "tag-iucn-nt" },
-  endemic:             { text: "中国特有", cls: "tag-endemism" },
-  breeding_endemic:    { text: "中国繁殖特有", cls: "tag-endemism-sub" },
-  near_endemic:        { text: "近中国特有", cls: "tag-endemism-sub" },
-  rare:                { text: "稀见/偶见", cls: "tag-occurrence-rare" },
-  introduced:          { text: "引入种", cls: "tag-occurrence-introduced" },
-  extirpated:          { text: "区域性灭绝", cls: "tag-occurrence-extirpated" },
-  exotic:              { text: "非本土宠物种", cls: "tag-occurrence-exotic" },
+const IUCN_BADGES = {
+  critically_endangered: { text: "CR", label: "极危", cls: "iucn-badge-cr" },
+  endangered:           { text: "EN", label: "濒危", cls: "iucn-badge-en" },
+  vulnerable:           { text: "VU", label: "易危", cls: "iucn-badge-vu" },
+  near_threatened:      { text: "NT", label: "近危", cls: "iucn-badge-nt" },
 };
 
-function renderTags(sp) {
+const DETAIL_TAG_LABELS = {
+  endemic: "中国特有种",
+  breeding_endemic: "仅在中国繁育",
+  near_endemic: "近乎中国特有",
+  rare: "稀见/偶见",
+  introduced: "外来物种",
+  extirpated: "消失",
+  exotic: "非本土宠物种",
+};
+
+function renderIucnBadge(sp) {
+  const badge = IUCN_BADGES[sp.iucnStatus];
+  if (!badge) return "";
+  return `<span class="iucn-badge ${badge.cls}" title="IUCN ${esc(badge.label)}" aria-label="IUCN ${esc(badge.label)}">${badge.text}</span>`;
+}
+
+function renderDetailTags(sp) {
   const tags = [];
-  if (sp.iucnStatus && TAG_LABELS[sp.iucnStatus]) {
-    tags.push(TAG_LABELS[sp.iucnStatus]);
+  if (sp.endemism && DETAIL_TAG_LABELS[sp.endemism]) {
+    tags.push(DETAIL_TAG_LABELS[sp.endemism]);
   }
-  if (sp.endemism && TAG_LABELS[sp.endemism]) {
-    tags.push(TAG_LABELS[sp.endemism]);
-  }
-  if (sp.occurrenceType && TAG_LABELS[sp.occurrenceType]) {
-    tags.push(TAG_LABELS[sp.occurrenceType]);
+  if (sp.occurrenceType && DETAIL_TAG_LABELS[sp.occurrenceType]) {
+    tags.push(DETAIL_TAG_LABELS[sp.occurrenceType]);
   }
   if (!tags.length) return "";
-  return `<div class="tag-row">${tags.map(t => `<span class="tag ${t.cls}">${esc(t.text)}</span>`).join("")}</div>`;
+  return `<p class="detail-tags">${tags.map(esc).join("、")}</p>`;
 }
 
 function renderBirdDetail(listId, birdId, isShare) {
@@ -1403,11 +1409,10 @@ function renderBirdDetail(listId, birdId, isShare) {
       <button class="ghost check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${birdCheckIcon(checked)}</button>
     </div>
     <div class="detail-name">
-      <h1>${esc(sp.chineseName)}</h1>
+      <h1>${esc(sp.chineseName)}${renderIucnBadge(sp)}</h1>
       <div class="taxonomy-left">${esc(formatTaxonomy(sp))}</div>
       <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
     </div>
-    ${renderTags(sp)}
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span>${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
@@ -1479,6 +1484,8 @@ function renderDescription(sp, identification) {
   const fallback = identification?.morphology || identification?.habitat || identification?.behavior;
   const parts = [];
   parts.push(`<p class="latin" style="margin:0 0 8px;">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
+  const detailTags = renderDetailTags(sp);
+  if (detailTags) parts.push(detailTags);
   if (cleanWiki) {
     parts.push(`<p>${esc(cleanText(cleanWiki))}</p>`);
     if (identification?.wikipediaUrl) {
