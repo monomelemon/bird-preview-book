@@ -1416,7 +1416,9 @@ function renderSounds(sounds = []) {
   const links = sounds.map((s, i) =>
     s.sourceUrl ? `<a href="${esc(s.sourceUrl)}" target="_blank">鸣声${i + 1}</a>` : `鸣声${i + 1}`
   ).join(" · ");
-  return `<div class="audio-card">${audios}</div><p class="small muted" style="margin-top:4px">来源：Macaulay Library / eBird（${links}）</p>`;
+  const sources = new Set(sounds.map(s => s.source).filter(Boolean));
+  const sourceText = [...sources].join(" / ") || "Macaulay Library / eBird";
+  return `<div class="audio-card">${audios}</div><p class="small muted" style="margin-top:4px">来源：${esc(sourceText)}（${links}）</p>`;
 }
 
 function renderDistribution(rangeMap, sp, identification) {
