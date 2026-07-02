@@ -1088,6 +1088,9 @@ function buildLocationFromMatch(freeText) {
 
 function generateRecommendedList({ location, months, filters }) {
   const best = new Map();
+  const hasLocation = location?.provinceCode || location?.cityCode || location?.districtCode;
+
+  // Phase 1: match species via occurrence records
   appData.occurrences.forEach(occ => {
     const sp = appData.speciesById.get(occ.birdId);
     if (!sp) return;
@@ -1101,7 +1104,26 @@ function generateRecommendedList({ location, months, filters }) {
     const prev = best.get(occ.birdId);
     if (!prev || occurrenceRank(occ) > occurrenceRank(prev)) best.set(occ.birdId, occ);
   });
+
+  // Phase 2: fill gaps with province distribution for species without occurrence records
+  appData.speciesById.forEach((sp, birdId) => {
+    if (best.has(birdId)) return;
+    if (filters.orders.length && !filters.orders.includes(sp.order?.zh)) return;
+    if (filters.families.length && !filters.families.includes(sp.family?.zh)) return;
+    if (hasLocation) {
+      const prov = normalizeProvince(appData.locationsByCode.get(location.provinceCode)?.name);
+      if (!prov) return;
+      if (!sp.provinceDistribution?.some(p => normalizeProvince(p) === prov)) return;
+    }
+    best.set(birdId, null);
+  });
+
   return [...best.keys()].sort((a, b) => sortBirdIds(a, b, best));
+}
+
+function normalizeProvince(name) {
+  if (!name) return "";
+  return name.replace(/省$|自治区$|市$|维吾尔$|壮族$|回族$|特别行政区$/, "").trim();
 }
 
 function matchLocation(occ, location) {
