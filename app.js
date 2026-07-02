@@ -1393,7 +1393,7 @@ function renderBirdDetail(listId, birdId, isShare) {
   const notes = StorageService.getNotes(list.listId);
   const index = list.birdIds.indexOf(birdId);
     const image = media.images?.[state.imageIndex];
-    const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))) || (sp?.description && extractDistFromWiki(toSimplified(sp.description))) || sp?.provinceDistribution?.length);
+    const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))) || (sp?.description && extractDistFromWiki(toSimplified(sp.description))));
 
   app.innerHTML = $html`
     <div class="page-header">
@@ -1448,15 +1448,9 @@ function renderDistribution(rangeMap, sp, identification) {
   const wikiDist = extractDistFromWiki(stripWikiIntro(wikiSource));
   const preDist = toSimplified(identification?.wikipediaDistribution || sp?.distribution || "");
   const combined = wikiDist || preDist;
-  const body = combined ? `<p>${esc(cleanText(combined))}</p>` : "";
-  const provPills = sp?.provinceDistribution?.length
-    ? `<div class="tag-row">${sp.provinceDistribution.map(p => `<span class="pill">${esc(p)}</span>`).join("")}</div>`
-    : "";
-  const fallback = (!combined && !sp?.provinceDistribution?.length)
-    ? `<p class="muted">暂无该地区月份的可靠记录</p>`
-    : "";
+  const body = combined ? `<p>${esc(cleanText(combined))}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
   const map = rangeMap?.sourceUrl ? `<p><a href="${esc(rangeMap.sourceUrl)}" target="_blank">查看权威分布图</a></p>` : "";
-  return `${map}${provPills}${body}${fallback}`;
+  return `${map}${body}`;
 }
 
 function cleanText(text) {
