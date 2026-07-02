@@ -322,8 +322,8 @@ summary { font-weight: 700; cursor: pointer; }
 }
 
 .iucn-badge {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: inline-grid;
   place-items: center;
