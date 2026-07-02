@@ -1586,7 +1586,7 @@ function renderDetailTags(sp) {
     tags.push(DETAIL_TAG_LABELS[sp.occurrenceType]);
   }
   if (!tags.length) return "";
-  return `<p class="detail-tags">${tags.map(esc).join("、")}</p>`;
+  return `<p class="detail-line detail-tags">${tags.map(esc).join("、")}</p>`;
 }
 
 function renderBirdDetail(listId, birdId, isShare) {
@@ -1620,7 +1620,7 @@ function renderBirdDetail(listId, birdId, isShare) {
     <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}" onerror="handleBirdImageError('${esc(listId)}', '${esc(birdId)}', ${isShare})">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span>${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
-    <details open><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
+    <details open><summary>基本信息</summary>${renderDescription(sp, identification)}</details>
     <details${hasDist ? " open" : ""}><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
     <details><summary>资料来源</summary>${renderSources(sp, media, identification)}</details>
     <div class="bottom-nav">
@@ -1687,18 +1687,16 @@ function renderDescription(sp, identification) {
   const cleanWiki = stripDistSentences(stripWikiIntro(wiki));
   const fallback = identification?.morphology || identification?.habitat || identification?.behavior;
   const parts = [];
-  parts.push(`<p class="latin" style="margin:0 0 8px;">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
+  parts.push(`<p class="detail-line latin">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
   const detailTags = renderDetailTags(sp);
   if (detailTags) parts.push(detailTags);
   if (cleanWiki) {
-    parts.push(`<p>${esc(cleanText(cleanWiki))}</p>`);
+    parts.push(`<p class="detail-line detail-text">${esc(cleanText(cleanWiki))}</p>`);
     if (identification?.wikipediaUrl) {
       parts.push(`<p class="small muted">来源：<a href="${esc(identification.wikipediaUrl)}" target="_blank" rel="noopener">维基百科</a>（CC BY-SA）</p>`);
     }
   } else if (fallback) {
-    parts.push(`<p>${esc(cleanText(toSimplified(fallback)))}</p>`);
-  } else {
-    parts.push(`<p class="muted">暂无可靠资料</p>`);
+    parts.push(`<p class="detail-line detail-text">${esc(cleanText(toSimplified(fallback)))}</p>`);
   }
   return parts.join("");
 }

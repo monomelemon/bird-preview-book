@@ -260,12 +260,14 @@ textarea {
   grid-column: 1;
   grid-row: 2;
 }
-.latin { font-style: italic; color: var(--muted); white-space: nowrap; font-size: 15px; }
-.detail-tags {
+.detail-line {
   margin: 0 0 8px;
-  color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.6;
 }
+.latin { font-style: italic; color: var(--muted); white-space: nowrap; }
+.detail-tags { color: var(--muted); }
+.detail-text { color: var(--text); }
 
 details {
   background: var(--card);
