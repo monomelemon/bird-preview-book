@@ -9,7 +9,7 @@ const DATA_FILES = {
   similar: "data/similar.json"
 };
 
-const DATA_CACHE_VERSION = "v2-fix-2026-05-08";
+const DATA_CACHE_VERSION = "v2-fix-2026-07-02-taxonomy-image-fallback";
 
 const STORAGE_KEYS = {
   lists: "birdPreviewBook:lists",
@@ -17,10 +17,112 @@ const STORAGE_KEYS = {
   notes: (listId) => `birdPreviewBook:notes:${listId}`
 };
 
+const ORDER_ZH_BY_LATIN = {
+  Pterocliformes: "沙鸡目"
+};
+
+const FAMILY_ZH_BY_LATIN = {
+  Accipitridae: "鹰科",
+  Acrocephalidae: "苇莺科",
+  Aegithalidae: "长尾山雀科",
+  Aegithinidae: "雀鹎科",
+  Alaudidae: "百灵科",
+  Alcedinidae: "翠鸟科",
+  Alcidae: "海雀科",
+  Anatidae: "鸭科",
+  Anhingidae: "蛇鹈科",
+  Apodidae: "雨燕科",
+  Ardeidae: "鹭科",
+  Artamidae: "燕鵙科",
+  Bucerotidae: "犀鸟科",
+  Burhinidae: "石鸻科",
+  Campephagidae: "山椒鸟科",
+  Caprimulgidae: "夜鹰科",
+  Certhiidae: "旋木雀科",
+  Cettiidae: "树莺科",
+  Charadriidae: "鸻科",
+  Chloropseidae: "叶鹎科",
+  Ciconiidae: "鹳科",
+  Cinclidae: "河乌科",
+  Cisticolidae: "扇尾莺科",
+  Columbidae: "鸠鸽科",
+  Coraciidae: "佛法僧科",
+  Corvidae: "鸦科",
+  Cuculidae: "杜鹃科",
+  Dicaeidae: "啄花鸟科",
+  Dicruridae: "卷尾科",
+  Emberizidae: "鹀科",
+  Estrildidae: "梅花雀科",
+  Eurylaimidae: "阔嘴鸟科",
+  Falconidae: "隼科",
+  Fregatidae: "军舰鸟科",
+  Fringillidae: "燕雀科",
+  Glareolidae: "燕鸻科",
+  Gruidae: "鹤科",
+  Hemiprocnidae: "树燕科",
+  Hirundinidae: "燕科",
+  Icteridae: "拟鹂科",
+  Indicatoridae: "响蜜䴕科",
+  Irenidae: "和平鸟科",
+  Jacanidae: "水雉科",
+  Laniidae: "伯劳科",
+  Laridae: "鸥科",
+  Leiothrichidae: "噪鹛科",
+  Locustellidae: "蝗莺科",
+  Megalaimidae: "拟啄木鸟科",
+  Meropidae: "蜂虎科",
+  Monarchidae: "王鹟科",
+  Motacillidae: "鹡鸰科",
+  Muscicapidae: "鹟科",
+  Nectariniidae: "太阳鸟科",
+  Oriolidae: "黄鹂科",
+  Otididae: "鸨科",
+  Paradoxornithidae: "鸦雀科",
+  Paridae: "山雀科",
+  Passerellidae: "雀鹀科",
+  Passeridae: "雀科",
+  Pelecanidae: "鹈鹕科",
+  Pellorneidae: "画眉科",
+  Phaethontidae: "鹲科",
+  Phalacrocoracidae: "鸬鹚科",
+  Phasianidae: "雉科",
+  Phylloscopidae: "柳莺科",
+  Picidae: "啄木鸟科",
+  Pittidae: "八色鸫科",
+  Ploceidae: "织布鸟科",
+  Pnoepygidae: "短翅莺科",
+  Podargidae: "蟆口鸱科",
+  Procellariidae: "鹱科",
+  Prunellidae: "岩鹨科",
+  Psittaculidae: "鹦鹉科",
+  Pteroclidae: "沙鸡科",
+  Pycnonotidae: "鹎科",
+  Rallidae: "秧鸡科",
+  Recurvirostridae: "反嘴鹬科",
+  Remizidae: "攀雀科",
+  Rhipiduridae: "扇尾鹟科",
+  Scolopacidae: "鹬科",
+  Sittidae: "鳾科",
+  Stenostiridae: "仙鹟科",
+  Strigidae: "鸱鸮科",
+  Sturnidae: "椋鸟科",
+  Sylviidae: "莺鹛科",
+  Threskiornithidae: "鹮科",
+  Timaliidae: "林鹛科",
+  Trogonidae: "咬鹃科",
+  Turdidae: "鸫科",
+  Turnicidae: "三趾鹑科",
+  Tytonidae: "仓鸮科",
+  Urocynchramidae: "朱鹀科",
+  Vangidae: "钩嘴鵙科",
+  Vireonidae: "莺雀科",
+  Zosteropidae: "绣眼鸟科"
+};
+
 const ALL_MONTHS = [1,2,3,4,5,6,7,8,9,10,11,12];
 const app = document.querySelector("#app");
 let appData = null;
-let state = { imageIndex: 0, matchResults: [] };
+let state = { imageIndex: 0, matchResults: [], imageFailures: {} };
 let _lastRouteName = "";
 
 const $html = (strings, ...values) => strings.reduce((out, str, i) => out + str + (values[i] ?? ""), "");
@@ -646,6 +748,90 @@ function formatMonths(months) {
   return months.map(m => `${m}月`).join("、");
 }
 
+function hasChineseText(value) {
+  return /[\u3400-\u9fff]/.test(String(value || ""));
+}
+
+function normalizeOrderZh(orderZh, orderEn) {
+  return ORDER_ZH_BY_LATIN[orderZh] || ORDER_ZH_BY_LATIN[orderEn] || orderZh || orderEn || "";
+}
+
+function normalizeFamilyZh(familyZh, familyEn) {
+  if (hasChineseText(familyZh)) return familyZh;
+  return FAMILY_ZH_BY_LATIN[familyZh] || FAMILY_ZH_BY_LATIN[familyEn] || familyZh || familyEn || "";
+}
+
+function normalizeSpeciesTaxonomy(species) {
+  return {
+    ...species,
+    order: {
+      ...(species.order || {}),
+      zh: normalizeOrderZh(species?.order?.zh, species?.order?.en)
+    },
+    family: {
+      ...(species.family || {}),
+      zh: normalizeFamilyZh(species?.family?.zh, species?.family?.en)
+    }
+  };
+}
+
+function normalizeTaxonomyFamilies(families, species, orderSortMap) {
+  const normalized = [];
+  const seen = new Map();
+  const nextSortByOrder = new Map();
+
+  (families || []).forEach(family => {
+    const orderZh = normalizeOrderZh(family.orderZh, family.orderEn);
+    const zh = normalizeFamilyZh(family.zh, family.en);
+    const item = { ...family, zh, orderZh };
+    if (!seen.has(zh)) {
+      seen.set(zh, item);
+      normalized.push(item);
+    }
+    nextSortByOrder.set(orderZh, Math.max(nextSortByOrder.get(orderZh) || 0, item.sortOrder || 0));
+  });
+
+  species.forEach(sp => {
+    const zh = sp?.family?.zh;
+    const orderZh = sp?.order?.zh || "";
+    if (!zh || seen.has(zh)) return;
+    const baseSort = (orderSortMap.get(orderZh) || 999) * 10;
+    const nextSort = Math.max(nextSortByOrder.get(orderZh) || baseSort, baseSort) + 1;
+    nextSortByOrder.set(orderZh, nextSort);
+    const item = {
+      zh,
+      en: sp?.family?.en || zh,
+      orderZh,
+      sortOrder: nextSort
+    };
+    seen.set(zh, item);
+    normalized.push(item);
+  });
+
+  normalized.sort((a, b) => (a.sortOrder || 9999) - (b.sortOrder || 9999) || String(a.zh || "").localeCompare(String(b.zh || ""), "zh-Hans-CN"));
+  return normalized;
+}
+
+function getWorkingImageIndex(images, currentIndex, failedSet) {
+  if (!images.length || failedSet.size >= images.length) return -1;
+  for (let step = 0; step < images.length; step += 1) {
+    const index = (currentIndex + step) % images.length;
+    if (!failedSet.has(index)) return index;
+  }
+  return -1;
+}
+
+function getFailedImages(birdId) {
+  if (!state.imageFailures[birdId]) state.imageFailures[birdId] = new Set();
+  return state.imageFailures[birdId];
+}
+
+function markImageFailure(birdId, index) {
+  const failedImages = getFailedImages(birdId);
+  failedImages.add(index);
+  return failedImages;
+}
+
 function formatTaxonomy(species) {
   return `${species?.order?.zh || "暂无可靠数据"} > ${species?.family?.zh || "暂无可靠数据"}`;
 }
@@ -679,6 +865,14 @@ async function loadData() {
 }
 
 function buildIndexes(data) {
+  const species = (data.species || []).map(normalizeSpeciesTaxonomy);
+  const orders = (data.taxonomy?.orders || []).map(order => ({
+    ...order,
+    zh: normalizeOrderZh(order.zh, order.en)
+  }));
+  const orderSortMap = new Map(orders.map(order => [order.zh, order.sortOrder]));
+  const families = normalizeTaxonomyFamilies(data.taxonomy?.families || [], species, orderSortMap);
+  const taxonomy = { ...(data.taxonomy || {}), orders, families };
   const speciesById = new Map();
   const speciesByChineseName = new Map();
   const speciesByAlias = new Map();
@@ -688,7 +882,7 @@ function buildIndexes(data) {
   const taxonomySortMap = new Map();
   const locationsByCode = new Map();
 
-  data.species.forEach(sp => {
+  species.forEach(sp => {
     speciesById.set(sp.birdId, sp);
     speciesByChineseName.set(normalize(sp.chineseName), sp);
     speciesByScientificName.set(normalize(sp.scientificName), sp);
@@ -701,11 +895,11 @@ function buildIndexes(data) {
     occurrencesByBirdId.get(occ.birdId).push(occ);
   });
 
-  (data.taxonomy.orders || []).forEach(o => taxonomySortMap.set(o.zh, o.sortOrder));
-  (data.taxonomy.families || []).forEach(f => taxonomySortMap.set(f.zh, f.sortOrder));
+  (taxonomy.orders || []).forEach(o => taxonomySortMap.set(o.zh, o.sortOrder));
+  (taxonomy.families || []).forEach(f => taxonomySortMap.set(f.zh, f.sortOrder));
   flattenLocations(data.locations).forEach(loc => locationsByCode.set(loc.code, loc));
 
-  return { ...data, speciesById, speciesByChineseName, speciesByAlias, speciesByScientificName, speciesByEnglishName, occurrencesByBirdId, taxonomySortMap, locationsByCode };
+  return { ...data, species, taxonomy, speciesById, speciesByChineseName, speciesByAlias, speciesByScientificName, speciesByEnglishName, occurrencesByBirdId, taxonomySortMap, locationsByCode };
 }
 
 function flattenLocations(locations, parent = null) {
@@ -1123,7 +1317,13 @@ function generateRecommendedList({ location, months, filters }) {
 
 function normalizeProvince(name) {
   if (!name) return "";
-  return name.replace(/省$|自治区$|市$|维吾尔$|壮族$|回族$|特别行政区$/, "").trim();
+  let normalized = name.trim();
+  while (normalized) {
+    const next = normalized.replace(/(?:特别行政区|自治区|维吾尔|壮族|回族|省|市)$/, "").trim();
+    if (next === normalized) break;
+    normalized = next;
+  }
+  return normalized;
 }
 
 function matchLocation(occ, location) {
@@ -1315,12 +1515,13 @@ function saveBookList(listId) {
 function birdRow(list, birdId, isShare) {
   const sp = appData.speciesById.get(birdId);
   if (!sp) return "";
-  const media = appData.media[birdId];
-  const img = media?.images?.[0]?.url;
+  const media = appData.media[birdId] || { images: [] };
+  const imgIndex = getWorkingImageIndex(media.images || [], 0, getFailedImages(birdId));
+  const img = imgIndex === -1 ? "" : media.images?.[imgIndex]?.url;
   const checked = StorageService.isChecked(list.listId, birdId);
   const shareParam = isShare ? "&share=1" : "";
   return `<div class="bird-row ${checked ? "checked-row" : ""}">
-    ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">` : `<div class="thumb" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">🐦</div>`}
+    ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}" data-image-index="${imgIndex}" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')" onerror="handleThumbImageError(this, '${esc(birdId)}')">` : `<div class="thumb" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">🐦</div>`}
     <div class="bird-main" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">
       <div class="bird-name">${esc(sp.chineseName)}</div>
       <div class="bird-taxonomy">${esc(formatTaxonomy(sp))}</div>
@@ -1398,8 +1599,11 @@ function renderBirdDetail(listId, birdId, isShare) {
   const checked = StorageService.isChecked(list.listId, birdId);
   const notes = StorageService.getNotes(list.listId);
   const index = list.birdIds.indexOf(birdId);
-    const image = media.images?.[state.imageIndex];
-    const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))) || (sp?.description && extractDistFromWiki(toSimplified(sp.description))));
+  const failedImages = state.imageFailures[birdId] || new Set();
+  const workingImageIndex = getWorkingImageIndex(media.images || [], state.imageIndex, failedImages);
+  if (workingImageIndex !== -1 && workingImageIndex !== state.imageIndex) state.imageIndex = workingImageIndex;
+  const image = workingImageIndex === -1 ? null : media.images?.[state.imageIndex];
+  const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))) || (sp?.description && extractDistFromWiki(toSimplified(sp.description))));
 
   app.innerHTML = $html`
     <div class="page-header">
@@ -1413,7 +1617,7 @@ function renderBirdDetail(listId, birdId, isShare) {
       <div class="taxonomy-left">${esc(formatTaxonomy(sp))}</div>
       <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
     </div>
-    <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
+    <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}" onerror="handleBirdImageError('${esc(listId)}', '${esc(birdId)}', ${isShare})">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
     <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span>${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
     <details open><summary>详细信息</summary>${renderDescription(sp, identification)}</details>
@@ -1519,6 +1723,34 @@ function changeImage(offset, listId, birdId, isShare) {
   const images = appData.media[birdId]?.images || [];
   state.imageIndex = (state.imageIndex + offset + images.length) % images.length;
   renderBirdDetail(listId, birdId, isShare);
+}
+
+function handleBirdImageError(listId, birdId, isShare) {
+  const images = appData.media[birdId]?.images || [];
+  if (!images.length) return;
+  const failedImages = markImageFailure(birdId, state.imageIndex);
+  const nextIndex = getWorkingImageIndex(images, state.imageIndex + 1, failedImages);
+  state.imageIndex = nextIndex === -1 ? 0 : nextIndex;
+  renderBirdDetail(listId, birdId, isShare);
+}
+
+function handleThumbImageError(imgEl, birdId) {
+  const images = appData.media[birdId]?.images || [];
+  if (!images.length) return;
+  const currentIndex = Number(imgEl?.dataset?.imageIndex || 0);
+  const failedImages = markImageFailure(birdId, currentIndex);
+  const nextIndex = getWorkingImageIndex(images, currentIndex + 1, failedImages);
+  if (nextIndex === -1) {
+    const fallback = document.createElement("div");
+    fallback.className = "thumb";
+    fallback.textContent = "🐦";
+    const onclick = imgEl.getAttribute("onclick");
+    if (onclick) fallback.setAttribute("onclick", onclick);
+    imgEl.replaceWith(fallback);
+    return;
+  }
+  imgEl.dataset.imageIndex = String(nextIndex);
+  imgEl.src = images[nextIndex].url;
 }
 
 function goBird(listId, birdId, isShare) {
