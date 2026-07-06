@@ -815,6 +815,10 @@ function matchesPinyinInitials(chineseText, query) {
   return index >= normalizedQuery.length;
 }
 
+function matchesAnyPinyinInitials(values, query) {
+  return (values || []).some(value => matchesPinyinInitials(value, query));
+}
+
 function hashString(str) {
   let hash = 5381;
   for (let i = 0; i < str.length; i++) hash = ((hash << 5) + hash) + str.charCodeAt(i);
@@ -1784,7 +1788,7 @@ function filterSortBirds(birdIds, listId, { filter, sort, search }, list) {
     if (!query) return true;
     const sp = appData.speciesById.get(id);
     const pinyinQuery = query.toLowerCase().replace(/\s/g, "");
-    if (pinyinQuery && matchesPinyinInitials(sp?.chineseName || "", pinyinQuery)) return true;
+    if (pinyinQuery && matchesAnyPinyinInitials([sp?.chineseName, ...(sp?.aliases || [])], pinyinQuery)) return true;
     const hay = [sp?.chineseName, sp?.scientificName, sp?.englishName, ...(sp?.aliases || [])].map(normalize).join(" ");
     return hay.includes(query);
   }).sort((a, b) => {
@@ -2108,7 +2112,7 @@ function showAddBirdModal(listId) {
         normalize(sp.scientificName).includes(query) ||
         normalize(sp.englishName).includes(query) ||
         (sp.aliases || []).some(a => normalize(a).includes(query)) ||
-        (pinyinQuery && matchesPinyinInitials(sp.chineseName, pinyinQuery));
+        (pinyinQuery && matchesAnyPinyinInitials([sp.chineseName, ...(sp.aliases || [])], pinyinQuery));
       return match && !list.birdIds.includes(sp.birdId);
     }).slice(0, 10);
     resultsNode.innerHTML = results.length
