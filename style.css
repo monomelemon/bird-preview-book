@@ -319,6 +319,7 @@ summary { font-weight: 700; cursor: pointer; }
   border: 1px solid var(--line);
   padding: 16px;
   box-shadow: 0 -12px 34px rgba(0,0,0,.14);
+  z-index: 30;
 }
 
 .match-item {
