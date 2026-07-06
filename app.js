@@ -943,6 +943,26 @@ const StorageService = {
     this.updateList(list);
     return true;
   },
+  removeBirdFromList(listId, birdId) {
+    const list = this.getList(listId);
+    if (!list || !list.birdIds.includes(birdId)) return false;
+    list.birdIds = list.birdIds.filter(id => id !== birdId);
+    this.updateList(list);
+
+    const checks = this.getChecks(listId);
+    if (checks.checkedBirdIds.includes(birdId)) {
+      checks.checkedBirdIds = checks.checkedBirdIds.filter(id => id !== birdId);
+      checks.updatedAt = nowISO();
+      localStorage.setItem(STORAGE_KEYS.checks(listId), JSON.stringify(checks));
+    }
+
+    const notes = this.getNotes(listId);
+    if (Object.hasOwn(notes, birdId)) {
+      delete notes[birdId];
+      localStorage.setItem(STORAGE_KEYS.notes(listId), JSON.stringify(notes));
+    }
+    return true;
+  },
   getChecks(listId) {
     const checks = safeParse(localStorage.getItem(STORAGE_KEYS.checks(listId)), null);
     if (!checks || !Array.isArray(checks.checkedBirdIds)) return { listId, checkedBirdIds: [], updatedAt: nowISO() };
@@ -1046,37 +1066,93 @@ function deleteRecentList(event, listId) {
   });
 }
 
-function resetAllSwipes() {
-  document.querySelectorAll(".swipe-card").forEach(el => el.style.transform = "translateX(0)");
+function resetAllSwipes(exceptCard = null) {
+  document.querySelectorAll(".swipe-card").forEach(el => {
+    if (el !== exceptCard) el.style.transform = "translateX(0)";
+  });
 }
 
 function setupSwipeCards() {
   document.querySelectorAll(".swipe-container").forEach(container => {
     const card = container.querySelector(".swipe-card");
-    let startX = 0, moved = false;
+    let startX = 0;
+    let startSwipeX = 0;
+    let moved = false;
+    let suppressClick = false;
+    let mouseDragging = false;
 
     function reset() { card.style.transform = "translateX(0)"; }
+    function currentSwipeX() { return parseInt(card.style.transform.replace(/[^-\d]/g, "")) || 0; }
+    function setSwipeX(nextX) { card.style.transform = `translateX(${Math.min(0, Math.max(nextX, -80))}px)`; }
+    function finalizeSwipe() {
+      if (!moved) return;
+      if (currentSwipeX() < -40) card.style.transform = "translateX(-80px)";
+      else reset();
+      suppressClick = true;
+      setTimeout(() => { suppressClick = false; }, 0);
+    }
 
     card.addEventListener("touchstart", e => {
       startX = e.touches[0].clientX;
+      startSwipeX = currentSwipeX();
       moved = false;
-      resetAllSwipes();
+      resetAllSwipes(card);
     }, { passive: true });
 
     card.addEventListener("touchmove", e => {
       const dx = e.touches[0].clientX - startX;
-      if (dx < 0) { card.style.transform = `translateX(${Math.max(dx, -80)}px)`; moved = true; }
+      const nextX = startSwipeX + dx;
+      if (nextX <= 0) {
+        setSwipeX(nextX);
+        moved = moved || Math.abs(dx) > 4;
+      }
     }, { passive: true });
 
     card.addEventListener("touchend", () => {
-      if (!moved) return;
-      const currentX = parseInt(card.style.transform.replace(/[^-\d]/g, "")) || 0;
-      if (currentX < -40) card.style.transform = "translateX(-80px)";
-      else reset();
+      finalizeSwipe();
     });
 
+    card.addEventListener("pointerdown", e => {
+      if (e.pointerType !== "mouse" || e.button !== 0) return;
+      startX = e.clientX;
+      startSwipeX = currentSwipeX();
+      moved = false;
+      mouseDragging = true;
+      suppressClick = false;
+      resetAllSwipes(card);
+      card.classList.add("swiping");
+      card.setPointerCapture(e.pointerId);
+    });
+
+    card.addEventListener("pointermove", e => {
+      if (!mouseDragging || e.pointerType !== "mouse") return;
+      const dx = e.clientX - startX;
+      const nextX = startSwipeX + dx;
+      if (nextX <= 0) {
+        setSwipeX(nextX);
+        moved = moved || Math.abs(dx) > 4;
+      }
+    });
+
+    function finishMouseSwipe(e) {
+      if (!mouseDragging || e.pointerType !== "mouse") return;
+      mouseDragging = false;
+      card.classList.remove("swiping");
+      if (card.hasPointerCapture(e.pointerId)) card.releasePointerCapture(e.pointerId);
+      finalizeSwipe();
+    }
+
+    card.addEventListener("pointerup", finishMouseSwipe);
+    card.addEventListener("pointercancel", finishMouseSwipe);
+    card.addEventListener("dragstart", e => e.preventDefault());
+
     card.addEventListener("click", e => {
-      const currentX = parseInt(card.style.transform.replace(/[^-\d]/g, "")) || 0;
+      if (suppressClick) {
+        e.stopPropagation();
+        e.preventDefault();
+        return;
+      }
+      const currentX = currentSwipeX();
       if (currentX < -40) { e.stopPropagation(); e.preventDefault(); resetAllSwipes(); }
     });
   });
@@ -1469,11 +1545,12 @@ function renderBookDetail(listId, sharePayload = null) {
         <select id="filter" style="flex-shrink:0;width:70px;"><option value="all">全部</option><option value="unchecked">未观察</option><option value="checked">已观察</option></select>
         <select id="sort" style="flex-shrink:0;width:80px;">${sortHTML}</select>
       </div>
-      ${birds.length ? birds.map(id => birdRow(list, id, isShare)).join("") : `<p class="muted">没有符合条件的鸟种。</p>`}
+      ${birds.length ? birds.map((id, index) => birdRow(list, id, isShare, index === birds.length - 1)).join("") : `<p class="muted">没有符合条件的鸟种。</p>`}
     </div>
     ${isShare ? `<button class="secondary" style="width:100%;" onclick="cloneShareList('${esc(list.listId)}')">复制为我的清单（可编辑）</button>` : ``}
     ${isShare ? `` : `<button class="fab" onclick="showAddBirdModal('${esc(list.listId)}')" title="添加鸟种">+</button>`}
   `;
+  if (!isShare) setupSwipeCards();
   document.querySelector("#filter").value = filter;
   document.querySelector("#sort").value = sort;
   document.querySelector("#search").oninput = e => { sessionStorage.setItem(`search:${list.listId}`, e.target.value); renderBookDetail(list.listId, isShare ? list : null); };
@@ -1512,7 +1589,7 @@ function saveBookList(listId) {
   render();
 }
 
-function birdRow(list, birdId, isShare) {
+function birdRow(list, birdId, isShare, isLast = false) {
   const sp = appData.speciesById.get(birdId);
   if (!sp) return "";
   const media = appData.media[birdId] || { images: [] };
@@ -1520,13 +1597,18 @@ function birdRow(list, birdId, isShare) {
   const img = imgIndex === -1 ? "" : media.images?.[imgIndex]?.url;
   const checked = StorageService.isChecked(list.listId, birdId);
   const shareParam = isShare ? "&share=1" : "";
-  return `<div class="bird-row ${checked ? "checked-row" : ""}">
+  const rowHtml = `<div class="bird-row ${checked ? "checked-row" : ""} ${isLast ? "bird-row-last" : ""}">
     ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}" data-image-index="${imgIndex}" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')" onerror="handleThumbImageError(this, '${esc(birdId)}')">` : `<div class="thumb" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">🐦</div>`}
     <div class="bird-main" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">
       <div class="bird-name">${esc(sp.chineseName)}</div>
       <div class="bird-taxonomy">${esc(formatTaxonomy(sp))}</div>
     </div>
     <div class="check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${birdCheckIcon(checked)}</div>
+  </div>`;
+  if (isShare) return rowHtml;
+  return `<div class="swipe-container bird-swipe-container">
+    <div class="swipe-delete bird-swipe-delete" onclick="deleteBirdFromList(event, '${esc(list.listId)}', '${esc(birdId)}')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
+    <div class="swipe-card bird-swipe-card">${rowHtml}</div>
   </div>`;
 }
 
@@ -1552,6 +1634,26 @@ function filterSortBirds(birdIds, listId, { filter, sort, search }, list) {
 function toggleAndRefresh(listId, birdId) {
   StorageService.toggleCheck(listId, birdId);
   render();
+}
+
+function deleteBirdFromList(event, listId, birdId) {
+  event.stopPropagation();
+  const sp = appData.speciesById.get(birdId);
+  showModal({
+    title: "确认移除",
+    message: `确定从当前清单移除“${sp?.chineseName || "该鸟种"}”？已观察状态和笔记也会一并删除。`,
+    buttons: [
+      { label: "取消", action: () => resetAllSwipes() },
+      {
+        label: "删除",
+        cls: "danger",
+        action: () => {
+          StorageService.removeBirdFromList(listId, birdId);
+          render();
+        }
+      }
+    ]
+  });
 }
 
 const IUCN_BADGES = {

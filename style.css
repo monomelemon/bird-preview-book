@@ -144,9 +144,23 @@ textarea {
 }
 
 .bird-row:last-child { border-bottom: 0; }
+.bird-row-last { border-bottom: 0; }
 .bird-main { min-width: 0; cursor: pointer; }
 .bird-name { font-weight: 700; font-size: 17px; }
 .bird-taxonomy { color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+.bird-swipe-container {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.bird-swipe-card {
+  background: var(--card);
+}
+
+.bird-swipe-delete {
+  border-radius: 0;
+}
 
 
 .thumb {
@@ -490,6 +504,17 @@ select option:disabled {
   margin-bottom: 0;
   transition: transform 0.2s ease;
   touch-action: pan-y;
+  cursor: grab;
+}
+
+.swipe-card.swiping {
+  transition: none;
+  cursor: grabbing;
+}
+
+.swipe-card.swiping,
+.swipe-card.swiping * {
+  user-select: none;
 }
 
 .swipe-delete {
