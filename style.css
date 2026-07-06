@@ -159,7 +159,7 @@ textarea {
 }
 
 .bird-swipe-delete {
-  border-radius: 0;
+  border-radius: 14px;
 }
 
 
@@ -376,7 +376,7 @@ summary { font-weight: 700; cursor: pointer; }
 }
 @media (max-width: 592px) { .fab { right: 12px; } }
 
-.list-card { display: flex; align-items: center; padding-right: 40px; }
+.list-card { display: flex; align-items: center; padding-right: 40px; cursor: pointer; }
 
 .search-results { margin-top: 8px; max-height: 320px; overflow-y: auto; }
 .add-bird-item {
@@ -504,7 +504,7 @@ select option:disabled {
   margin-bottom: 0;
   transition: transform 0.2s ease;
   touch-action: pan-y;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .swipe-card.swiping {
@@ -520,17 +520,23 @@ select option:disabled {
 .swipe-delete {
   position: absolute;
   right: 0;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  background: var(--danger);
-  color: white;
+  top: 50%;
+  width: 52px;
+  height: 44px;
+  transform: translateY(-50%);
+  background: rgba(154, 61, 50, 0.1);
+  color: var(--danger);
+  border: 1px solid rgba(154, 61, 50, 0.16);
   display: grid;
   place-items: center;
-  font-size: 24px;
-  border-radius: 20px;
+  border-radius: 14px;
   cursor: pointer;
   z-index: 0;
+  box-shadow: 0 8px 18px rgba(154, 61, 50, 0.08);
+}
+
+.swipe-delete svg {
+  display: block;
 }
 
 .swipe-container {

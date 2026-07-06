@@ -1109,9 +1109,9 @@ function renderHome() {
     <h2 class="section-title">最近清单</h2>
     ${savedLists.length ? savedLists.map(list => `
       <div class="swipe-container">
-        <div class="swipe-delete" onclick="deleteRecentList(event, '${esc(list.listId)}')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
-        <div class="card list-card swipe-card" data-listid="${esc(list.listId)}">
-          <div onclick="navigate('book?id=${esc(list.listId)}')" style="flex:1;">
+        <div class="swipe-delete" onclick="deleteRecentList(event, '${esc(list.listId)}')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
+        <div class="card list-card swipe-card" data-listid="${esc(list.listId)}" onclick="navigate('book?id=${esc(list.listId)}')">
+          <div style="flex:1;">
             <strong>${esc(list.title)}</strong>
             <div class="muted small">${formatMonths(list.months) ? `${esc(formatMonths(list.months))} · ` : ''}${list.birdIds.length} 种</div>
           </div>
@@ -1143,18 +1143,23 @@ function resetAllSwipes(exceptCard = null) {
 function setupSwipeCards() {
   document.querySelectorAll(".swipe-container").forEach(container => {
     const card = container.querySelector(".swipe-card");
+    const deleteAction = container.querySelector(".swipe-delete");
+    const swipeWidth = Math.max(48, Math.round(deleteAction?.getBoundingClientRect().width || 52));
+    const dragThreshold = 8;
     let startX = 0;
     let startSwipeX = 0;
+    let lastDx = 0;
     let moved = false;
     let suppressClick = false;
     let mouseDragging = false;
 
     function reset() { card.style.transform = "translateX(0)"; }
     function currentSwipeX() { return parseInt(card.style.transform.replace(/[^-\d]/g, "")) || 0; }
-    function setSwipeX(nextX) { card.style.transform = `translateX(${Math.min(0, Math.max(nextX, -80))}px)`; }
+    function setSwipeX(nextX) { card.style.transform = `translateX(${Math.min(0, Math.max(nextX, -swipeWidth))}px)`; }
     function finalizeSwipe() {
       if (!moved) return;
-      if (currentSwipeX() < -40) card.style.transform = "translateX(-80px)";
+      if (lastDx > dragThreshold) reset();
+      else if (currentSwipeX() < -(swipeWidth / 2)) card.style.transform = `translateX(-${swipeWidth}px)`;
       else reset();
       suppressClick = true;
       setTimeout(() => { suppressClick = false; }, 0);
@@ -1163,16 +1168,23 @@ function setupSwipeCards() {
     card.addEventListener("touchstart", e => {
       startX = e.touches[0].clientX;
       startSwipeX = currentSwipeX();
+      lastDx = 0;
       moved = false;
       resetAllSwipes(card);
     }, { passive: true });
 
     card.addEventListener("touchmove", e => {
       const dx = e.touches[0].clientX - startX;
+      if (!moved && Math.abs(dx) < dragThreshold) return;
+      moved = true;
+      lastDx = dx;
+      if (dx > 0) {
+        reset();
+        return;
+      }
       const nextX = startSwipeX + dx;
       if (nextX <= 0) {
         setSwipeX(nextX);
-        moved = moved || Math.abs(dx) > 4;
       }
     }, { passive: true });
 
@@ -1184,21 +1196,28 @@ function setupSwipeCards() {
       if (e.pointerType !== "mouse" || e.button !== 0) return;
       startX = e.clientX;
       startSwipeX = currentSwipeX();
+      lastDx = 0;
       moved = false;
       mouseDragging = true;
       suppressClick = false;
       resetAllSwipes(card);
-      card.classList.add("swiping");
       card.setPointerCapture(e.pointerId);
     });
 
     card.addEventListener("pointermove", e => {
       if (!mouseDragging || e.pointerType !== "mouse") return;
       const dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) < dragThreshold) return;
+      moved = true;
+      lastDx = dx;
+      card.classList.add("swiping");
+      if (dx > 0) {
+        reset();
+        return;
+      }
       const nextX = startSwipeX + dx;
       if (nextX <= 0) {
         setSwipeX(nextX);
-        moved = moved || Math.abs(dx) > 4;
       }
     });
 
@@ -1671,17 +1690,18 @@ function birdRow(list, birdId, isShare, isLast = false) {
   const img = imgIndex === -1 ? "" : media.images?.[imgIndex]?.url;
   const checked = StorageService.isChecked(list.listId, birdId);
   const shareParam = isShare ? "&share=1" : "";
-  const rowHtml = `<div class="bird-row ${checked ? "checked-row" : ""} ${isLast ? "bird-row-last" : ""}">
-    ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}" data-image-index="${imgIndex}" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')" onerror="handleThumbImageError(this, '${esc(birdId)}')">` : `<div class="thumb" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">🐦</div>`}
-    <div class="bird-main" onclick="navigate('bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}')">
+  const navTarget = `bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}`;
+  const rowHtml = `<div class="bird-row ${checked ? "checked-row" : ""} ${isLast ? "bird-row-last" : ""}" onclick="navigate('${navTarget}')">
+    ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}" data-image-index="${imgIndex}" onerror="handleThumbImageError(this, '${esc(birdId)}')">` : `<div class="thumb">🐦</div>`}
+    <div class="bird-main">
       <div class="bird-name">${esc(sp.chineseName)}</div>
       <div class="bird-taxonomy">${esc(formatTaxonomy(sp))}</div>
     </div>
-    <div class="check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${birdCheckIcon(checked)}</div>
+    <div class="check-zone" onclick="event.stopPropagation(); toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${birdCheckIcon(checked)}</div>
   </div>`;
   if (isShare) return rowHtml;
   return `<div class="swipe-container bird-swipe-container">
-    <div class="swipe-delete bird-swipe-delete" onclick="deleteBirdFromList(event, '${esc(list.listId)}', '${esc(birdId)}')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
+    <div class="swipe-delete bird-swipe-delete" onclick="deleteBirdFromList(event, '${esc(list.listId)}', '${esc(birdId)}')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
     <div class="swipe-card bird-swipe-card">${rowHtml}</div>
   </div>`;
 }
