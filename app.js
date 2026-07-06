@@ -713,10 +713,78 @@ z:杂在赞灶泽贼增扎窄展占张章爪找赵赭浙针珍真枕震镇正郑
   return map;
 }, {});
 
+const PINYIN_INITIAL_OVERRIDES = {
+  // Bird names use "藏" overwhelmingly in the Tibetan sense (zang), not cang.
+  "藏": "z",
+  "长": "z",
+  "暗": "a",
+  "靛": "d",
+  "鹬": "y"
+};
+
+const PINYIN_INITIAL_EXTRAS = {
+  "埃": "a",
+  "岸": "a",
+  "澳": "a",
+  "捕": "b",
+  "辫": "b",
+  "垂": "c",
+  "鸱": "c",
+  "度": "d",
+  "德": "d",
+  "甸": "d",
+  "尔": "e",
+  "帆": "f",
+  "法": "f",
+  "国": "g",
+  "岗": "g",
+  "果": "g",
+  "和": "h",
+  "槲": "h",
+  "皇": "h",
+  "霍": "h",
+  "及": "j",
+  "疆": "j",
+  "距": "j",
+  "宽": "k",
+  "盔": "k",
+  "来": "l",
+  "瘤": "l",
+  "路": "l",
+  "梅": "m",
+  "玫": "m",
+  "缅": "m",
+  "蟆": "m",
+  "泊": "p",
+  "蒲": "p",
+  "钳": "q",
+  "肉": "r",
+  "僧": "s",
+  "梢": "s",
+  "森": "s",
+  "肃": "s",
+  "薮": "s",
+  "赛": "s",
+  "黍": "s",
+  "塔": "t",
+  "条": "t",
+  "梯": "t",
+  "韦": "w",
+  "休": "x",
+  "响": "x",
+  "犀": "x",
+  "域": "y",
+  "幽": "y",
+  "侏": "z",
+  "支": "z",
+  "皱": "z",
+  "蛛": "z"
+};
+
 function getPinyinInitials(chineseText) {
   let result = "";
   for (const c of chineseText || "") {
-    result += PINYIN_INITIALS[c] || "";
+    result += PINYIN_INITIAL_OVERRIDES[c] || PINYIN_INITIALS[c] || PINYIN_INITIAL_EXTRAS[c] || "";
   }
   return result;
 }
@@ -1512,14 +1580,20 @@ function createImportList() {
   navigate(`book?id=${list.listId}`);
 }
 
+function getListViewState(listId) {
+  return {
+    filter: sessionStorage.getItem(`filter:${listId}`) || "all",
+    sort: sessionStorage.getItem(`sort:${listId}`) || "taxonomy",
+    search: sessionStorage.getItem(`search:${listId}`) || ""
+  };
+}
+
 function renderBookDetail(listId, sharePayload = null) {
   const list = sharePayload || StorageService.getList(listId);
   if (!list) return renderError("当前清单不存在。", "返回首页");
   const isShare = listId?.startsWith("share_");
   const checks = StorageService.getChecks(list.listId);
-  const filter = sessionStorage.getItem(`filter:${list.listId}`) || "all";
-  const sort = sessionStorage.getItem(`sort:${list.listId}`) || "taxonomy";
-  const search = sessionStorage.getItem(`search:${list.listId}`) || "";
+  const { filter, sort, search } = getListViewState(list.listId);
   const birds = filterSortBirds(list.birdIds, list.listId, { filter, sort, search }, list);
   const sortOptions = [
     { value: "taxonomy", label: "按分类" },
@@ -1726,12 +1800,16 @@ function renderBirdDetail(listId, birdId, isShare) {
   const list = isShare ? getShareListFromSession(listId) : StorageService.getList(listId);
   const sp = appData.speciesById.get(birdId);
   if (!list || !sp) return renderError("当前鸟种资料不存在。", "返回首页");
+  const viewState = getListViewState(list.listId);
+  const visibleBirds = filterSortBirds(list.birdIds, list.listId, viewState, list);
+  const sortedBirds = filterSortBirds(list.birdIds, list.listId, { ...viewState, filter: "all", search: "" }, list);
+  const detailBirds = visibleBirds.includes(birdId) ? visibleBirds : sortedBirds;
   const media = appData.media[birdId] || { images: [], sounds: [] };
   const identification = appData.identification[birdId] || {};
   const similar = appData.similar[birdId] || [];
   const checked = StorageService.isChecked(list.listId, birdId);
   const notes = StorageService.getNotes(list.listId);
-  const index = list.birdIds.indexOf(birdId);
+  const index = detailBirds.indexOf(birdId);
   const failedImages = state.imageFailures[birdId] || new Set();
   const workingImageIndex = getWorkingImageIndex(media.images || [], state.imageIndex, failedImages);
   if (workingImageIndex !== -1 && workingImageIndex !== state.imageIndex) state.imageIndex = workingImageIndex;
@@ -1741,7 +1819,7 @@ function renderBirdDetail(listId, birdId, isShare) {
   app.innerHTML = $html`
     <div class="page-header">
       <button class="ghost" onclick="${isShare ? `renderBookDetail('${esc(list.listId)}', getShareListFromSession('${esc(list.listId)}'))` : `navigate('book?id=${esc(list.listId)}')`}">返回清单</button>
-      <strong>${index + 1}/${list.birdIds.length}</strong>
+      <strong>${index + 1}/${detailBirds.length}</strong>
       <button class="ghost" onclick="openNotePanel('${esc(list.listId)}','${esc(birdId)}')">笔记${notes[birdId] ? "•" : ""}</button>
       <button class="ghost check-zone" onclick="toggleAndRefresh('${esc(list.listId)}','${esc(birdId)}')">${birdCheckIcon(checked)}</button>
     </div>
@@ -1757,8 +1835,8 @@ function renderBirdDetail(listId, birdId, isShare) {
     <details${hasDist ? " open" : ""}><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
     <details><summary>资料来源</summary>${renderSources(sp, media, identification)}</details>
     <div class="bottom-nav">
-      <button class="secondary" ${index <= 0 ? "disabled" : ""} onclick="goBird('${esc(list.listId)}', '${esc(list.birdIds[index - 1])}', ${isShare})">上一种</button>
-      <button ${index >= list.birdIds.length - 1 ? "disabled" : ""} onclick="goBird('${esc(list.listId)}', '${esc(list.birdIds[index + 1])}', ${isShare})">下一种</button>
+      <button class="secondary" ${index <= 0 ? "disabled" : ""} onclick="goBird('${esc(list.listId)}', '${esc(detailBirds[index - 1])}', ${isShare})">上一种</button>
+      <button ${index >= detailBirds.length - 1 ? "disabled" : ""} onclick="goBird('${esc(list.listId)}', '${esc(detailBirds[index + 1])}', ${isShare})">下一种</button>
     </div>
   `;
   document.querySelectorAll("audio").forEach(audio => {
