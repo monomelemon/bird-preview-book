@@ -4259,7 +4259,9 @@
     "chineseName": "绿脚山鹧鸪",
     "englishName": "Scaly-breasted Partridge",
     "scientificName": "Tropicoperdix chloropus",
-    "aliases": [],
+    "aliases": [
+      "绿脚树鹧鸪"
+    ],
     "order": {
       "zh": "鸡形目",
       "en": "Galliformes"
@@ -4769,7 +4771,9 @@
     "chineseName": "雉鹑",
     "englishName": "Chestnut-throated Monal-Partridge",
     "scientificName": "Tetraophasis obscurus",
-    "aliases": [],
+    "aliases": [
+      "红喉雉鹑"
+    ],
     "order": {
       "zh": "鸡形目",
       "en": "Galliformes"
@@ -4923,10 +4927,12 @@
   },
   {
     "birdId": "tetrszec",
-    "chineseName": "黄喉雉鹑（四川雉鹑）",
+    "chineseName": "黄喉雉鹑",
     "englishName": "Buff-throated Monal-Partridge",
     "scientificName": "Tetraophasis szechenyii",
-    "aliases": [],
+    "aliases": [
+      "四川雉鹑"
+    ],
     "order": {
       "zh": "鸡形目",
       "en": "Galliformes"
@@ -7439,7 +7445,9 @@
     "chineseName": "霍氏鹰鹃",
     "englishName": "Hodgson's Hawk-Cuckoo",
     "scientificName": "Hierococcyx nisicolor",
-    "aliases": [],
+    "aliases": [
+      "棕腹鹰鹃"
+    ],
     "order": {
       "zh": "鹃形目",
       "en": "Cuculiformes"
@@ -7753,7 +7761,9 @@
     "chineseName": "凤头树燕",
     "englishName": "Crested Treeswift",
     "scientificName": "Hemiprocne coronata",
-    "aliases": [],
+    "aliases": [
+      "凤头雨燕"
+    ],
     "order": {
       "zh": "雨燕目",
       "en": "Apodiformes"
@@ -12228,7 +12238,9 @@
     "chineseName": "欧石鸻",
     "englishName": "Eurasian Thick-knee",
     "scientificName": "Burhinus oedicnemus",
-    "aliases": [],
+    "aliases": [
+      "石鸻"
+    ],
     "order": {
       "zh": "鸻形目",
       "en": "Charadriiformes"
@@ -13517,7 +13529,9 @@
     "chineseName": "石鸻",
     "englishName": "Beach Thick-knee",
     "scientificName": "Esacus magnirostris",
-    "aliases": [],
+    "aliases": [
+      "澳洲石鸻"
+    ],
     "order": {
       "zh": "鸻形目",
       "en": "Charadriiformes"
@@ -20204,10 +20218,12 @@
   },
   {
     "birdId": "butebute",
-    "chineseName": "普通",
+    "chineseName": "欧亚鵟",
     "englishName": "Common Buzzard",
     "scientificName": "Buteo buteo",
-    "aliases": [],
+    "aliases": [
+      "普通鵟"
+    ],
     "order": {
       "zh": "鹰形目",
       "en": "Accipitriformes"
@@ -22711,7 +22727,9 @@
     "chineseName": "毛腿渔鸮",
     "englishName": "Blakiston's Fish-Owl",
     "scientificName": "Ketupa blakistoni",
-    "aliases": [],
+    "aliases": [
+      "毛腿雕鸮"
+    ],
     "order": {
       "zh": "鸮形目",
       "en": "Strigiformes"
@@ -24173,7 +24191,9 @@
     "chineseName": "印度佛法僧",
     "englishName": "Indian Roller",
     "scientificName": "Coracias benghalensis",
-    "aliases": [],
+    "aliases": [
+      "西棕胸佛法僧"
+    ],
     "order": {
       "zh": "佛法僧目",
       "en": "Coraciiformes"
@@ -26377,7 +26397,9 @@
     "chineseName": "黄额斑啄木鸟",
     "englishName": "Yellow-crowned Woodpecker",
     "scientificName": "Leiopicus mahrattensis",
-    "aliases": [],
+    "aliases": [
+      "黄冠斑啄木鸟"
+    ],
     "order": {
       "zh": "啄木鸟目",
       "en": "Piciformes"
@@ -27150,7 +27172,9 @@
     "chineseName": "梅头鹦鹉",
     "englishName": "Plum-headed Parakeet",
     "scientificName": "Psittacula cyanocephala",
-    "aliases": [],
+    "aliases": [
+      "紫头鹦鹉"
+    ],
     "order": {
       "zh": "鹦形目",
       "en": "Psittaciformes"
@@ -28603,7 +28627,9 @@
     "chineseName": "二斑百灵",
     "englishName": "Bimaculated Lark",
     "scientificName": "Melanocorypha bimaculata",
-    "aliases": [],
+    "aliases": [
+      "双斑百灵"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -29052,7 +29078,9 @@
     "chineseName": "休氏树莺",
     "englishName": "Hume's Bush Warbler",
     "scientificName": "Horornis brunnescens",
-    "aliases": [],
+    "aliases": [
+      "喜山黄腹树莺"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -29080,7 +29108,9 @@
     "chineseName": "侏蓝仙鹟",
     "englishName": "Pygmy Flycatcher",
     "scientificName": "Ficedula hodgsoni",
-    "aliases": [],
+    "aliases": [
+      "侏蓝姬鹟"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -29110,7 +29140,9 @@
     "chineseName": "光背地鸫",
     "englishName": "Alpine Thrush",
     "scientificName": "Zoothera mollissima",
-    "aliases": [],
+    "aliases": [
+      "淡背地鸫"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -30274,7 +30306,9 @@
     "chineseName": "印缅寿带",
     "englishName": "Indian Paradise-Flycatcher",
     "scientificName": "Terpsiphone paradisi",
-    "aliases": [],
+    "aliases": [
+      "印度寿带"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -30697,7 +30731,9 @@
     "chineseName": "喜山光背地鸫",
     "englishName": "Himalayan Thrush",
     "scientificName": "Zoothera salimalii",
-    "aliases": [],
+    "aliases": [
+      "喜山淡背地鸫"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -30850,7 +30886,9 @@
     "chineseName": "喜山红眉朱雀",
     "englishName": "Himalayan Beautiful Rosefinch",
     "scientificName": "Carpodacus pulcherrimus",
-    "aliases": [],
+    "aliases": [
+      "红眉朱雀"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -31007,7 +31045,9 @@
     "chineseName": "四川光背地鸫",
     "englishName": "Sichuan Thrush",
     "scientificName": "Zoothera griseiceps",
-    "aliases": [],
+    "aliases": [
+      "四川淡背地鸫"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -31113,7 +31153,9 @@
     "chineseName": "四川短翅莺",
     "englishName": "Sichuan Bush Warbler",
     "scientificName": "Locustella chengi",
-    "aliases": [],
+    "aliases": [
+      "四川短翅蝗莺"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -31708,7 +31750,9 @@
     "chineseName": "大草莺",
     "englishName": "Chinese Grassbird",
     "scientificName": "Graminicola striatus",
-    "aliases": [],
+    "aliases": [
+      "中华草鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -33645,7 +33689,9 @@
     "chineseName": "巨嘴短翅莺",
     "englishName": "Long-billed Bush Warbler",
     "scientificName": "Locustella major",
-    "aliases": [],
+    "aliases": [
+      "巨嘴短翅蝗莺"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -37232,7 +37278,9 @@
     "chineseName": "梯氏鸫",
     "englishName": "Tickell's Thrush",
     "scientificName": "Turdus unicolor",
-    "aliases": [],
+    "aliases": [
+      "蒂氏鸫"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -38010,7 +38058,9 @@
     "chineseName": "棕胸幽鹛",
     "englishName": "Buff-breasted Babbler",
     "scientificName": "Pellorneum tickelli",
-    "aliases": [],
+    "aliases": [
+      "棕胸雅鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -38723,10 +38773,12 @@
   },
   {
     "birdId": "aegiious",
-    "chineseName": "棕额长尾山雀/黑眉长尾山雀",
+    "chineseName": "棕额长尾山雀",
     "englishName": "Black-browed Tit",
     "scientificName": "Aegithalos iouschistos",
-    "aliases": [],
+    "aliases": [
+      "黑眉长尾山雀"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -38758,7 +38810,9 @@
     "chineseName": "楔嘴鹩鹛",
     "englishName": "Cachar Wedge-billed Babbler",
     "scientificName": "Stachyris roberti",
-    "aliases": [],
+    "aliases": [
+      "楔嘴穗鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -39903,7 +39957,9 @@
     "chineseName": "泰国斑椋鸟",
     "englishName": "Siamese Pied Starling",
     "scientificName": "Gracupica floweri",
-    "aliases": [],
+    "aliases": [
+      "暹罗斑椋鸟"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -41955,7 +42011,9 @@
     "chineseName": "灰眉岩鹀",
     "englishName": "Rock Bunting",
     "scientificName": "Emberiza cia",
-    "aliases": [],
+    "aliases": [
+      "淡灰眉岩鹀"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -42042,7 +42100,9 @@
     "chineseName": "灰眉阔嘴鸟",
     "englishName": "Gray-lored Broadbill",
     "scientificName": "Serilophus rubropygius",
-    "aliases": [],
+    "aliases": [
+      "灰眼先丝冠鸟"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -45746,7 +45806,9 @@
     "chineseName": "白翅百灵",
     "englishName": "White-winged Lark",
     "scientificName": "Alauda leucoptera",
-    "aliases": [],
+    "aliases": [
+      "白翅云雀"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -48417,7 +48479,9 @@
     "chineseName": "红嘴钩嘴鹛",
     "englishName": "Black-crowned Scimitar-Babbler",
     "scientificName": "Pomatorhinus ferruginosus",
-    "aliases": [],
+    "aliases": [
+      "黑冠钩嘴鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -50199,7 +50263,9 @@
     "chineseName": "纹胸巨鹛",
     "englishName": "Pin-striped Tit-Babbler",
     "scientificName": "Mixornis gularis",
-    "aliases": [],
+    "aliases": [
+      "纹胸鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -50792,7 +50858,9 @@
     "chineseName": "芦莺",
     "englishName": "Common Reed Warbler",
     "scientificName": "Acrocephalus scirpaceus",
-    "aliases": [],
+    "aliases": [
+      "芦苇莺"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -52391,7 +52459,9 @@
     "chineseName": "虎斑地鸫",
     "englishName": "Scaly Thrush",
     "scientificName": "Zoothera dauma",
-    "aliases": [],
+    "aliases": [
+      "小虎斑地鸫"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -52588,7 +52658,9 @@
     "chineseName": "褐冠钩嘴鹛",
     "englishName": "Brown-crowned Scimitar-Babbler",
     "scientificName": "Pomatorhinus phayrei",
-    "aliases": [],
+    "aliases": [
+      "红嘴钩嘴鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -52647,7 +52719,9 @@
     "chineseName": "褐喉沙燕",
     "englishName": "Gray-throated Martin",
     "scientificName": "Riparia chinensis",
-    "aliases": [],
+    "aliases": [
+      "灰喉沙燕"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -52757,7 +52831,9 @@
     "chineseName": "褐头岭雀",
     "englishName": "Sillem's Rosefinch",
     "scientificName": "Carpodacus sillemi",
-    "aliases": [],
+    "aliases": [
+      "褐头朱雀"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -53666,7 +53742,9 @@
     "chineseName": "西白腹毛脚燕",
     "englishName": "Western House-Martin",
     "scientificName": "Delichon urbicum",
-    "aliases": [],
+    "aliases": [
+      "西方毛脚燕"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -54091,7 +54169,9 @@
     "chineseName": "赤脸薮鹛",
     "englishName": "Red-faced Liocichla",
     "scientificName": "Liocichla phoenicea",
-    "aliases": [],
+    "aliases": [
+      "灰头薮鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -54631,7 +54711,9 @@
     "chineseName": "金头缝叶莺",
     "englishName": "Mountain Tailorbird",
     "scientificName": "Phyllergates cucullatus",
-    "aliases": [],
+    "aliases": [
+      "金头拟缝叶莺"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -56255,7 +56337,9 @@
     "chineseName": "长尾鹩鹛",
     "englishName": "Gray-bellied Wren-Babbler",
     "scientificName": "Spelaeornis reptatus",
-    "aliases": [],
+    "aliases": [
+      "灰腹鹩鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -57004,7 +57088,9 @@
     "chineseName": "高山雀鹛",
     "englishName": "Chinese Fulvetta",
     "scientificName": "Fulvetta striaticollis",
-    "aliases": [],
+    "aliases": [
+      "中华雀鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"
@@ -60763,7 +60849,9 @@
     "chineseName": "黑胸楔嘴鹩鹛",
     "englishName": "Sikkim Wedge-billed Babbler",
     "scientificName": "Stachyris humei",
-    "aliases": [],
+    "aliases": [
+      "黑胸楔嘴穗鹛"
+    ],
     "order": {
       "zh": "雀形目",
       "en": "Passeriformes"

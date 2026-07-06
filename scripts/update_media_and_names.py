@@ -27,8 +27,11 @@ from text_utils import to_simplified
 MANUAL_CN = {
     "lobmur": "长嘴斑海雀",
     "ibisbi1": "鹮嘴鹬",
+    "tetrszec": "黄喉雉鹑",
     "harduc": "丑鸭",
     "himgri1": "高山兀鹫",
+    "butebute": "欧亚鵟",
+    "aegiious": "棕额长尾山雀",
     "rebgoo1": "红胸黑雁",
     "shteag1": "短趾雕",
     "steeag1": "草原雕",

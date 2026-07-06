@@ -62,6 +62,13 @@ TAG_MAP = {
 # Tag labels in order of display priority (longest patterns first)
 TAG_SORTED = sorted(TAG_MAP.keys(), key=lambda x: -len(x))
 
+# Correct a small set of known Chinese-name issues from the upstream checklist.
+CN_NAME_OVERRIDES = {
+    "Buteo buteo": "欧亚鵟",
+    "Tetraophasis szechenyii": "黄喉雉鹑",
+    "Aegithalos iouschistos": "棕额长尾山雀",
+}
+
 
 def fetch_html(url):
     req = urllib.request.Request(url, headers={
@@ -127,6 +134,7 @@ def parse_checklist(html):
             avibase_id = sp_m.group(2)
             scientific_name = sp_m.group(3).strip()
             chinese_name = sp_m.group(4).strip()
+            chinese_name = CN_NAME_OVERRIDES.get(scientific_name, chinese_name)
             tags_html = sp_m.group(5)
             tags = parse_tags(tags_html)
 

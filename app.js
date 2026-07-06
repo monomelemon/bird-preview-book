@@ -1821,6 +1821,9 @@ function renderDescription(sp, identification) {
   const fallback = identification?.morphology || identification?.habitat || identification?.behavior;
   const parts = [];
   parts.push(`<p class="detail-line latin">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
+  if (sp?.aliases?.length) {
+    parts.push(`<p class="detail-line">别名：${esc(sp.aliases.join("、"))}</p>`);
+  }
   const detailTags = renderDetailTags(sp);
   if (detailTags) parts.push(detailTags);
   if (cleanWiki) {
