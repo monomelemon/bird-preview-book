@@ -1145,7 +1145,7 @@ function renderHome() {
     ${savedLists.length ? savedLists.map(list => `
       <div class="swipe-container">
         <div class="swipe-delete" onclick="deleteRecentList(event, '${esc(list.listId)}')"><span class="swipe-delete-icon" aria-hidden="true"></span></div>
-        <div class="card list-card swipe-card" data-listid="${esc(list.listId)}" onclick="navigate('book?id=${esc(list.listId)}')">
+        <div class="card list-card swipe-card" data-listid="${esc(list.listId)}" data-nav="book?id=${esc(list.listId)}">
           <div style="flex:1;">
             <strong>${esc(list.title)}</strong>
             <div class="muted small">${formatMonths(list.months) ? `${esc(formatMonths(list.months))} · ` : ''}${list.birdIds.length} 种</div>
@@ -1215,7 +1215,7 @@ function setupSwipeCards() {
       else if (currentSwipeX() < -(swipeWidth / 2)) card.style.transform = `translateX(-${swipeWidth}px)`;
       else reset();
       suppressClick = true;
-      setTimeout(() => { suppressClick = false; }, 0);
+      setTimeout(() => { suppressClick = false; }, 220);
     }
 
     card.addEventListener("touchstart", e => {
@@ -1295,13 +1295,25 @@ function setupSwipeCards() {
     card.addEventListener("dragstart", e => e.preventDefault());
 
     card.addEventListener("click", e => {
+      if (e.target.closest(".check-zone") || e.target.closest(".swipe-delete")) return;
       if (suppressClick) {
         e.stopPropagation();
+        e.stopImmediatePropagation();
         e.preventDefault();
         return;
       }
       const currentX = currentSwipeX();
-      if (currentX < -40) { e.stopPropagation(); e.preventDefault(); resetAllSwipes(); }
+      if (currentX < -40) {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        resetAllSwipes();
+        return;
+      }
+      const navTarget = card.dataset.nav;
+      if (!navTarget) return;
+      e.preventDefault();
+      navigate(navTarget);
     });
   });
 }
@@ -1764,7 +1776,7 @@ function birdRow(list, birdId, isShare, isLast = false) {
   const checked = StorageService.isChecked(list.listId, birdId);
   const shareParam = isShare ? "&share=1" : "";
   const navTarget = `bird?list=${esc(list.listId)}&bird=${esc(birdId)}${shareParam}`;
-  const rowHtml = `<div class="bird-row ${checked ? "checked-row" : ""} ${isLast ? "bird-row-last" : ""}" onclick="navigate('${navTarget}')">
+  const rowHtml = `<div class="bird-row ${checked ? "checked-row" : ""} ${isLast ? "bird-row-last" : ""}${isShare ? `" onclick="navigate('${navTarget}')` : ""}">
     ${img ? `<img class="thumb" src="${esc(img)}" alt="${esc(sp.chineseName)}" data-image-index="${imgIndex}" onerror="handleThumbImageError(this, '${esc(birdId)}')">` : `<div class="thumb">🐦</div>`}
     <div class="bird-main">
       <div class="bird-name">${esc(sp.chineseName)}</div>
@@ -1775,7 +1787,7 @@ function birdRow(list, birdId, isShare, isLast = false) {
   if (isShare) return rowHtml;
   return `<div class="swipe-container bird-swipe-container">
     <div class="swipe-delete bird-swipe-delete" onclick="deleteBirdFromList(event, '${esc(list.listId)}', '${esc(birdId)}')"><span class="swipe-delete-icon" aria-hidden="true"></span></div>
-    <div class="swipe-card bird-swipe-card">${rowHtml}</div>
+    <div class="swipe-card bird-swipe-card" data-nav="${navTarget}">${rowHtml}</div>
   </div>`;
 }
 
