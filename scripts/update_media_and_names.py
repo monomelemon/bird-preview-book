@@ -84,6 +84,10 @@ def is_cjk(text: str) -> bool:
     return bool(CJK_RE.search(str(text or "")))
 
 
+def has_ascii_alpha(text: str) -> bool:
+    return bool(re.search(r"[A-Za-z]", str(text or "")))
+
+
 def fetch_json(url: str, headers=None, timeout=25):
     req = urllib.request.Request(url, headers=headers or {})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -126,7 +130,7 @@ def clean_species(species, taxonomy_by_sci):
         seen = set()
         for alias in sp.get("aliases") or []:
             a = to_simplified(alias).strip()
-            if a and a != sp["chineseName"] and a not in seen:
+            if a and not has_ascii_alpha(a) and a != sp["chineseName"] and a not in seen:
                 aliases.append(a)
                 seen.add(a)
         sp["aliases"] = aliases

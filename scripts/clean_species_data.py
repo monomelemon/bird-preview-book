@@ -180,6 +180,10 @@ def has_chinese(text):
     return any("\u4e00" <= c <= "\u9fff" for c in (text or ""))
 
 
+def has_ascii_alpha(text):
+    return bool(re.search(r"[A-Za-z]", text or ""))
+
+
 def simplify_name(text):
     return to_simplified(text)
 
@@ -249,7 +253,7 @@ def main():
         seen = set()
         for a in sp.get("aliases", []):
             a_simp = simplify_name(a)
-            if a_simp not in seen:
+            if a_simp and not has_ascii_alpha(a_simp) and a_simp not in seen:
                 new_aliases.append(a_simp)
                 seen.add(a_simp)
         sp["aliases"] = new_aliases

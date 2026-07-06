@@ -133,10 +133,9 @@ def merge_species(existing_species, avibase_species, dry_run=False):
             sp["endemism"] = _extract_endemism(avi.get("tags", []))
             sp["occurrenceType"] = _extract_occurrence(avi.get("tags", []))
 
-            # Update English name if Avibase has better
+            # Update English name if Avibase has better.
+            # Keep aliases for Chinese alternate names only; old English names are not aliases.
             if avi.get("englishName") and avi["englishName"] != sp.get("englishName", ""):
-                if sp.get("englishName") and avi["englishName"] not in sp.get("aliases", []):
-                    sp.setdefault("aliases", []).append(sp["englishName"])
                 sp["englishName"] = avi["englishName"]
 
             # Update source refs
