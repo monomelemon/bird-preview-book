@@ -1589,6 +1589,37 @@ function renderDetailTags(sp) {
   return `<p class="detail-line detail-tags">${tags.map(esc).join("、")}</p>`;
 }
 
+function renderDetailHeroImage(sp, image, listId, birdId, isShare) {
+  return image
+    ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}" onerror="handleBirdImageError('${esc(listId)}', '${esc(birdId)}', ${isShare})">`
+    : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`;
+}
+
+function renderDetailImageCounter(images = [], imageIndex) {
+  if (!images.length) return "0/0";
+  if (imageIndex === -1) return `0/${images.length}`;
+  return `${imageIndex + 1}/${images.length}`;
+}
+
+function updateBirdDetailImage(listId, birdId, isShare) {
+  const sp = appData.speciesById.get(birdId);
+  const media = appData.media[birdId] || { images: [] };
+  const failedImages = state.imageFailures[birdId] || new Set();
+  const workingImageIndex = getWorkingImageIndex(media.images || [], state.imageIndex, failedImages);
+  if (workingImageIndex !== -1 && workingImageIndex !== state.imageIndex) state.imageIndex = workingImageIndex;
+  const image = workingImageIndex === -1 ? null : media.images?.[workingImageIndex];
+  const heroImage = document.querySelector(".hero-image");
+  const imageCounter = document.querySelector('[data-role="image-counter"]');
+
+  if (!heroImage || !imageCounter || !sp) {
+    renderBirdDetail(listId, birdId, isShare);
+    return;
+  }
+
+  heroImage.innerHTML = renderDetailHeroImage(sp, image, listId, birdId, isShare);
+  imageCounter.textContent = renderDetailImageCounter(media.images || [], workingImageIndex);
+}
+
 function renderBirdDetail(listId, birdId, isShare) {
   const list = isShare ? getShareListFromSession(listId) : StorageService.getList(listId);
   const sp = appData.speciesById.get(birdId);
@@ -1602,7 +1633,7 @@ function renderBirdDetail(listId, birdId, isShare) {
   const failedImages = state.imageFailures[birdId] || new Set();
   const workingImageIndex = getWorkingImageIndex(media.images || [], state.imageIndex, failedImages);
   if (workingImageIndex !== -1 && workingImageIndex !== state.imageIndex) state.imageIndex = workingImageIndex;
-  const image = workingImageIndex === -1 ? null : media.images?.[state.imageIndex];
+  const image = workingImageIndex === -1 ? null : media.images?.[workingImageIndex];
   const hasDist = !!(sp?.distribution || identification?.wikipediaDistribution || (identification?.wikipediaSummary && extractDistFromWiki(toSimplified(identification.wikipediaSummary))) || (sp?.description && extractDistFromWiki(toSimplified(sp.description))));
 
   app.innerHTML = $html`
@@ -1617,8 +1648,8 @@ function renderBirdDetail(listId, birdId, isShare) {
       <div class="taxonomy-left">${esc(formatTaxonomy(sp))}</div>
       <div class="name-right">${esc(sp.englishName || "暂无可靠数据")}</div>
     </div>
-    <div class="hero-image">${image ? `<img src="${esc(image.url)}" alt="${esc(sp.chineseName)}" onerror="handleBirdImageError('${esc(listId)}', '${esc(birdId)}', ${isShare})">` : `<div><div style="font-size:58px;text-align:center;">🐦</div><div class="muted">暂无可靠图片</div></div>`}</div>
-    <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span>${media.images?.length ? `${state.imageIndex + 1}/${media.images.length}` : "0/0"}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
+    <div class="hero-image">${renderDetailHeroImage(sp, image, listId, birdId, isShare)}</div>
+    <div class="image-nav">${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(-1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">◀</button>` : `<span></span>`}<span data-role="image-counter">${renderDetailImageCounter(media.images || [], workingImageIndex)}</span>${media.images?.length > 1 ? `<button class="ghost" onclick="changeImage(1, '${esc(listId)}', '${esc(birdId)}', ${isShare})">▶</button>` : `<span></span>`}</div>
     <details open><summary>鸣声</summary>${renderSounds(media.sounds)}</details>
     <details open><summary>基本信息</summary>${renderDescription(sp, identification)}</details>
     <details${hasDist ? " open" : ""}><summary>分布信息</summary>${renderDistribution(media.rangeMap, sp, identification)}</details>
@@ -1720,7 +1751,7 @@ function renderSourcePill(source) {
 function changeImage(offset, listId, birdId, isShare) {
   const images = appData.media[birdId]?.images || [];
   state.imageIndex = (state.imageIndex + offset + images.length) % images.length;
-  renderBirdDetail(listId, birdId, isShare);
+  updateBirdDetailImage(listId, birdId, isShare);
 }
 
 function handleBirdImageError(listId, birdId, isShare) {
@@ -1729,7 +1760,7 @@ function handleBirdImageError(listId, birdId, isShare) {
   const failedImages = markImageFailure(birdId, state.imageIndex);
   const nextIndex = getWorkingImageIndex(images, state.imageIndex + 1, failedImages);
   state.imageIndex = nextIndex === -1 ? 0 : nextIndex;
-  renderBirdDetail(listId, birdId, isShare);
+  updateBirdDetailImage(listId, birdId, isShare);
 }
 
 function handleThumbImageError(imgEl, birdId) {
