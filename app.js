@@ -1612,6 +1612,17 @@ function getListViewState(listId) {
   };
 }
 
+function cacheVisibleBirds(listId, birdIds) {
+  sessionStorage.setItem(`visibleBirds:${listId}`, JSON.stringify(birdIds || []));
+}
+
+function getCachedVisibleBirds(list) {
+  const cached = safeParse(sessionStorage.getItem(`visibleBirds:${list.listId}`), []);
+  if (!Array.isArray(cached) || !cached.length) return [];
+  const available = new Set(list.birdIds || []);
+  return cached.filter(id => available.has(id));
+}
+
 function renderBookDetail(listId, sharePayload = null) {
   const list = sharePayload || StorageService.getList(listId);
   if (!list) return renderError("当前清单不存在。", "返回首页");
@@ -1619,6 +1630,7 @@ function renderBookDetail(listId, sharePayload = null) {
   const checks = StorageService.getChecks(list.listId);
   const { filter, sort, search } = getListViewState(list.listId);
   const birds = filterSortBirds(list.birdIds, list.listId, { filter, sort, search }, list);
+  cacheVisibleBirds(list.listId, birds);
   const sortOptions = [
     { value: "taxonomy", label: "按分类" },
     { value: "name", label: "按中文名" }
@@ -1826,7 +1838,7 @@ function renderBirdDetail(listId, birdId, isShare) {
   const sp = appData.speciesById.get(birdId);
   if (!list || !sp) return renderError("当前鸟种资料不存在。", "返回首页");
   const viewState = getListViewState(list.listId);
-  const visibleBirds = filterSortBirds(list.birdIds, list.listId, viewState, list);
+  const visibleBirds = getCachedVisibleBirds(list);
   const sortedBirds = filterSortBirds(list.birdIds, list.listId, { ...viewState, filter: "all", search: "" }, list);
   const detailBirds = visibleBirds.includes(birdId) ? visibleBirds : sortedBirds;
   const media = appData.media[birdId] || { images: [], sounds: [] };
@@ -1834,7 +1846,7 @@ function renderBirdDetail(listId, birdId, isShare) {
   const similar = appData.similar[birdId] || [];
   const checked = StorageService.isChecked(list.listId, birdId);
   const notes = StorageService.getNotes(list.listId);
-  const index = detailBirds.indexOf(birdId);
+  const index = Math.max(0, detailBirds.indexOf(birdId));
   const failedImages = state.imageFailures[birdId] || new Set();
   const workingImageIndex = getWorkingImageIndex(media.images || [], state.imageIndex, failedImages);
   if (workingImageIndex !== -1 && workingImageIndex !== state.imageIndex) state.imageIndex = workingImageIndex;
