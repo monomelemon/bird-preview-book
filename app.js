@@ -1069,6 +1069,10 @@ const StorageService = {
 
 function navigate(hash) { location.hash = hash; }
 
+function dismissTransientPanels() {
+  document.querySelectorAll(".note-panel, .modal-overlay").forEach(node => node.remove());
+}
+
 function getRoute() {
   const raw = location.hash.slice(1);
   if (!raw) return { name: "home" };
@@ -1079,6 +1083,7 @@ function getRoute() {
 }
 
 function render() {
+  dismissTransientPanels();
   const route = getRoute();
   state.imageIndex = 0;
   window.scrollTo(0, 0);
@@ -1991,13 +1996,18 @@ function goBird(listId, birdId, isShare) {
 }
 
 function openNotePanel(listId, birdId) {
+  dismissTransientPanels();
   const notes = StorageService.getNotes(listId);
   const panel = document.createElement("div");
   panel.className = "note-panel";
   panel.innerHTML = `<h3>笔记</h3><textarea id="noteText" placeholder="补充说明">${esc(notes[birdId] || "")}</textarea><div class="row"><button id="saveNote">保存</button><button class="secondary" id="closeNote">关闭</button></div>`;
   document.body.appendChild(panel);
-  document.querySelector("#closeNote").onclick = () => panel.remove();
-  document.querySelector("#saveNote").onclick = () => { StorageService.saveNote(listId, birdId, document.querySelector("#noteText").value); panel.remove(); render(); };
+  panel.querySelector("#closeNote").onclick = () => panel.remove();
+  panel.querySelector("#saveNote").onclick = () => {
+    StorageService.saveNote(listId, birdId, panel.querySelector("#noteText").value);
+    panel.remove();
+    render();
+  };
 }
 
 function renameList(listId) {
@@ -2013,6 +2023,7 @@ function renameList(listId) {
 function showAddBirdModal(listId) {
   const list = StorageService.getList(listId);
   if (!list) return;
+  dismissTransientPanels();
   const panel = document.createElement("div");
   panel.className = "note-panel";
   panel.innerHTML = `<h3>添加鸟种</h3>
@@ -2020,10 +2031,14 @@ function showAddBirdModal(listId) {
     <div id="addBirdResults" class="search-results"></div>
     <div class="row" style="margin-top:12px;"><button class="secondary" id="closeAddBird">关闭</button></div>`;
   document.body.appendChild(panel);
-  document.querySelector("#closeAddBird").onclick = () => panel.remove();
-  document.querySelector("#addBirdSearch").oninput = function() {
+  panel.querySelector("#closeAddBird").onclick = () => panel.remove();
+  panel.querySelector("#addBirdSearch").oninput = function() {
     const query = normalize(this.value);
-    if (!query) { document.querySelector("#addBirdResults").innerHTML = ""; return; }
+    const resultsNode = panel.querySelector("#addBirdResults");
+    if (!query) {
+      resultsNode.innerHTML = "";
+      return;
+    }
     const pinyinQuery = query.toLowerCase().replace(/\s/g, "");
     const results = appData.species.filter(sp => {
       const match = normalize(sp.chineseName).includes(query) ||
@@ -2033,7 +2048,7 @@ function showAddBirdModal(listId) {
         (pinyinQuery && getPinyinInitials(sp.chineseName).toLowerCase().startsWith(pinyinQuery));
       return match && !list.birdIds.includes(sp.birdId);
     }).slice(0, 10);
-    document.querySelector("#addBirdResults").innerHTML = results.length
+    resultsNode.innerHTML = results.length
       ? results.map(sp => `<div class="add-bird-item" onclick="addBirdToList('${esc(sp.birdId)}','${esc(listId)}','${esc(list.listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}</span></div>`).join("")
       : `<p class="muted">未找到可添加的鸟种（可能已存在或未收录）。</p>`;
   };
