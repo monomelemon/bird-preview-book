@@ -122,8 +122,9 @@ const FAMILY_ZH_BY_LATIN = {
 const ALL_MONTHS = [1,2,3,4,5,6,7,8,9,10,11,12];
 const app = document.querySelector("#app");
 let appData = null;
-let state = { imageIndex: 0, matchResults: [], imageFailures: {} };
+let state = { imageIndex: 0, matchResults: [], imageFailures: {}, addBirdHighlight: null };
 let _lastRouteName = "";
+let _addBirdHighlightTimer = null;
 
 const $html = (strings, ...values) => strings.reduce((out, str, i) => out + str + (values[i] ?? ""), "");
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
@@ -2109,6 +2110,56 @@ function renameList(listId) {
   }
 }
 
+function setAddBirdMessage(panel, text, cls = "muted") {
+  const messageNode = panel?.querySelector("#addBirdMsg");
+  if (!messageNode) return;
+  messageNode.className = `small ${cls}`;
+  messageNode.textContent = text || "";
+}
+
+function flashAddedBird(listId, birdId) {
+  state.addBirdHighlight = { listId, birdId };
+  if (_addBirdHighlightTimer) clearTimeout(_addBirdHighlightTimer);
+  _addBirdHighlightTimer = setTimeout(() => {
+    state.addBirdHighlight = null;
+    _addBirdHighlightTimer = null;
+    const panel = document.querySelector(".note-panel");
+    if (panel) renderAddBirdResults(panel, listId);
+  }, 1200);
+}
+
+function renderAddBirdResults(panel, listId) {
+  const searchInput = panel?.querySelector("#addBirdSearch");
+  const resultsNode = panel?.querySelector("#addBirdResults");
+  const list = StorageService.getList(listId);
+  if (!searchInput || !resultsNode) return;
+  if (!list) {
+    resultsNode.innerHTML = `<p class="muted">当前清单不存在。</p>`;
+    return;
+  }
+  const query = normalize(searchInput.value);
+  if (!query) {
+    resultsNode.innerHTML = "";
+    return;
+  }
+  const existingBirdIds = new Set(list.birdIds || []);
+  const pinyinQuery = query.toLowerCase().replace(/\s/g, "");
+  const results = appData.species.filter(sp => {
+    return normalize(sp.chineseName).includes(query) ||
+      normalize(sp.scientificName).includes(query) ||
+      normalize(sp.englishName).includes(query) ||
+      (sp.aliases || []).some(a => normalize(a).includes(query)) ||
+      (pinyinQuery && matchesAnyPinyinInitials([sp.chineseName, ...(sp.aliases || [])], pinyinQuery));
+  }).slice(0, 10);
+  resultsNode.innerHTML = results.length
+    ? results.map(sp => {
+        const exists = existingBirdIds.has(sp.birdId);
+        const isHighlighted = state.addBirdHighlight?.listId === listId && state.addBirdHighlight?.birdId === sp.birdId;
+        return `<div class="add-bird-item${exists ? " is-added" : ""}${isHighlighted ? " just-added" : ""}" onclick="addBirdToList('${esc(sp.birdId)}','${esc(listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}${exists ? " · 已在清单中" : ""}</span></div>`;
+      }).join("")
+    : `<p class="muted">未找到匹配的鸟种。</p>`;
+}
+
 function showAddBirdModal(listId) {
   const list = StorageService.getList(listId);
   if (!list) return;
@@ -2117,39 +2168,30 @@ function showAddBirdModal(listId) {
   panel.className = "note-panel";
   panel.innerHTML = `<h3>添加鸟种</h3>
     <input id="addBirdSearch" placeholder="输入鸟名、别名、学名或英文名" autocomplete="off" style="width:100%;">
+    <div id="addBirdMsg" class="small muted"></div>
     <div id="addBirdResults" class="search-results"></div>
     <div class="row" style="margin-top:12px;"><button class="secondary" id="closeAddBird">关闭</button></div>`;
   document.body.appendChild(panel);
   panel.querySelector("#closeAddBird").onclick = () => panel.remove();
-  panel.querySelector("#addBirdSearch").oninput = function() {
-    const query = normalize(this.value);
-    const resultsNode = panel.querySelector("#addBirdResults");
-    if (!query) {
-      resultsNode.innerHTML = "";
-      return;
-    }
-    const pinyinQuery = query.toLowerCase().replace(/\s/g, "");
-    const results = appData.species.filter(sp => {
-      const match = normalize(sp.chineseName).includes(query) ||
-        normalize(sp.scientificName).includes(query) ||
-        normalize(sp.englishName).includes(query) ||
-        (sp.aliases || []).some(a => normalize(a).includes(query)) ||
-        (pinyinQuery && matchesAnyPinyinInitials([sp.chineseName, ...(sp.aliases || [])], pinyinQuery));
-      return match && !list.birdIds.includes(sp.birdId);
-    }).slice(0, 10);
-    resultsNode.innerHTML = results.length
-      ? results.map(sp => `<div class="add-bird-item" onclick="addBirdToList('${esc(sp.birdId)}','${esc(listId)}','${esc(list.listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}</span></div>`).join("")
-      : `<p class="muted">未找到可添加的鸟种（可能已存在或未收录）。</p>`;
+  panel.querySelector("#addBirdSearch").oninput = () => {
+    setAddBirdMessage(panel, "");
+    renderAddBirdResults(panel, listId);
   };
+  panel.querySelector("#addBirdSearch").focus();
 }
 
-function addBirdToList(targetBirdId, listId, rerenderListId) {
-  const ok = StorageService.addBirdToList(rerenderListId, targetBirdId);
+function addBirdToList(targetBirdId, listId) {
+  const panel = document.querySelector(".note-panel");
+  const ok = StorageService.addBirdToList(listId, targetBirdId);
   if (ok) {
-    document.querySelector(".note-panel")?.remove();
-    render();
+    const species = appData.speciesById.get(targetBirdId);
+    flashAddedBird(listId, targetBirdId);
+    renderBookDetail(listId);
+    setAddBirdMessage(panel, `已添加：${species?.chineseName || "该鸟种"}`, "success");
+    renderAddBirdResults(panel, listId);
+    panel?.querySelector("#addBirdSearch")?.focus();
   } else {
-    alert("无法添加该鸟种（可能已存在）。");
+    setAddBirdMessage(panel, "该鸟种已在清单中", "muted");
   }
 }
 

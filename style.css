@@ -386,6 +386,23 @@ summary { font-weight: 700; cursor: pointer; }
   cursor: pointer;
 }
 .add-bird-item:hover { background: var(--green-soft); }
+.add-bird-item.is-added {
+  color: var(--muted);
+  background: #f5f3ed;
+}
+
+.add-bird-item.is-added strong,
+.add-bird-item.is-added .muted {
+  color: var(--muted);
+}
+
+.add-bird-item.is-added:hover { background: #f0ece2; }
+.add-bird-item.just-added {
+  background: #e6f3df;
+  transition: background-color .2s ease;
+}
+
+.add-bird-item.just-added:hover { background: #dcefd3; }
 
 select option:disabled {
   color: var(--muted);
