@@ -819,6 +819,13 @@ function matchesAnyPinyinInitials(values, query) {
   return (values || []).some(value => matchesPinyinInitials(value, query));
 }
 
+function getPinyinInitialMatches(query) {
+  const normalizedQuery = String(query || "").toLowerCase().replace(/\s/g, "");
+  if (!normalizedQuery || !/^[a-z]+$/.test(normalizedQuery)) return [];
+
+  return appData.species.filter(sp => matchesAnyPinyinInitials([sp?.chineseName, ...(sp?.aliases || [])], normalizedQuery));
+}
+
 function hashString(str) {
   let hash = 5381;
   for (let i = 0; i < str.length; i++) hash = ((hash << 5) + hash) + str.charCodeAt(i);
@@ -1594,8 +1601,8 @@ function renderImportList() {
     ${header("录入清单")}
     <div class="card stack">
       <p class="muted">支持手动输入或批量导入</p>
-      <div class="small muted">批量导入格式要求：可每行输入一种鸟；也可用逗号或顿号分隔多个鸟名；支持中文名、别名、学名或英文名；可直接从表格复制一列鸟名。</div>
-      <textarea id="importText" placeholder="红嘴蓝鹊、白头鹎、普通翠鸟"></textarea>
+      <div class="small muted">批量导入格式要求：可每行输入一种鸟；也可用逗号或顿号分隔多个鸟名；支持中文名、别名、学名、英文名或中文名/别名的拼音首字母；可直接从表格复制一列鸟名。</div>
+      <textarea id="importText" placeholder="红嘴蓝鹊、白头鹎、普通翠鸟 或 hzlq"></textarea>
       <div class="row">
         <button class="secondary" id="demo">使用示例</button>
         <button class="danger" id="clear">清空</button>
@@ -1621,6 +1628,9 @@ function matchInputName(input) {
   const key = normalize(input);
   const exact = appData.speciesByChineseName.get(key) || appData.speciesByAlias.get(key) || appData.speciesByScientificName.get(key) || appData.speciesByEnglishName.get(key);
   if (exact) return { input, status: "matched", species: exact };
+  const pinyinMatches = getPinyinInitialMatches(key);
+  if (pinyinMatches.length === 1) return { input, status: "matched", species: pinyinMatches[0] };
+  if (pinyinMatches.length) return { input, status: "candidate", candidates: pinyinMatches.slice(0, 5), selected: null };
   const candidates = appData.species.filter(sp => {
     const cn = normalize(sp.chineseName);
     if (cn.includes(key) || key.includes(cn)) return true;
