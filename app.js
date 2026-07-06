@@ -716,10 +716,15 @@ z:杂在赞灶泽贼增扎窄展占张章爪找赵赭浙针珍真枕震镇正郑
 const PINYIN_INITIAL_OVERRIDES = {
   // Bird names use "藏" overwhelmingly in the Tibetan sense (zang), not cang.
   "藏": "z",
-  "长": "z",
   "暗": "a",
   "靛": "d",
   "鹬": "y"
+};
+
+const PINYIN_INITIAL_ALIASES = {
+  // Accept both common initials for a few ambiguous bird-name characters.
+  "藏": ["c"],
+  "长": ["z"]
 };
 
 const PINYIN_INITIAL_EXTRAS = {
@@ -755,7 +760,8 @@ const PINYIN_INITIAL_EXTRAS = {
   "玫": "m",
   "缅": "m",
   "蟆": "m",
-  "泊": "p",
+  // Bird names only use "泊" in "尼泊尔", which is pronounced "bo".
+  "泊": "b",
   "蒲": "p",
   "钳": "q",
   "肉": "r",
@@ -784,9 +790,29 @@ const PINYIN_INITIAL_EXTRAS = {
 function getPinyinInitials(chineseText) {
   let result = "";
   for (const c of chineseText || "") {
-    result += PINYIN_INITIAL_OVERRIDES[c] || PINYIN_INITIALS[c] || PINYIN_INITIAL_EXTRAS[c] || "";
+    const primary = PINYIN_INITIAL_OVERRIDES[c] || PINYIN_INITIALS[c] || PINYIN_INITIAL_EXTRAS[c] || "";
+    result += primary;
   }
   return result;
+}
+
+function matchesPinyinInitials(chineseText, query) {
+  const normalizedQuery = String(query || "").toLowerCase().replace(/\s/g, "");
+  if (!normalizedQuery) return false;
+
+  let index = 0;
+  for (const c of chineseText || "") {
+    if (index >= normalizedQuery.length) return true;
+
+    const primary = PINYIN_INITIAL_OVERRIDES[c] || PINYIN_INITIALS[c] || PINYIN_INITIAL_EXTRAS[c] || "";
+    const options = [primary, ...(PINYIN_INITIAL_ALIASES[c] || [])]
+      .filter(Boolean)
+      .map(initial => initial.toLowerCase());
+    if (!options.includes(normalizedQuery[index])) return false;
+    index += 1;
+  }
+
+  return index >= normalizedQuery.length;
 }
 
 function hashString(str) {
@@ -1732,8 +1758,7 @@ function filterSortBirds(birdIds, listId, { filter, sort, search }, list) {
     if (!query) return true;
     const sp = appData.speciesById.get(id);
     const pinyinQuery = query.toLowerCase().replace(/\s/g, "");
-    const pinyinInitials = getPinyinInitials(sp?.chineseName || "");
-    if (pinyinQuery && pinyinInitials.toLowerCase().startsWith(pinyinQuery)) return true;
+    if (pinyinQuery && matchesPinyinInitials(sp?.chineseName || "", pinyinQuery)) return true;
     const hay = [sp?.chineseName, sp?.scientificName, sp?.englishName, ...(sp?.aliases || [])].map(normalize).join(" ");
     return hay.includes(query);
   }).sort((a, b) => {
@@ -2057,7 +2082,7 @@ function showAddBirdModal(listId) {
         normalize(sp.scientificName).includes(query) ||
         normalize(sp.englishName).includes(query) ||
         (sp.aliases || []).some(a => normalize(a).includes(query)) ||
-        (pinyinQuery && getPinyinInitials(sp.chineseName).toLowerCase().startsWith(pinyinQuery));
+        (pinyinQuery && matchesPinyinInitials(sp.chineseName, pinyinQuery));
       return match && !list.birdIds.includes(sp.birdId);
     }).slice(0, 10);
     resultsNode.innerHTML = results.length
