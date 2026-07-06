@@ -522,8 +522,8 @@ select option:disabled {
   position: absolute;
   right: 0;
   top: 50%;
-  width: 52px;
-  height: 44px;
+  width: 64px;
+  height: 56px;
   transform: translateY(-50%);
   display: grid;
   place-items: center;

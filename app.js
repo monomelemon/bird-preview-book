@@ -1176,17 +1176,35 @@ function setupSwipeCards() {
     const card = container.querySelector(".swipe-card");
     const deleteAction = container.querySelector(".swipe-delete");
     const swipeWidth = Math.max(48, Math.round(deleteAction?.getBoundingClientRect().width || 52));
-    const dragThreshold = 8;
+    const dragThreshold = 10;
+    const axisLockOffset = 6;
     let startX = 0;
+    let startY = 0;
     let startSwipeX = 0;
     let lastDx = 0;
     let moved = false;
     let suppressClick = false;
     let mouseDragging = false;
+    let swipeAxis = "";
 
     function reset() { card.style.transform = "translateX(0)"; }
     function currentSwipeX() { return parseInt(card.style.transform.replace(/[^-\d]/g, "")) || 0; }
     function setSwipeX(nextX) { card.style.transform = `translateX(${Math.min(0, Math.max(nextX, -swipeWidth))}px)`; }
+    function detectSwipeAxis(dx, dy) {
+      if (swipeAxis) return swipeAxis;
+      const absX = Math.abs(dx);
+      const absY = Math.abs(dy);
+      if (absX < dragThreshold && absY < dragThreshold) return "";
+      if (absY > absX + axisLockOffset) {
+        swipeAxis = "vertical";
+        return swipeAxis;
+      }
+      if (absX > absY + axisLockOffset) {
+        swipeAxis = "horizontal";
+        return swipeAxis;
+      }
+      return "";
+    }
     function finalizeSwipe() {
       if (!moved) return;
       if (lastDx > dragThreshold) reset();
@@ -1198,15 +1216,19 @@ function setupSwipeCards() {
 
     card.addEventListener("touchstart", e => {
       startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
       startSwipeX = currentSwipeX();
       lastDx = 0;
       moved = false;
+      swipeAxis = "";
       resetAllSwipes(card);
     }, { passive: true });
 
     card.addEventListener("touchmove", e => {
       const dx = e.touches[0].clientX - startX;
-      if (!moved && Math.abs(dx) < dragThreshold) return;
+      const dy = e.touches[0].clientY - startY;
+      const axis = detectSwipeAxis(dx, dy);
+      if (axis !== "horizontal") return;
       moved = true;
       lastDx = dx;
       if (dx > 0) {
@@ -1226,11 +1248,13 @@ function setupSwipeCards() {
     card.addEventListener("pointerdown", e => {
       if (e.pointerType !== "mouse" || e.button !== 0) return;
       startX = e.clientX;
+      startY = e.clientY;
       startSwipeX = currentSwipeX();
       lastDx = 0;
       moved = false;
       mouseDragging = true;
       suppressClick = false;
+      swipeAxis = "";
       resetAllSwipes(card);
       card.setPointerCapture(e.pointerId);
     });
@@ -1238,7 +1262,9 @@ function setupSwipeCards() {
     card.addEventListener("pointermove", e => {
       if (!mouseDragging || e.pointerType !== "mouse") return;
       const dx = e.clientX - startX;
-      if (!moved && Math.abs(dx) < dragThreshold) return;
+      const dy = e.clientY - startY;
+      const axis = detectSwipeAxis(dx, dy);
+      if (axis !== "horizontal") return;
       moved = true;
       lastDx = dx;
       card.classList.add("swiping");
