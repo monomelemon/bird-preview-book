@@ -278,6 +278,7 @@ textarea {
   margin: 0 0 8px;
   font-size: 15px;
   line-height: 1.6;
+  color: var(--muted);
 }
 .latin { font-style: italic; color: var(--muted); white-space: nowrap; }
 .detail-tags { color: var(--muted); }
