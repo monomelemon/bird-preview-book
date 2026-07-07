@@ -1625,6 +1625,71 @@ function parseImportText(text) {
   return [...new Set(text.split(/[\n,，、]/).map(item => item.trim()).filter(Boolean))];
 }
 
+function getLongestCommonSuffixLength(a, b) {
+  let length = 0;
+  const charsA = [...String(a || "")];
+  const charsB = [...String(b || "")];
+  while (length < charsA.length && length < charsB.length) {
+    if (charsA[charsA.length - 1 - length] !== charsB[charsB.length - 1 - length]) break;
+    length += 1;
+  }
+  return length;
+}
+
+function getOrderedMatchCount(query, text) {
+  const queryChars = [...String(query || "")];
+  const textChars = [...String(text || "")];
+  let count = 0;
+  let index = 0;
+
+  queryChars.forEach(char => {
+    while (index < textChars.length && textChars[index] !== char) index += 1;
+    if (index >= textChars.length) return;
+    count += 1;
+    index += 1;
+  });
+
+  return count;
+}
+
+function scoreImportCandidate(input, species) {
+  const key = normalize(input);
+  if (!key) return null;
+
+  const names = [species.chineseName, ...(species.aliases || [])].map(normalize).filter(Boolean);
+  let best = null;
+
+  names.forEach(name => {
+    const containsInput = name.includes(key);
+    const containedByInput = key.includes(name);
+    const includes = containsInput || containedByInput;
+    const suffixLength = getLongestCommonSuffixLength(key, name);
+    const orderedMatchCount = getOrderedMatchCount(key, name);
+    const keySet = new Set([...key]);
+    const nameSet = new Set([...name]);
+    const overlap = [...keySet].filter(c => nameSet.has(c)).length;
+    const minLen = Math.min(key.length, name.length);
+    const overlapThreshold = Math.max(2, Math.ceil(minLen * 0.5));
+    const sameType = suffixLength >= 2;
+    const passes = includes || sameType || overlap >= overlapThreshold;
+    if (!passes) return;
+
+    const score =
+      (containsInput ? 180 : 0) +
+      (containedByInput ? 80 : 0) +
+      (sameType ? 400 + suffixLength * 40 : 0) +
+      orderedMatchCount * 40 +
+      overlap * 50 -
+      Math.abs(name.length - key.length);
+
+    if (!best || score > best.score) {
+      best = { species, score, suffixLength, orderedMatchCount, overlap, includes, sameType };
+    }
+  });
+
+  return best;
+}
+
 function matchInputName(input) {
   const key = normalize(input);
   const exact = appData.speciesByChineseName.get(key) || appData.speciesByAlias.get(key) || appData.speciesByScientificName.get(key) || appData.speciesByEnglishName.get(key);
@@ -1632,15 +1697,12 @@ function matchInputName(input) {
   const pinyinMatches = getPinyinInitialMatches(key);
   if (pinyinMatches.length === 1) return { input, status: "matched", species: pinyinMatches[0] };
   if (pinyinMatches.length) return { input, status: "candidate", candidates: pinyinMatches.slice(0, 5), selected: null };
-  const candidates = appData.species.filter(sp => {
-    const cn = normalize(sp.chineseName);
-    if (cn.includes(key) || key.includes(cn)) return true;
-    const keySet = new Set([...key]);
-    const cnSet = new Set([...cn]);
-    const overlap = [...keySet].filter(c => cnSet.has(c)).length;
-    const minLen = Math.min(key.length, cn.length);
-    return overlap >= Math.max(2, Math.ceil(minLen * 0.5));
-  }).slice(0, 5);
+  const candidates = appData.species
+    .map(sp => scoreImportCandidate(input, sp))
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score || b.suffixLength - a.suffixLength || b.orderedMatchCount - a.orderedMatchCount || b.overlap - a.overlap || (a.species.chineseName || "").localeCompare(b.species.chineseName || "", "zh-Hans-CN"))
+    .slice(0, 5)
+    .map(result => result.species);
   if (candidates.length) return { input, status: "candidate", candidates, selected: null };
   return { input, status: "unmatched" };
 }
@@ -2155,7 +2217,7 @@ function renderAddBirdResults(panel, listId) {
     ? results.map(sp => {
         const exists = existingBirdIds.has(sp.birdId);
         const isHighlighted = state.addBirdHighlight?.listId === listId && state.addBirdHighlight?.birdId === sp.birdId;
-        return `<div class="add-bird-item${exists ? " is-added" : ""}${isHighlighted ? " just-added" : ""}" onclick="addBirdToList('${esc(sp.birdId)}','${esc(listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}${exists ? " · 已在清单中" : ""}</span></div>`;
+        return `<div class="add-bird-item${exists ? " is-added" : ""}${isHighlighted ? " just-added" : ""}" onclick="addBirdToList('${esc(sp.birdId)}','${esc(listId)}')"><strong>${esc(sp.chineseName)}</strong> <span class="muted">${esc(sp.englishName || sp.scientificName)}</span></div>`;
       }).join("")
     : `<p class="muted">未找到匹配的鸟种。</p>`;
 }
