@@ -162,6 +162,7 @@ const TRAD_TO_SIMP = {
   "劍":"剑",
   "動":"动",
   "勞":"劳",
+  "勝":"胜",
   "勢":"势",
   "匯":"汇",
   "區":"区",
@@ -347,6 +348,7 @@ const TRAD_TO_SIMP = {
   "簑":"蓑",
   "簡":"简",
   "籠":"笼",
+  "籬":"篱",
   "粵":"粤",
   "紀":"纪",
   "約":"约",
@@ -483,6 +485,7 @@ const TRAD_TO_SIMP = {
   "貨":"货",
   "責":"责",
   "貴":"贵",
+  "費":"费",
   "貿":"贸",
   "賀":"贺",
   "資":"资",
@@ -490,6 +493,7 @@ const TRAD_TO_SIMP = {
   "賓":"宾",
   "賞":"赏",
   "賴":"赖",
+  "賽":"赛",
   "贏":"赢",
   "趨":"趋",
   "跡":"迹",
@@ -500,6 +504,7 @@ const TRAD_TO_SIMP = {
   "軟":"软",
   "軼":"轶",
   "較":"较",
+  "輝":"辉",
   "輕":"轻",
   "輪":"轮",
   "轉":"转",
@@ -509,6 +514,7 @@ const TRAD_TO_SIMP = {
   "週":"周",
   "進":"进",
   "過":"过",
+  "遊":"游",
   "達":"达",
   "遜":"逊",
   "遠":"远",
@@ -523,6 +529,7 @@ const TRAD_TO_SIMP = {
   "釋":"释",
   "釐":"厘",
   "針":"针",
+  "鈍":"钝",
   "鈷":"钴",
   "銀":"银",
   "銅":"铜",
@@ -530,10 +537,12 @@ const TRAD_TO_SIMP = {
   "鋒":"锋",
   "鋸":"锯",
   "錄":"录",
+  "錦":"锦",
   "錐":"锥",
   "錫":"锡",
   "鎮":"镇",
   "鏡":"镜",
+  "鏽":"锈",
   "鐮":"镰",
   "鐵":"铁",
   "鑽":"钻",
@@ -545,6 +554,7 @@ const TRAD_TO_SIMP = {
   "闊":"阔",
   "關":"关",
   "陸":"陆",
+  "陽":"阳",
   "際":"际",
   "隨":"随",
   "隱":"隐",
@@ -581,6 +591,7 @@ const TRAD_TO_SIMP = {
   "顯":"显",
   "風":"风",
   "飛":"飞",
+  "飯":"饭",
   "飲":"饮",
   "飼":"饲",
   "飾":"饰",
@@ -590,6 +601,7 @@ const TRAD_TO_SIMP = {
   "馬":"马",
   "馮":"冯",
   "體":"体",
+  "髮":"发",
   "鬍":"胡",
   "鬚":"须",
   "魚":"鱼",
@@ -653,6 +665,7 @@ const TRAD_TO_SIMP = {
   "鷸":"鹬",
   "鷹":"鹰",
   "鷺":"鹭",
+  "鷉":"䴘",
   "鷿":"䴙",
   "鸂":"㶉",
   "鸊":"䴘",
@@ -670,7 +683,10 @@ const TRAD_TO_SIMP = {
   "齒":"齿",
   "龍":"龙",
   "龐":"庞",
-  "龜":"龟"
+  "龜":"龟",
+  "䴉":"鹮",
+  "䵘":"䴙",
+  "綠":"绿"
 };
 function toSimplified(text) {
   text = String(text || "");
@@ -2187,7 +2203,7 @@ function renderSounds(sounds = []) {
 
 function renderDistribution(rangeMap, sp, identification) {
   const wikiSource = toSimplified(identification?.wikipediaSummary || sp?.description || "");
-  const wikiDist = extractDistFromWiki(stripWikiIntro(wikiSource));
+  const wikiDist = extractDistFromWiki(stripRepeatedNameIntro(wikiSource, sp));
   const preDist = toSimplified(identification?.wikipediaDistribution || sp?.distribution || "");
   const combined = wikiDist || preDist;
   const body = combined ? `<p>${esc(cleanText(combined))}</p>` : `<p class="muted">暂无该地区月份的可靠记录</p>`;
@@ -2199,8 +2215,79 @@ function cleanText(text) {
   return text.replace(/。。+/g, "。").replace(/））+/g, "）").replace(/，，+/g, "，").replace(/：：+/g, "：").replace(/；；+/g, "；").replace(/。；/g, "；").replace(/；。+/g, "。").replace(/^[；，]/, "");
 }
 
-function stripWikiIntro(text) {
-  return text.replace(/^[^（(]+[（(](?:学名|學名)[：:].+?[）)]\s*/, "");
+function stripRepeatedNameIntro(text, sp = {}) {
+  let result = String(text || "").trim();
+  const names = [sp.chineseName, sp.englishName, sp.scientificName]
+    .map(name => toSimplified(String(name || "")).trim())
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length);
+
+  let removedLeadingName = false;
+  for (const name of names) {
+    const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const isChineseName = /[\u3400-\u9fff]/u.test(name);
+    const match = result.match(new RegExp(`^${escapedName}${isChineseName ? "" : "(?=$|\\s|[（(，,：:；;。])"}`, "iu"));
+    if (!match) continue;
+    result = result.slice(match[0].length).trimStart();
+    removedLeadingName = true;
+    break;
+  }
+
+  if (removedLeadingName) {
+    result = result.replace(/^(?:[（(][^（）()]*[）)]\s*)+/, "");
+  } else {
+    const sentenceEnd = result.search(/[。！？\n]/);
+    const intro = result.slice(0, sentenceEnd === -1 ? 180 : Math.min(sentenceEnd, 180));
+    const lowerIntro = intro.toLocaleLowerCase();
+    const markers = [sp.scientificName, sp.englishName]
+      .map(name => toSimplified(String(name || "")).trim().toLocaleLowerCase())
+      .filter(Boolean);
+    const markerIndexes = markers.map(marker => lowerIntro.indexOf(marker)).filter(index => index >= 0);
+    const labelMatch = intro.match(/(?:学名|學名|scientific name|英文名|英语|英語)/iu);
+    if (labelMatch) markerIndexes.push(labelMatch.index);
+    const markerIndex = markerIndexes.length ? Math.min(...markerIndexes) : -1;
+
+    if (markerIndex >= 0) {
+      const openIndex = Math.max(intro.lastIndexOf("（", markerIndex), intro.lastIndexOf("(", markerIndex));
+      const closeCandidates = [intro.indexOf("）", markerIndex), intro.indexOf(")", markerIndex)].filter(index => index >= 0);
+      const closeIndex = closeCandidates.length ? Math.min(...closeCandidates) : -1;
+      if (openIndex >= 0 && closeIndex > markerIndex) {
+        result = result.slice(closeIndex + 1).trimStart();
+      }
+    }
+  }
+
+  result = result.replace(/^[\s，,；;：:。]+/, "");
+
+  const metadataNames = [sp.scientificName, sp.englishName]
+    .map(name => toSimplified(String(name || "")).trim())
+    .filter(Boolean);
+  if (metadataNames.length) {
+    const metadataAlternation = metadataNames
+      .map(name => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+      .sort((a, b) => b.length - a.length)
+      .join("|");
+    const label = "(?:学名|學名|scientific name|英文俗名|英文名|英语|英語)";
+    result = result.replace(new RegExp(`^(?:[（(]?\\s*${label}\\s*[：:]?\\s*(?:${metadataAlternation})\\s*[，,；;]?\\s*)+`, "iu"), "");
+
+    const sentenceEnd = result.search(/[。！？\n]/);
+    const firstSentence = result.slice(0, sentenceEnd === -1 ? result.length : sentenceEnd);
+    const remainder = result.slice(firstSentence.length);
+    const cleanedFirstSentence = firstSentence.replace(/[（(]([^（）()]*)[）)]/gu, (group, content) => {
+      const values = toSimplified(content)
+        .replace(new RegExp(`${label}\\s*[：:]?`, "giu"), "")
+        .split(/[，,；;、/]/u)
+        .map(value => value.trim().toLocaleLowerCase())
+        .filter(Boolean);
+      const isNameMetadata = values.length > 0 && values.every(value =>
+        metadataNames.some(name => value === name.toLocaleLowerCase())
+      );
+      return isNameMetadata ? "" : group;
+    });
+    result = cleanedFirstSentence + remainder;
+  }
+
+  return result.replace(/^[\s，,；;：:。]+/, "").replace(/\s+([，,；;。])/g, "$1");
 }
 
 const DIST_RE = /[^。\n]*(?:分布[于在]|模式产地|分布於|分布在|常见[於于].{1,40}(?:地区|區域|大陆|國家)|广布[於于]|繁殖[於于在]|越冬[於于在]|南迁地区|南遷地區|冬候鸟|冬候鳥|从.{1,60}(?:经|到).{2,60}(?:到|一直).{2,60}|留鸟.{0,40}从.{2,60}到.{2,60}|造访.{0,30}(?:日本|韩国|朝鲜|台湾))[^。\n]*[。\n]/g;
@@ -2217,7 +2304,7 @@ function stripDistSentences(text) {
 
 function renderDescription(sp, identification) {
   const wiki = toSimplified(identification?.wikipediaSummary || sp?.description || "");
-  const cleanWiki = stripDistSentences(stripWikiIntro(wiki));
+  const cleanWiki = stripDistSentences(stripRepeatedNameIntro(wiki, sp));
   const fallback = identification?.morphology || identification?.habitat || identification?.behavior;
   const parts = [];
   parts.push(`<p class="detail-line latin">学名：${esc(sp.scientificName || "暂无可靠数据")}</p>`);
@@ -2232,7 +2319,7 @@ function renderDescription(sp, identification) {
       parts.push(`<p class="small muted">来源：<a href="${esc(identification.wikipediaUrl)}" target="_blank" rel="noopener">维基百科</a>（CC BY-SA）</p>`);
     }
   } else if (fallback) {
-    parts.push(`<p class="detail-line detail-text">${esc(cleanText(toSimplified(fallback)))}</p>`);
+    parts.push(`<p class="detail-line detail-text">${esc(cleanText(stripRepeatedNameIntro(toSimplified(fallback), sp)))}</p>`);
   }
   return parts.join("");
 }

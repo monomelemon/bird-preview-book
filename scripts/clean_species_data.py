@@ -156,6 +156,7 @@ V1_ALIASES = {
     "comkin1": ["普通翠鸟", "翠鸟", "alcedo_atthis"],
     "livbul1": ["白头鹎", "白头翁", "pycnonotus_sinensis"],
     "rbbmag": ["红嘴蓝鹊", "urocissa_erythroryncha"],
+    "lstlar2": ["短趾百灵"],
 }
 
 V1_CHINESE_NAME = {
@@ -242,13 +243,7 @@ def main():
                     aliases_added += 1
                     modified = True
 
-        # ── 6. Add original traditional name as alias if it differs ──
-        if old_cn and to_simplified(old_cn) != old_cn and old_cn not in aliases:
-            aliases.append(old_cn)
-            aliases_added += 1
-            modified = True
-
-        # ── 7. Convert aliases to simplified ──
+        # ── 6. Convert aliases to simplified ──
         new_aliases = []
         seen = set()
         for a in sp.get("aliases", []):
@@ -261,13 +256,13 @@ def main():
         # Deduplicate aliases against chineseName
         sp["aliases"] = [a for a in sp["aliases"] if a != sp.get("chineseName", "")]
 
-        # ── 8. Convert order.zh to simplified if needed ──
+        # ── 7. Convert order.zh to simplified if needed ──
         order_zh = sp.get("order", {}).get("zh", "")
         order_simp = simplify_name(order_zh)
         if order_simp != order_zh:
             sp["order"]["zh"] = order_simp
 
-        # ── 9. Track families for taxonomy rebuild ──
+        # ── 8. Track families for taxonomy rebuild ──
         f_en = sp["family"]["en"]
         f_zh = sp["family"]["zh"]
         o_zh = sp["order"]["zh"]
@@ -276,7 +271,7 @@ def main():
 
         sp["updatedAt"] = "2026-05-08"
 
-    # ── 10. Rebuild taxonomy.json families ──
+    # ── 9. Rebuild taxonomy.json families ──
     # Map family English names to sort orders from original taxonomy
     old_sort = {}
     for f in taxonomy["families"]:
@@ -297,11 +292,11 @@ def main():
     new_families.sort(key=lambda x: x["sortOrder"])
     taxonomy["families"] = new_families
 
-    # ── 11. Update metadata ──
+    # ── 10. Update metadata ──
     metadata["dataVersion"] = "v2-fix-2026-05-08"
     metadata["updatedAt"] = "2026-05-08"
 
-    # ── 12. Write output ──
+    # ── 11. Write output ──
     write_json("species.json", species)
     write_json("taxonomy.json", taxonomy)
     write_json("metadata.json", metadata)

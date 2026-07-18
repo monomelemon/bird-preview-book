@@ -14,7 +14,8 @@ DATA = ROOT / "data"
 
 # Import shared utilities
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from text_utils import to_simplified
+from text_utils import normalize_mainland_taxonomy, to_simplified
+from normalize_species_descriptions import normalize_description
 
 DIST_RE = re.compile(
     r"分布[：:\s][^\n]{10,150}|"
@@ -79,7 +80,10 @@ def fetch_wiki_extract(title, lang="zh"):
         pages = data.get("query", {}).get("pages", {})
         for pid, page in pages.items():
             if pid != "-1" and page.get("extract") and len(page.get("extract", "")) > 30:
-                return {"title": page["title"], "extract": to_simplified(page["extract"])}
+                return {
+                    "title": page["title"],
+                    "extract": normalize_mainland_taxonomy(to_simplified(page["extract"])),
+                }
     except Exception:
         pass
     return None
@@ -108,13 +112,19 @@ def backfill_local_wiki(species, identification_by_bird, identification_by_sci):
         "distribution_from_description": 0,
     }
     for sp in species:
+        if sp.get("description"):
+            sp["description"] = normalize_mainland_taxonomy(sp["description"])
         ident = identification_by_bird.get(sp["birdId"]) or identification_by_sci.get(sp.get("scientificName")) or {}
-        summary = to_simplified(ident.get("wikipediaSummary", ""))
-        explicit_dist = to_simplified(ident.get("wikipediaDistribution", ""))
+        summary = normalize_mainland_taxonomy(to_simplified(ident.get("wikipediaSummary", "")))
+        explicit_dist = normalize_mainland_taxonomy(to_simplified(ident.get("wikipediaDistribution", "")))
 
         if not sp.get("description") and summary:
             sp["description"] = summary[:800]
             stats["description_from_identification"] += 1
+
+        normalized_description, _ = normalize_description(sp)
+        if normalized_description:
+            sp["description"] = normalized_description
 
         if sp.get("distribution"):
             continue
@@ -124,7 +134,9 @@ def backfill_local_wiki(species, identification_by_bird, identification_by_sci):
             stats["distribution_from_identification"] += 1
             continue
 
-        desc_dist = extract_distribution(to_simplified(sp.get("description", "")))
+        desc_dist = extract_distribution(
+            normalize_mainland_taxonomy(to_simplified(sp.get("description", "")))
+        )
         if desc_dist:
             sp["distribution"] = desc_dist
             stats["distribution_from_description"] += 1
@@ -224,6 +236,8 @@ def main():
                     existing_desc = species_index[bird_id].get("description")
                     if not existing_desc or (refresh_english and is_english_only_text(existing_desc)):
                         species_index[bird_id]["description"] = wiki_data["description"]
+                        normalized_description, _ = normalize_description(species_index[bird_id])
+                        species_index[bird_id]["description"] = normalized_description
                     if wiki_data["distribution"]:
                         species_index[bird_id]["distribution"] = wiki_data["distribution"]
                     updated += 1
