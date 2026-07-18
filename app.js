@@ -1887,6 +1887,12 @@ function toggleAndRefresh(listId, birdId) {
   render();
 }
 
+function refreshBookAtCurrentScroll(listId) {
+  const scrollPosition = window.scrollY;
+  renderBookDetail(listId);
+  window.scrollTo(0, scrollPosition);
+}
+
 function deleteBirdFromList(event, listId, birdId) {
   event.stopPropagation();
   const sp = appData.speciesById.get(birdId);
@@ -1899,8 +1905,9 @@ function deleteBirdFromList(event, listId, birdId) {
         label: "删除",
         cls: "danger",
         action: () => {
-          StorageService.removeBirdFromList(listId, birdId);
-          render();
+          if (StorageService.removeBirdFromList(listId, birdId)) {
+            refreshBookAtCurrentScroll(listId);
+          }
         }
       }
     ]
