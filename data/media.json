@@ -3589,13 +3589,13 @@
         "license": "cc-by-nc"
       },
       {
-        "url": "https://static.inaturalist.org/photos/618383965/large.jpg",
+        "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/618383965/large.jpg",
         "type": "photo",
         "caption": "遗鸥",
         "source": "iNaturalist",
         "sourceUrl": "https://www.inaturalist.org/observations/339880214",
         "author": "Paul Ha",
-        "license": null
+        "license": "cc-by-nc"
       },
       {
         "url": "https://static.inaturalist.org/photos/282987908/large.jpeg",
