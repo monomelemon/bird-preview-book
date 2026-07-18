@@ -836,16 +836,152 @@ function hashString(str) {
 function base64urlEncode(obj) {
   const json = JSON.stringify(obj);
   const bytes = new TextEncoder().encode(json);
+  return bytesToBase64url(bytes);
+}
+
+function bytesToBase64url(bytes) {
   let binary = "";
   bytes.forEach(b => binary += String.fromCharCode(b));
   return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
 }
 
-function base64urlDecode(text) {
+function base64urlToBytes(text) {
   const padded = text.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((text.length + 3) % 4);
   const binary = atob(padded);
-  const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
-  return JSON.parse(new TextDecoder().decode(bytes));
+  return Uint8Array.from(binary, c => c.charCodeAt(0));
+}
+
+function base64urlDecode(text) {
+  return JSON.parse(new TextDecoder().decode(base64urlToBytes(text)));
+}
+
+function stableBirdShareHash(birdId) {
+  let hash = 2166136261;
+  for (let i = 0; i < birdId.length; i++) {
+    hash ^= birdId.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+class ShareBinaryWriter {
+  constructor() { this.bytes = []; }
+  writeByte(value) { this.bytes.push(value & 255); }
+  writeUint32(value) {
+    this.bytes.push((value >>> 24) & 255, (value >>> 16) & 255, (value >>> 8) & 255, value & 255);
+  }
+  writeVarUint(value) {
+    let remaining = Math.max(0, Math.floor(value));
+    while (remaining >= 128) {
+      this.writeByte((remaining % 128) | 128);
+      remaining = Math.floor(remaining / 128);
+    }
+    this.writeByte(remaining);
+  }
+  writeString(value) {
+    const bytes = new TextEncoder().encode(String(value || ""));
+    this.writeVarUint(bytes.length);
+    bytes.forEach(byte => this.writeByte(byte));
+  }
+  writeStringList(values) {
+    const list = Array.isArray(values) ? values : [];
+    this.writeVarUint(list.length);
+    list.forEach(value => this.writeString(value));
+  }
+  toUint8Array() { return Uint8Array.from(this.bytes); }
+}
+
+class ShareBinaryReader {
+  constructor(bytes) { this.bytes = bytes; this.offset = 0; }
+  readByte() {
+    if (this.offset >= this.bytes.length) throw new Error("unexpected end of share data");
+    return this.bytes[this.offset++];
+  }
+  readUint32() {
+    return ((this.readByte() * 0x1000000) + (this.readByte() << 16) + (this.readByte() << 8) + this.readByte()) >>> 0;
+  }
+  readVarUint() {
+    let value = 0;
+    let multiplier = 1;
+    for (let i = 0; i < 5; i++) {
+      const byte = this.readByte();
+      value += (byte & 127) * multiplier;
+      if (!(byte & 128)) return value;
+      multiplier *= 128;
+    }
+    throw new Error("invalid share number");
+  }
+  readString() {
+    const length = this.readVarUint();
+    if (length > 4096 || this.offset + length > this.bytes.length) throw new Error("invalid share string");
+    const value = new TextDecoder().decode(this.bytes.slice(this.offset, this.offset + length));
+    this.offset += length;
+    return value;
+  }
+  readStringList() {
+    const count = this.readVarUint();
+    if (count > 100) throw new Error("invalid share list");
+    return Array.from({ length: count }, () => this.readString());
+  }
+}
+
+let _birdIdByShareHash = null;
+
+function getBirdIdByShareHash() {
+  if (_birdIdByShareHash) return _birdIdByShareHash;
+  const map = new Map();
+  appData.species.forEach(species => {
+    const hash = stableBirdShareHash(species.birdId);
+    map.set(hash, map.has(hash) ? null : species.birdId);
+  });
+  _birdIdByShareHash = map;
+  return map;
+}
+
+function encodeCompactShare(list) {
+  const writer = new ShareBinaryWriter();
+  [66, 80, 66, 1].forEach(byte => writer.writeByte(byte));
+  writer.writeByte(list.mode === "recommended" ? 1 : 0);
+  writer.writeString(list.title);
+  const location = list.location || {};
+  ["provinceCode", "provinceName", "cityCode", "cityName", "districtCode", "districtName"]
+    .forEach(key => writer.writeString(location[key]));
+  const filters = list.filters || {};
+  writer.writeStringList(filters.orders);
+  writer.writeStringList(filters.families);
+  writer.writeStringList(filters.habitats);
+  writer.writeVarUint(list.birdIds.length);
+  list.birdIds.forEach(birdId => writer.writeUint32(stableBirdShareHash(birdId)));
+  return bytesToBase64url(writer.toUint8Array());
+}
+
+function decodeCompactShare(encoded) {
+  const reader = new ShareBinaryReader(base64urlToBytes(encoded));
+  if ([66, 80, 66, 1].some(expected => reader.readByte() !== expected)) throw new Error("unsupported share format");
+  const mode = reader.readByte() & 1 ? "recommended" : "import";
+  const title = reader.readString();
+  const locationValues = Array.from({ length: 6 }, () => reader.readString());
+  const locationKeys = ["provinceCode", "provinceName", "cityCode", "cityName", "districtCode", "districtName"];
+  const location = Object.fromEntries(locationKeys.map((key, index) => [key, locationValues[index]]));
+  const filters = {
+    orders: reader.readStringList(),
+    families: reader.readStringList(),
+    habitats: reader.readStringList()
+  };
+  const birdCount = reader.readVarUint();
+  if (!birdCount || birdCount > 2000) throw new Error("invalid bird count");
+  const birdHashMap = getBirdIdByShareHash();
+  const birdIds = Array.from({ length: birdCount }, () => birdHashMap.get(reader.readUint32()));
+  if (birdIds.some(birdId => !birdId)) throw new Error("unknown or ambiguous bird id");
+  if (reader.offset !== reader.bytes.length) throw new Error("unexpected share data");
+  return createSharePayload({
+    title: title || `分享预习本 · ${birdIds.length}种`,
+    mode,
+    location: locationValues.some(Boolean) ? location : null,
+    filters,
+    birdIds,
+    dataVersion: appData.metadata.dataVersion
+  });
 }
 
 function formatMonths(months) {
@@ -1114,6 +1250,7 @@ function dismissTransientPanels() {
 function getRoute() {
   const raw = location.hash.slice(1);
   if (!raw) return { name: "home" };
+  if (raw.startsWith("s=")) return { name: "compact-share", encoded: raw.slice(2) };
   if (raw.startsWith("share=")) return { name: "share", encoded: raw.slice(6) };
   const [name, queryString] = raw.split("?");
   const params = Object.fromEntries(new URLSearchParams(queryString || ""));
@@ -1135,6 +1272,7 @@ function render() {
   if (route.name === "import-list") return renderImportList();
   if (route.name === "book") return renderBookDetail(route.params?.id);
   if (route.name === "bird") return renderBirdDetail(route.params?.list, route.params?.bird, route.params?.share === "1");
+  if (route.name === "compact-share") return renderCompactShare(route.encoded);
   if (route.name === "share") return renderShare(route.encoded);
   renderHome();
 }
@@ -2265,24 +2403,91 @@ function addBirdToList(targetBirdId, listId) {
 }
 
 function createSharePayload(list) {
-  return { type: "birdPreviewBookShare", app: "观鸟预习本", version: 1, title: list.title, mode: list.mode, location: list.location, months: null, filters: list.filters, birdIds: list.birdIds, dataVersion: list.dataVersion };
+  const birdNames = list.birdIds
+    .slice(0, 3)
+    .map(id => appData.speciesById.get(id)?.chineseName)
+    .filter(Boolean);
+  const coverImage = list.birdIds
+    .map(id => appData.media[id]?.images?.[0]?.url)
+    .find(url => /^https:\/\//i.test(url || "")) || null;
+  const description = birdNames.length
+    ? `共 ${list.birdIds.length} 种，包含${birdNames.join("、")}等鸟种`
+    : `共 ${list.birdIds.length} 种鸟类的观鸟预习清单`;
+  return {
+    type: "birdPreviewBookShare",
+    app: "观鸟预习本",
+    version: 1,
+    title: list.title,
+    description,
+    coverImage,
+    mode: list.mode,
+    location: list.location,
+    months: null,
+    filters: list.filters,
+    birdIds: list.birdIds,
+    dataVersion: list.dataVersion
+  };
+}
+
+function copyShareUrl(url) {
+  if (!navigator.clipboard?.writeText) {
+    prompt("复制分享链接", url);
+    return;
+  }
+  navigator.clipboard.writeText(url).then(
+    () => alert("紧凑分享链接已复制，请粘贴到微信好友或群聊。"),
+    () => prompt("复制分享链接", url)
+  );
+}
+
+function showShareOptions(url, payload) {
+  const buttons = [];
+  if (navigator.share) {
+    buttons.push({
+      label: "分享到…",
+      cls: "",
+      action: () => navigator.share({ title: payload.title, text: payload.description, url }).catch(err => {
+        if (err?.name !== "AbortError") copyShareUrl(url);
+      })
+    });
+  }
+  buttons.push({ label: "复制链接", cls: navigator.share ? "secondary" : "", action: () => copyShareUrl(url) });
+  buttons.push({ label: "取消", cls: "secondary" });
+  showModal({
+    title: "分享清单",
+    message: "紧凑链接已生成。复制到微信后，将使用统一的“观鸟预习本”网页卡片。",
+    buttons
+  });
 }
 
 function shareList(listId) {
   const list = StorageService.getList(listId);
   if (!list) return;
-  const url = `${location.origin}${location.pathname}#share=${base64urlEncode(createSharePayload(list))}`;
-  navigator.clipboard?.writeText(url).then(() => alert("分享链接已复制"), () => prompt("复制分享链接", url));
+  const payload = createSharePayload(list);
+  const url = `${location.origin}${location.pathname}#s=${encodeCompactShare(list)}`;
+  showShareOptions(url, payload);
+}
+
+function storeSharedList(payload) {
+  if (payload.type !== "birdPreviewBookShare" || !Array.isArray(payload.birdIds)) throw new Error("bad payload");
+  const listId = `share_${hashString(JSON.stringify(payload))}`;
+  const list = { ...payload, listId, createdAt: nowISO(), updatedAt: nowISO() };
+  sessionStorage.setItem(`share:${listId}`, JSON.stringify(list));
+  renderBookDetail(listId, list);
+}
+
+function renderCompactShare(encoded) {
+  try {
+    storeSharedList(decodeCompactShare(encoded));
+  } catch {
+    renderError("分享链接无法识别，可能来自不兼容的数据版本。", "返回首页");
+  }
 }
 
 function renderShare(encoded) {
   try {
     const payload = base64urlDecode(encoded);
-    if (payload.type !== "birdPreviewBookShare" || !Array.isArray(payload.birdIds)) throw new Error("bad payload");
-    const listId = `share_${hashString(JSON.stringify(payload))}`;
-    const list = { ...payload, listId, createdAt: nowISO(), updatedAt: nowISO() };
-    sessionStorage.setItem(`share:${listId}`, JSON.stringify(list));
-    renderBookDetail(listId, list);
+    storeSharedList(payload);
   } catch {
     renderError("分享链接无法识别。", "返回首页");
   }
